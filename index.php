@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home page | Barangayy Information System</title>
+    <link rel = "stylesheet" href = "index.css"/>
+
 </head>
 <body>
-    <h1>HELLO WORLD</h1>
-
-        <h2>JEnmar</h2>
-
-        <p>sadalsdkasda</p>
-    <h1>adkajsds</h1>
+        <header class = "header">
+            
+        </header>
 </body>
 </html>
