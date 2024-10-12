@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "main_text";
+    src: url(../asset/font/Syncopate/Syncopate-Bold.ttf);
+}
+@font-face {
+    font-family: "sub_text";
+    src: url(asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt\,wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+    --bg-color:#FCFAEE;
+    --2nd-bg-color:#4A9D4f;
+    --sub-bg-color: #005720 ;
+ 
+    --1st-text-color: #005720 ;
+    --2nd-text-color: rgb(53, 53, 53);
+    --3rd-text-color: #FCFAEE;
+   
+    --btn-color: #F5E402;
+
+    --other-color :rgb(0, 183, 255);
+}
+body{
+    background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+    background-color: var(--2nd-bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;   
+}
+.header h1{
+    font-family: "main_text";
+    padding-right: 550px;
+    font-size: 1.5rem;
+}
+.header img{
+    margin-left: 60px;
+    width: 110px;
+}
+#main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}   
+#main form{
+    width: fit-content;
+    background-color: var(--1st-text-color);
+    padding: 50px;
+    box-shadow: 10px 20px 10px #5858585e;
+    
+}
+#main h1{
+   margin-bottom: 20px;
+    font-family: "main_text";
+    color: var(--bg-color);
+    text-align: center;
+    
+}
+#main form div{
+    width: fit-content;
+    background-color: var(--2nd-bg-color);
+    padding: 40px;
+
+}
+#main form input{
+    width: 20vw;
+    height: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border: none;
+    outline: none;
+    color: var(--1st-text-color);
+    cursor: pointer;
+}
+#main form #checkbox{
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#main form #check_span{
+    font-family: "main_text";
+    font-size: 10px;
+    color: var(--1st-text-color);
+}
+#main form label{
+    font-family: "main_text";
+    font-size: 15px;
+    color: var(--1st-text-color);
+
+}
+#main h1 span svg{
+    width: 50px;
+    position: relative;
+    top: 10px;
+    fill: var(--bg-color);
+    margin-right: 15px;
+}
+
+#main span svg{
+    width: 25px;
+    position: relative;
+    top: 5px;
+    fill: #005720;
+}
+
+#main div img{
+    width: 320px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#main div h4{
+    width: 300px;
+    margin-top: 70px;
+    font-family: "main_text";
+    line-height: 30px;
+    text-align: justify;
+    width: 500px;
+    font-size: .8rem;
+    color: var(--1st-text-color);
+}
+
+#main #submit{
+    background-color: var(--btn-color);
+    color: #005720;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
