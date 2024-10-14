@@ -29,11 +29,11 @@
                 <h3>CITY OF DASMARIÑAS</h3>
             </div>
             <div class = "nav_">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Officer</a>
-                <a href="">Hotlines</a>
-                <a href="">Services</a>
+                <a href="#home">Home</a>
+                <a href="#footer">About</a>
+                <a href="#official">Officer</a>
+                <a href="#hotlines">Hotlines</a>
+                <a href="#services">Services</a>
             </div>
         </nav>
 
@@ -42,8 +42,10 @@
             <h1><span >WELCOME TO</span> <br> <span style = "color:#F5E402;">BARANGAY PALIPARAN</span></h1>
         </section>
 
-        <section id = "services">
+  
 
+        <section id = "services">
+      
         <div>
             <a href=""><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M2.047 14.667a.992.992 0 0 0 .466.607l1.909 1.104v2.199a1 1 0 0 0 1 1h2.199l1.104 1.91a1.002 1.002 0 0 0 1.366.366L12 20.75l1.91 1.104a1.002 1.002 0 0 0 1.366-.366l1.103-1.909h2.199a1 1 0 0 0 1-1V16.38l1.909-1.104a.999.999 0 0 0 .366-1.366L20.75 12l1.104-1.909a1 1 0 0 0-.366-1.366l-1.909-1.104V5.422a1 1 0 0 0-1-1H16.38l-1.103-1.909a1.004 1.004 0 0 0-.607-.466.994.994 0 0 0-.759.1L12 3.25l-1.909-1.104a.998.998 0 0 0-1.366.365l-1.104 1.91H5.422a1 1 0 0 0-1 1V7.62L2.513 8.725a1.001 1.001 0 0 0-.365 1.366L3.251 12l-1.104 1.909a1.003 1.003 0 0 0-.1.758z"></path></svg></button>
             </a>
@@ -110,7 +112,74 @@
         </section>
 
         <section id = "hotlines">
-            
+            <h1><span style = "color:red;">EMERGENCY</span> HOTLINES</h1>
+            <div class = "item1">
+                <h2>Emergency operation Hotlines</h2>
+                <div class = "emergency">
+                    <div>
+                        <p>(046) 435 0183</p>
+                        <p>(046) 481 0555</p>
+                        <p>(046) 686 6608</p>
+                    </div>
+                    <div>
+                        <p>0917 721 8825</p>
+                        <p>0998 843 5477</p>
+                        <p>0908 818 5555</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class = "item2">
+
+            <h2>BFP</h2>
+                <div class = "bfp">
+                    <div>
+                        <p>(046) 416 0875</p>
+                        <p>(046) 424 2537</p>
+                    </div>
+                    <div>
+                        <p>0995 336 9534</p>
+                        <p>0902 448 7857</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "item3">
+            <h2>PNP</h2>
+                <div class = "pnp">
+                    <div>
+                        <p>(046) 416 0254</p>
+                        <p>(046) 416 2924</p>
+                    </div>
+                    <div>
+                        <p>0929 665 9533</p>
+                        <p>0998 598 5595</p>
+                        <p>0956 800 3329</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "item4">
+                <div>   
+                    <h2>MERALCO</h2>
+                    <p>0917 551 6211</p>
+                    <p>0920 971 6211</p>
+                </div>
+                <div>   
+                    <h2>ABULANCE</h2>
+                    <p>0998 566 5555</p>
+                </div>
+            </div>
+
+            <div class = "item5">
+                <div>   
+                    <h2>BARANGAY PALIPARAN 2</h2>
+                    <p>0951 385 6318</p>
+                </div>
+            </div>
+
+
 
         </section>
 

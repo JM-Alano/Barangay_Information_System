@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "main_text";
+    src: url(../asset/font/Syncopate/Syncopate-Regular.ttf);
+}
+@font-face {
+    font-family: "sub_text";
+    src: url(../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+    --bg-color:#FCFAEE;
+    --2nd-bg-color:#4A9D4f;
+    --sub-bg-color: #005720 ;
+ 
+    --1st-text-color: #005720 ;
+    --2nd-text-color: rgb(53, 53, 53);
+    --3rd-text-color: #FCFAEE;
+   
+    --btn-color: #F5E402;
+
+    --other-color :rgb(0, 183, 255);
+}
+body{
+    background-color: var(--bg-color);
+}
+#main{
+    background-image: linear-gradient(45deg, rgba(255, 238, 2, 0.281),rgba(104, 184, 57, 0.5),rgba(45, 170, 7, 0.473)), 
+    url(../asset/image/background/background.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 60% ;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: "main_text";
+    letter-spacing: 3px;
+}
+#main h1{
+    font-size: 2.8rem;
+    padding-top: 50px;
+    color: var(--bg-color);
+}
+#main h2{
+    font-size: 2.3rem;
+    padding-top: 10px;
+    color: var(--btn-color);
+}
+#main h3{
+    font-weight: 700;
+    font-size: 2rem;
+    padding-top: 10px;
+    color: var(--1st-text-color);
+}
+#main img{
+    width: 200px;
+    filter: drop-shadow(rgb(41, 63, 43) 10px 10px 10px);
+}
