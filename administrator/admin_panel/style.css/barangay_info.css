@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "main_text";
+    src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
+}
+@font-face {
+    font-family: "sub_text";
+    src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    list-style-type: none ;
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+    --bg-color:#FCFAEE;
+    --2nd-bg-color:#4A9D4f;
+    --sub-bg-color: #005720 ;
+ 
+    --1st-text-color: #005720 ;
+    --2nd-text-color: rgb(53, 53, 53);
+    --3rd-text-color: #FCFAEE;
+   
+    --btn-color: #F5E402;
+
+    --other-color :rgb(0, 183, 255);
+}
+#main{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:var(--2nd-bg-color);
+    width: 77vw;
+    margin-left: 40px;
+    padding: 20px 5px 20px 5px;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    z-index: -999;
+    border-radius: 6px;
+    
+    
+}
+#main .display_info{
+    height: 80vh;
+    width: 30vw;
+    background-color: #E3E3E3;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 50px 10px;
+    
+    
+}
+.sidebar.active ~ .dashboard_content #main .display_info{
+    width: 40vw;
+}
+.sidebar.active ~ .dashboard_content #main{
+    width: 93vw;
+    margin-left: -180px;
+}
+#main .setting {
+    background-color: #e3e3e3;
+    padding: 40px;
+    font-family: "sub_text";
+    color: var(--1st-text-color);
+    font-weight: 700;
+    border-radius: 4px;
+   
+}
+#main .setting h1{
+    font-weight: 400;
+    color: var(--1st-text-color);
+}
+#main .setting svg{
+    width: 24px;
+    padding-right: 20px;
+    fill: var(--1st-text-color);
+}
+#main .setting form input{
+    width: 30vw;
+    height: 30px;
+    margin-top: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(202, 202, 202);
+    color: var(--1st-text-color);
+    border-radius: 2px;
+    background-color:var(--bg-color) ;
+}
+#main .setting form input:focus{
+    outline: 3px solid var(--2nd-bg-color);
+}
+#main .setting form #UPDATE{
+    width: 200px;
+    cursor: pointer;
+    margin-left: 200px;
+    background-color: var(--other-color);
+    font-weight: 600;
+    border: none;
+    transition: all 0.5s ease;
+}
+#main .setting form #UPDATE:hover{
+    background-color: #80d7ff;
+    
+}
+#main .setting form #UPDATE:focus{
+    outline: none;
+}
