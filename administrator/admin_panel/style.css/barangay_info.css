@@ -25,7 +25,7 @@ html {
     --3rd-text-color: #FCFAEE;
    
     --btn-color: #F5E402;
-
+    
     --other-color :rgb(0, 183, 255);
 }
 #main{
@@ -39,11 +39,11 @@ html {
     transition: all 0.5s ease;
     z-index: -999;
     border-radius: 6px;
-    
+   
     
 }
 #main .display_info{
-    height: 80vh;
+    height: 70vh;
     width: 30vw;
     background-color: #E3E3E3;
     transition: all 0.5s ease;
@@ -59,8 +59,8 @@ html {
     width: 40vw;
 }
 .sidebar.active ~ .dashboard_content #main{
-    width: 93vw;
-    margin-left: -180px;
+    width: 87vw;
+    margin-left: -100px;
 }
 #main .setting {
     background-color: #e3e3e3;
@@ -69,6 +69,7 @@ html {
     color: var(--1st-text-color);
     font-weight: 700;
     border-radius: 4px;
+    color: var(--1st-text-color);
    
 }
 #main .setting h1{

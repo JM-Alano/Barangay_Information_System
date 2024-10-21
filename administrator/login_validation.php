@@ -19,8 +19,8 @@
           
                 echo "Please Fill up this form ";
                 echo"
-                   <script>
-                      document.getElementById('validation').style.display = 'block';
+                   <script> 
+                        document.getElementById('validation').style.display = 'block';
                       document.getElementById('pwd').style.outline = '1px rgb(253, 42, 42) solid';
                     
                     </script> ";

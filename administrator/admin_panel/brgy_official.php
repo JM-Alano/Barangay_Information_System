@@ -8,8 +8,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "style.css/main.css"/>
+    <title>Barangay Official | Barangayy Information System</title>
+    <link rel = "stylesheet" href = "style.css/main_template.css"/>
+    <link rel = "stylesheet" href = "style.css/barangay_official.css"/>
 </head>
 <body>
 
@@ -94,19 +95,61 @@
         <div class = "dashboard_content">
             <div class = "text">BARANGAY OFFICIAL</div>
 
+            <!-------------------- MAIN CONTENT -------------------------------------------------- -->
+
+            <div class = "main_content">
+
+              
+            
+                <form action="brgy_official.php" method = "post">
+                    <!-- ADD BUTTIN -->
+                    <input type="submit" value = "+ Add" name = "create" id = "create_btn">
+
+                        <!-- SEARCH BUTTON -->
+                    <input type="text" id = "live_search" placeholder = "SEARCH">
+                </form>
+
+            </div>
+                <!-- SEACH DIV -->
+                <div  id = "searchresult" class = "table_div">
+                    <?php require('./brgy_official_folder/table.php'); ?>
+                </div>
+
+
+
+            <div id = "pop_success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;
+            <p id = "p"> <?php include ("brgy_official_folder/create.php");?></p>
+            </div>
+                <div>
+                    <div id = "form_add_official">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span>
+                    <?php
+                    if(isset($_POST['create'])){ 
+                        include('brgy_official_folder/create_temp.php');
+                    }?></span>
+                    </div>
+                </div>
+
+
+               
+                
+                <footer style = "height:30vh;">
+
+                </footer>
         </div>
-
-
+        
+<!-- ---------------------------------------------------------------------------------- -->
 
         <!-- LOGOUT FUNCTION -->
         <script>
             function logout(){
                 window.location.href = '../logout.php';
             }
-
         </script>
 
-
+        <!-- SIDE HAMBURDER SLIDE FUNCTION -->
         <script>
             let btn = document.querySelector("#btn_menu");
             let sidebar = document.querySelector(".sidebar");
@@ -117,5 +160,34 @@
 
         </script>
 
+        
+
+
+        <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        
+        <script type = "text/javascript">
+            $(document).ready(function(){
+                $("#live_search").keyup(function(){
+                    var input = $(this).val();
+                    // alert(input);
+
+                    if(input != ""){
+                        $.ajax({
+                            url: "./brgy_official_folder/livesearch.php",
+                            method: "POST",
+                            data: {input:input},
+
+                            success:function (data){
+                                $("#searchresult").html(data);
+                            }
+                        });
+                    }
+
+                });
+            });
+ 
+        </script>
 </body>
 </html>

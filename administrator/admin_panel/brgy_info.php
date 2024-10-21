@@ -9,8 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barangay Infromation | Barangayy Information System</title>
+    <link rel = "stylesheet" href = "style.css/main_template.css"/>
     <link rel = "stylesheet" href = "style.css/barangay_info.css"/>
-    <link rel = "stylesheet" href = "style.css/main.css"/>
 </head>
 <body>
 
@@ -96,7 +96,7 @@
             <div class = "text">BARANGAY INFROMATION</div>
 
             <div id = "validation_update">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+           
                 <p>
                     <?php
                         include("brgy_info_folder/update.php");
@@ -127,8 +127,7 @@
                     <label for="" style = "margin-right:45px;">Address</label>
                     <input type="text" name = "address" placeholder = "Ex. Address"><br>
 
-                    <label for="" style = "margin-right:32px;">Phone No.</label>
-                    <input type="tel" name = "phone" pattern="[0-9]{11}" placeholder = "Ex. 09123456723"><br>
+                   
 
                     <label for="" style = "margin-right:10px;">Email Address</label>
                     <input type="email" name = "email"  placeholder = "Ex. Juan_dela_cruz@gmail.com"><br>

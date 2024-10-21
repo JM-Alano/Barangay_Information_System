@@ -16,7 +16,7 @@ html {
     scroll-behavior: smooth;
   }
 :root{
-    --bg-color:#FCFAEE;
+    --bg-color: #FCFAEE;
     --2nd-bg-color:#4A9D4f;
     --sub-bg-color: #005720 ;
  
@@ -137,12 +137,15 @@ body{
     pointer-events: none;
     font-family: "sub_text";
     border-radius: 8px;
-    z-index: 999;
+   
     
 }
 .sidebar.active ul li .tooltip{
-    left: 30px;
-
+    left: 10px;
+    z-index: 999;
+    height: 35px;
+    width: 115px;
+    font-size: medium;
 }
 .sidebar ul li:hover .tooltip{
     top:50%;
@@ -296,7 +299,7 @@ body{
     position: absolute;
     background-color: rgb(226, 15, 0);
     right: 10px;
-    top: 25px;
+    top: 20px;
     padding: 5px;
     height: 100px;
     width: 20vw;
@@ -320,7 +323,7 @@ body{
     width: 30px;
     margin-right: -1px;
     margin-top: 2px;
-    color: white;
+    color: rgb(119, 2, 2);
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -329,5 +332,5 @@ body{
     transition: 0.3s;
 }
 .closebtn:hover {
-    color: black;
+    color: var(--sub-bg-color);
   }

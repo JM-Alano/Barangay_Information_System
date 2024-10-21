@@ -42,8 +42,9 @@ html {
     justify-content: center;
     align-content: center;
     box-shadow: 1px 1px 20px #1841061f;
-    display: none;
+   display: none;
  }
+
  @keyframes validation {
     from {opacity: 10%;}
     to {opacity: 100%;}

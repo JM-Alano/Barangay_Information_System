@@ -1,0 +1,223 @@
+@font-face {
+    font-family: "main_text";
+    src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
+}
+@font-face {
+    font-family: "sub_text";
+    src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    list-style-type: none ;
+}
+:root{
+    --bg-color: #FCFAEE;
+    --2nd-bg-color:#4A9D4f;
+    --sub-bg-color: #005720 ;
+ 
+    --1st-text-color: #005720 ;
+    --2nd-text-color: rgb(53, 53, 53);
+    --3rd-text-color: #FCFAEE;
+   
+    --btn-color: #F5E402;
+
+    --other-color :rgb(0, 183, 255);
+}
+.main_content{
+    background-color: #005720;
+    width: 75vw;
+    height: 0vh;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+   
+}
+.main_content form #create_btn{
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: var(--2nd-bg-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    margin-top: 30px;
+    width: 60px;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .dashboard_content .main_content form #create_btn{
+    margin-left: -220px;
+}
+#form_add_official{
+   max-height: 700px;
+   width: 30vw;
+   position: absolute;
+   background-color: #e3e3e3;
+   top:40px;
+   padding: 20px;
+   left: 25%;
+   border-radius: 4px;
+   box-shadow: 10px 10px 10px rgba(201, 201, 201, 0.479) ;
+   margin-bottom: 20px;
+   animation-name: down;
+   animation-duration: 1s;
+   display: none;
+}
+@keyframes down {
+    from {top:-50px;
+        opacity: 10%;
+    }
+    to {opacity: 100%;}
+  }
+
+  #pop_success{
+    animation-name: validation;
+    animation-duration: 1s;
+    font-family: sans-serif;
+    position: absolute;
+    background-color: rgb(230,46,45);
+    right: 10px;
+    top: 15px;
+    padding: 5px;
+    height: 70px;
+    width: 17vw;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 1px 1px 20px #7a8077d0;
+    border-radius: 4px;
+    display: none;
+    
+}
+
+@keyframes validation {
+    from {opacity: 1%;
+        right: -20px;}
+    to {opacity: 100%;}
+    
+  }
+  .dashboard_content #pop_success p{
+    color: var(--bg-color);
+    font-size: 16px;
+    margin-top:-25px;
+    font-weight: 400;
+    padding: 20px;
+    margin-left: -190px;
+    font-family: "sub_text";
+ }
+.closebtn{
+    width: 30px;
+    margin-right: -1px;
+    margin-top: 2px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: rgba(248, 248, 248, 0.966);
+  }
+
+
+
+
+  /*-------------------------  TABLE STYLE ------------------------------------*/ 
+
+
+table{
+    border: 2px solid rgba(228, 228, 228, 0.39);
+    margin-left: 40px;
+    margin-top: 100px;
+    background-color: rgba(226, 226, 226, 0.322);
+    width: 77vw;
+    border-collapse: collapse;
+    transition: all 0.5s ease;
+    border-radius:4px;
+    font-family: "sub_text";
+    text-align: center;
+    color: var(--1st-text-color);
+    
+  
+    
+}
+.sidebar.active ~ .dashboard_content .table_div table{
+    width: 93vw;
+    margin-left: -180px;
+}
+table td{
+    padding: 12px;
+    
+}
+table th{
+    border: 2px solid rgba(226, 226, 226, 0.562);
+    padding: 12px;
+    
+}
+table tr:nth-child(even){background-color: #a7a5a548;}
+
+.table_hover:hover{
+    background-image: linear-gradient(140deg,var(--2nd-bg-color),var(--btn-color));
+    color: var(--bg-color);
+}
+
+caption {
+    font-size: 2vw;
+    letter-spacing: 2px;
+    background-color: var(--2nd-bg-color);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: azure;
+    border-radius: 4px;
+    
+}
+#update_btn{
+    background-color: rgb(0, 183, 255);
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    color: var(--bg-color);
+}
+#update_btn:hover{
+    background-color: rgb(92, 209, 255);
+    color: #005720;
+}
+#update_btn:focus{
+    background-color: rgb(92, 209, 255);
+}
+#delete_btn{
+    background-color: red;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    color: var(--bg-color);
+}
+#delete_btn:hover{
+    background-color: rgb(247, 108, 108);
+    color: #005720;
+}
+#delete_btn:focus{
+    background-color: rgb(247, 108, 108);
+}
+
+
+/*--------------------SEARCH BUTTON ---------------------  */
+
+#live_search{
+   float: right;
+    width: 20vw;
+    margin-right: -25px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    border: #91ad9b67 2px solid;
+    border-radius: 4px;
+    color:var(--1st-text-color);
+    outline: none;
+}
+#live_search:focus{
+   outline: 3px solid var(--2nd-bg-color);
+}
