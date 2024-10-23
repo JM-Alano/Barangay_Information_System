@@ -33,7 +33,7 @@
         }
          #input{
             width: 100%;
-            height:28px;
+            height:30px;
             padding-left:10px;
             margin-top:10px;
             color:#005720;
@@ -46,7 +46,7 @@
         }
         #chairman{
             width: 100%;
-            height:28px;
+            height:30px;
             padding-left:10px;
             margin-top:10px;
             color:#005720;
@@ -56,7 +56,15 @@
             outline:none;
             cursor: pointer;
         }
-
+        #chairman:focus{
+          outline: 3px solid var(--2nd-bg-color);
+         
+        }
+        .btn_form_reset_sub{
+          display:flex;
+          justify-content:space-evenly;
+          align-items:center;
+        }
         #create{
             background:#4A9D4f;
             width: 10vw;    
@@ -65,7 +73,7 @@
             cursor: pointer;
             color:#FCFAEE;
             font-size:1rem;
-            margin-left:30px;
+           
             padding:10px;
             border:none;
             
@@ -73,7 +81,7 @@
         #reset{
             background:red;
             width: 10vw;
-            margin-left:5px;
+          
             margin-top:20px;
             text-align:center;
             font-size:1rem;
@@ -92,7 +100,7 @@
     <body>  
         
         <!-- display pop up add official -->
-        <script>document.getElementById('form_add_official').style.display = 'block';</script>
+        
 
         <h1>Add Official</h1>
        
@@ -142,9 +150,11 @@
           <option value= 0>Inactive</option>
         </select><br>
 
-
+       <div class = "btn_form_reset_sub">
         <input type="submit" value = "Create" name = "create_submit" id = "create" >
         <input type = "reset" value = "Reset" id = "reset">
+       </div>
+       
         </form>
 
       

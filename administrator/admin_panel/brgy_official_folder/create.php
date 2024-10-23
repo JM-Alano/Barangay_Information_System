@@ -29,16 +29,12 @@
 
 
            if ($result === TRUE) {
-             echo "New record created successfully";
 
              echo"
                   <script> 
-                       document.getElementById('pop_success').style.display = 'block';
-                        document.getElementById('pop_success').style.width = '17vw';
-                        document.getElementById('pop_success').style.height = '70px';
-                        document.getElementById('pop_success').style.background = 'rgb(0, 183, 255)';
-
-                        window.location.href = '/BIS/administrator/admin_panel/brgy_official.php'
+         
+                      alert('New record created successfully');
+                      window.location.href ='/BIS/administrator/admin_panel/brgy_official.php';
                    </script> ";
                   
              

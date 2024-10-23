@@ -97,78 +97,51 @@
 
             <!-------------------- MAIN CONTENT -------------------------------------------------- -->
 
+              <!-- POPUP -->
+              <div id = "pop_success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <p id = "p"> <?php include ("brgy_official_folder/create.php");?></p>
+            </div>
+      
+      
             <div class = "main_content">
-
-              
-            
-                <form action="brgy_official.php" method = "post">
-                    <!-- ADD BUTTIN -->
-                    <input type="submit" value = "+ Add" name = "create" id = "create_btn">
-
-                        <!-- SEARCH BUTTON -->
+                    <!-- ADD BUTTON -->
+                    <button id = "create_btn">+ADD</button>
+                    <!-- SEARCH BUTTON -->
                     <input type="text" id = "live_search" placeholder = "SEARCH">
-                </form>
-
             </div>
-                <!-- SEACH DIV -->
-                <div  id = "searchresult" class = "table_div">
-                    <?php require('./brgy_official_folder/table.php'); ?>
-                </div>
 
-
-
-            <div id = "pop_success">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;
-            <p id = "p"> <?php include ("brgy_official_folder/create.php");?></p>
-            </div>
-                <div>
-                    <div id = "form_add_official">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    <span>
-                    <?php
-                    if(isset($_POST['create'])){ 
-                        include('brgy_official_folder/create_temp.php');
-                    }?></span>
+             <!-- ADD FORM -->
+             <div id="modal_add_official" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <?php include ("brgy_official_folder/create_temp.php") ;?>
                     </div>
-                </div>
+            </div>
 
+                <!-- Table in Database -->
+            <div  id = "searchresult" class = "table_div">
+                    <?php require('./brgy_official_folder/table.php'); ?>
+            </div>
 
-               
-                
                 <footer style = "height:30vh;">
 
                 </footer>
         </div>
-        
-<!-- ---------------------------------------------------------------------------------- -->
-
-        <!-- LOGOUT FUNCTION -->
-        <script>
-            function logout(){
-                window.location.href = '../logout.php';
-            }
-        </script>
-
-        <!-- SIDE HAMBURDER SLIDE FUNCTION -->
-        <script>
-            let btn = document.querySelector("#btn_menu");
-            let sidebar = document.querySelector(".sidebar");
             
-            btn.onclick = function(){
-                sidebar.classList.toggle("active");
-            }
-
-        </script>
-
+<!-- -------------------------------------JAVASCRIPT--------------------------------------------- -->
+        <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
+        <script src = "javascript_folder/logout_&_sidebar.js"></script>
         
-
-
+        <!-- MODAL FUNCTION OF ADD BOTTON OF OFFICIAL  -->
+        <script src = "javascript_folder/modal_function_btn.js"></script>
+      
         <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        
-        <script type = "text/javascript">
-            $(document).ready(function(){
+        <script type = "text/javascript" >
+                $(document).ready(function(){
                 $("#live_search").keyup(function(){
                     var input = $(this).val();
                     // alert(input);
@@ -187,7 +160,6 @@
 
                 });
             });
- 
         </script>
 </body>
 </html>

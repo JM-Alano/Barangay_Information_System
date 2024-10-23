@@ -12,7 +12,7 @@
 
             <?php require("../../database/conn_db.php");
 
-            $sql = "SELECT fullname,chairmanship,position,term_start,term_end,status FROM barangay_official LIMIT 10";
+            $sql = "SELECT * FROM barangay_official LIMIT 10";
             $result = $conn->query($sql);
 
             $result->num_rows > 0;
@@ -32,12 +32,15 @@
                     </tr>
                     <?php
                          while($row = $result->fetch_assoc()) {
+                            $id = $row['id'];
                             $fullname = $row["fullname"];
                             $chairman = $row["chairmanship"];
                             $position = $row["position"];
                             $term_start = $row["term_start"];
                             $term_end = $row["term_end"];
                             $status = $row["status"];
+
+
                             ?>
                              <tr class = "table_hover">
                                 <td><?php echo $fullname; ?></td>
@@ -56,7 +59,17 @@
                                 ?></td>
                             
                                 <td>
-                                <button type = 'submit' id = 'update_btn' name = 'update_btn_official'>Update</button>|<button type = 'submit' id = 'delete_btn'>Delete</button>
+                                    <div id = "form_up_del_official">
+                                        <form action="#" method = "POST" >
+                                            <input type="submit" value = Update name = "update" id = "update_official_btn">
+                                        </form>|
+                                        <form method = "POST">
+                                            <input type="submit" value = Delete name = "delete_submit_official" id = "delete_official_btn" >
+                                            <input type="hidden" value = <?php echo $id ?> id = "delete_official_btn" >
+                                        </form>
+                                       
+                                    </div>
+                                    
                                 </td>
                             </tr>
                             
@@ -70,13 +83,7 @@
             </table>
             
             <?php
-
-
-
-
-            }
-            ?>
-
-
+            }   
+            ?>          
 </body>
 </html>

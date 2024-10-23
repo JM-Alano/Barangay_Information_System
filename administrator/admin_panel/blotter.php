@@ -96,26 +96,8 @@
 
         </div>
 
-
-
-        <!-- LOGOUT FUNCTION -->
-        <script>
-            function logout(){
-                window.location.href = '../logout.php';
-            }
-
-        </script>
-
-
-        <script>
-            let btn = document.querySelector("#btn_menu");
-            let sidebar = document.querySelector(".sidebar");
-            
-            btn.onclick = function(){
-                sidebar.classList.toggle("active");
-            }
-
-        </script>
-
+<!-- -------------------------------------JAVASCRIPT--------------------------------------------- -->
+        <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
+        <script src = "javascript_folder/logout_&_sidebar.js"></script>
 </body>
 </html>

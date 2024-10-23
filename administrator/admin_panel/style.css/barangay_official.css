@@ -21,7 +21,7 @@
     --2nd-text-color: rgb(53, 53, 53);
     --3rd-text-color: #FCFAEE;
    
-    --btn-color: #F5E402;
+    --btn-color: #d4b62f;
 
     --other-color :rgb(0, 183, 255);
 }
@@ -34,7 +34,7 @@
     margin-right: 20px;
    
 }
-.main_content form #create_btn{
+.main_content  #create_btn{
     border: none;
     border-radius: 4px;
     padding: 15px;
@@ -45,31 +45,9 @@
     width: 60px;
     transition: all 0.5s ease;
 }
-.sidebar.active ~ .dashboard_content .main_content form #create_btn{
+.sidebar.active ~ .dashboard_content .main_content  #create_btn{
     margin-left: -220px;
 }
-#form_add_official{
-   max-height: 700px;
-   width: 30vw;
-   position: absolute;
-   background-color: #e3e3e3;
-   top:40px;
-   padding: 20px;
-   left: 25%;
-   border-radius: 4px;
-   box-shadow: 10px 10px 10px rgba(201, 201, 201, 0.479) ;
-   margin-bottom: 20px;
-   animation-name: down;
-   animation-duration: 1s;
-   display: none;
-}
-@keyframes down {
-    from {top:-50px;
-        opacity: 10%;
-    }
-    to {opacity: 100%;}
-  }
-
   #pop_success{
     animation-name: validation;
     animation-duration: 1s;
@@ -98,10 +76,10 @@
   .dashboard_content #pop_success p{
     color: var(--bg-color);
     font-size: 16px;
-    margin-top:-25px;
+    margin-top:0px;
     font-weight: 400;
     padding: 20px;
-    margin-left: -190px;
+    margin-left: 0px;
     font-family: "sub_text";
  }
 .closebtn{
@@ -120,8 +98,58 @@
     color: rgba(248, 248, 248, 0.966);
   }
 
-
-
+/* ----------------CRUD BUTTON Style------------------------------------- */
+  /* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: scroll; /* Enable scroll if needed */
+    background-color: rgb(153, 0, 0); /* Fallback color */
+    background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
+    animation-name: background ;
+    animation-duration: 0.7s; 
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgb(235, 235, 235);
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    animation-name: down ;
+    animation-duration: 0.7s; 
+    border-radius: 8px;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @keyframes background {
+    from {
+        opacity: 10%;
+    }
+    to {opacity: 100%;}
+  }
+  @keyframes down {
+    from {
+        margin-top: -20%;
+    }
+    to {opacity: 100%;}
+  }
 
   /*-------------------------  TABLE STYLE ------------------------------------*/ 
 
@@ -168,39 +196,43 @@ caption {
     background-color: var(--2nd-bg-color);
     padding-bottom: 10px;
     padding-top: 10px;
-    color: azure;
+    color: var(--bg-color);
     border-radius: 4px;
     
 }
-#update_btn{
-    background-color: rgb(0, 183, 255);
-    cursor: pointer;
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
+#form_up_del_official{
+   display: flex;
+   justify-content:space-evenly ;
+   align-items: center;
+}
+#update_official_btn{
     color: var(--bg-color);
+    cursor: pointer;
+    padding: 3px 5px 3px 5px;
+    background-color: var(--other-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
 }
-#update_btn:hover{
-    background-color: rgb(92, 209, 255);
-    color: #005720;
+#update_official_btn:hover{
+    background-color: rgb(150, 202, 250);
+    color: var(--1st-text-color);
 }
-#update_btn:focus{
-    background-color: rgb(92, 209, 255);
-}
-#delete_btn{
+#delete_official_btn{
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 3px 5px 3px 5px;
     background-color: red;
-    cursor: pointer;
-    padding: 5px;
-    border: none;
     border-radius: 4px;
-    color: var(--bg-color);
+    border: 1px solid rgb(197, 197, 197);
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
 }
-#delete_btn:hover{
-    background-color: rgb(247, 108, 108);
-    color: #005720;
-}
-#delete_btn:focus{
-    background-color: rgb(247, 108, 108);
+#delete_official_btn:hover{
+    background-color: rgb(252, 134, 134);
+    color: var(--1st-text-color);
 }
 
 
@@ -217,6 +249,7 @@ caption {
     border-radius: 4px;
     color:var(--1st-text-color);
     outline: none;
+    
 }
 #live_search:focus{
    outline: 3px solid var(--2nd-bg-color);
