@@ -8,14 +8,7 @@
       <title>Document</title>
 
       <style>
-            @font-face {
-    font-family: "main_text";
-    src: url("../../../asset/font/Syncopate/Syncopate-Regular.ttf");
-    }
-        @font-face {
-    font-family: "sub_text";
-    src: url("../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf");
-        }
+    
         body{}
       .form{
         color:#005720;
@@ -31,7 +24,7 @@
         label{
             font-size:1.2rem;
         }
-         #input{
+         #fullname{
             width: 100%;
             height:30px;
             padding-left:10px;
@@ -44,7 +37,7 @@
         input:focus{
           outline: 3px solid var(--2nd-bg-color);
         }
-        #chairman{
+        #position, #term_start, #term_end, #status,#chairmanship{
             width: 100%;
             height:30px;
             padding-left:10px;
@@ -65,7 +58,7 @@
           justify-content:space-evenly;
           align-items:center;
         }
-        #create{
+        #update-btn{
             background:#4A9D4f;
             width: 10vw;    
             margin-top:20px;
@@ -102,25 +95,25 @@
         <!-- display pop up add official -->
         
 
-        <h1>Add Official</h1>
+        <h1>Edit Official</h1>
        
 
-         <form action='../admin_panel/brgy_official.php' class = "form" method = "post">
+         <form id="edit-form" class = "form" method = "POST" action = "/BIS/administrator/admin_panel/brgy_official_folder/update.php">
           
         <label>Fullname</label><br>
-        <input type = 'text' name = 'fullname' id = "input" placeholder = "Ex. Juan Dela Cruz" required><br>
+        <input type = 'text' name = 'fullname' id = "fullname" placeholder = "Ex. Juan Dela Cruz" required><br>
 
          <label>Chairmanship</label><br>
-        <select id='chairman' name=chairman >
+        <select id='chairmanship' name=chairman >
           <option value= 'Chairmanship'>Chairmanship</option>
           <option value= 'Kagawad'>Kagawad</option>
-          <option value= 'SK Chairman'>SK Chairman</option>
+          <option value= 'SK chairman'>SK Chairman</option>
           <option value= 'SK kagawad'>SK Kagawad</option>
         </select><br>
 
 
         <label>Position</label><br>
-        <select id='chairman' name='position'>
+        <select id='position' name='position'>
           <option value= 'Chairman'>Chairman</option>
           <option value= 'Commnittee on Peace & Order'>Commnittee on Peace & Order</option>
           <option value= 'Commnittee on Education'>Commnittee on Education</option>
@@ -138,20 +131,23 @@
 
 
          <label>Term Start</label><br>
-        <input type = 'date' name = 'date_start' min = '2020-12-31' max = '2040-12-31' id = "input"><br>
+        <input type = 'date' name = 'date_start' min = '2020-12-31' max = '2040-12-31' id = "term_start"><br>
 
          <label>Term End</label><br>
-        <input type = 'date' name = 'date_end' min = '2020-12-31' max = '2040-12-31'id = "input"><br>
+        <input type = 'date' name = 'date_end' min = '2020-12-31' max = '2040-12-31'id = "term_end"><br>
 
 
          <label>Status</label><br>
-        <select id='chairman' name=active>
+        <select id='status' name=active required>
           <option value= 1>Active</option>
           <option value= 0>Inactive</option>
         </select><br>
 
+
+        <input type="hidden" id = "id" name = "id">
+
        <div class = "btn_form_reset_sub">
-        <input type="submit" value = "Create" name = "create_submit" id = "create" >
+        <input type="Submit" id="update-btn" value = "Update" name = "update_official_list">
         <input type = "reset" value = "Reset" id = "reset">
        </div>
        

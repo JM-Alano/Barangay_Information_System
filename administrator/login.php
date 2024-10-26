@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "index_login.css"/>
+    <link rel = "stylesheet" href = "login_index.css"/>
 </head>
 <body>
     <header class = "header">
