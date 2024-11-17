@@ -48,20 +48,21 @@
                                 <td><?php echo $position; ?></td>
                                 <td><?php echo $term_start; ?></td>
                                 <td><?php echo $term_end; ?></td>
-                                <td><?php $status;
+                                <td  style = 'color:blue;'><?php
+                                    
                                     if($status == 1){
                                       echo "<p style = 'color:blue;'>Active</p>";
                                     }else{
-                                        echo "<p style = 'color:red;'>Inactive</p>";
-                                    };
+                                        echo "<p style = 'color:red;'>Incative</p>";
+                                    }
                                 
                                 ?></td>
                             
                                 <td>
                                     <div id = "form_up_del_official">
                                       
-                                        <button  id = "update_official_btn" class = "update_btn" data-id= <?php echo $row ["id"] ?>>Update</button>
-                                        <button id = "delete_official_btn" class = "delete_btn" data-id= <?php echo $row ["id"] ?>>Delete </button>
+                                        <button  id = "update_official_btn" class = "update_btn" data-id= <?php echo $row ["id"] ?>>Edit</button>
+                                        <button id = "delete_official_btn" class = "delete_btn" data-id= <?php echo $row ["id"] ?>>Del</button>
                                     </div>
                                     
                                 </td>

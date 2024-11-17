@@ -43,7 +43,7 @@ html {
     
 }
 #main .display_info{
-    height: 70vh;
+    height: max-content;
     width: 30vw;
     background-color: #E3E3E3;
     transition: all 0.5s ease;
@@ -52,6 +52,8 @@ html {
     justify-content: center;
     align-items: center;
     padding: 0px 10px 50px 10px;
+    font-size: small;
+    padding-bottom: 80px;
     
     
 }
@@ -59,8 +61,8 @@ html {
     width: 40vw;
 }
 .sidebar.active ~ .dashboard_content #main{
-    width: 87vw;
-    margin-left: -100px;
+    width: 90vw;
+    margin-left: -160px;
 }
 #main .setting {
     background-color: #e3e3e3;
@@ -70,7 +72,13 @@ html {
     font-weight: 700;
     border-radius: 4px;
     color: var(--1st-text-color);
-   
+    animation-name: opacity;
+    animation-duration: 2s ease;
+    
+}
+@keyframes opacity{
+    from{opacity: 0;}
+    to {opacity: 1;}
 }
 #main .setting h1{
     font-weight: 400;
@@ -109,4 +117,21 @@ html {
 }
 #main .setting form #UPDATE:focus{
     outline: none;
+}
+#main .setting form #file_upload{
+    position: absolute;
+    left: 150px;
+    top: 270px;
+    width: 15vw;
+    background-color: transparent;
+    padding: 5px;
+    height: 15px;
+    font-size: 0.6rem;
+    transition: all 0.5 ease;
+    border: 2px solid #4a9d5052;
+    border-radius: 5px;
+}
+.sidebar.active ~ .dashboard_content #main .setting form #file_upload{
+    left: 40px;
+    width: 15vw;
 }

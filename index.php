@@ -1,4 +1,10 @@
+<?php
+    
+    
+    
 
+    require('select_data_db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page | Barangayy Information System</title>
     <link rel = "stylesheet" href = "index.css"/>
+    <link rel = "stylesheet" href = "Responsive.css"/>
 
 </head>
-<body>
+<body>  
+        
+
         <header class = "header">
             <div class = "social_logo">
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
@@ -17,30 +26,36 @@
            
             </div>
             <div class = "btn_e-barangay">
-                <a href=""><button>E-BARANGAY CERTIFICATION</button></a>
+                <a href="form_request/form_request.php"><button>E-BARANGAY CERTIFICATION</button></a>
             </div>
         </header>
         
         <nav class = "nav">
             <div class = "logo">
-                <img src="asset/image/logo/New Project.png" alt="">
+                <img src="asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo">
             </div>
             <div class = "headings">
-                <h1>BARANGAY PALIPARAN II</h1><br>
-                <h3>CITY OF DASMARIÑAS</h3>
+                <h1>BARANGAY <span id = "barangay_name">PALIPARAN II</span> </h1><br>
+                <h3>CITY OF <span id = "municipality">DASMARIÑAS</span></h3>
             </div>
+            
             <div class = "nav_">
                 <a href="#home">Home</a>
                 <a href="#footer">About</a>
                 <a href="#official">Officer</a>
                 <a href="#hotlines">Hotlines</a>
                 <a href="#services">Services</a>
+              
             </div>
-        </nav>
+            <div class = "humber_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
 
+        </nav>
+       
         <section id = "home">
             <img src="asset/image/background/bg.jpg" alt="">
-            <h1><span >WELCOME TO</span> <br> <span style = "color:#F5E402;">BARANGAY PALIPARAN</span></h1>
+            <h1><span >WELCOME TO</span> <br> <span style = "color:#F5E402;">BARANGAY <span id = "barangay_name-2nd">PALIPARAN</span> </span></h1>
         </section>
 
   
@@ -194,7 +209,7 @@
             <div class = "item1_footer">
                 <h1>ABOUT</h1>
                 <div class = "div_img">
-                    <img src="asset/image/logo/New Project.png" alt="">
+                <img src="asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo-about">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores similique hic enim odit sed error cumque, maiores suscipit inventor</p>
                 </div>
             </div>
@@ -207,6 +222,15 @@
             </div>
         </footer>
 
-   
+        <script>
+                let logo = document.getElementById("logo_get").textContent;
+                let barangay_name = document.getElementById("barangay_get").textContent;
+                let municipality = document.getElementById("municipality_get").textContent;
+                document.getElementById("municipality").innerHTML =  municipality;
+                document.getElementById("barangay_name").innerHTML =  barangay_name;
+                document.getElementById("barangay_name-2nd").innerHTML =  barangay_name;
+                document.getElementById("logo").src =  logo;
+                document.getElementById("logo-about").src =  logo;
+        </script>
 </body>
 </html>

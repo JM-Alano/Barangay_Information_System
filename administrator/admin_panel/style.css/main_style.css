@@ -146,6 +146,7 @@ body{
     height: 35px;
     width: 115px;
     font-size: medium;
+    display: none;
 }
 .sidebar ul li:hover .tooltip{
     top:50%;
@@ -271,7 +272,7 @@ body{
 .dashboard_content .text{
     font-size: 16px;
     font-weight: 500;
-    color: var(--bg-color);
+    color: #F5E402;
     margin: 20px 0px 0px 40px;
     font-family: "main_text";
     font-weight: 700;
@@ -281,7 +282,8 @@ body{
     margin-top: 3px;
     width: 75vw;
     border-radius: 6px;
-    color: var(--btn-color);
+    letter-spacing: 2px;
+    
 }
 .dashboard_content img {
     width: 50%;

@@ -1,7 +1,7 @@
 <?php
     require("../database/conn_db.php");
 
-    session_start();
+   
 
     if ($_SESSION['status'] == 'invalid' || empty($_SESSION['status'])){
         // set default session invalid

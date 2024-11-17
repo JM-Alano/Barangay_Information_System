@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barangay Infromation | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "style.css/main_template.css"/>
+    <link rel = "stylesheet" href = "style.css/main_style.css"/>
     <link rel = "stylesheet" href = "style.css/barangay_info.css"/>
 </head>
 <body>
@@ -17,7 +17,7 @@
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">
-                <img src="../../asset/image/logo/New Project.png" alt="">
+                <img src="../../asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo">
                 <div class = "logo_name">BIS</div>
             </div>
             <span id = "btn_menu">
@@ -45,21 +45,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM609.3 512l-137.8 0c5.4-9.4 8.6-20.3 8.6-32l0-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2l61.4 0C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg><span class = "link_name">Barangay Official</span></a>
                         <span class = "tooltip">Brgy. Official</span>
                     </li>
-                    <li>
-                        <a href="household.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c.2 35.5-28.5 64.3-64 64.3l-320.4 0c-35.3 0-64-28.7-64-64l0-160.4-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16l192 0c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80l-64 0z"/></svg><span class = "link_name">Household</span></a>
-                        <span class = "tooltip">Household</span>
-                    </li>
+                  
                     <li>
                         <a href="resident.php">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z"/></svg><span class = "link_name">Resident</span></a>
                         <span class = "tooltip">Resident</span>
                     </li>
-                    <li>
-                        <a href="voters.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM625 177L497 305c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L591 143c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg><span class = "link_name">Voters</span></a>
-                        <span class = "tooltip">Voters</span>
-                    </li>
+                    
                     <li>
                         <a href="blotter.php">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg><span class = "link_name">Blotter</span></a>
@@ -95,20 +87,13 @@
         <div class = "dashboard_content">
             <div class = "text">BARANGAY INFROMATION</div>
 
-            <div id = "validation_update">
-           
-                <p>
-                    <?php
-                        include("brgy_info_folder/update.php");
-                    ?>
-                </p>
-            </div>
+         
             <main id = "main">
 
                 
-            <div class = "display_info">    
-                    <img src="../../asset/image/logo/New Project.png" alt="">
+            <div class = "display_info">
                     <?php include("brgy_info_folder/select_db.php");?>
+            
             </div>
 
 
@@ -117,31 +102,52 @@
             
             
            
-            <form action="brgy_info.php" method = "POST" >
+            <form action="/BIS/administrator/admin_panel/brgy_info_folder/update.php" method = "POST" enctype = "multipart/form-data">
+                    <input type="file" name = "image" id = "file_upload" accept = ".jpg, .jpeg, .png"  id = "image">
                     <label for="" style = "margin-right:35px;" >Barangay</label>
-                    <input type="text" name = "brgy" placeholder = "Ex. Paliparan II"><br>
+                    <input type="text" id="barangay_name" name = "brgy" placeholder = "Ex. Paliparan II"><br>
 
                     <label for="" style = "margin-right:20px;">Municipality</label>
-                    <input type="text" name = "municipal" placeholder = "Ex. Dasmariñas"><br>
+                    <input type="text" id = "municipal"  name = "municipal" placeholder = "Ex. Dasmariñas"><br>
 
                     <label for="" style = "margin-right:45px;">Address</label>
-                    <input type="text" name = "address" placeholder = "Ex. Address"><br>
+                    <input type="text" id = "address" name = "address" placeholder = "Ex. Address"><br>
 
-                   
+                    <label for="" style = "margin-right:35px;">Phone No.</label>
+                    <input type="tel" id = "phone_no" name = "phone" placeholder = "Ex.09123456789" pattern="[0-9]{11}"><br>
 
                     <label for="" style = "margin-right:10px;">Email Address</label>
-                    <input type="email" name = "email"  placeholder = "Ex. Juan_dela_cruz@gmail.com"><br>
+                    <input type="email" id = "email" name = "email"  placeholder = "Ex. Juan_dela_cruz@gmail.com"><br>
 
                     <input type="submit" id = "UPDATE" name = "update" value = "UPDATE">
                 </form>
             </div>
        </main>
-        
-        
+      
         </div>
-
+        
 <!-- -------------------------------------JAVASCRIPT--------------------------------------------- -->
         <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
         <script src = "javascript_folder/logout_&_sidebar.js"></script>
+
+        <script>
+        let barangay_name = document.getElementById("barangay_name_get").textContent;
+        let municipality = document.getElementById("municipality_get").textContent;
+        let address= document.getElementById("address_get").textContent;
+        let phone_no = document.getElementById("phone_no_get").textContent;
+        let email = document.getElementById("email_get").textContent;
+        let logo = document.getElementById("image_get").textContent;
+       
+        
+        document.getElementById("barangay_name").value = barangay_name ;
+        document.getElementById("municipal").value = municipality;
+        document.getElementById("address").value = address;
+        document.getElementById("phone_no").value = phone_no;
+        document.getElementById("email").value =  email;
+        document.getElementById("images").src =  logo;
+        document.getElementById("logo").src =  logo;
+        
+        
+    </script>
 </body>
 </html>

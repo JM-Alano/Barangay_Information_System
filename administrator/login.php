@@ -1,6 +1,8 @@
 
 
-
+    <?php
+        session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 </head>
 <body>
     <header class = "header">
-            <img src="../asset/image/logo/New Project.png" alt="">
+            <img src="../asset/image/logo/6736e31f2c7d1.png" alt="">
 
             <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">INFORMATION SYSTEM</span></h1>
     </header>

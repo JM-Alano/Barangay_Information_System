@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +11,43 @@
 </head>
 
    <style>
-        h2{
-            color:#005720;
-            margin-top:0px;
-            font-family:"sub_text";
-            text-align:center;
-            
-        }
+    @font-face {
+    font-family: "main_text";
+   src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
+   }
+   @font-face {
+       font-family: "sub_text";
+       src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+   }
+   *{
+       margin: 0px;
+       padding: 0px;
+       box-sizing: content-box;
+       list-style-type: none ;
+   }
+    .div-main{
+        display:flex;
+        color:#005720;
+        font-size:0.7rem;
+        justfy-content:space-between;
+        margin-top:60px;
+        width: 100%;
+        line-height:50px;
+        font-family:"sub_text";
+    }
+    .div-main .div-1{
+        padding: 0px 0px 0px 10px;
+        
+    }
+    .div-main .div-2{
+        padding: 0px 0px 0px 10px;
+    }
+    #images{
+        width: 170px;
+        height:180px;
+        margin-top:15px;
+        
+    }
    </style>
 <body>
     <?php
@@ -21,20 +55,47 @@
     require("../../database/conn_db.php");
 
 
-    $sql = "SELECT barangay_name, municipality, address, email FROM barangay_information";
+    $sql = "SELECT * FROM barangay_information";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0){
         
-       $row = mysqli_fetch_assoc($result);
+       $row = mysqli_fetch_array($result);
+       $_SESSION['logo'] = $row['logo'];
+        ?>
+          <img src="../../asset/image/logo/<?php echo  $row['logo']?>" alt="" id ="images">
+          <div class = "div-main">
+                    <div class = "div-1">
+                        <h2>Barangay name :</h2>
+                        <h2>Municipality :</h2>
+                        <h2>Address :</h2>
+                        <h2>Phone no :</h2>
+                        <h2>Email :</h2>
+                        
+                    </div>
+                    <div class = "div-2">
+                    <h2 class = "h2" id = "barangay_name_get"><?php echo  $row['barangay_name']?></h2>
+                    <h2 id = "municipality_get"><?php echo $row['municipality']?></h2></span>
+                    <h2 id = "address_get"><?php echo  $row['address']?></h2>
+                    <h2 id = "phone_no_get"><?php echo   $row['phone_no']?></h2>
+                    <h2 id = "email_get"><?php echo   $row['email']?></h2>
+                    <p hidden  id = "image_get">../../asset/image/logo/<?php echo   $_SESSION['logo'] ?></p>
+                    
+                    </div>
+         </div>
 
-        echo  '<h2>' . "Barangay  : " .  $row['barangay_name'] . '</h2>';
-        echo '<h2>' . "Municipality : " .  $row['municipality'] . '</h2>';
-        echo '<h2>' . "Address : " .  $row['address'] . '</h2>';
-        echo '<h2>'  . "Email : ".  $row['email'] . '</h2>';
+
+           
+        <?php
 
     }
+   
     ?>
+
+
+
+
+
 </body>
 </html>
 

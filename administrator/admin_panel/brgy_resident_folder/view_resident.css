@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "main_text";
+   src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
+   }
+   @font-face {
+       font-family: "sub_text";
+       src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+   }
+   *{
+       margin: 0px;
+       padding: 0px;
+       box-sizing: content-box;
+       list-style-type: none ;
+   }
+   :root{
+       --bg-color: #FCFAEE;
+       --2nd-bg-color:#4A9D4f;
+       --sub-bg-color: #005720 ;
+   
+       --1st-text-color: #005720 ;
+       --2nd-text-color: rgb(53, 53, 53);
+       --3rd-text-color: #FCFAEE;
+   
+       --btn-color: #d4b62f;
+
+       --other-color :rgb(0, 183, 255);
+   }
+   body{
+    background-color: var(--bg-color);
+   }
+   .header-div{
+    background-color: var(--2nd-bg-color);
+    padding: 20px 20px 20px 80px;
+    color: var(--btn-color);
+    border-radius: 20px;
+    margin: 4px;
+    font-family: "sub_text";
+   }
+   hr{
+    background-color: var(--bg-color);
+    
+   }
+   .main-div{
+    background-color: rgb(235, 235, 235);
+    margin: 1in;
+    font-family: "sub_text";
+    border-radius: 2px;
+    box-shadow: 10px 10px 50px rgba(128, 128, 128, 0.226);
+    height: max-content;
+   }
+   .main-div .div-main-1 {
+    padding: 10px 10px 10px 40px;
+    
+    color: var(--1st-text-color);
+   }
+   .heading{
+    text-align: center;
+    margin-top: 30px;
+    color: #303a34ce;
+   }
+   .heading h3{
+    font-size: 1.5rem;
+   }
+   .heading h3 i{
+    font-size: 1rem;
+   }
+    h2{
+    font-size: 2rem;
+    margin-top: 20px;
+   }
+   .heading hr{
+    width: 70vw;
+    margin-left: 1in;
+    margin-top: 20px;
+   }
+   #section{
+    color: #303a34ce;
+   }
+   #section img{
+    width: 300px;
+    height: 400px;
+   }
+   #section .info_div{
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+   }
+   #section .info_div .item1{
+        font-size: 1.2rem;
+        padding: 20px;
+        margin-bottom: 0.75in;
+        margin-left: 100px;
+   }
+   #section .info_div .item1 h2{
+    line-height: 35px;
+    font-size: large;
+}
+   #section .info_div .item2{
+   
+    margin-right: 0px;
+    padding: 50px 20px 20px 50px;
+    width: 100vw;
+    margin-bottom: 0.75in;
+    margin-right: 1in;
+    height: fit-content;
+    font-size: 1.3rem;
+}
+#section .info_div .item2 h1{
+    padding-top: 70px;
+}
+#section .info_div .item2 .item2-about{
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+}
+#section .info_div .item2 .item2-about div{
+    width: 100%;
+    padding-top: 10%;
+}
+ 
+ 
