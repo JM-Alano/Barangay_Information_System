@@ -1,8 +1,8 @@
       // Get the modal
-      var modal_delete = document.getElementById("delete-modal");
-      var deleteBtns = document.querySelectorAll(".delete_btn");
-      var confirmDeleteBtn = document.getElementById("confirm-delete");
-      var cancelDeleteBtn = document.getElementById("cancel-delete");
+      let modal_delete = document.getElementById("delete-modal");
+      let deleteBtns = document.querySelectorAll(".delete_btn");
+      let confirmDeleteBtn = document.getElementById("confirm-delete");
+      let cancelDeleteBtn = document.getElementById("cancel-delete");
    
       deleteBtns.forEach(function(btn) {
           btn.addEventListener("click", function() {

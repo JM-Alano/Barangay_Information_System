@@ -222,7 +222,7 @@
     </header>
     <main class = "main_container">
         <div class = "img-profile-resident">
-            <img src="../../../asset/image/official/images.png" alt="">
+            <img src="../../../asset/image/resident_profile/images.png" alt="">
         </div>
         <form action="/BIS/administrator/admin_panel/brgy_resident_folder/create.php" method = "post" enctype = "multipart/form-data">
             <div class = "item1">
@@ -291,9 +291,6 @@
                 <select name="gender" id="gender" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
-                    <option value="Transgender">Transgender</option>
-                    <option value="Gender Neutral">Gender Neutral</option>
-                    <option value="Other">Other</option>
                 </select>
             </div>
             <div class = "item-form">

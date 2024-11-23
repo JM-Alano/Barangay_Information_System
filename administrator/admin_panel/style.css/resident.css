@@ -34,6 +34,11 @@
     margin-right: 20px;
    
 }
+body{
+  background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .main_content  #create_btn{
     border: none;
     border-radius: 4px;
@@ -43,8 +48,8 @@
     cursor: pointer;
     margin-top: 30px;
     width: max-content;
-    letter-spacing: 2px;
     transition: all 0.5s ease;
+    letter-spacing: 2px;
 }
 .sidebar.active ~ .dashboard_content .main_content  #create_btn{
     margin-left: -220px;
@@ -114,6 +119,7 @@
     background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
     animation-name: background ;
     animation-duration: 0.7s; 
+    display: block;
   }
   /* Modal Content/Box */
   .modal-content {
@@ -125,6 +131,7 @@
     animation-name: down ;
     animation-duration: 0.7s; 
     border-radius: 8px;
+    
   }
   .close {
     color: #aaa;
@@ -213,7 +220,7 @@
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width:100%; /* Full width */
     height: 100%; /* Full height */
     overflow-y: scroll; /* Enable scroll if needed */
     background-color: rgb(153, 0, 0); /* Fallback color */
@@ -223,11 +230,11 @@
     display: none;
   }
 .edit-modal-content{
-    background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235);
     margin: 2% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Could be more or less, depending on screen size */
     animation-name: down ;
     animation-duration: 0.7s; 
     border-radius: 8px;
@@ -258,6 +265,30 @@
     }
     to {opacity: 100%;}
   }
+  .view-modal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: scroll; /* Enable scroll if needed */
+    background-color: rgb(153, 0, 0); /* Fallback color */
+    background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
+    animation-name: background ;
+    animation-duration: 0.7s; 
+   display: none;
+  }
+.view-modal-content{
+    background-color: rgb(235, 235, 235);
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    animation-name: down ;
+    animation-duration: 0.7s; 
+    border-radius: 8px;
+}
 
   /*-------------------------  TABLE STYLE ------------------------------------*/ 
 
@@ -272,7 +303,6 @@ table{
     transition: all 0.5s ease;
     border-radius:4px;
     font-family: "sub_text";
-    text-align: center;
     color: var(--1st-text-color);
     
   
@@ -283,8 +313,14 @@ table{
     margin-left: -180px;
 }
 table td{
-    padding: 12px;
-    
+  padding: 5px;
+    text-align: center;
+}
+table .img img{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--btn-color);
 }
 table th{
     border: 2px solid rgba(226, 226, 226, 0.562);
@@ -341,6 +377,21 @@ caption {
 #delete_official_btn:hover{
     background-color: rgb(252, 134, 134);
     color: var(--1st-text-color);
+}
+#view_resident_btn{
+  color: var(--bg-color);
+  cursor: pointer;
+  padding: 3px 5px 3px 5px;
+  background-color: #d4b62f;
+  border-radius: 4px;
+  border: 1px solid rgb(197, 197, 197);
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+}
+#view_resident_btn:hover{
+  background-color: #f8de6c;
+  color: var(--1st-text-color);
 }
 
 

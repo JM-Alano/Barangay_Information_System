@@ -29,12 +29,57 @@ html {
     --other-color :rgb(0, 183, 255);
 }
 #selected{
+    
     background-color: var(--bg-color);
     color: var(--1st-text-color);
     font-weight: 600;
 }
 #selected svg{
     fill: #d4c603;
+
+}
+#selected .svg_arrow{
+    fill: #d4c603;
+    position: relative;
+    left: 60px;
+    top: 2px;
+    transform: rotate(0deg);
+   
+}
+
+.nav_list .sub_certification_folder {
+    padding: 10px 5px 10px 50px;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.nav_list .sub_certification_folder #manage {
+    padding: 5px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-align: "sub_text";
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: var(--bg-color);
+    cursor: pointer;
+   
+}
+.nav_list .sub_certification_folder #requested {
+    padding: 5px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    text-align: "sub_text";
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--bg-color);
+   
+}
+
+.nav_list .sub_certification_folder #requested:hover,.nav_list .sub_certification_folder #manage:hover{
+    color: var(--btn-color);
 }
 body{
     background-color: var(--bg-color);
@@ -43,7 +88,9 @@ body{
     width: 100%;
     overflow: scroll;
     overflow-x: hidden;
+    
 }
+
 .sidebar{
     height: 100vh;
     width: 240px;
@@ -53,16 +100,21 @@ body{
     background-color: #005720;
     padding: 6px 14px;
     transition: all 0.5s ease;
-
+    
 }
 .sidebar.active{
    width: 20px;
 }
+
 .nav_list h3{
     font-family: "main_text";
     color: var(--bg-color);
     font-size: 0.7rem;
     padding-bottom: 10px;
+    
+}
+.nav_list {
+    margin-bottom: 100px;
 }
 .sidebar.active .nav_list h3{
     display: none;
@@ -185,6 +237,14 @@ body{
   height: 16px;
   min-width: 50px;
   fill: #dddddda9;
+  
+ }
+ .sidebar ul li a .svg_arrow{
+    fill: #dddddda9;
+    position: relative;
+    left: 60px;
+    top: 2px;
+    transform: rotate(90deg);
  }
  .sidebar.active ul li a svg{
     margin-left: -25px;
@@ -283,6 +343,66 @@ body{
     width: 75vw;
     border-radius: 6px;
     letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.5rem;
+}
+
+.dashboard_content .text .setting{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.dashboard_content .text .setting  .dropdown-content{
+    background-color: rgba(235, 235, 235, 0.904);
+    width: 20%;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    padding: 20px 10px 20px 20px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgba(54, 54, 54, 0.253);
+    display: none;
+    cursor: default;
+    z-index: 99;
+    
+}
+.dashboard_content .text .setting  .dropdown-content a{
+
+    display: block;
+    line-height: 40px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: "sub_text";
+    color: #134629;
+    width: max-content;
+    margin-top: 5px;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard_content .text .setting  .dropdown-content a svg{
+    width: 20px;
+    
+    margin-right: 10PX;
+}
+
+.dashboard_content .text .svg:hover .dropdown-content{
+    display: block;
+}
+.dashboard_content .text .setting img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.dashboard_content .text .setting .svg{
+    width: 24px;
+    fill: #F5E402 ;
+    cursor: pointer;
     
 }
 .dashboard_content img {
@@ -290,6 +410,9 @@ body{
     height: 200px;
     margin-left: 25%;
 
+}
+.sidebar.active ~ .dashboard_content .text .setting{
+    margin-right: 130px;
 }
 .sidebar.active ~ .dashboard_content .text{
     margin-left: -180px;

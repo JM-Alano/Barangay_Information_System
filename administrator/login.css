@@ -117,6 +117,7 @@ body{
     background-color: var(--1st-text-color);
     padding: 50px;
     box-shadow: 10px 20px 10px #5858585e;
+    border-radius: 4px;
     
 }
 #main h1{
@@ -124,7 +125,7 @@ body{
     font-family: "main_text";
     color: var(--bg-color);
     text-align: center;
-    
+    border-radius: 2px;
 }
 #main form div{
     width: fit-content;

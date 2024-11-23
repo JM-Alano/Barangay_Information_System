@@ -15,7 +15,7 @@
         padding:10px;
         font-family:"sub_text";
       }
-        h1{
+        .h1_div{
           color:#005720;
           padding-bottom:0px;
           font-size:1.5rem;
@@ -95,7 +95,7 @@
         <!-- display pop up add official -->
         
 
-        <h1>Edit Official</h1>
+        <h1 class = "h1_div">Edit Official</h1>
        
 
          <form id="edit-form" class = "form" method = "POST" action = "/BIS/administrator/admin_panel/brgy_official_folder/update.php">

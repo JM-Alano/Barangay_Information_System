@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Table</title>
-    <link rel = "stylesheet" href = "table_style.css" />
+    <link rel = "stylesheet" href = "table_sle.css" />
 </head>
 <body>
                         
         
 
             <?php require("../../database/conn_db.php");
-
+             
+       
             $sql = "SELECT * FROM barangay_resident LIMIT 10";
             $result = $conn->query($sql);
 
@@ -96,6 +97,7 @@
 
 
                                     <div id = "form_up_del_official">
+                                       
                                         <form action="/BIS/administrator/admin_panel/brgy_resident_folder/view.php" method = "post">
                                             <input type="submit" value = view  id = "view_resident_btn" class = "view_btn" name = "view">
                                             <input type="hidden" value = <?php echo $row ["id"] ?> name = "id_view" >
@@ -150,7 +152,7 @@
                </div>
           
             <!-- UPDATE MODAL FUNCTION JS -->
-            <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/update_modal_button.js"></script>\
+            <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/update_modal_button.js"></script>
 
                
                <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/view_model.js"></script>

@@ -294,9 +294,6 @@
                         <select name="gender" id="gender" required>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                            <option value="Transgender">Transgender</option>
-                            <option value="Gender Neutral">Gender Neutral</option>
-                            <option value="Other">Other</option>
                         </select>
                         </div>
                     </div>

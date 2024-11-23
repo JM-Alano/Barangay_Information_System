@@ -22,7 +22,7 @@
         padding:10px;
         font-family:"sub_text";
       }
-        h1{
+        .h1_text{
           color:#005720;
           padding-bottom:0px;
           font-size:1.5rem;
@@ -102,7 +102,7 @@
         <!-- display pop up add official -->
         
 
-        <h1>Add Official</h1>
+        <h1 class = "h1_text">Add Official</h1>
        
 
          <form action='../admin_panel/brgy_official.php' class = "form" method = "post">

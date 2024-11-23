@@ -28,110 +28,122 @@ html {
     
     --other-color :rgb(0, 183, 255);
 }
+body{
+    background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 #main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    margin-left: 40px;
+    padding: 0px 0px 100px 0px ;
+}
+#main form{
     display: flex;
     justify-content: space-evenly;
-    background-color:var(--2nd-bg-color);
-    width: 77vw;
-    margin-left: 40px;
-    padding: 20px 5px 20px 5px;
-    margin-top: 20px;
     transition: all 0.5s ease;
-    z-index: -999;
-    border-radius: 6px;
-   
-    
+
 }
-#main .display_info{
-    height: max-content;
-    width: 30vw;
-    background-color: #E3E3E3;
-    transition: all 0.5s ease;
+.sidebar.active ~ .dashboard_content #main form{
+    margin-left: -220px;
+}
+#main form .display_info{
+    background-color: rgb(235, 235, 235);
+    box-shadow: 10px 10px 10px rgba(70, 70, 70, 0.13);
+    padding: 70px 40px 40px 60px;
     border-radius: 4px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 10px 50px 10px;
-    font-size: small;
-    padding-bottom: 80px;
+}
+.sidebar.active ~ .display_info{
+    width: 200px;
+}
+#main form .display_info .div-main{
+    font-size: 0.8rem;
+}
+.div-main{
+    display:flex;
+    color:#005720;
+    font-size:0.8rem;
+    justfy-content:space-between;
+    margin-top:60px;
+    width: 100%;
+    line-height:60px;
+    font-family:"sub_text";
+    margin-top: 100px;
+}
+.div-main .div-1{
+    padding: 0px 0px 0px 10px;
     
+}
+.div-main .div-2{
+    padding: 0px 0px 0px 10px;
+}
+#main form .display_info #images{
+    width: 200px;
+    height: 200px;
+    margin-top: -40px;
+    margin-bottom: -10px;
+}
+#main form .display_info .image{
     
+    position: relative;
+    bottom: 390px;
+    left: 80px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid #4a9d50bd;
 }
-.sidebar.active ~ .dashboard_content #main .display_info{
-    width: 40vw;
+#main form .form_info__update input{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    color: var(--1st-text-color);
 }
-.sidebar.active ~ .dashboard_content #main{
-    width: 90vw;
-    margin-left: -160px;
+#main form .form_info__update input:focus{
+    outline: var(--2nd-bg-color) 3px solid;
 }
-#main .setting {
-    background-color: #e3e3e3;
-    padding: 40px;
+#main form .form_info__update label{
     font-family: "sub_text";
+    font-size: 1.2rem;
     color: var(--1st-text-color);
-    font-weight: 700;
-    border-radius: 4px;
-    color: var(--1st-text-color);
-    animation-name: opacity;
-    animation-duration: 2s ease;
+    font-weight: 600;
     
 }
-@keyframes opacity{
-    from{opacity: 0;}
-    to {opacity: 1;}
+   #main form .display_info .image{
+    margin-top: 20px;
+   }
+#main form .form_info__update{
+ background-color: rgb(235, 235, 235);
+ padding: 40px 40px 40px 40px;
+ border-radius: 4px;
+ box-shadow: 10px 10px 10px rgba(70, 70, 70, 0.13);
 }
-#main .setting h1{
-    font-weight: 400;
-    color: var(--1st-text-color);
-}
-#main .setting svg{
-    width: 24px;
-    padding-right: 20px;
+#main span svg {
+    height: 32px;
+    margin-right: 20px;
     fill: var(--1st-text-color);
 }
-#main .setting form input{
-    width: 30vw;
-    height: 30px;
-    margin-top: 40px;
-    padding-left: 5px;
-    border: 1px solid rgb(202, 202, 202);
-    color: var(--1st-text-color);
-    border-radius: 2px;
-    background-color:var(--bg-color) ;
+#main h1 {
+   color: #005720;
+   font-family: "sub_text";
+   letter-spacing: 2px;
 }
-#main .setting form input:focus{
-    outline: 3px solid var(--2nd-bg-color);
-}
-#main .setting form #UPDATE{
-    width: 200px;
-    cursor: pointer;
-    margin-left: 200px;
-    background-color: var(--other-color);
-    font-weight: 600;
-    border: none;
-    transition: all 0.5s ease;
-}
-#main .setting form #UPDATE:hover{
-    background-color: #80d7ff;
-    
-}
-#main .setting form #UPDATE:focus{
+#main form .form_info__update #UPDATE{
+   background-color: var(--other-color);
+   font-weight: 500;
+   font-size: 1rem;
+   margin-top: 80px;
+   color: var(--bg-color);
+   cursor: pointer;
+   }
+   #main form .form_info__update #UPDATE:hover{
+    background-color: rgb(86, 205, 252);
+   }
+   #main form .form_info__update #UPDATE:focus{
     outline: none;
-}
-#main .setting form #file_upload{
-    position: absolute;
-    left: 150px;
-    top: 270px;
-    width: 15vw;
-    background-color: transparent;
-    padding: 5px;
-    height: 15px;
-    font-size: 0.6rem;
-    transition: all 0.5 ease;
-    border: 2px solid #4a9d5052;
-    border-radius: 5px;
-}
-.sidebar.active ~ .dashboard_content #main .setting form #file_upload{
-    left: 40px;
-    width: 15vw;
-}
+   }

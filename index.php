@@ -1,9 +1,8 @@
 <?php
-    
-    
-    
 
     require('select_data_db.php');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "index.css"/>
-    <link rel = "stylesheet" href = "Responsive.css"/>
+    <link rel = "stylesheet" href = "index_style.css"/>
+    <link rel = "stylesheet" href = "style_responsive.css"/>
 
 </head>
 <body>  
@@ -20,7 +19,7 @@
 
         <header class = "header">
             <div class = "social_logo">
-                <a href=""><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
+                <a href="https://www.facebook.com/profile.php?id=61553666895025" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg></a>
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a>
            
@@ -32,22 +31,24 @@
         
         <nav class = "nav">
             <div class = "logo">
-                <img src="asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo">
+                <img src="asset/image/logo/6736f2c7d1.png" alt="" id = "logo">
             </div>
             <div class = "headings">
                 <h1>BARANGAY <span id = "barangay_name">PALIPARAN II</span> </h1><br>
                 <h3>CITY OF <span id = "municipality">DASMARIÑAS</span></h3>
             </div>
             
-            <div class = "nav_">
+            <div class = "nav_" id = "_nav">
+          
                 <a href="#home">Home</a>
                 <a href="#footer">About</a>
                 <a href="#official">Officer</a>
                 <a href="#hotlines">Hotlines</a>
                 <a href="#services">Services</a>
-              
+                <span class="closebtn" onclick="this.parentElement.classList.toggle('active');">&times;</span>
             </div>
-            <div class = "humber_menu">
+            <div class = "humber_menu" id = "menu_btn">
+            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
             </div>
 
@@ -59,26 +60,41 @@
         </section>
 
   
-
+        <h1 class = "h1-services">SERVICES</h1>
         <section id = "services">
-      
+           
         <div>
-            <a href=""><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M2.047 14.667a.992.992 0 0 0 .466.607l1.909 1.104v2.199a1 1 0 0 0 1 1h2.199l1.104 1.91a1.002 1.002 0 0 0 1.366.366L12 20.75l1.91 1.104a1.002 1.002 0 0 0 1.366-.366l1.103-1.909h2.199a1 1 0 0 0 1-1V16.38l1.909-1.104a.999.999 0 0 0 .366-1.366L20.75 12l1.104-1.909a1 1 0 0 0-.366-1.366l-1.909-1.104V5.422a1 1 0 0 0-1-1H16.38l-1.103-1.909a1.004 1.004 0 0 0-.607-.466.994.994 0 0 0-.759.1L12 3.25l-1.909-1.104a.998.998 0 0 0-1.366.365l-1.104 1.91H5.422a1 1 0 0 0-1 1V7.62L2.513 8.725a1.001 1.001 0 0 0-.365 1.366L3.251 12l-1.104 1.909a1.003 1.003 0 0 0-.1.758z"></path></svg></button>
+            <a href="form_request/form_request.php"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+            </button></a>
+            <h4>BARANGAY CERTIFICATION</h4>
+            <p>View the Branagay Certification requirements<br></p>
+            <a href="form_request/form_request.php"><button class = "btn_proceed">Proceed</button></a>
+        </div>
+      
+        
+        <div>
+        <a href="form_request/form_request.php"><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><circle cx="6" cy="4" r="2"></circle><path d="M9 7H3a1 1 0 0 0-1 1v7h2v7h4v-7h2V8a1 1 0 0 0-1-1z"></path><circle cx="17" cy="4" r="2"></circle><path d="M20.21 7.73a1 1 0 0 0-1-.73h-4.5a1 1 0 0 0-1 .73L12 14h2l-1 4h2v4h4v-4h2l-1-4h2z"></path></svg></button></a>
+        <h4>BARANGAY INDIGENCY</h4>
+        <p>View the Branagay Indigency requirements<br></p>
+        <a href="form_request/form_request.php"><button class = "btn_proceed">Proceed</button></a>
+        </div>
+       
+        <div>
+            <a href="form_request/form_request.php"><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M2.047 14.667a.992.992 0 0 0 .466.607l1.909 1.104v2.199a1 1 0 0 0 1 1h2.199l1.104 1.91a1.002 1.002 0 0 0 1.366.366L12 20.75l1.91 1.104a1.002 1.002 0 0 0 1.366-.366l1.103-1.909h2.199a1 1 0 0 0 1-1V16.38l1.909-1.104a.999.999 0 0 0 .366-1.366L20.75 12l1.104-1.909a1 1 0 0 0-.366-1.366l-1.909-1.104V5.422a1 1 0 0 0-1-1H16.38l-1.103-1.909a1.004 1.004 0 0 0-.607-.466.994.994 0 0 0-.759.1L12 3.25l-1.909-1.104a.998.998 0 0 0-1.366.365l-1.104 1.91H5.422a1 1 0 0 0-1 1V7.62L2.513 8.725a1.001 1.001 0 0 0-.365 1.366L3.251 12l-1.104 1.909a1.003 1.003 0 0 0-.1.758z"></path></svg></button>
             </a>
             <h4>BARANGAY CLEARANCE</h4>
+            <p>View the Branagay Clearance requirements<br></p>
+            <a href="form_request/form_request.php"><button class = "btn_proceed">Proceed</button></a>
         </div>
            
         <div>
-            <a href=""><button>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"transform: ;msFilter:;"><path d="M7 14.001h2v2H7z"></path><path d="M19 2h-8a2 2 0 0 0-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2zM5 20v-8h6v8H5zm9-12h-2V6h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V6h2v2z"></path></svg>
-            </button></a>
-            <h4>BUSINESS PERMIT</h4>
+            <a href="form_request/form_request.php"><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96l576 0c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96zm0 32L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-288L0 128zM64 405.3c0-29.5 23.9-53.3 53.3-53.3l117.3 0c29.5 0 53.3 23.9 53.3 53.3c0 5.9-4.8 10.7-10.7 10.7L74.7 416c-5.9 0-10.7-4.8-10.7-10.7zM176 192a64 64 0 1 1 0 128 64 64 0 1 1 0-128zm176 16c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/></svg></button></a>
+            <h4>BARANGAY ID</h4>
+            <p>View the Branagay ID requirements<br></p>
+            <a href="form_request/form_request.php"><button class = "btn_proceed" >Proceed</button></a>
         </div>
-           
-        <div>
-        <a href=""><button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><circle cx="6" cy="4" r="2"></circle><path d="M9 7H3a1 1 0 0 0-1 1v7h2v7h4v-7h2V8a1 1 0 0 0-1-1z"></path><circle cx="17" cy="4" r="2"></circle><path d="M20.21 7.73a1 1 0 0 0-1-.73h-4.5a1 1 0 0 0-1 .73L12 14h2l-1 4h2v4h4v-4h2l-1-4h2z"></path></svg></button></a>
-        <h4>BARANGAY INDIGENCY</h4>
-        </div>
+        
 
         </section>
 
@@ -86,26 +102,60 @@
         <h1>BARANGAY OFFICIALS</h1>
             <div class = "chairman">
               
-                <img src="asset/image/official/images.png" alt="">
+                <img src="asset/image/official/RolandoAmbal.jpg" alt="">
+                <p>Engr. Rolando "Rolly" Ambal</p>
+                <p>PUNONG BARANGAY</p>
+                
             </div>
 
             <div class = "_kagawad">
-                <img src="asset/image/official/images.png" alt="">
-                <img src="asset/image/official/images.png" alt="">
-                <img src="asset/image/official/images.png" alt="">
-            </div>
 
-            <div class = "_kagawad">
-                <img src="asset/image/official/images.png" alt="">
-                <img src="asset/image/official/images.png" alt="">
-                <img src="asset/image/official/images.png" alt="">
-                <img src="asset/image/official/images.png" alt="">
+                <div>
+                <img src="asset/image/official/OscarAlvarez.jpg" alt="">
+                <p>Kag. Oscar Alvarez</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+                <div>
+                <img src="asset/image/official/BabyAlvarez.jpg" alt=""  >
+                <p>Kag. Baby Andaya</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+                <div>
+                <img src="asset/image/official/AlvinAndaya.jpg" alt="">
+                <p>Kag. Alvin Andaya</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+               
+                
+                
+           
+                <div>
+                <img src="asset/image/official/RessaMartinez.jpg" alt="">
+                <p>Kag. Resie Martinez </p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+                <div>
+                <img src="asset/image/official/MjAsilo.jpg" alt="">
+                <p>Kag. MJ Asilo</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+                <div>
+                <img src="asset/image/official/GilbertMagtaas.jpg" alt="">
+                <p>Kag. Gilbert Magtaas</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+                <div>
+                <img src="asset/image/official/TessaSanchez.jpg" alt="">
+                <p>Kag. Tessa Sanchez</p>
+                <p>BARANGAY COUNCIL</p>
+                </div>
+               
             </div>
         </section>
 
         <section id = "online_request"> 
             <h1>ONLINE BARANGAY <br>REQUEST</h1>
-            <a href=""><button>Let's Go</button></a>
+            <a href="form_request/form_request.php"><button>Let's Go</button></a>
         </section>
 
         <section id = "galllery">
@@ -124,7 +174,7 @@
                 <img src="asset/image/gallery/8.jpg" alt="">
                 <img src="asset/image/gallery/9.jpg" alt="">
             </div>
-            <a href=""><button>LOAD MORE</button></a>
+          
         </section>
 
         <section id = "hotlines">
@@ -221,6 +271,32 @@
                 <p><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg></span>Barangay.paliparanII@gmail.com</p>
             </div>
         </footer>
+
+
+        <script>
+         
+                            // ----------------------MODAL_ADD_OFFIICIAL--------------------
+            // Get the modal
+            let modal = document.getElementById("_nav");
+           
+            // Get the button that opens the modal
+            let btn_create = document.querySelector("#menu_btn");
+         
+
+            // When the user clicks on the button, open the modal
+            btn_create.onclick = function() {
+         
+            modal.classList.toggle("active");
+            }
+         
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal || event.target == btn_create) {
+                modal.classList.toggle("active");
+            }
+            }
+
+        </script>
 
         <script>
                 let logo = document.getElementById("logo_get").textContent;

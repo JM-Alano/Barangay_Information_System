@@ -12,7 +12,7 @@
             
             if(isset($_POST['input'])){
                 
-
+               
                 $input = $_POST['input']; 
 
                 $query = "SELECT * FROM barangay_resident WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%' OR id_type LIKE '{$input}%' OR age LIKE '{$input}%' OR civil_status LIKE '{$input}%' OR gender LIKE '{$input}%' OR voter_status LIKE '{$input}%' ";

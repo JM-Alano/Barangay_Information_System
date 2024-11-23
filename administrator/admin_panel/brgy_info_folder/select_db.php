@@ -10,45 +10,7 @@
     <title>Document</title>
 </head>
 
-   <style>
-    @font-face {
-    font-family: "main_text";
-   src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
-   }
-   @font-face {
-       font-family: "sub_text";
-       src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
-   }
-   *{
-       margin: 0px;
-       padding: 0px;
-       box-sizing: content-box;
-       list-style-type: none ;
-   }
-    .div-main{
-        display:flex;
-        color:#005720;
-        font-size:0.7rem;
-        justfy-content:space-between;
-        margin-top:60px;
-        width: 100%;
-        line-height:50px;
-        font-family:"sub_text";
-    }
-    .div-main .div-1{
-        padding: 0px 0px 0px 10px;
-        
-    }
-    .div-main .div-2{
-        padding: 0px 0px 0px 10px;
-    }
-    #images{
-        width: 170px;
-        height:180px;
-        margin-top:15px;
-        
-    }
-   </style>
+  
 <body>
     <?php
 
@@ -64,7 +26,10 @@
        $_SESSION['logo'] = $row['logo'];
         ?>
           <img src="../../asset/image/logo/<?php echo  $row['logo']?>" alt="" id ="images">
+         
           <div class = "div-main">
+
+         
                     <div class = "div-1">
                         <h2>Barangay name :</h2>
                         <h2>Municipality :</h2>
@@ -73,6 +38,7 @@
                         <h2>Email :</h2>
                         
                     </div>
+                   
                     <div class = "div-2">
                     <h2 class = "h2" id = "barangay_name_get"><?php echo  $row['barangay_name']?></h2>
                     <h2 id = "municipality_get"><?php echo $row['municipality']?></h2></span>

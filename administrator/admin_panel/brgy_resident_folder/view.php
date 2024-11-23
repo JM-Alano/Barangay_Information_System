@@ -22,21 +22,32 @@
                   <head>
                       <meta charset="UTF-8">
                       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                      <title>Document</title>
-                      <link rel = "stylesheet"  href = "/BIS/administrator/admin_panel/brgy_resident_folder/view_resident.css"/>
-                    
+                      <title>Generate Resident Profile</title>
+                      <link rel = "stylesheet"  href = "/BIS/administrator/admin_panel/brgy_resident_folder/style_view.css"/>
+                        
                   </head>
-                  <body>
+                  <body id = "body">
 
                   <header class = "header-div">
                     <h1>Generate Resident Profile</h1>
-                  </header>
-                      
                     
+                  </header>
+
+
                     <main class = "main-div">
                         <div class = "div-main-1">
                             <h2>Resident Profile</h2>
-                        </div><hr>
+                            <div> 
+                                <button id = "btn_print">Print this page</button>
+                                <a href="/BIS/administrator/admin_panel/resident.php"><button class = "btn_return">Return to Resident list</button></a>
+                               
+                            </div>
+                           
+                    </div><hr class = "hr1">
+                        
+
+                    <div id = "section"> 
+
                         <div class = "heading">
                             <h3>Republic of the Philippines</h3>
                             <h3>Province of Dasmariñas Cavite</h3>
@@ -46,13 +57,10 @@
                             <h2>Resident Profile</h2>
                             <hr>
                         </div>
-
-                    <section id = "section"> 
-                       
-                    <button onclick="window.print()">Print this page</button>
+                
                         <div class = "info_div">
                             <div class = "item1">
-                            <img src="../../../asset/image/resident_profile/<?php echo $row['image'] ?>" alt="">
+                            <img src="../../../asset/image/resident_profile/<?php echo $row['image'] ?>" alt="" id = "image">
                                 <h2>INFORMATION</h2>
                                 <p><?php echo "Birthday : " . date('F d, Y',strtotime($birthday)); ?></p>
                                 <p><?php echo "Age: " . $row['age'] . " " . "yrs. old"; ?></p>
@@ -94,13 +102,25 @@
                         </div>
 
                        
-                    </section>
+                    </div>
                 
                     
 
 
                     </main>
-                     
+
+
+
+                    <script>
+                        let printBtn = document.getElementById('btn_print'); 
+
+                        printBtn.addEventListener('click', function() {
+                          
+
+                            window.print();
+                        })
+                    </script>
+                </body>
                   </html>
                 
                 <?php

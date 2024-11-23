@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Table</title>
-    <link rel = "stylesheet" href = "table_style.css" />
+   
 </head>
 <body>
                         
         
 
             <?php require("../../database/conn_db.php");
-
-            $sql = "SELECT * FROM barangay_official LIMIT 10";
+                
+            $sql = "SELECT * FROM barangay_official LIMIT 5";
             $result = $conn->query($sql);
 
             $result->num_rows > 0;

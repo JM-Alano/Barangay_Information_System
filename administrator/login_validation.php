@@ -1,6 +1,6 @@
 <?php
     require("../database/conn_db.php");
-
+    
    
 
     if ($_SESSION['status'] == 'invalid' || empty($_SESSION['status'])){
@@ -38,6 +38,7 @@
                 $_SESSION['status'] = 'valid';
                 
                 $_SESSION['username'] = $rowValidate['username'];     
+                $_SESSION['profile'] = $rowValidate['admin_profile'];  
                  
                 header('location: admin_panel/dashboard.php');
                

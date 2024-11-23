@@ -12,10 +12,10 @@
             
             if(isset($_POST['input'])){
                 
-
+               
                 $input = $_POST['input']; 
-
-                $query = "SELECT * FROM barangay_official WHERE fullname LIKE '{$input}%' OR id LIKE '{$input}%' OR id LIKE '{$input}%' OR chairmanship LIKE '{$input}%' OR position LIKE '{$input}%' OR term_start LIKE '{$input}%' OR term_end LIKE '{$input}%' ";
+                
+                $query = "SELECT * FROM barangay_official WHERE fullname LIKE '{$input}%' OR id LIKE '{$input}%' OR id LIKE '{$input}%' OR chairmanship LIKE '{$input}%' OR position LIKE '{$input}%' OR term_start LIKE '{$input}%' OR term_end LIKE '{$input}%' LIMIT 11";
 
                 
                 $result = mysqli_query($conn,$query);
