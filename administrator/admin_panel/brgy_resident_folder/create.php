@@ -72,9 +72,7 @@
 
             echo"
                  <script> 
-        
-                     alert('New record created successfully');
-                     window.location.href ='/BIS/administrator/admin_panel/resident.php';
+                     window.location.href ='loading_add.php';
                   </script> ";
                  
             

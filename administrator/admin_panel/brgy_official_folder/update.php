@@ -18,8 +18,8 @@
                 
         if (mysqli_query($conn, $sql)) {
             
-            echo "<script>alert('Record updated successfully');</script>";
-            echo "<script>window.location.href = '/BIS/administrator/admin_panel/brgy_official.php';</script>";
+            include('loading.php');
+           
         } else {
             echo "Error updating record: " . mysqli_error($conn);
         }

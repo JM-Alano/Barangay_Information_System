@@ -1,5 +1,11 @@
 <?php
     require('../select_data_db.php');
+
+    session_start();
+
+
+     $_SESSION['status'] = 'invalid';
+
 ?>
 
 <!DOCTYPE html>

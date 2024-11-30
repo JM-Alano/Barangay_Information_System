@@ -44,9 +44,7 @@
             $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , id_type='$id_type' , id_type_no='$id_number' , alias='$alias' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , address='$address' WHERE id=$id";
 
             if (mysqli_query($conn, $sql)) {
-            
-                echo "<script>alert('Record updated successfully');</script>";
-                echo "<script>window.location.href = '/BIS/administrator/admin_panel/resident.php';</script>";
+                echo "<script>window.location.href = 'loading_update.php';</script>";
                
             }
           }else{

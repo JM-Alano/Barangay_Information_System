@@ -33,9 +33,9 @@
           xhr.send("id=" + id);
           xhr.onload = function() {
               if (xhr.status === 200) {
-                  alert("Record deleted successfully!");
+                  alert("Record delete fully!");
                   // Refresh page or update table
-                  window.location.href = "/BIS/administrator/admin_panel/certificate_folder/delete.php";
+                  window.location.href = "/BIS/administrator/admin_panel/brgy_official.php";
                   
               } else {
                   console.log("Error deleting record!");

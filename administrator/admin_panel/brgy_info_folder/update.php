@@ -25,9 +25,8 @@
               $result = mysqli_query($conn, $sql);
               if ($result == true) {
                 
-                  echo "<script>alert('Record updated successfully')</script>";
-                  
-                  echo "<script>window.location.href = '/BIS/administrator/admin_panel/brgy_info.php'</script>";
+                  include('loading.php');
+                 
                 } 
             }else{
               $fileName = $_FILES["image"]["name"];
@@ -58,8 +57,7 @@
   
                 if (mysqli_query($conn, $sql)) {
               
-                  echo "<script>alert('Record updated successfully');</script>";
-                  echo "<script>window.location.href = '/BIS/administrator/admin_panel/brgy_info.php'</script>";
+                  include('loading.php');
                  
               } else {
                   echo "Error updating record: " . mysqli_error($conn);

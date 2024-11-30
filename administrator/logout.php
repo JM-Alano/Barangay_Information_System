@@ -4,8 +4,12 @@
 
     $_SESSION['status'] = 'invalid';
 
+    unset($_SESSION['user_id']);
+    unset($_SESSION['user_type']);
     unset($_SESSION['username']);
-    unset($_SESSION['profile']);
+   
+
+
     
     header('location:  login.php ');
 ?>

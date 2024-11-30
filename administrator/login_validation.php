@@ -27,7 +27,7 @@
                     
          }else {
 
-            $query = "SELECT * FROM Admin_account WHERE password =  '$password' AND username = '$username'";
+            $query = "SELECT * FROM Admin_account WHERE password =  sha1('$password') AND username = '$username'";
 
             $result = mysqli_query($conn, $query);
 
@@ -37,10 +37,15 @@
 
                 $_SESSION['status'] = 'valid';
                 
-                $_SESSION['username'] = $rowValidate['username'];     
-                $_SESSION['profile'] = $rowValidate['admin_profile'];  
+               
+                $_SESSION['user_id'] = $rowValidate['user_id']; 
+                $_SESSION['user_type'] = $rowValidate['user_type']; 
+                $_SESSION['username'] = $rowValidate['username'];   
+                $_SESSION['admin_profile'] = $rowValidate['admin_profile'];       
+
+           
                  
-                header('location: admin_panel/dashboard.php');
+                header('location: loading.php');
                
             }else {
 
