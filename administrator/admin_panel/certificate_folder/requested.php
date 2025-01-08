@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/table.css">
+    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/style_table.css">
 </head>
 <body>
+
+
+               
+                     
+                     <!-- SEARCH BUTTON -->
+                     <input type="text" id = "live_search" placeholder = "SEARCH">
+             
+            
         <?php require("../../../database/conn_db.php");
                 
-                $sql = "SELECT * FROM barangay_request ORDER BY id DESC LIMIT 10";
+                $sql = "SELECT DISTINCT * FROM barangay_request ORDER BY id DESC LIMIT 12";
                 $result = $conn->query($sql);
     
                 $result->num_rows > 0;
@@ -24,7 +32,9 @@
                             <th>Contact Number</th>
                             <th>Purpose</th>
                             <th>Document Requested</th>
+                            <th>Date:</th>
                             <th>Status</th>
+                          
                             <th>Generate To:</th>
                             
                         </tr>
@@ -37,7 +47,9 @@
 
                                 $age = $row["age"];
                                 $request_document = $row["request_document"];
-                                $address = $row["address"];
+                                $house_no = $row["house_number"];
+
+                                $sitio_pook = $row["sitio_pook"];
 
                                 $birthday = $row["birthday"];
                                 $place_of_birth = $row["place_of_birth"];
@@ -51,9 +63,10 @@
                                 $status = $row["status"];
                                 $gender = $row["gender"];
                                 
+                                $date_request = $row["date_request"];
 
+                                date_default_timezone_set("Asia/Manila");
                                 $date_issue = date("Y-m-d");
-
 
                                 $exp_date = strtotime("+12 Months");
                                
@@ -64,6 +77,7 @@
                                     <td><?php echo $contact_no; ?></td>
                                     <td><?php echo $purpose; ?></td>
                                     <td><?php echo $request_document; ?></td>
+                                    <td><?php echo  date('m/d/Y',strtotime($date_request));?></td>
                                     <td  style = 'color:blue;'><?php
                                         
                                         if($status == 0){
@@ -91,7 +105,7 @@
                                         <p hidden><?php echo  $lastname ?></p>
                                         <p hidden><?php echo  $age ?></p>    
                                         <p hidden><?php echo  $request_document ?></p>    
-                                        <p hidden><?php echo  $address ?></p>   
+                                        <p hidden><?php echo  $house_no  ?></p>   
                                         <p hidden><?php echo  $birthday ?></p>   
                                         <p hidden><?php echo  $place_of_birth ?></p>   
                                         <p hidden><?php echo  $contact_no ?></p>   
@@ -102,14 +116,12 @@
                                         <p hidden><?php echo $status ?></p> 
                                         <p hidden><?php echo $gender ?></p> 
                                         <p hidden><?php echo  $date_issue ?></p>
-                                        <p hidden><?php echo  $exp_date; ?></p>
+                                        <p hidden><?php echo  date("m/d/Y", $exp_date) ; ?></p>
+                                        <p hidden><?php echo  $sitio_pook?></p>
 
-                                        <button id = "barangay_cert" class = "cert_btn" data-id= <?php echo $row ["id"] ?> >Barangay Certificate</button>
+                                        <button id = "barangay_cert" class = "cert_btn" data-id= <?php echo $row ["id"] ?> >Approve</button>
 
                                         </li>
-                                        <li><button  id = "barangay_clear" class = "clear_btn" data-id= <?php echo $row ["id"] ?> >Barangay Clearance</button></li>
-                                        <li><button id = "barangay_indigency" class = "indigency_btn" data-id= <?php echo $row ["id"] ?>>Barangay Indigency</button></li>
-                                        <li><button id = "barangay_ID" class = "ID_btn" data-id= <?php echo $row ["id"] ?>>Barangay ID</button></li>
                                        <li><button id = "delete_official_btn" class = "delete_btn" data-id= <?php echo $row ["id"] ?>>Delete List</button></li>
                                     </ul>
                                    
@@ -125,7 +137,7 @@
                                 <?php
                             
                             }
-                            
+                            2
                         
                         ?>
                    
@@ -162,34 +174,9 @@
 
 
                
-                <!-- MODAL CLEARANCE -->
-            <div id = "clear-modal" class = "clear-modal">
-                    <div class = "clear-modal-content">
-                    <span onclick="this.parentElement.parentElement.style.display='none';" class = "clear-close-btn">&times;</span>
-                        <?php include("barangay_clear_temp.php");?>
-                        
-                    </div>
-               </div>
+    
 
-
-                   <!-- MODAL INDIGENCY -->
-            <div id = "indigency-modal" class = "indigency-modal">
-                    <div class = "indigency-modal-content">
-                    <span onclick="this.parentElement.parentElement.style.display='none';" class = "indigency-close-btn">&times;</span>
-                        <?php include("barangay_indigency_temp.php");?>
-                        
-                    </div>
-               </div>
-
-
-                     <!-- MODAL ID -->
-            <div id = "ID-modal" class = "ID-modal">
-                    <div class = "ID-modal-content">
-                    <span onclick="this.parentElement.parentElement.style.display='none';" class = "ID-close-btn">&times;</span>
-                        <?php include("barangay_ID_temp.php");?>
-                        
-                    </div>
-               </div>
+     
 
                
                

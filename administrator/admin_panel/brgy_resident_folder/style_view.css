@@ -153,6 +153,7 @@
 #section .info_div .item2 .item2-about div{
     width: 100%;
     padding-top: 10%;
+   
 }
 
 @media print{
@@ -188,8 +189,7 @@
         display: flex;
         justify-content: space-evenly;
         margin-top: 40px;
-        background-color: #4A9D4f;
-       
+
        }
        #section .info_div .item1{
             font-size: 1.2rem;

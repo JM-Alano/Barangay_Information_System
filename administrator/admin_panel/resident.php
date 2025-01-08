@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resident | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/main.style.css"/>
-    <link rel = "stylesheet" href = "style.css/resident_barangay.css"/>
+    <link rel = "stylesheet" href = "style.css/resident_style.css"/>
 </head>
 <body>
 
@@ -61,16 +61,16 @@
                         <span class = "tooltip">Blotter</span>
                     </li>
                     <li>
-                        <a href="certificate.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></svg><span class = "link_name">CERTIFICATE <svg class = "svg_arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></span></a>
-                        <span class = "tooltip">CERTIFICATE</span>
+                        <a href="user_registered.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg><span class = "link_name">User Registered</span></a>
+                        <span class = "tooltip">User Registered</span>
                     </li>
                     <li>
-                        <a href="report.php" >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM112 192l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg><span class = "link_name">Report</span></a>
-                        <span class = "tooltip">Report</span>
+                        <a href="certificate.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></svg><span class = "link_name">Certificate<svg class = "svg_arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></span></a>
+                        <span class = "tooltip">CERTIFICATE</span>
                     </li>
-                   
+                  
 
             </ul>
 
@@ -109,7 +109,7 @@
      
             <!-- Table in Database -->
            <div  id = "searchresult" class = "table_div">
-                    <?php require('./brgy_resident_folder/table.php'); ?>
+                    <?php include('./brgy_resident_folder/table.php'); ?>
                    
             </div>
             
@@ -169,86 +169,9 @@
             </script>
         
             <!-- AJAX SCRIPT FOR DELETE BUTTON -->
-            <script src = "brgy_resident_folder/delete_modal_button.js"></script>
+            <script src ="/BIS/administrator/admin_panel/brgy_resident_folder/delete_modal_button.js.js"></script>
             <!-- AJAX SCRIPT FOR UPDATE BUTTON -->
-            <script>
-                           
-
-document.addEventListener("mouseover", function() {
-    
-    // Get modal and button elements
-    let edit_modal = document.getElementById("edit-modals");
-    let editBtns = document.querySelectorAll(".update_btns");
-    let updateBtn = document.getElementById("update-btns");        
-
-
-    // Show modal on edit button click
-    editBtns.forEach(function(btn) {
-    btn.addEventListener("click", function() {
-        edit_modal.style.display = "block";
-        // Get ID and data of record to edit
-        let id = btn.getAttribute("data-id");
-
-        
-        let  id_type = btn.parentNode.parentNode.parentNode.cells[2].textContent;
-        let age = btn.parentNode.parentNode.parentNode.cells[3].textContent;
-        let civil_status = btn.parentNode.parentNode.parentNode.cells[4].textContent;
-        let gender = btn.parentNode.parentNode.parentNode.cells[5].textContent;
-        let voter_status = btn.parentNode.parentNode.parentNode.cells[6].textContent;
-        let address = btn.parentNode.parentNode.parentNode.cells[7].textContent;
-        let firstname = btn.parentNode.parentNode.parentNode.cells[8].textContent;
-        let middlename = btn.parentNode.parentNode.parentNode.cells[9].textContent;
-        let lastname = btn.parentNode.parentNode.parentNode.cells[10].textContent;
-        let alias = btn.parentNode.parentNode.parentNode.cells[11].textContent;
-        let place_of_birthday = btn.parentNode.parentNode.parentNode.cells[12].textContent;
-        let birthday = btn.parentNode.parentNode.parentNode.cells[13].textContent;
-        let email = btn.parentNode.parentNode.parentNode.cells[14].textContent;
-        let contact_no = btn.parentNode.parentNode.parentNode.cells[15].textContent;
-        let citizenship = btn.parentNode.parentNode.parentNode.cells[16].textContent;
-        let occupation = btn.parentNode.parentNode.parentNode.cells[17].textContent;
-        let id_type_no = btn.parentNode.parentNode.parentNode.cells[18].textContent;
-        let image = btn.parentNode.parentNode.parentNode.cells[19].textContent;
-        
-      
-      
-       
-        document.getElementById("id").value = id;
-
-        document.getElementById("id_type").value = id_type;
-        document.getElementById("age").value = age;
-        document.getElementById("civil_status").value = civil_status;
-        document.getElementById("gender").value = gender;
-        document.getElementById("voter-status").value = voter_status;
-        document.getElementById("address").value = address;
-        document.getElementById("firstname").value = firstname;
-        document.getElementById("middlename").value = middlename;
-        document.getElementById("lastname").value = lastname;
-        document.getElementById("alias").value = alias;
-        document.getElementById("place_of_birth").value = place_of_birthday;
-        document.getElementById("birthday").value = birthday;
-        document.getElementById("email").value = email;
-        document.getElementById("contact_no").value = contact_no;
-        document.getElementById("citizenship").value = citizenship;
-        document.getElementById("occupation").value = occupation;
-        document.getElementById("id_number").value = id_type_no;
-        document.getElementById("address").value = address;
-        document.getElementById("images").src = image;
-     
-
-       
-    
-    });
-    });
-            
-    window.addEventListener("click", function(event) {
-        if (event.target == edit_modal) {
-            edit_modal.style.display = "none";
-        }
-    });
-
-});
-  
-            </script>
+            <script src ="/BIS/administrator/admin_panel/brgy_resident_folder/update_modal.js.js"></script>
                 
      
 </body>

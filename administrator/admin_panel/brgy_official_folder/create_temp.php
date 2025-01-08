@@ -93,6 +93,12 @@
         #reset:focus{
           outline: 3px solid red;
         }
+        #images{
+          padding: 2px;
+          border: 3px solid #4a9d504b;
+          border-radius:4px;
+          width: 100%;
+        }
       </style>
 
     </head>
@@ -105,8 +111,10 @@
         <h1 class = "h1_text">Add Official</h1>
        
 
-         <form action='../admin_panel/brgy_official.php' class = "form" method = "post">
-          
+         <form action='../admin_panel/brgy_official.php' class = "form" method = "post" enctype = "multipart/form-data">
+          <label for="">Insert Photo</label><br>
+          <input type="file" name = "image" value = "" accept = ".jpg, .jpeg, .png" id = "images"><br>
+
         <label>Fullname</label><br>
         <input type = 'text' name = 'fullname' id = "input" placeholder = "Ex. Juan Dela Cruz" required><br>
 

@@ -72,7 +72,7 @@
                             <div class = "item2">
                                 <p><?php echo "Name : " . $row['firstname'] . " " . $row['middlename'] . " " . $row['lastname']?></p>
                                 <p><?php echo $row['id_type'] . " : " . $row['id_type_no'] ?></p>
-                                <p><?php echo "Address : " . $row['address'] ?></p>
+                                <p><?php echo "Address : " . $row['house_no'] ." ". $row['sitio_pook'] ?></p>
                                 <br>
                                 <p><?php echo "Alias : " . $row['alias'] ?></p>
                                 <hr style = "width:40vw; margin-top:20px;">

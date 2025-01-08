@@ -26,7 +26,9 @@
 
         $voter_status = trim($_POST["voter-status"]);
         $citizenship = trim($_POST["citizenship"]);
-        $address = trim($_POST["address"]);
+        $house_no = trim($_POST["house_no"]);
+
+        $sitio_pook = trim($_POST["sitio_pook_add"]);
         
 
         $fileName = $_FILES["image"]["name"];
@@ -41,7 +43,7 @@
 
         if($_FILES["image"]["error"] == 4){
             
-            $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , id_type='$id_type' , id_type_no='$id_number' , alias='$alias' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , address='$address' WHERE id=$id";
+            $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , id_type='$id_type' , id_type_no='$id_number' , alias='$alias' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , house_no='$house_no' , sitio_pook='$sitio_pook' WHERE id=$id";
 
             if (mysqli_query($conn, $sql)) {
                 echo "<script>window.location.href = 'loading_update.php';</script>";
@@ -71,13 +73,12 @@
   
               move_uploaded_file($tmpName, '../../../asset/image/resident_profile/'. $newImageName );
 
-              $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , id_type='$id_type' , id_type_no='$id_number' , alias='$alias' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , address='$address' , image='$newImageName' WHERE id=$id";
+              $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , id_type='$id_type' , id_type_no='$id_number' , alias='$alias' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , house_no='$house_no' , sitio_pook='$sitio_pook' , image='$newImageName' WHERE id=$id";
 
 
               if (mysqli_query($conn, $sql)) {
             
-                echo "<script>alert('Record updated successfully');</script>";
-                echo "<script>window.location.href = '/BIS/administrator/admin_panel/resident.php';</script>";
+                echo "<script>window.location.href = 'loading_update.php';</script>";
                
             } else {
                 echo "Error updating record: " . mysqli_error($conn);

@@ -66,7 +66,7 @@
 </head>
 <body>
     <header>
-        <h1 class = "h1">Barangay Certificate</h1>
+        <h1 class = "h1" id = "h1">Barangay Certificate</h1>
     </header>
 
     <form action="/BIS/administrator/admin_panel/certificate_folder/insert_data.php" method = "POST" id = "certForm">
@@ -75,14 +75,14 @@
         <label for="">Purpose</label><br>
         <input type="text" name = "purpose_cert" placeholder = "Enter Valid Purpose"  id = "purpose_cert" required><br>
 
-        <input type="text" name = "id_cert" value = "" id = "id_cert">
+        <input type="hidden" name = "id_cert" value = "" id = "id_cert">
         <input type="hidden" name = "firstname_cert" value = "" id = "firstname_cert">
         <input type="hidden" name = "middlename_cert" value = "" id = "middlename_cert">
         <input type="hidden" name = "lastname_cert" value = "" id = "lastname_cert">
         
         <input type="hidden" name = "age_cert" value = "" id = "age_cert">
         <input type="hidden" name = "request_document_cert" value = "" id = "request_document_cert">
-        <input type="hidden" name = "address_cert" value = "" id = "address_cert">
+        <input type="hidden" name = "house_no_cert" value = "" id = "house_no_cert">
 
         <input type="hidden" name = "birthday_cert" value = "" id = "birthday_cert">
         <input type="hidden" name = "place_of_birth_cert" value = "" id = "place_of_birth_cert">
@@ -97,6 +97,8 @@
 
         <input type="hidden" id = "date_issue_cert" value = "" name = "date_issue_cert">
         <input type="hidden" id = "ex_date_issue_cert" value = "" name = "ex_date_issue_cert">
+
+        <input type="hidden" id = "sitio_pook" value = "" name = "sitio_pook">
 
 
         <input type="submit" name = "sub_cert" id = "submit">

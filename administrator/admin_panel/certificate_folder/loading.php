@@ -64,7 +64,7 @@
             
             window.location.href = "/BIS/administrator/admin_panel/certificate.php";
             clearInterval(timerInterval);
-        }, 3000); // Simulate PHP execution time
+        }, 2000); // Simulate PHP execution time
 
     
     </script>

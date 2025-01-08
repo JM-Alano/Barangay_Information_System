@@ -9,18 +9,22 @@
         
         <?php
             require("../../../database/conn_db.php");
+
+            
             
             if(isset($_POST['input'])){
                 
                
                 $input = $_POST['input']; 
 
-                $query = "SELECT * FROM barangay_resident WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%' OR id_type LIKE '{$input}%' OR age LIKE '{$input}%' OR civil_status LIKE '{$input}%' OR gender LIKE '{$input}%' OR voter_status LIKE '{$input}%' ";
+                $query = "SELECT * FROM barangay_resident WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%' OR id_type LIKE '{$input}%' OR age LIKE '{$input}%' OR civil_status LIKE '{$input}%' OR gender LIKE '{$input}%' OR voter_status LIKE '{$input}%'";
 
                 
                 $result = mysqli_query($conn,$query);
 
                 if ($result->num_rows > 0) {?>
+
+                <div style = "margin-bottom:150px;"></div>
 
                     
             <table>
@@ -54,14 +58,14 @@
                             $contact_no =$row["contact_no"];
 
                             $citizenship =$row["citizenship"];
-                            $address =$row["address"];
+                            $house_no =$row["house_no"];
                             $id_type = $row["id_type"];
 
                             $id_type_no = $row["id_type_no"];
                             $precinct_no = $row["precinct_no"];
                             $occupation = $row["occupation"];
                            
-
+                            $sitio_pook =$row["sitio_pook"];
                             $image = $row["image"];
                             $id = $row["id"];
 
@@ -75,7 +79,7 @@
                                 <td><?php echo $gender; ?></td>
                                 <td><?php echo $voter_status; ?></td>
                                 
-                                <td hidden><?php echo $address; ?></td>
+                                <td hidden><?php echo $house_no; ?></td>
                                 <td hidden><?php echo $firstname; ?></td>
                                 <td hidden><?php echo $middlename; ?></td>
                                 <td hidden><?php echo $lastname; ?></td>
@@ -87,18 +91,10 @@
                                 <td hidden><?php echo $citizenship; ?></td>
                                 <td hidden><?php echo $occupation; ?></td>
                                 <td hidden><?php echo $id_type_no; ?></td>
-
+                                <td hidden><?php echo $sitio_pook; ?></td>
                                 <td hidden><?php echo "../../asset/image/resident_profile/" . $image;  ?></td>
 
                                 <td>
-                                
-                                   
-
-                              
-                                 
-                             
-
-
                                     <div id = "form_up_del_official">
                                        
                                         <form action="/BIS/administrator/admin_panel/brgy_resident_folder/view.php" method = "post">
@@ -124,6 +120,10 @@
                
                 
             </table>
+
+                                    
+       
+
                     
                     <?php
                     } else {

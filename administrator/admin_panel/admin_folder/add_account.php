@@ -54,7 +54,7 @@
   
              
               $sql = "INSERT INTO admin_account (firstname, middlename, lastname, gender, age, date_created, status, email, username, password, admin_profile, user_type )
-              VALUES ('$firstname', '$middlename', '$lastname','$gender','$age','$date_created','$status','$email','$username',sha1('$password'), '$newImageName', '$user_type')";
+              VALUES ('$firstname', '$middlename', '$lastname','$gender','$age','$date_created','$status','$email','$username',$password', '$newImageName', '$user_type')";
   
               $result = mysqli_query($conn, $sql);
   

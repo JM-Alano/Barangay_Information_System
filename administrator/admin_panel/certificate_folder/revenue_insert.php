@@ -15,26 +15,23 @@
         $amount = trim($_POST["amount"]);
         $current_date = trim($_POST["current_date"]);
 
-
-       
-      
-            
-        $sql = "INSERT INTO barangay_revenue (id, firstname, middlename, lastname, document_amount, date_issue, document_type, OR_no, status)
-        VALUES ('$id', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$OR_no', '$status')";
-                
-                if (mysqli_query($conn, $sql)) {
-
-                  
-                  require('print_fucntion.php');
-
-
-
+                  switch ($document) {
+                    case "Barangay Clearance":
+                      include('document/barangay_clearance.php');
+                      break;
+                    case "Barangay Certificate":
+                        include('document/barangay_certificate.php');
+                      break;
+                    case "Barangay Indigency":
+                      include('document/baranagy_indigency.php');
+                      break;
+                    case "Barangay ID":
+                      include('document/barangay_ID.php');
+                      break;
                     
-                  } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                      default:
+                      include('manage_certificate.php');
                   }
-                  
-                  mysqli_close($conn);
       
      }
 ?>

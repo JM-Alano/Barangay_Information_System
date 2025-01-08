@@ -10,7 +10,9 @@
 
         $age = trim($_POST["age_cert"]);
         $request_document = trim($_POST["request_document_cert"]);
-        $address = trim($_POST["address_cert"]);
+        $house_no = trim($_POST["house_no_cert"]);
+
+        $sitio_pook = $_POST["sitio_pook"];
 
         $birthday = trim($_POST["birthday_cert"]);
         $place_of_birth = trim($_POST["place_of_birth_cert"]);
@@ -34,8 +36,8 @@
         $ex = date("Y-m-d", $exp_date_issue);
       
             
-        $sql = "INSERT INTO barangay_manage (id, firstname, middlename, lastname, age, request_document, address, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender , date_issue, expired_date)
-        VALUES ('$id', '$firstname', '$middlename', '$lastname', '$age', '$request_document', '$address', '$birthday', '$place_of_birth', '$contact_no', '$contact_person', '$contact_no_contact_person', '$live_since_year', '$purpose', '$status', '$gender' , '$date_issue', '$ex')";
+        $sql = "INSERT INTO barangay_manage (id, firstname, middlename, lastname, age, request_document, house_no, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender , date_issue, expired_date ,sitio_pook)
+        VALUES ('$id', '$firstname', '$middlename', '$lastname', '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no', '$contact_person', '$contact_no_contact_person', '$live_since_year', '$purpose', '$status', '$gender' , '$date_issue', '$ex', '$sitio_pook')";
                 
                 if (mysqli_query($conn, $sql)) {
 

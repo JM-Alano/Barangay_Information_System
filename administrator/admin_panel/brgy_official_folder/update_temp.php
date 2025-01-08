@@ -96,10 +96,15 @@
         
 
         <h1 class = "h1_div">Edit Official</h1>
-       
+        
+     
+         <form id="edit-form" class = "form" enctype = "multipart/form-data" method = "POST" action = "/BIS/administrator/admin_panel/brgy_official_folder/update.php">
+        
 
-         <form id="edit-form" class = "form" method = "POST" action = "/BIS/administrator/admin_panel/brgy_official_folder/update.php">
-          
+
+         <label for="">Insert Photo</label><br>
+         <input type="file" name = "image" value = "" accept = ".jpg, .jpeg, .png" id = "images"><br>
+         
         <label>Fullname</label><br>
         <input type = 'text' name = 'fullname' id = "fullname" placeholder = "Ex. Juan Dela Cruz" required><br>
 

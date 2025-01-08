@@ -43,6 +43,7 @@
                 margin-left: 1px;
                 border: 2px solid var(--2nd-bg-color);
                 box-shadow: 1px 1px 20px #d4b62f;
+                color: var(--2nd-bg-color);
             }
             .main_container .form .item1 #image{
             padding: 5px;
@@ -83,6 +84,7 @@
                 padding: 10px;
                 font-family: "sub_text";
                 width: 50vw;
+                color: var(--2nd-bg-color);
             } 
 
             .main_container .form .item-form1 input{
@@ -92,11 +94,12 @@
                 border: none;
                 padding: 10px;
                 border-radius: 4px;
-                color: var(--1st-text-color);
+                color: var(--2nd-bg-color);
             }
             .main_container .form .item-form1 input:focus{
                 outline: 2px solid var(--2nd-bg-color);
             }
+           
             .main_container .form .item-form2 input{
                 height:15px;
                 width: 13vw;
@@ -104,7 +107,7 @@
                 padding: 10px 0px 10px 10px;
                 border-radius: 4px;
                 border: none;
-                color: var(--1st-text-color);
+                color: var(--2nd-bg-color);
             }
             .main_container .form .item-form2 input:focus{
                 outline: 2px solid var(--2nd-bg-color);
@@ -116,8 +119,7 @@
                 padding: 10px 0px 10px 10px;
                 border-radius: 4px;
                 border: none;
-                color: var(--1st-text-color);
-            
+                color: var(--2nd-bg-color);
             }
             .main_container .form .item-form3 input:focus{
                 outline: 2px solid var(--2nd-bg-color);
@@ -132,7 +134,7 @@
             padding: 10px 0px 10px 10px;
             border-radius: 4px;
             border: none;
-            color: var(--1st-text-color);
+            color: var(--2nd-bg-color);
             
             }
             .main_container .form .item-form4 input:focus{
@@ -142,7 +144,7 @@
                 padding: 20px 20px 20px 40px;
                 font-family: "sub_text";
             }
-            .div_form .item-form-other #voter-status{
+            .div_form .item-form-other #voter-status,#sitio_pook_add{
                 width: 45vw;
                 height: 15px;
                 text-align: center;
@@ -150,9 +152,9 @@
                 border-radius: 4px;
                 border: none;
                 margin-top: 10px;
-                color: var(--1st-text-color);
+                color: var(--2nd-bg-color);
             }
-            .div_form .item-form-other #voter-status:focus{
+            .div_form .item-form-other #voter-status:focus, .div_form .item-form-other #sitio_pook_add:focus{
                 outline: 2px solid var(--2nd-bg-color);
             }
             .div_form .item-form-other input{
@@ -163,7 +165,7 @@
                 border-radius: 4px;
                 border: none;
                 margin-top: 10px;
-                color: var(--1st-text-color);
+                color: var(--2nd-bg-color);
             }
             .div_form .item-form-other input:focus{
                 outline: 2px solid var(--2nd-bg-color);
@@ -213,6 +215,7 @@
             </div>
                 <input type="file" name = "image" accept = ".jpg, .jpeg, .png" id = "image"><br>
                
+
                 <label for="">ID Type</label><br>
                 <select name="id_type" id="id_type">
                    <option value="No ID">No ID</option>
@@ -324,8 +327,17 @@
                         <input type="text" name = "citizenship" placeholder = "Enter Citizenship" id = "citizenship">
                         </div>  
                         <div>
-                        <label for="">Address :</label><br>
-                        <input type="text" name = "address" placeholder = "Enter Complete Address" id = "address"required>
+                        <label for="">House number :</label><br>
+                        <input type="text" name = "house_no" placeholder = "Enter Complete Address" id = "house_no"required> <br>
+                        <label for="">Sitio/Pook</label><br>
+                            <select id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
+                                <option value="Iyala">Iyala</option>
+                                <option value="Sitio Burol">Sitio Burol</option>
+                                <option value="Sitio Kubuhan & Rigde View">Sitio Kubuhan & Rigde View</option>
+                                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
+                                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
+                                <option value="Camella at the Island Park">Camella at the Island Park</option>
+                            </select><br>
                      </div>
                         
                         

@@ -27,8 +27,9 @@
 
          $voter_status = trim($_POST["voter-status"]);
          $citizenship = trim($_POST["citezenship"]);
-         $address = trim($_POST["address"]);
+         $house_no = trim($_POST["house_no"]);
         
+         $sitio_pook = trim($_POST["sitio_pook_add"]);
     
 
         if($_FILES["image"]["error"] == 4){
@@ -59,10 +60,10 @@
 
             move_uploaded_file($tmpName, '../../../asset/image/resident_profile/'. $newImageName );
 
-            $sql = "INSERT INTO barangay_resident (id_type, id_type_no, firstname, middlename, lastname, alias, place_of_birth, birthday, age, civil_status, gender, email, contact_no, occupation, voter_status, citizenship, address,image)
+            $sql = "INSERT INTO barangay_resident (id_type, id_type_no, firstname, middlename, lastname, alias, place_of_birth, birthday, age, civil_status, gender, email, contact_no, occupation, voter_status, citizenship, house_no,sitio_pook,image)
             VALUES ( '$id_type', '$id_number','$firstname','$middlename','$lastname' 
             ,'$alias','$place_of_birth','$birthday','$age','$civil_status','$gender','$email','$contact_no'
-            ,'$occupation','$voter_status','$citizenship','$address','$newImageName')";
+            ,'$occupation','$voter_status','$citizenship','$house_no','$sitio_pook','$newImageName')";
 
             $result = mysqli_query($conn, $sql);
 

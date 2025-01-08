@@ -11,25 +11,51 @@
         
 
             <?php require("../../database/conn_db.php");
+
+            // Get the current page and limit from query parameters, set defaults if not provided
+            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
+            $limit = $limit > 0 ? $limit : 10; // Ensure the limit is positive
+            $offset = ($page - 1) * $limit;
+
+            // Get the total number of records
+            $countQuery = "SELECT COUNT(*) AS total FROM barangay_official";
+            $countResult = $conn->query($countQuery);
+            $totalRows = $countResult->fetch_assoc()['total'];
+            $totalPages = ceil($totalRows / $limit);
              
        
-            $sql = "SELECT * FROM barangay_resident LIMIT 10";
+            $sql = "SELECT * FROM barangay_resident LIMIT $limit OFFSET $offset";
             $result = $conn->query($sql);
 
             $result->num_rows > 0;
 
             if ($result->num_rows > 0) {?>
 
+             <!-- Limit Selector -->
+                <div class="limit-selector">
+                    <form method="GET" action="">
+                        <label for="limit">Rows per page:</label>
+                        <select name="limit" id="limit" onchange="this.form.submit()">
+                            <option value="10" <?php if ($limit == 10) echo 'selected'; ?>>10</option>
+                            <option value="20" <?php if ($limit == 20) echo 'selected'; ?>>20</option>
+                            <option value="50" <?php if ($limit == 50) echo 'selected'; ?>>50</option>
+                        </select>
+                        <input type="hidden" name="page" value="<?php echo $page; ?>">
+                    </form>
+                </div>
+
             <table>
                     <caption>Barangay Resident list</caption>
                     <tr>
-                        <th>Profile</th>
+                        
                         <th>Fullname</th>
                         <th>National ID</th>
                         <th>Age</th>
                         <th>Civil Status</th>
                         <th>Gender</th>
                         <th>Voter Status</th>
+                        <th>Profile</th>
                         <th>Action</th>
                     </tr>
                     <?php
@@ -51,14 +77,14 @@
                             $contact_no =$row["contact_no"];
 
                             $citizenship =$row["citizenship"];
-                            $address =$row["address"];
+                            $house_no =$row["house_no"];
                             $id_type = $row["id_type"];
 
                             $id_type_no = $row["id_type_no"];
                             $precinct_no = $row["precinct_no"];
                             $occupation = $row["occupation"];
                            
-
+                            $sitio_pook =$row["sitio_pook"];
                             $image = $row["image"];
                             $id = $row["id"];
 
@@ -72,7 +98,7 @@
                                 <td><?php echo $gender; ?></td>
                                 <td><?php echo $voter_status; ?></td>
                                 
-                                <td hidden><?php echo $address; ?></td>
+                                <td hidden><?php echo $house_no; ?></td>
                                 <td hidden><?php echo $firstname; ?></td>
                                 <td hidden><?php echo $middlename; ?></td>
                                 <td hidden><?php echo $lastname; ?></td>
@@ -84,9 +110,9 @@
                                 <td hidden><?php echo $citizenship; ?></td>
                                 <td hidden><?php echo $occupation; ?></td>
                                 <td hidden><?php echo $id_type_no; ?></td>
-
+                                <td hidden><?php echo $sitio_pook; ?></td>
                                 <td hidden><?php echo "../../asset/image/resident_profile/" . $image;  ?></td>
-
+                               
                                 <td>
                                 
                                    
@@ -124,12 +150,48 @@
                
                 
             </table>
+
+            
+<!-- Pagination Controls -->
+<div class="pagination">
+    <?php if ($page > 1): ?>
+        <a href="?page=<?php echo $page - 1; ?>&limit=<?php echo $limit; ?>">Previous</a>
+    <?php endif; ?>
+
+    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+        <a href="?page=<?php echo $i; ?>&limit=<?php echo $limit; ?>" class="<?php echo $i == $page ? 'active' : ''; ?>">
+            <?php echo $i; ?>
+        </a>
+    <?php endfor; ?>
+
+    <?php if ($page < $totalPages): ?>
+        <a href="?page=<?php echo $page + 1; ?>&limit=<?php echo $limit; ?>">Next</a>
+    <?php endif; ?>
+</div>
+
           
-            <?php
-            }   
-            // -- close connection 
-            mysqli_close($conn);
-            ?>          
+           
+
+<?php 
+} else { ?>
+        <style>
+        .Data-not-found h1{
+            color:rgba(255, 0, 0, 0.37);
+            position:absolute;
+            top:300px;
+            left:25%;
+            font-size:3.5rem;
+        }
+    </style>
+    <div class = "Data-not-found">
+    <h1>DATA NOT FOUND</h1>
+    </div>
+    <?php
+}
+
+// Close the connection
+mysqli_close($conn);
+?>          
 
             <!-- MODAL DELETE -->
              <div id = "delete-modal" class = "delete-modal">
@@ -156,9 +218,9 @@
                </div>
           
             <!-- UPDATE MODAL FUNCTION JS -->
-            <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/update_modal_button.js"></script>
+            <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/update_modal.js.js"></script>
 
                
-               <script src = "/BIS/administrator/admin_panel/brgy_resident_folder/view_model.js"></script>
+            
 </body>
 </html>

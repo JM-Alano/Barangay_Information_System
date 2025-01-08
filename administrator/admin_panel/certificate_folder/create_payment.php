@@ -32,7 +32,7 @@
             border:none;
             border-radius:2px;
         }
-        #purpose_cert:focus,#OR_no:focus{
+        #purpose_cert:focus,#OR_no:focus,#amount:focus,#date_issue_print:focus{
             outline:3px solid #4A9D4f;
             
         }
@@ -73,7 +73,7 @@
         
 
         <label for="">Amount</label><br>
-        <input type="text" name = "amount" min = "0" placeholder = "Enter Amount"  id = "amount" required><br>
+        <input type="number" name = "amount" min = "0" placeholder = "Enter Amount"  id = "amount"  step="0.00001" required><br>
 
         <label for="">Date issue</label><br>
         <input type="date" name = "current_date" placeholder = "Enter Amount"  id = "date_issue_print" required><br>

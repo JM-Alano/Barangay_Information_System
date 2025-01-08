@@ -59,11 +59,12 @@
                 margin-bottom: 5%;
                 margin-top: 2%;
                 border-radius: 4px;
-            margin-left: 70px;
+                  margin-left: 70px;
                 color: #4A9D4f;
                 padding-top: 10px;
                 animation-name: side_animation;
                 animation-duration: 2s ;
+                
             
             }
             .img-profile-resident{
@@ -95,83 +96,61 @@
                 cursor: pointer;
 
             }
-            .main_container .item1 select{
-            height: 25px;
-                padding: 5px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-                width: 20%;
-                margin-top: 20px;
-                border: none;
-                text-align: center;
-                cursor: pointer;
-                font-family: "sub_text";
-                color: #4A9D4f;
-                font-size: large;
-              
+            form label{
+                font-size:1.2rem;
+                font-family:"sub_text";
             }
-            .main_container .item-form{
+            form input:focus, select:focus{
+                outline:3px solid #4A9D4f;
+            }
+            form .item-form input,.item-form select{
+                
+                width: 300px;
+                height:30px;
+                margin-top:10px;
+                margin-bottom:10px;
+                padding :5px 10px 5px 10px;
+                border-radius:4px;
+                border:none;
+                color:#4A9D4f;
+                
+            }
+            form .item-form1 input,.item-form1 select,.item-form2 input,.item-form2 select,.item-form3 input,.item-form3 select,.item-form4 input,.item-form4 select{
+                color:#4A9D4f;
+                width: 300px;
+                height:30px;
+                margin-top:10px;
+                margin-bottom:10px;
+                padding :5px 10px 5px 10px;
+                border-radius:4px;
+                border:none;
+                color:#4A9D4f;
+            }
+            form .item-form5{
+                display:grid;
+                justify-content:center;
+            }
+            form .item-form5 label{
+                text-align:left;
+            }
+            form .item-form5 input,.item-form5 select{
+                color:#4A9D4f;
+                width: 50vw;
+                height:30px;
+                
+                padding :5px 10px 5px 10px;
+                border-radius:4px;
+                border:none;
+                
+            }
+    
+          
             
-                display: flex;
-                justify-content: space-evenly;
-                padding: 20px 50px 20px 50px;
-                margin-top:30px;
-                
-            }
-            .main_container .item-form input,#gender,#civil_status{
-                width: 15vw;
-                height: 35px;
-                border-radius: 4px;
-                padding-left: 10px;
-                font-family: "sub_text";
-                border: none;
-                color: var(--1st-text-color);
-                font-weight: 600;
-                letter-spacing: 2px;
-               
-            }
-            .main_container .item-form input:focus{
-            outline: 3px solid var(--2nd-bg-color);
-            }
-            .main_container .item-form select:focus{
-            outline: 3px solid var(--2nd-bg-color);
-            }
-            .main_container .item-form label{
-            font-size: larger;
-            font-family: "sub_text";
-            color: var(--1st-text-color);
-            }
-            .main_container .item-form-other{
-                  margin-top:30px;
-                display: flex;
-                justify-content: space-evenly;
-                padding: 20px 50px 20px 50px;
-            }
-            .main_container .item-form-other input,#voter-status,#id_type{
-                width: 15vw;
-                height: 50px;
-                border-radius: 4px;
-                padding-left: 10px;
-                font-family: "sub_text";
-                border: none;
-                color: var(--1st-text-color);
-                letter-spacing:2px;
-                margin-left:25px;
-                
-            }
-            .main_container .item-form-other #voter-status:focus{
-                outline: 3px solid var(--2nd-bg-color);
-                
-            }
-            .main_container .item-form-other label{
-            font-size: larger;
-            font-family: "sub_text";
-            color: var(--1st-text-color);
-            }
+           
             .submit_reset_div{
                 display: flex;
                 justify-content: space-evenly;
-                padding: 40px 20px 40px 100px;
+                padding: 40px 20px 40px 10px;
                 
             }
             .submit_reset_div input{
@@ -183,9 +162,7 @@
                 height: 30px;
              
             }
-            .main_container .item-form-other input:focus{
-                outline: #4A9D4f 3px solid;
-            }
+          
             .submit_reset_div #submit{
                 background-color: #4A9D4f;
                 color: var(--bg-color);
@@ -193,7 +170,7 @@
             .submit_reset_div #reset{
                 background-color: red;
                 color: var(--bg-color);
-                margin-left:40px;
+                margin-left:0px;
             }
             .submit_reset_div #return{
                 padding: 10px;
@@ -214,6 +191,20 @@
                 
             
             }
+
+            form .grid{
+                display :grid;
+                grid-template-columns:auto auto;
+                justify-items:center;
+                padding:20px 200px 20px 200px;
+            }
+
+            form .item-form{
+                display :grid;
+                grid-template-columns:auto auto;
+                justify-items:center;
+                padding-bottom:30px;
+            }
     </style>
 </head>
 <body>
@@ -229,37 +220,47 @@
                 <input type="file" name = "image" value = "" accept = ".jpg, .jpeg, .png" required><br>
                 
             </div>
-            <div class = "item-form">
-            <label for="">ID Type</label><br>
-                <select name="id_type" id="id_type" style = "margin-left:-190px;">
-                   <option value="No ID">No ID</option>
-                   <optgroup label = "Recommended">
-                        <option value="Barangay ID">Barangay ID</option>
-                        <option value="National ID">National ID</option>
-                        <option value="UMID">UMID</option>
-                        <option value="TIN ID">TIN ID</option>
-                        <option value="Philhealth Card">Philhealth Card</option>
-                        <option value="Drivers License">Drivers License</option>
-                  </optgroup>
-                  <optgroup label = "Other ID">
-                        <option value="Passport">Passport</option>
-                        <option value="Students ID">Students ID</option>
-                        <option value="Voters ID">Voters ID</option>
-                        <option value="SSS ID">SSS ID</option>
-                        <option value="Alien/Immigrant COR">Alien/Immigrant COR</option>
-                        <option value="Government Office/GOCC ID">Government Office/GOCC ID</option>
-                        <option value="HDMF ID (Pagibig)">HDMF ID (Pagibig)</option>
-                        <option value="Postal ID">Postal ID</option>
-                        <option value="PRC ID">PRC ID</option>
-                  </optgroup>
 
-                   
-                    
-                </select>
-                <label for="" >ID Number</label>
-                <input type="text" name = "id_number" style = "margin-left:-100px;" placeholder = "Enter Your ID Number">
-            </div>
+
+          
             <div class = "item-form">
+            
+                <div>
+                <label for="">ID Type</label><br>
+                <select name="id_type" id="id_type" >
+                    <option value="No ID">No ID</option>
+                    <optgroup label = "Recommended">
+                            <option value="Barangay ID">Barangay ID</option>
+                            <option value="National ID">National ID</option>
+                            <option value="UMID">UMID</option>
+                            <option value="TIN ID">TIN ID</option>
+                            <option value="Philhealth Card">Philhealth Card</option>
+                            <option value="Drivers License">Drivers License</option>
+                    </optgroup>
+                    <optgroup label = "Other ID">
+                            <option value="Passport">Passport</option>
+                            <option value="Students ID">Students ID</option>
+                            <option value="Voters ID">Voters ID</option>
+                            <option value="SSS ID">SSS ID</option>
+                            <option value="Alien/Immigrant COR">Alien/Immigrant COR</option>
+                            <option value="Government Office/GOCC ID">Government Office/GOCC ID</option>
+                            <option value="HDMF ID (Pagibig)">HDMF ID (Pagibig)</option>
+                            <option value="Postal ID">Postal ID</option>
+                            <option value="PRC ID">PRC ID</option>
+                    </optgroup>
+        
+                    </select>
+                </div>
+                <div>
+                    <label for="" >ID Number</label><br>
+                    <input type="text" name = "id_number"  placeholder = "Enter Your ID Number">
+                </div>
+               
+            </div>
+
+
+            <div class = "grid">
+            <div class = "item-form1">
                 <label for="">Firstname :</label><br>
                 <input type="text" name = "firstname" placeholder = "Enter name" required><br>
                 <label for="">Middlename :</label><br>
@@ -267,16 +268,16 @@
                 <label for="">Lastname :</label><br>
                 <input type="text" name = "lastname" placeholder = "Enter Lastname" required>
             </div>
-            <div class = "item-form">
-                <label for="" style = "margin-left:30px;">Alias :</label><br>
+            <div class = "item-form2">
+                <label for="">Alias :</label><br>
                 <input type="text" name = "alias" placeholder = "Enter Alias"><br>
                 <label for="">Place of birth :</label><br>
                 <input type="text" name = "place_of_birth" placeholder = "Enter Place of Birth" required><br>
                 <label for="">Birthday :</label><br>
                 <input type="date" name = "date" required>
             </div>
-            <div class = "item-form">
-                <label for="" style = "margin-left:30px;">Age :</label><br>
+            <div class = "item-form3">
+                <label for="">Age :</label><br>
                 <input type="number" name = "age" placeholder = "Enter Age"  max = "110" min = "1" required ><br>
                 <label for="">Civil Status :</label><br>
                 <select name="civil-status" id = "civil_status"required>
@@ -285,7 +286,7 @@
                     <option value="Seperated">Seperated</option>
                     <option value="Widowed">Widowed</option>
                     <option value="Divorced">Divorced</option>
-                </select>
+                </select><br>
 
                 <label for="">Gender :</label><br>
                 <select name="gender" id="gender" required>
@@ -293,24 +294,37 @@
                     <option value="Female">Female</option>
                 </select>
             </div>
-            <div class = "item-form">
-                <label for="" style = "margin-left:40px;">Email :</label><br>
+            <div class = "item-form4">
+                <label for="" >Email :</label><br>
                 <input type="email" name = "email" placeholder = "Enter email"><br>
                 <label for="">Contact number :</label><br>
                 <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" pattern="[0-9]{11}"><br>
                 <label for="">Occupation</label><br>
                 <input type="text" name = "occupation" placeholder = "Enter Occupation">
             </div>
-            <div class = "item-form-other">
-                <label for="">Voter Status :</label>
+           
+        </div>
+        <div class = "item-form5">
+                <label for="">Voter Status :</label><br>
                 <select name="voter-status" id="voter-status">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
-                </select>
-                <label for="" style = "margin-left:30px;">Citizenship :</label><br>
+                </select><br>
+                <label for=""   >Citizenship :</label><br>
                 <input type="text" name = "citezenship" placeholder = "Enter Citezenship"><br>
-                <label for="">Address :</label><br>
-                <input type="text" name = "address" placeholder = "Enter Complete Address" required><br>
+                <label for="">House No :</label><br>
+                <input type="text" name = "house_no" placeholder = "Enter house number" required><br>
+            
+            <label for="">Sitio/Pook</label><br>
+            <select id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
+                <option value="Iyala">Iyala</option>
+                <option value="Sitio Burol">Sitio Burol</option>
+                <option value="Sitio Kubuhan & Rigde View">Sitio Kubuhan & Rigde View</option>
+                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
+                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
+                <option value="Camella at the Island Park">Camella at the Island Park</option>
+            </select><br>
+            
             </div>
 
             <div class = "submit_reset_div">

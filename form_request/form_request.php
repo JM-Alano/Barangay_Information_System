@@ -1,11 +1,8 @@
 <?php
     require('../select_data_db.php');
+    require('../user_login/session.php');
 
-    session_start();
-
-
-     $_SESSION['status'] = 'invalid';
-
+   
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Request | Barangayy Information System</title>
 
-    <link rel = "stylesheet" href = "form.request.css"/>
+    <link rel = "stylesheet" href = "form.css"/>
 </head>
 <body>
     
@@ -100,9 +97,19 @@
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select><br>
-            <label for="">Complete Address : </label><br>
-            <input type="text"name = "address" placeholder = "Enter Complete Address" required><br>
+            <label for="">House Number : </label><br>
+            <input type="text"name = "house_no" placeholder = "Enter House Number" required><br>
 
+            <label for="">Sitio/Pook/Subdivision : </label><br>
+            <select name="Sitio_Pook" id="select">
+               <option value="">--Select Pook/Sitio/Subdivision--</option>
+                <option value="Iyala">Iyala</option>
+                <option value="Sitio Burol">Sitio Burol</option>
+                <option value="Sitio Kubuhan & Ridge View">Sitio Kubuhan & Ridge View</option>
+                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
+                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
+                <option value="Camella at the Island Park">Camella at the Island Park</option>
+            </select><br>
             
             <label for="">Birthday : </label><br>
             <input type="date" name = "date" required><br>
@@ -131,7 +138,7 @@
             <div class = "submit_reset_return_div">
                 <input type="submit" id = "submit" name = "submit_request" value = "Submit">
                 <input type="reset" id = "reset" value = "Reset">
-                <a href="../index.php"><input type="button" value = "Return" id = "return"></a>
+                <a href="../user_login/logout.php"><input type="button" value = "Logout" id = "return"></a>
             </div>
         </form>
     </section>
