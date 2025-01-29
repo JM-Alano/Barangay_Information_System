@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
-    <link rel = "stylesheet" href = "style_user/user_profile.css"/>
+    <link rel = "stylesheet" href = "style_user/profile_user.css"/>
     <link rel = "stylesheet" href = "style_user/style_respon.css"/>
 </head>
 <body>

@@ -253,7 +253,7 @@ html {
     .sub_dashboard_profile .item2 h3{
       
         margin-left: 2px;
-        font-size:1rem;
+        font-size:0.8rem;
         font-weight: 400;
         color: #00572091;
         width: max-content;
@@ -277,7 +277,8 @@ html {
         margin-top: 20px;
         font-size: 0.8rem;
         position: relative;
-        margin-right: 10px;
+        right: 10px;
+        
     }
     .sub2_dashboard_profile .item1 a svg{
         width: 25px;

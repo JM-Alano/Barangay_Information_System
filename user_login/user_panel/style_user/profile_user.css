@@ -180,7 +180,7 @@ hr{
   .form{
     
     height:max-content;
-    background-color: #5019199c;
+    background-color: #ebebeb9c;
     padding-bottom: 100px;
     width: 70vw;
     margin-left: 10px;
@@ -193,15 +193,15 @@ hr{
   }
   .sidebar.active ~ .dashboard_content .form{
    
-    margin-left: -30px;
+    margin-left: 40px;
   }
   .form .personal_info h3{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: "sub_text";
-    color: var(--2nd-bg-color);
+    color: #005720;
   }
   .form .personal_info h5{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: "sub_text";
     color: #00572079;
     margin-bottom: 20px;
@@ -217,8 +217,8 @@ hr{
   .profile h1{
    color: #005720;
     align-items: center;
-    margin-left: 70px;
-    font-size: 1.5rem;
+    margin-left: 0px;
+    font-size: 1rem;
     font-family: "sub_text";
   }
   .profile .img{
@@ -226,18 +226,19 @@ hr{
     
   } 
   .profile img{
-    width: 250px;
-    height: 250px;  
-    margin-right: 500px;
+    width: 100px;
+    height: 100px;  
+    margin-right: 300px;
     border-radius: 4px;
-  
+    border: 1px solid #005720;
   }
   .profile input{
     margin-top: 20px;
-    margin-left: 180px;
+    margin-left: 60px;
     border: 2px solid #4a9d506c;
-    padding: 5px;
-    border-radius: 4px; 
+    padding: 3px;
+    border-radius: 4px;
+    width: 40vw;
   }
   
   .container {
@@ -247,45 +248,46 @@ hr{
 .label_div{
   display: grid;
   align-items: center;
-  margin-left: 70px;
-  font-size: 1.5rem;
+  margin-left: 0px;
+  font-size: 1rem;
   font-family: "sub_text";
 
 }
 .label_div label{
-  margin-top: 10px;
+  margin-top: -10px;
   color: var(--1st-text-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .input_div{
   display: grid;
-  
+
   align-items: center;
-  margin-left: -200px;
+  width: max-content;
+  margin-left: 0px;
 }
 .input_div input{
   margin-top: 10px;
-  width: 20px;
-  height: 40px;
-  padding-left: 20px;
+  width: 40vw;
+  height: 30px;
+  padding-left: 5px;
   font-size: 1rem;
   border: 2px solid rgba(128, 128, 128, 0.144);
   border-radius: 4px;
  background-color: rgb(245, 245, 245);
  color: #005720;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 .input_div select{
   margin-top: 10px;
-  width: 250px;
-  height: 40px;
-  padding-left: 20px;
+  width: 40vw;
+  height: 30px;
+  padding-left: 5px;
   font-size: 1rem;
   border: 2px solid rgba(128, 128, 128, 0.144);
   border-radius: 4px;
  background-color: rgb(245, 245, 245);
  color: #005720;
- margin-left: 50px;
+ margin-left: 20px;
 }
 .input_div input:focus{
  outline: #4A9D4f 2px solid;
@@ -298,9 +300,9 @@ hr{
 #submit{
   padding: 10px;
   background-color: var(--other-color);
-  margin-left: 60px;
-  margin-top: 50px;
-  width: 100px;
+  margin-left: 0px;
+  margin-top: 30px;
+  width: 30vw;
   border-radius: 4px;
   border: none;
   color: var(--bg-color);
@@ -312,7 +314,7 @@ hr{
 
 .contact{
     margin-top: 30px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "sub_text";
     color: #005720;
     margin-bottom: 20px;

@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
-    <link rel = "stylesheet" href = "style_user/style_dash.css"/>
+    <link rel = "stylesheet" href = "style_user/style_dashboard.css"/>
     <link rel = "stylesheet" href = "style_user/style_respon.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
