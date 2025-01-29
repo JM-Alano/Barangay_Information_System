@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blotter | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/main.style.css"/>
-    <link rel = "stylesheet" href = "style.css/barangay_blotter.css"/>
+    <link rel = "stylesheet" href = "style.css/brgy.blotter.css"/>
 </head>
 </head>
 <body>
@@ -30,7 +30,7 @@
 
 
             <ul class = "nav_list">
-                <h3>ADMIN PANEL</h3>
+                
                     <li>
                         <a href="dashboard.php">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"></path></svg><span class = "link_name">Dashboard</span></a>
@@ -84,10 +84,12 @@
                     
                     <div class = "setting">
                         <div>
-                        <img src="../../asset/image/admin/<?php echo $_SESSION['admin_profile']?>" alt="">
+                        <img src="../../asset/image/admin/" alt="" id = "admin_profile">
                         </div>
-                        <div> <p><?php echo $_SESSION['username']?></p>
-                            ADMINISTRATOR</div>
+                        <div>
+                            <p id = "username_admin">Admin</p>
+                            <p id = "user_type" style = "font-size:0.6rem;">ADMINISTRATOR</p>
+                        </div>
                         <div class = "svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
                         <div class="dropdown-content">
@@ -137,6 +139,15 @@
                 let logo = document.getElementById("logo_get").textContent;
 
                 document.getElementById("logo").src =  logo;
+
+                let user_admin = document.getElementById("user_admin").textContent;
+                document.getElementById("username_admin").innerHTML =  user_admin;
+
+                let user_type = document.getElementById("user_type_get").textContent;
+                document.getElementById("user_type").innerHTML =  user_type;
+
+                let admin_profile = document.getElementById("admin_picture").textContent;
+                document.getElementById("admin_profile").src =  admin_profile;
                 
     
         </script>

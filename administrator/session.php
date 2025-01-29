@@ -7,4 +7,12 @@
               header('Location: ../login.php');
           }
           
+
+          if (empty($_SESSION['admin_id'])){
+            // set default session invalid
+            $_SESSION['status'] = 'invalid';
+    
+            header('Location: ../login.php');
+        }
+        
 ?>

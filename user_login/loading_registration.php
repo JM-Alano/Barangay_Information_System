@@ -50,7 +50,7 @@
 <body>
     <!-- Loading screen -->
     <div id="loading-screen">
-    <h1>Successfully! Registered. </h1>
+    <h1></h1>
         <div class="spinner"></div>
     </div>
 
@@ -61,9 +61,9 @@
         setTimeout(() => {
             // Hide the loading screen after 5 seconds
             
-            window.location.href = "/BIS/user_login/user_login_page.php";
+            window.location.href = "/BIS/user_login/successful.php";
             clearInterval(timerInterval);
-        }, 5000); // Simulate PHP execution time
+        }, 4000); // Simulate PHP execution time
 
     
     </script>

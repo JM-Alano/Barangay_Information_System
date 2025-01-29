@@ -60,7 +60,7 @@
         setTimeout(() => {
             // Hide the loading screen after 5 seconds
             
-            window.location.href = "/BIS/form_request/form_request.php";
+            window.location.href = "/BIS/user_login/user_panel/user.php";
             clearInterval(timerInterval);
         }, 1000); // Simulate PHP execution time
 

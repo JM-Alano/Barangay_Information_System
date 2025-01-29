@@ -6,6 +6,7 @@
    if ($_SESSION['status_input'] == 'invalid_input' || empty($_SESSION['status_input'])){
     // set default session invalid
     $_SESSION['status_input'] = 'invalid_input';
+          
     }
     if ($_SESSION['status_input'] == 'valid_input'){
          header('location: loading.php');
@@ -22,13 +23,13 @@
                 echo"
                    <script> 
                         document.getElementById('validation').style.display = 'block';
-                      document.getElementById('pwd').style.outline = '1px rgb(253, 42, 42) solid';
-                    
+                         document.getElementById('pwd').style.outline = '1px rgb(253, 42, 42) solid';
+
                     </script> ";
                     
          }else {
 
-            $query = "SELECT * FROM user_account WHERE password =  md5('$password') AND username = '$username'";
+            $query = "SELECT * FROM user_account WHERE password =  '$password' AND username = '$username'";
 
             $result = mysqli_query($conn, $query);
 
@@ -38,6 +39,9 @@
 
            
                 $_SESSION['status_input'] = 'valid_input';
+                
+                $_SESSION['user_id'] = $rowValidate['user_id']; 
+              
                 header('location: loading.php');
                
             }else {

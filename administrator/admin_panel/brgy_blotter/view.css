@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "main_text";
+src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
+}
+@font-face {
+    font-family: "sub_text";
+    src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    list-style-type: none ;
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+    --bg-color:#FCFAEE;
+    --2nd-bg-color:#4A9D4f;
+    --sub-bg-color: #005720 ;
+ 
+    --1st-text-color: #005720 ;
+    --2nd-text-color: rgb(53, 53, 53);
+    --3rd-text-color: #FCFAEE;
+   
+    --btn-color: #F5E402;
+    
+    --other-color :rgb(0, 183, 255);
+}
+.item1 ,.item2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.item1 h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "sub_text";
+    color: #4A9D4f;
+    text-align: left;
+    letter-spacing: 1px;
+
+}
+.item1 h3 span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "sub_text";
+    color: #005720;
+    
+}
+.item2 h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "sub_text";
+    color: #4A9D4f;
+    margin-top: 20px;
+    letter-spacing: 1px;
+
+
+}
+.item2 h3 span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "sub_text";
+    color: #005720;
+}
+.item3 h1{
+    color:#005720c2;
+    font-family: "sub_text";
+    margin-left: 20px;
+}
+.h1_blotter{
+    color:#005720c2;
+    font-family: "sub_text";
+    margin-left: 20px;
+}
+.item3{
+
+    height: max-content;
+}
+.item3 h3{
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: #005720;
+    font-family: "sub_text";
+    letter-spacing: 1px;
+
+}
+.item3 p{
+    border: #4a9d5088 2px solid;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #005720;
+    font-family: "sub_text";
+    letter-spacing: 1px;
+    margin-right: 50px;
+    margin-left: 100px;
+}

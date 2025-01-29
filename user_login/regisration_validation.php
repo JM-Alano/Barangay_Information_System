@@ -7,12 +7,14 @@
         $middlename = trim($_POST['mname']);
         $lastname = trim($_POST['lname']);
 
-        $house_no = trim($_POST['house_no']);
-        $Sitio_Pook = trim($_POST['Sitio_Pook']);
+        $gender = trim($_POST['gender']);
+        $age = trim($_POST['age']);
 
         $username = trim($_POST['uname']);
         $password = trim($_POST['pword']);
         $confirm_pword = trim($_POST['confirm_pword']);
+
+        $profile_default = trim($_POST['profile_default']);
 
         date_default_timezone_set("Asia/Manila");
         $date_issue = date("Y-m-d");
@@ -25,11 +27,13 @@
                    <script> 
                        window.location.href = 'BIS/user_login/user_login_page.php';
                     </script> ";
+
+                    
                    
          }else {
 
-            $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, house_no, sitio_pook, date_registered)
-                        VALUES ('$firstname', '$middlename', '$lastname', '$username' ,md5('$password'), '$house_no', '$Sitio_Pook', '$date_issue')";
+            $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, gender, age, date_registered , profile)
+                        VALUES ('$firstname', '$middlename', '$lastname', '$username' , '$password' , '$gender', '$age', '$date_issue' , '$profile_default')";
 
             $result = mysqli_query($conn, $query);
 

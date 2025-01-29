@@ -1,10 +1,10 @@
 <?php
-
+    
     require('select_data_db.php');
+    
+    session_start();
 
-  
-
-
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "index_style.css"/>
-    <link rel = "stylesheet" href = "style_responsive.css"/>
+    <link rel = "stylesheet" href = "user.css"/>
+    <link rel = "stylesheet" href = "_responsive.css"/>
+    <script>
+        // Check if the page has already reloaded
+        if (!sessionStorage.getItem("reloaded")) {
+            // Set a flag in sessionStorage
+            sessionStorage.setItem("reloaded", true);
 
+            // Reload the page
+            window.location.reload();
+        }
+    </script>
 </head>
 <body>  
         
@@ -23,17 +32,70 @@
             <div class = "social_logo">
                 <a href="https://www.facebook.com/profile.php?id=61553666895025" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg></a>
-                <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a>
+               
            
             </div>
             <div class = "btn_e-barangay">
-                <a href="user_login/user_login_page.php"><button>Login Account</button></a>
+                <a href="user_login/user_login_page.php"><button id="loginButton" class = "svg_login">LOGIN<svg id = "iconContainer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></button></a>
             </div>
+            
+            <?php
+            
+          if ($_SESSION['status_input'] == 'invalid_input' || empty($_SESSION['status_input'])){
+            // set default session invalid
+            $_SESSION['status_input'] = 'invalid_input';
+        }else{
+            if( $_SESSION['status_input'] == 'valid_input'){
+           
+                ?>
+                     <script>
+                          // Simulate user login status (true for logged in, false for logged out)
+                            let isLoggedIn = true;
+                              // Get the button element
+                              const button = document.getElementById("loginButton");
+
+                              const button_svg = document.querySelector('.iconContainer');
+                              
+                              const svgIcon = `
+                                    <svg style = fill:#4A9D4f; xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+                                `;
+      
+                              // Function to update button based on login status
+                              function updateButton() {
+                                  if (isLoggedIn) {
+                                    button.innerHTML = svgIcon;
+                                    
+                                        // Add a style directly to the button
+                                     
+                                        button.style.width = 'max-content';
+                                    
+                                        button_svg.style.position = 'relative';
+                                        
+                                        button_svg.style.right = '10px'; // Move 20px to the right
+                                      button.onclick = () => {
+                                          isLoggedIn = true; // Update the status
+                                          updateButton(); // Update button again
+
+                                       
+                                      };
+                                  } 
+                              }
+                              
+                              // Initial update
+                              updateButton();
+                   </script>
+                <?php
+            }
+
+        }
+            
+      
+            ?>
         </header>
         
         <nav class = "nav">
             <div class = "logo">
-                <img src="asset/image/logo/6736f2c7d1.png" alt="" id = "logo">
+                <img src="asset/image/l7d1.png" alt="" id = "logo">
             </div>
             <div class = "headings">
                 <h1>BARANGAY <span id = "barangay_name">PALIPARAN II</span> </h1><br>

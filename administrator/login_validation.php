@@ -37,13 +37,8 @@
 
                 $_SESSION['status'] = 'valid';
                 
-               
-                $_SESSION['user_id'] = $rowValidate['user_id']; 
-                $_SESSION['user_type'] = $rowValidate['user_type']; 
-                $_SESSION['username'] = $rowValidate['username'];   
-                $_SESSION['admin_profile'] = $rowValidate['admin_profile'];       
-
-           
+                
+                $_SESSION['admin_id'] = $rowValidate['user_id']; 
                  
                 header('location: loading.php');
                

@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "login.css"/>
+    <link rel = "stylesheet" href = "login.admin.css"/>
 </head>
 <body>
     <header class = "header">
@@ -31,10 +31,10 @@
 
             <div>
             <label for=""><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg></span>Username</label><br>
-            <input type="text" id = "uname" name = "uname" required><br>
+            <input type="text" id = "uname" name = "uname" placeholder = "Usename" required><br>
 
             <label for=""><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z"></path></svg></span>Password</label><br>
-            <input type="Password" id = "pwd" name = "pname" ><br>
+            <input type="Password" id = "pwd" name = "pname" placeholder = "Password" ><br>
 
           
             <input type="checkbox" id = "checkbox" onclick="show_pwd()"><label for="" id = "check_span">SHOW PASSWORD</label><br>
@@ -58,7 +58,11 @@
         </div>
 
     </main>
+<?php
 
+   
+
+?>
 
 
       <!-- Js function visibility eye -->
@@ -77,6 +81,17 @@
         };
         
 </script>
+
+
+    <script>
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('validation').style.display = 'none';
+        }
+
+        // Set a timer to automatically close the modal after 5 seconds (5000 ms)
+        setTimeout(closeModal, 5000);   
+    </script>
 
 
 

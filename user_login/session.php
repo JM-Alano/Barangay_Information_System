@@ -9,4 +9,12 @@
             </script>";
           }
           
+
+          if (empty($_SESSION['user_id'])){
+            // set default session invalid
+            $_SESSION['status'] = 'invalid';
+    
+            header('Location: user_login_page.php');
+        }
+        
 ?>
