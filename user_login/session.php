@@ -12,8 +12,7 @@
 
           if (empty($_SESSION['user_id'])){
             // set default session invalid
-            $_SESSION['status'] = 'invalid';
-    
+            $_SESSION['status_input'] = 'invalid_input';
             header('Location: user_login_page.php');
         }
         

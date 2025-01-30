@@ -13,7 +13,7 @@
     <title>Document | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
     <link rel = "stylesheet" href = "style_user/style_documnet.css"/>
-    <link rel = "stylesheet" href = "style_user/style_respon.css"/>
+    <link rel = "stylesheet" href = "style_user/layout_res.css"/>
 </head>
 <body>
 

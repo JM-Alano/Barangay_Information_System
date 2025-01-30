@@ -6,6 +6,7 @@
    if ($_SESSION['status_input'] == 'invalid_input' || empty($_SESSION['status_input'])){
     // set default session invalid
     $_SESSION['status_input'] = 'invalid_input';
+    
           
     }
     if ($_SESSION['status_input'] == 'valid_input'){
