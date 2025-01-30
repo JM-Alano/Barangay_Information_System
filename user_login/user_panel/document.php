@@ -108,15 +108,9 @@
             <input type="text" id = "house_no_my_profile_id" name = "house_no" placeholder = "Enter House Number" required><br>
 
             <label for="" >Sitio/Pook/Subdivision : </label><br>
-            <select   name="Sitio_Pook" id="select" class ="select">
-               <option value="">--Select Pook/Sitio/Subdivision--</option>
-                <option value="Iyala">Iyala</option>
-                <option value="Sitio Burol">Sitio Burol</option>
-                <option value="Sitio Kubuhan & Ridge View">Sitio Kubuhan & Ridge View</option>
-                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
-                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
-                <option value="Camella at the Island Park">Camella at the Island Park</option>
-            </select><br>
+            <input   name="Sitio_Pook" id="select" class ="select"/>
+              
+            <br>
             
             <label for="">Birthday : </label><br>
             <input type="date" id = "birthday_my_profile_id" name = "date_birthday" required><br>
