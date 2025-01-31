@@ -14,7 +14,7 @@
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
     <link rel = "stylesheet" href = "style_user/style.dash.css"/>
-    <link rel = "stylesheet" href = "style_user/layout_res.css"/>
+    <link rel = "stylesheet" href = "style_user/responsive_layout.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -23,7 +23,7 @@
     <div class = "sidebar" >
         <div class = "logo_content">
             <div class = "logo">
-            <img src="../../asset/image/logo/6798e21533658.png" alt="" id = "logo">
+            <img src="../../asset/image/logo/679b85db30f8c.png" alt="" id = "logo">
                 <div class = "logo_name">BIS</div>
             </div>
             <span id = "btn_menu">

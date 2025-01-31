@@ -95,7 +95,7 @@
         
         <nav class = "nav">
             <div class = "logo">
-                <img src="asset/image/l7d1.png" alt="" id = "logo">
+                <img src="asset/image/6798e1930e952.png" alt="" id = "logo">
             </div>
             <div class = "headings">
                 <h1>BARANGAY <span id = "barangay_name">PALIPARAN II</span> </h1><br>
