@@ -26,6 +26,7 @@
         font-size: 1rem;
         padding: 0px 10px 0px 0px;
     }
+   
     .sidebar{
       
         width: 20px;
@@ -262,9 +263,21 @@
         text-decoration: none;
         color: #4A9D4f;
         font-style: italic;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-left: 80px;
     }
+    .sidebar.active ~ .dashboard_content .date_today{
+       width: max-content;
+        margin-left: 50px;
+        font-size: 1rem;
+        padding: 0px 10px 0px 0px;
+    }
+    .sidebar.active ~ .dashboard_content .date_today a{
+        width: max-content;
+         margin-left: 10px;
+         font-size: 1rem;
+         padding: 0px 30px 0px 0px;
+     }
     .dashboard_content{
         position: absolute;
         height: 100%;
@@ -328,12 +341,19 @@
         transition: all 0.5s;
      
     }
+  
     .date_today a{
         text-decoration: none;
         color: #4A9D4f;
         font-style: italic;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-left: 80px;
+    }
+    .sidebar.active ~ .dashboard_content .date_today{
+       width: max-content;
+        margin-left: 50px;
+        font-size: 1rem;
+        padding: 0px 10px 0px 0px;
     }
     .dashboard_content{
         position: absolute;
@@ -402,7 +422,7 @@
         text-decoration: none;
         color: #4A9D4f;
         font-style: italic;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-left: 80px;
     }
     .dashboard_content{
@@ -1035,14 +1055,15 @@ body{
         left: 50%;
     }
     .sidebar ul{
-        margin-top: 10px;
+        margin-top: 20px;
+    
     }
     .sidebar ul li{
        position: relative;
        height: 50px;
        list-style: none;
        line-height: 50px;
-       
+      
     }
     .sidebar ul li .tooltip{
         position: absolute;
@@ -1088,6 +1109,7 @@ body{
         width: 110%;
         margin-left: 5px;
         margin-top: 10px;
+        font-size: 1.3rem;
      }
      .sidebar.active ul li a{
         width: 40px;

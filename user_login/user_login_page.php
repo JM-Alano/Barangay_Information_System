@@ -17,7 +17,7 @@
 <body>
 
     <header class = "header">
-            <img src="../asset/image/logo/6798e1930e952.png" alt="">
+            <img src="../asset/image/logo/679b85db30f8c.png" alt="">
 
             <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">INFORMATION SYSTEM</span></h1>
     </header>

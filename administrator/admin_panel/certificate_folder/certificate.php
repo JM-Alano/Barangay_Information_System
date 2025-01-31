@@ -17,7 +17,7 @@
             
         <?php require("../../../database/conn_db.php");
                 
-                $sql = "SELECT DISTINCT * FROM barangay_request ORDER BY id DESC LIMIT 12";
+                $sql = "SELECT DISTINCT * FROM barangay_request WHERE request_document = 'Barangay Certificate' ORDER BY id DESC LIMIT 12";
                 $result = $conn->query($sql);
     
                 $result->num_rows > 0;
@@ -25,7 +25,7 @@
                 if ($result->num_rows > 0) {?>
            
                 <table>
-                        <caption>Requested Certificate List</caption>
+                        <caption>Barangay Certificate Request</caption>
                         <tr>
                             <th>Fullname</th>
                             <th>Gender</th>
@@ -78,21 +78,29 @@
                                     <td><?php echo $purpose; ?></td>
                                     <td><?php echo $request_document; ?></td>
                                     <td><?php echo  date('m/d/Y',strtotime($date_request));?></td>
-                                    <td  style = 'color:blue;'><?php
-                                        
-                                        if($status == 0){
-                                          echo "<p style = 'color:red;'>Decline</p>";
-                                        }elseif($status == 1){
-                                            echo "<p style = 'color:orange;'>Pending</p>";
-                                        }
-                                        elseif($status == 2){
-                                            echo "<p style = 'color:rgb(0, 183, 255);'>Processing</p>";
-                                        }
-                                        elseif($status == 3){
-                                            echo "<p style = 'color:green'>Completed</p>";
-                                        }
-                                    
-                                    ?></td>
+                                    <td  style = 'color:blue;'>
+                                        <?php
+                                            $satus_document =  $row['status'] ;
+
+                                            if ($satus_document == 0){
+                                                echo "<p style = 'color:#00572060;'>No data</p>";
+                                            }
+                                            else if ($satus_document == 1){
+                                                echo "<p style = 'color:red;'>Pending</p>";
+                                            }
+                                            else if ($satus_document == 3){
+                                                echo "<p style = 'color:orange;'>Processing</p>";
+                                            }
+                                            else if ($satus_document == 4){
+                                                echo "<p style = 'color:blue;'>Ready to Pick-up</p>";
+
+
+                                            }
+                                            else if ($satus_document == 5){
+                                                echo "<p style = 'color:#00cc0e;'>Released</p>";
+                                            }
+                                        ?>
+                                    </td>
                                 
                                     <td>
                                         

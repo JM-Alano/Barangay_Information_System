@@ -28,9 +28,8 @@ html {
     --other-color :rgb(0, 183, 255);
 }
    body{
-     
-       background-image: url("/BIS/asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-     
+    
+ 
    }
    .popup{
        width: 400px;
@@ -116,8 +115,7 @@ html {
      @media only screen and (min-width: 320px ){
          /* SUCCESSFUL MESSAGE RESPONSIVE */
          body{
-            background-color: var(--bg-color);
-            background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
         }
@@ -206,8 +204,7 @@ html {
      @media only screen and (min-width: 481px ){
          /* SUCCESSFUL MESSAGE RESPONSIVE */
          body{
-            background-color: var(--bg-color);
-            background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
         }
@@ -296,8 +293,7 @@ html {
      @media only screen and (min-width: 601px ){
          /* SUCCESSFUL MESSAGE RESPONSIVE */
          body{
-            background-color: var(--bg-color);
-            background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
         }
@@ -386,8 +382,7 @@ html {
      @media only screen and (min-width: 769px ){
         /* SUCCESSFUL MESSAGE RESPONSIVE */
         body{
-            background-color: var(--bg-color);
-            background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
          
@@ -478,8 +473,8 @@ html {
      @media only screen and (min-width: 1281px ){
         /* SUCCESSFUL MESSAGE RESPONSIVE */
         body{
-            background-color: var(--bg-color);
-            background-image: url("../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+           
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
         }
@@ -577,8 +572,8 @@ html {
      @media only screen and (min-width: 1441px) {
         /* SUCCESSFUL MESSAGE RESPONSIVE */
         body{
-            background-color: var(--bg-color);
-            background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+           
+            background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
             background-repeat: repeat;
             background-size: cover;
         }

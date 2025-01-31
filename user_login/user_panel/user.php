@@ -14,7 +14,7 @@
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
     <link rel = "stylesheet" href = "style_user/style.dash.css"/>
-    <link rel = "stylesheet" href = "style_user/responsive_layout.css"/>
+    <link rel = "stylesheet" href = "style_user/layout_main.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>

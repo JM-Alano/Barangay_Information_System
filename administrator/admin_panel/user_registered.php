@@ -20,7 +20,7 @@
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">
-            <img src="../../asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo">
+            <img src="../../asset/image/logo/679b85db30f8c.png" alt="" id = "logo">
                 <div class = "logo_name">BIS</div>
             </div>
             <span id = "btn_menu">

@@ -3,11 +3,11 @@
 
 
     if (isset($_POST['registraion'])) {
-        $firstname = trim($_POST['fname']);
-        $middlename = trim($_POST['mname']);
-        $lastname = trim($_POST['lname']);
+        $firstname = ucfirst(strtolower(trim($_POST['fname'])));
+        $middlename = ucfirst(trim($_POST['mname']));
+        $lastname = ucfirst(trim($_POST['lname']));
 
-        $gender = trim($_POST['gender']);
+        $gender = trim($_POST['gender']); 
         $age = trim($_POST['age']);
 
         $username = trim($_POST['uname']);
@@ -25,29 +25,38 @@
             
                 echo"
                    <script> 
-                       window.location.href = 'BIS/user_login/user_login_page.php';
+                       window.location.href = '/BIS/user_login/user_login_page.php';
                     </script> ";
 
                     
                    
          }else {
 
-            $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, gender, age, date_registered , profile)
-                        VALUES ('$firstname', '$middlename', '$lastname', '$username' , '$password' , '$gender', '$age', '$date_issue' , '$profile_default')";
+                    
+            // Check if the date_registered already exists
+            $checkQuery = "SELECT COUNT(*) AS count FROM user_account WHERE username = '$username'  || password = '$password' ";
+            $result = mysqli_query($conn, $checkQuery);
+            $row = mysqli_fetch_assoc($result);
 
-            $result = mysqli_query($conn, $query);
-
-
-            if($result){
-            header('location: loading_registration.php');
-               
-            }else {
-
-              
-
-                echo "Invalid Input.";
-               
+            if ($row['count'] == 0) {
+                // Insert new record if date is unique
+                $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, gender, age, date_registered, profile)
+                        VALUES ('$firstname', '$middlename', '$lastname', '$username', '$password', '$gender', '$age', '$date_issue', '$profile_default')";
+                
+                if (mysqli_query($conn, $query)) {
+                    echo "New record created successfully!";
+                } else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+            }else{
+                echo "<script>alert('Username or Password is already exists!');
+                window.location.href = '/BIS/user_login/user_login_page.php';
+                 </script>";
             }
+
+            // Close connection
+            mysqli_close($conn);
+        
          }
         }
 
