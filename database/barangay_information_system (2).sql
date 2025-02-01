@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2025 at 09:47 AM
+-- Generation Time: Feb 01, 2025 at 04:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -211,7 +211,8 @@ CREATE TABLE `barangay_request` (
 --
 
 INSERT INTO `barangay_request` (`firstname`, `middlename`, `lastname`, `age`, `request_document`, `house_number`, `sitio_pook`, `birthday`, `place_of_birth`, `contact_no`, `contact_person`, `contact_no_contact_person`, `live_since_year`, `purpose`, `status`, `gender`, `date_request`, `profile`, `user_id`, `id`) VALUES
-('Jm', 'Acantilado', 'Alano', 23, 'Barangay Indigency', 'bkl 18 lot 18 dsad', 'Camella at the Island Park', '2025-01-08', 'Cavite ads', '09694911523', 'Jenmar Acantilado Alano', '09694911585', '2025-02', 'School', 1, 'Female', '2025-01-28', 'images.png', 16, 52);
+('Jenmar bb', 'Acantlado', 'Alano', 22, 'Barangay Certificate', 'asdasd', 'Mabuhay Homes 2000 asdsd', '2025-01-09', 'Manila', '09694911585', 'Maryjane', '09454566545', '2025-02', 'Education', 1, 'Male', '2025-01-28', '679b9f74184a1.jpg', 17, 52),
+('aaaaaa', 'aaaaaaa', 'aaaaaaaaa', 23, 'Barangay Indigency', 'asdasd', 'Sitio Burol', '2025-01-08', 'Manila', '09694911585', 'Maryjane', '09454566545', '2025-02', 'Education', 1, 'Female', '2025-01-28', '6798fc567d3f8.jpg', 18, 53);
 
 -- --------------------------------------------------------
 
@@ -259,47 +260,28 @@ INSERT INTO `barangay_resident` (`id`, `firstname`, `middlename`, `lastname`, `h
 
 CREATE TABLE `barangay_revenue` (
   `date_issue` date NOT NULL,
+  `expired_date` date NOT NULL,
   `document_amount` float NOT NULL,
   `firstname` varchar(200) NOT NULL,
   `middlename` varchar(200) NOT NULL,
   `lastname` varchar(200) NOT NULL,
   `document_type` varchar(200) NOT NULL,
-  `OR_no` bigint(20) NOT NULL,
-  `id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
   `status` int(11) NOT NULL,
-  `ID_incre` int(11) NOT NULL
+  `OR_no` bigint(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `barangay_revenue`
 --
 
-INSERT INTO `barangay_revenue` (`date_issue`, `document_amount`, `firstname`, `middlename`, `lastname`, `document_type`, `OR_no`, `id`, `status`, `ID_incre`) VALUES
-('2024-12-12', 23, 'JENMAR', 'A', 'ALANO', 'Barangay Indigency', 52, 65, 3, 9),
-('2024-12-12', 23, 'JENMAR', 'A', 'ALANO', 'Barangay Indigency', 52, 65, 3, 10),
-('2024-12-15', 100, 'JUAN', 'D', 'DELA CRUZ', 'Barangay ID', 55, 67, 3, 15),
-('2024-12-15', 23, 'JUAN', 'D', 'DELA CRUZ', 'Barangay ID', 56, 67, 3, 16),
-('2024-12-15', 123, 'JUAN', 'D', 'DELA CRUZ', 'Barangay Clearance', 57, 67, 3, 17),
-('2024-12-16', 21, 'JUAN', 'D', 'DELA CRUZ', 'Barangay ID', 58, 66, 3, 18),
-('2024-12-16', 50, 'WWDW', 'W', 'WDDD', 'Barangay ID', 59, 68, 2, 19),
-('2024-12-12', 12, 'JENMAR', 'A', 'ALANO', 'Barangay Certificate', 52, 65, 3, 20),
-('2024-12-24', 12, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 2, 21),
-('2024-12-24', 12, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 3, 22),
-('2024-12-24', 2, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 3, 23),
-('2025-01-06', 200, 'WWDW', 'W', 'WDDD', 'Barangay Clearance', 61, 68, 2, 24),
-('2025-01-07', 23, 'JENMAR', 'A', 'ASDS', 'Barangay Indigency', 62, 69, 2, 25),
-('2025-01-07', 23, 'JENMAR', 'A', 'ASDS', 'Barangay Indigency', 62, 69, 2, 26),
-('2025-01-08', 23, 'JENMAR', 'A', 'ALANO', 'Barangay Certificate', 63, 73, 2, 27),
-('2025-01-09', 23123, 'JENMAR', 'A', 'ASDD', 'Barangay Clearance', 64, 72, 2, 28),
-('2025-01-13', 100, 'JENMAR', 'A', 'ALANO', 'Barangay Certificate', 65, 73, 3, 29),
-('2025-01-13', 120, 'JENMAR', 'A', 'ALANO', 'Barangay Clearance', 66, 75, 2, 30),
-('2024-12-24', 111, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 3, 31),
-('2024-12-24', 222, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 3, 32),
-('2025-01-13', 54, 'JENMAR', 'A', 'ALANO', 'Barangay Clearance', 66, 75, 2, 33),
-('2024-12-16', 23, 'WWDW', 'W', 'WDDD', 'Barangay ID', 59, 68, 2, 34),
-('2024-12-24', 77, 'WWDW', 'W', 'WDDD', 'Barangay ID', 60, 68, 3, 35),
-('2025-01-13', 21, 'JENMAR', 'A', 'ALANO', 'Barangay Clearance', 66, 75, 2, 36),
-('2025-01-13', 232, 'JENMAR', 'A', 'ALANO', 'Barangay Clearance', 66, 75, 2, 37);
+INSERT INTO `barangay_revenue` (`date_issue`, `expired_date`, `document_amount`, `firstname`, `middlename`, `lastname`, `document_type`, `user_id`, `status`, `OR_no`) VALUES
+('2025-02-01', '2026-02-01', 100, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 134),
+('2025-02-01', '2026-02-01', 100, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 135),
+('2025-02-01', '2026-02-01', 100, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 136),
+('2025-02-01', '2026-02-01', 100, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 137),
+('2025-02-01', '2026-02-01', 100, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 138),
+('2025-02-01', '2026-02-01', 23, 'Jenmar bb', 'Acantlado', 'Alano', 'Barangay Certificate', 17, 1, 139);
 
 -- --------------------------------------------------------
 
@@ -329,7 +311,8 @@ CREATE TABLE `user_account` (
 --
 
 INSERT INTO `user_account` (`firstname`, `middlename`, `lastname`, `username`, `password`, `gender`, `age`, `birthday`, `date_registered`, `house_no`, `sitio_pook`, `contact_no`, `profile`, `user_id`) VALUES
-('Jm', 'Acantilado', 'Alano', 'Jenmar0411', 'Jenmar0411', 'Female', 23, '2025-01-08', '2025-01-28', 'bkl 18 lot 18 dsad', 'Camella at the Island Park', '09694911523', 'images.png', 16);
+('Jenmar bb', 'Acantlado', 'Alano', 'Jenmar0411', 'Jenmar0411', 'Male', 22, '2025-01-09', '2025-01-28', 'asdasd', 'Mabuhay Homes 2000 asdsd', '09694911585', '679b9f74184a1.jpg', 17),
+('aaaaaa', 'aaaaaaa', 'aaaaaaaaa', 'Aaaa0411', 'Aaaa0411', 'Female', 23, '2025-01-08', '2025-01-28', 'asdasd', 'Sitio Burol', '09694911585', '6798fc567d3f8.jpg', 18);
 
 --
 -- Indexes for dumped tables
@@ -381,7 +364,7 @@ ALTER TABLE `barangay_resident`
 -- Indexes for table `barangay_revenue`
 --
 ALTER TABLE `barangay_revenue`
-  ADD PRIMARY KEY (`ID_incre`);
+  ADD PRIMARY KEY (`OR_no`);
 
 --
 -- Indexes for table `user_account`
@@ -427,7 +410,7 @@ ALTER TABLE `barangay_official`
 -- AUTO_INCREMENT for table `barangay_request`
 --
 ALTER TABLE `barangay_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `barangay_resident`
@@ -439,13 +422,13 @@ ALTER TABLE `barangay_resident`
 -- AUTO_INCREMENT for table `barangay_revenue`
 --
 ALTER TABLE `barangay_revenue`
-  MODIFY `ID_incre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `user_account`
 --
 ALTER TABLE `user_account`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
