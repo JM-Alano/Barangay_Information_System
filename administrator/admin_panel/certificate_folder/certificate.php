@@ -114,9 +114,13 @@
                                             <li>
                                                
                                                 <p hidden><?php echo $request_document?></p>
-                                                <p hidden><?php echo $id?></p>
+                                               
                                                 <p hidden><?php echo $status?></p>
                                                 <p hidden><?php echo $purpose?></p>
+
+                                                <p hidden><?php echo $firstname?></p>
+                                                <p hidden><?php echo $middlename?></p>
+                                                <p hidden><?php echo $lastname?></p>
                                                 
                                                 <button  id = "barangay_print" class = "print_btn" data-id= <?php echo $row ["user_id"] ?> >PRINT</button>
                                             </li>

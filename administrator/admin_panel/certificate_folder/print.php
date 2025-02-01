@@ -92,14 +92,13 @@
         </select><br>
 
 
-     
+        <input type="hidden" name = "firstname_print" id = "firstname_print">
+        <input type="hidden" name = "middlename_print" id = "middlename_print">
+        <input type="hidden" name = "lastname_print" id = "lastname_print">
+
+
         <input type="hidden" name = "document_print" id = "document_print">
-        <input type="hidden" name = "OR_no_print" id = "OR.no_print">
-
-      
-
-
-
+   
         <input type="hidden" name = "id_print" id = "id_print">
 
 

@@ -2,7 +2,7 @@
     require('../../../database/conn_db.php');
 
 
-    $sql = "SELECT * FROM barangay_manage WHERE OR_no = '$OR_no'";
+    $sql = "SELECT * FROM  barangay_revenue as r LEFT JOIN barangay_request as req ON r.user_id = req.user_id  WHERE r.user_id = $user_id";
 
     $result = mysqli_query($conn, $sql);
 
@@ -18,7 +18,7 @@
 
        $age = $row["age"];
        $request_document = $row["request_document"];
-       $house_no = strtoupper($row["house_no"]);
+       $house_number = strtoupper($row["house_number"]);
 
        $birthday = $row["birthday"];
        $place_of_birth = $row["place_of_birth"];
@@ -87,7 +87,7 @@
 
                 <h2 class = "to_whom">TO WHOM IT MAY CONCERN:</h2>
 
-                <p class = "p1">This is to certify that <u><b>MR./MRS./MS. <?php echo $firstname ." " . $middlename .". " .$lastname . ","; ?></b></u> of legal age, FIlipino Citizen, is a bonafide reside <u><b><?php echo $house_no . " " .  $sitio_pook ; ?> Paliparan II, Dasmariñas City, Cavite.</b></u> He/she establish his/her residency here at our Barangay since <u><b><?php echo date('Y',strtotime($live_since_year)) .".";?></b></u></p>
+                <p class = "p1">This is to certify that <u><b>MR./MRS./MS. <?php echo $firstname ." " . $middlename .". " .$lastname . ","; ?></b></u> of legal age, FIlipino Citizen, is a bonafide reside <u><b><?php echo $house_number . " " .  $sitio_pook ; ?> Paliparan II, Dasmariñas City, Cavite.</b></u> He/she establish his/her residency here at our Barangay since <u><b><?php echo date('M Y',strtotime($live_since_year)) .".";?></b></u></p>
 
                 <p class = "p2">This further certifies that she/he is well-known to the undersigned to be a person of a good moral, law-abiding citizen and has never violated any law, ordinace or rule duly implemented by the government authorities.</p>
 
@@ -148,15 +148,17 @@
 
     // Open a new tab after the print dialog closes
     window.onafterprint = function () {
-
+      
       <?php
-            $sql = "INSERT INTO barangay_revenue (id, firstname, middlename, lastname, document_amount, date_issue, document_type, OR_no, status)
-              VALUES ('$id', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$OR_no', '$status')";
-                      
-                      if (mysqli_query($conn, $sql)) {
+        
 
-                        
-                    }
+         
+
+
+            
+
+
+                    
       ?>
 
        
@@ -169,7 +171,9 @@
        <?php
 
         
-      } else {
+      }
+      
+      else {
         echo "0 results";
       }
       

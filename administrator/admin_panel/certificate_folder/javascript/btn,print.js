@@ -15,17 +15,23 @@ document.addEventListener("mouseover", function() {
            
  
      let  request_document = btn.parentNode.childNodes[1].textContent;
-     let  OR_no = btn.parentNode.childNodes[3].textContent;
-     let  status = btn.parentNode.childNodes[5].textContent;
-     let  purpose = btn.parentNode.childNodes[7].textContent;
+     
+     let  status = btn.parentNode.childNodes[3].textContent;
+     let  purpose = btn.parentNode.childNodes[5].textContent;
+
+     let  firstname = btn.parentNode.childNodes[7].textContent;
+     let  middlename = btn.parentNode.childNodes[9].textContent;
+     let  lastname = btn.parentNode.childNodes[11].textContent;
     
      document.getElementById("id_print").value = id;
 
     document.getElementById("document_print").value = request_document;
-    document.getElementById("OR.no_print").value = OR_no;
+   
     document.getElementById("status_print").value = status;
     document.getElementById("purpose_print").value = purpose;
-
+    document.getElementById("firstname_print").value = firstname;
+    document.getElementById("middlename_print").value = middlename;
+    document.getElementById("lastname_print").value = lastname;
     
  });
  });
