@@ -195,14 +195,17 @@
                                             else if ($satus_document == 1){
                                                 echo "<h2 style = 'color:red;'>Pending</h2>";
                                             }
-                                            else if ($satus_document == 3){
+                                            else if ($satus_document == 2){
                                                 echo "<h2 style = 'color:orange;'>Processing</h2>";
                                             }
-                                            else if ($satus_document == 4){
+                                            else if ($satus_document == 3){
                                                 echo "<h2 style = 'color:blue;'>Ready to Pick-up</h2>";
                                             }
-                                            else if ($satus_document == 5){
+                                            else if ($satus_document == 4){
                                                 echo "<h2 style = 'color:#00cc0e;'>Released</h2>";
+                                            }
+                                            else if ($satus_document == 5){
+                                                echo "<p style = 'color:red;'>Invalid Purpose</p>";
                                             }
                                         ?>
                                         </h2>

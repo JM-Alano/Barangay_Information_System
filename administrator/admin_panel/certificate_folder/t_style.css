@@ -23,6 +23,13 @@ color: var(--1st-text-color);
     width: 93vw;
     margin-left: 10px;
 }
+table .img img{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--btn-color);
+  margin-left: -10px;
+  }
 table td{
   padding: 8px;
     

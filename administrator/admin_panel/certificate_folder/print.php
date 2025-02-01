@@ -23,7 +23,7 @@
             margin-top:20px;
             color:#005720;
         }
-        #purpose_cert,#OR_no,#amount,#date_issue_print{
+        #purpose_cert,#OR_no,#amount,#date_issue_print,#purpose_print,#status_print{
             width: 100%;
             height:40px;
             margin-top:10px;
@@ -32,7 +32,7 @@
             border:none;
             border-radius:2px;
         }
-        #purpose_cert:focus,#OR_no:focus,#amount:focus,#date_issue_print:focus{
+        #purpose_cert:focus,#OR_no:focus,#amount:focus,#date_issue_print:focus,#purpose_print:focus,#status_print:focus{
             outline:3px solid #4A9D4f;
             
         }
@@ -69,7 +69,7 @@
         <h1 class = "h1">Create Payment</h1>
     </header>
 
-    <form action="/BIS/administrator/admin_panel/certificate_folder/revenue_insert.php" method = "POST" id = "certForm">
+    <form action="/BIS/administrator/admin_panel/certificate_folder/print_insert.php" method = "POST" id = "certForm">
         
 
         <label for="">Amount</label><br>
@@ -78,16 +78,29 @@
         <label for="">Date issue</label><br>
         <input type="date" name = "current_date" placeholder = "Enter Amount"  id = "date_issue_print" required><br>
 
+        <label for="">Purpose</label><br>
+        <input type="text" name = "purpose_print" id = "purpose_print" required><br>
 
-        <input type="hidden" name = "id_print" id = "id_print">
-        <input type="hidden" name = "firstname_print" id = "firstname_print">
-        <input type="hidden" name = "middlename_print" id = "middlename_print">
-        <input type="hidden" name = "lastname_print" id = "lastname_print">
+        <label for="">Status</label><br>
+        <select name="status_print" id="status_print" required>
+            <option value=0>No data</option>
+            <option value=1>Pending</option>
+            <option value=2>Processing</option>
+            <option value=3>Ready to Pick-up</option>
+            <option value=4>Released</option>
+            <option value=5>Invalid Purpose</option>
+        </select><br>
+
+
+     
         <input type="hidden" name = "document_print" id = "document_print">
         <input type="hidden" name = "OR_no_print" id = "OR.no_print">
-        <input type="hidden" name = "status_print" id = "status_print">
-       
 
+      
+
+
+
+        <input type="hidden" name = "id_print" id = "id_print">
 
 
         <input type="submit" name = "sub_print" id = "submit">

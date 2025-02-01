@@ -48,14 +48,14 @@
             <table>
                     <caption>Barangay Resident list</caption>
                     <tr>
-                        
+                         <th>Profile</th>
                         <th>Fullname</th>
                         <th>National ID</th>
                         <th>Age</th>
                         <th>Civil Status</th>
                         <th>Gender</th>
                         <th>Voter Status</th>
-                        <th>Profile</th>
+                       
                         <th>Action</th>
                     </tr>
                     <?php

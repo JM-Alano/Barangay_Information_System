@@ -51,34 +51,25 @@ html {
     padding: 10px 5px 10px 50px;
     text-align: left;
     font-size: 2rem;
-}
-
-.nav_list .sub_certification_folder #manage,.nav_list .sub_certification_folder #revenue {
-    padding: 5px;
-    letter-spacing: 2px;
-    margin-top: 5px;
-    text-align: "sub_text";
-    border: none;
-    background-color: transparent;
-    font-size: 0.8rem;
-    color: var(--bg-color);
-    cursor: pointer;
    
 }
-.nav_list .sub_certification_folder #requested {
+
+.nav_list .sub_certification_folder #certificate,.nav_list .sub_certification_folder #clearance ,.nav_list .sub_certification_folder #indigency,.nav_list .sub_certification_folder #barangay_id{
     padding: 5px;
     letter-spacing: 1px;
     margin-top: 5px;
-    text-align: "sub_text";
+    font-family: "sub_text";
     border: none;
     background-color: transparent;
-    cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--bg-color);
+    cursor: pointer;
+ 
    
 }
 
-.nav_list .sub_certification_folder #requested:hover,.nav_list .sub_certification_folder #manage:hover{
+
+.nav_list .sub_certification_folder #certificate:hover,.nav_list .sub_certification_folder #clearance:hover,.nav_list .sub_certification_folder #indigency:hover,.nav_list .sub_certification_folder #barangay_id:hover{
     color: var(--btn-color);
 }
 body{

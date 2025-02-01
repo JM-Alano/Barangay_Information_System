@@ -4,9 +4,7 @@
 
   if(isset($_POST['sub_print'])){
         $id = trim($_POST["id_print"]);
-        $firstname = trim($_POST["firstname_print"]);
-        $middlename = trim($_POST["middlename_print"]);
-        $lastname = trim($_POST["lastname_print"]);
+       $purpose =trim($_POST["purpose_print"]);
 
         $document = trim($_POST["document_print"]);
         $OR_no = trim($_POST["OR_no_print"]);
@@ -17,6 +15,8 @@
 
                   switch ($document) {
                     case "Barangay Clearance":
+
+                        
                       include('document/barangay_clearance.php');
                       break;
                     case "Barangay Certificate":
@@ -30,7 +30,7 @@
                       break;
                     
                       default:
-                      include('manage_certificate.php');
+                      echo "rerr";
                   }
       
      }
