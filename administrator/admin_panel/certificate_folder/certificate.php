@@ -202,7 +202,7 @@
         <div id = "add-modal_manage" class = "add-modal_manage">
                 <div class = "add-modal-content_manage">
                     <span onclick="this.parentElement.parentElement.style.display='none';" class = "add-close-btn_manage">&times;</span>
-                        <?php include("add_manage_list.php");?>
+                        <?php include("add_request.php");?>
                     </div>
            </div>
                <!-- MODAL Delete -->    

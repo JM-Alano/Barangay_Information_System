@@ -8,7 +8,7 @@
 <body>
    
 
-    <form action="certificate_folder/add_manage.php" class = "form_manage" method = "POST">
+    <form action="certificate_folder/add_req_function.php" class = "form_manage" method = "POST">
     <h1>Add Manage List</h1>
 
     <div class = "main_div_manage">
@@ -41,14 +41,7 @@
             <input type="text" id = "house_no_add" name = "house_no_add" placeholder = "Enter House number" required><br>
 
             <label for="">Sitio/Pook</label><br>
-            <select id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
-                <option value="Iyala">Iyala</option>
-                <option value="Sitio Burol">Sitio Burol</option>
-                <option value="Sitio Kubuhan & Rigde View">Sitio Kubuhan & Rigde View</option>
-                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
-                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
-                <option value="Camella at the Island Park">Camella at the Island Park</option>
-            </select><br>
+            <input type = "text" id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required/> <br>
 
             <label for="">Contact no.</label><br>
             <input type="tel" id = "contact_no_add" name = "contact_no_add" placeholder = "Enter Contact Number" pattern="[0-9]{11}"> <br>
