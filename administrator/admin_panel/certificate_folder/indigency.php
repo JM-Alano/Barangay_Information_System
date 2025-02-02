@@ -17,7 +17,7 @@
             
         <?php require("../../../database/conn_db.php");
                 
-                $sql = "SELECT DISTINCT * FROM barangay_request WHERE request_document = 'Barangay Certificate' ORDER BY id DESC LIMIT 12";
+                $sql = "SELECT DISTINCT * FROM barangay_request WHERE request_document = 'Barangay Indigency' ORDER BY id DESC LIMIT 12";
                 $result = $conn->query($sql);
     
                 $result->num_rows > 0;

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "style.css/style_main.css.css"/>
+    <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/style.css_doc.css"/>
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/style_request.css">
 </head>
@@ -81,9 +81,9 @@
                          
                          <button id = "clearance" onclick="loadContent('certificate_folder/clearance.php')" >Barangay Clearance</button>
                         
-                         <button id = "indigency" onclick="loadContent('certificate_folder/revenue.php')" >Barangay Indigency</button>
+                         <button id = "indigency" onclick="loadContent('certificate_folder/indigency.php')" >Barangay Indigency</button>
 
-                         <button id = "barangay_id" onclick="loadContent('certificate_folder/revenue.php')" >Barangay I.D</button>
+                         <button id = "barangay_id" onclick="loadContent('certificate_folder/ID.php')" >Barangay I.D</button>
                             
                            
                     </div>

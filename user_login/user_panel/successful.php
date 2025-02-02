@@ -39,7 +39,7 @@
         </i>
         <h2>Successfully!!</h2>
         <br>
-        <h1><?php  echo $row['user_id'] . $row['id']  ;?></h1>
+        <h1><?php echo $row['id']  ;?></h1>
             
         <p>Please take a screenshot for your control number. <br> Your document will be available within 3–5 working days</p>
         <p>Thank you for your patience.</p>

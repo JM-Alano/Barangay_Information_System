@@ -73,34 +73,35 @@
         <div>
             <input type="file"  name = "image" accept = ".jpg, .jpeg, .png" id = "images"><br>
             <label for="">Firstname</label><br>
-            <input type="text" name = "firstname_upd" id = "firstname_upd"><br>
+            <input type="text" name = "firstname_upd" id = "firstname_upd" required><br>
 
             <label for="">Middlename</label><br>
-            <input type="text" name = "middlename_upd" id = "middlename_upd"><br>
+            <input type="text" name = "middlename_upd" id = "middlename_upd" required><br>
             
             <label for="">Lastname</label><br>
-            <input type="text" name = "lastname_upd" id = "lastname_upd"><br>
+            <input type="text" name = "lastname_upd" id = "lastname_upd" required><br>
 
             <label for="">Age</label><br>
-            <input type="number" name = "age_upd" id = "age_upd"><br>
+            <input type="number" name = "age_upd" id = "age_upd" required><br>
 
             <label for="">Birthday</label><br>
-            <input type="date" name = "birthday_upd" id = "birthday_upd"><br>
+            <input type="date" name = "birthday_upd" id = "birthday_upd" required><br>
 
             <label for="">Place of Birth</label><br>
-            <input type="text" name = "place_of_birth_upd" id = "place_of_birth_upd"><br>
+            <input type="text" name = "place_of_birth_upd" id = "place_of_birth_upd" required><br>
 
             <label for="">Gender</label><br>
-                <select id = "gender_upd" name = "gender_upd">
+                <select id = "gender_upd" name = "gender_upd" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
                 </select><br>
 
             <label for="">House no.</label><br>
-            <input type="text" id = "house_no_upd" name = "house_no_upd"><br>
+            <input type="text" id = "house_no_upd" name = "house_no_upd" required><br>
 
             <label for="">Sitio/Pook</label><br>
-            <input id = "sitio_pook_update" name = "sitio_pook_upd" />
+            <input id = "sitio_pook_update" name = "sitio_pook_upd" required />
             
 
          
@@ -112,7 +113,7 @@
          <div>
             
          <label for="">Purpose</label><br>
-        <input type="text" id = "purpose_upd" name = "purpose_upd"><br>
+        <input type="text" id = "purpose_upd" name = "purpose_upd" required><br>
 
          <label for="">Contact no.</label><br>
          <input type="tel" id = "contact_no_upd" name = "contact_no_upd" pattern="[0-9]{11}"> <br>
@@ -124,7 +125,7 @@
             <input type="tel" id = "contact_person_no_upd" name = "contact_person_no_upd" pattern="[0-9]{11}"><br>
             
             <label for="">Document Type</label><br>
-                <select id="request_document_upd" name = "request_document_upd">
+                <select id="request_document_upd" name = "request_document_upd" required>
                     <option value="Barangay Certificate">Barangay Certificate</option>
                     <option value="Barangay Clearance">Barangay Clearance</option>
                     <option value="Barangay Indigency">Barangay Indigency</option>
@@ -135,11 +136,11 @@
           
 
             <label for="">Live Since (Month/Year)</label><br>
-            <input type="month" id = "live_since_upd" name = "live_since_upd"><br>
+            <input type="month" id = "live_since_upd" name = "live_since_upd" required><br>
 
             
             <label for="">Status</label><br>
-            <select id="status_upd" name = "status_upd">
+            <select id="status_upd" name = "status_upd" required>
                 <option value=0>No data</option>
                 <option value=1>Pending</option>
                 <option value=2>Processing</option>

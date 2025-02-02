@@ -2,8 +2,7 @@
     require('../../../database/conn_db.php');
 
 
-    $sql = "SELECT * FROM barangay_manage WHERE OR_no = '$OR_no'";
-
+    $sql = "SELECT * FROM  barangay_revenue as r LEFT JOIN barangay_request as req ON r.user_id = req.id  WHERE req.id = $id";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -18,7 +17,7 @@
 
        $age = $row["age"];
        $request_document = $row["request_document"];
-       $house_no = strtoupper($row["house_no"]);
+       $house_no = strtoupper($row["house_number"]);
 
        $birthday = $row["birthday"];
        $place_of_birth = $row["place_of_birth"];

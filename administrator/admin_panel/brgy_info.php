@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barangay Infromation | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "style.css/mainstyle.css"/>
+    <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/barangay_info.css"/>
 </head>
 <body>
