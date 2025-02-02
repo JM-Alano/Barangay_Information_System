@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "style.css/mainstyle.css"/>
+    <link rel = "stylesheet" href = "style.css/style_main.css.css"/>
     <link rel = "stylesheet" href = "style.css/style.css_doc.css"/>
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/style_request.css">
 </head>
@@ -201,25 +201,20 @@
         </script>
 
 
-        <!-- REQUESTED LIST -->
+       
         <!-- REQUETED CERTIFICATE BUTTON SCRIPT -->
         <script src = "certificate_folder/javascript/btn_action_requested.js"></script>
-         <!-- DELETE BUTTON -->
-         <script src = "certificate_folder/javascript/delete.js"></script>
-
-        <!-- CERTIFICATE BUTTON -->
-        <script src = "certificate_folder/javascript/Approved.js"></script>
 
 
-        <!-- MANAGE CERT LIST -->
+        <!-- REQUESTED LIST -->
          <!-- PRINT BTN  -->
         <script src = "certificate_folder/javascript/btn,print.js"> </script>
         <!-- Update Manage BTN  -->
-        <script src = "certificate_folder/javascript/update_btnjs.js"> </script>
+        <script src = "certificate_folder/javascript/js_btn_update.js"> </script>
         <!-- add Manage BTN  -->
         <script src = "certificate_folder/javascript/add_btn.js"> </script>
           <!-- DELETE BUTTON -->
-          <script src = "certificate_folder/javascript/delete_mange_list.js"></script>
+          <script src = "certificate_folder/javascript/req_delete.js"></script>
 
 
         <!-- REVENUE LIST BTN -->

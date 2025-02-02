@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/t_style.css">
+    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/s.table.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
                      
                      <!-- SEARCH BUTTON -->
                      <input type="text" id = "live_search" placeholder = "SEARCH">
-             
+                     <button id = "add_list" class = "add_btn_manage">+Add</button>
             
         <?php require("../../../database/conn_db.php");
                 
@@ -122,9 +122,9 @@
                                                 <p hidden><?php echo $middlename?></p>
                                                 <p hidden><?php echo $lastname?></p>
                                                 
-                                                <button  id = "barangay_print" class = "print_btn" data-id= <?php echo $row ["user_id"] ?> >PRINT</button>
+                                                <button  id = "barangay_print" class = "print_btn" data-id= <?php echo $row ["id"] ?> >PRINT</button>
                                             </li>
-                                            <li><button id = "add_list" class = "add_btn_manage" data-id= <?php echo $row ["id"] ?>>Add List</button></li>
+                                            <li></li>
                                             <li>
     
                                                 <p hidden><?php echo $firstname ?></p>
@@ -140,22 +140,21 @@
                                                 <p hidden><?php echo $house_no ?></p>
                                                 <p hidden><?php echo $sitio_pook ?></p>
                                              
-                                               
+                                                <p hidden><?php echo $purpose ?></p>
+
                                                 <p hidden><?php echo  $contact_no ?></p>
                                                 <p hidden><?php echo $contact_person ?></p>
                                                 <p hidden><?php echo $contact_no_contact_person ?></p>
     
                                                 <p hidden><?php echo $request_document ?></p>
-                                                <p hidden><?php echo  $date_issue ?></p>
-                                                <p hidden><?php echo  $expired_date ?></p>
                                                 
                                                 <p hidden><?php echo $live_since_year ?></p>
                                                 <p hidden><?php echo $status ?></p>
-                                                <p hidden><?php echo  $OR_no ?></p>
-                                                <p hidden><?php echo $purpose ?></p>
+                                            
+                                                <p hidden><?php echo  $profile ?></p>
                                                 
-                                                <button id = "edit_list" class = "edit_btn_manage" data-id= <?php echo $row ["user_id"] ?>>Edit List</button></li>
-                                           <li><button id = "delete_official_btn" class = "delete_btn_manage" data-id= <?php echo $row ["user_id"] ?>>Delete List</button></li>
+                                                <button id = "edit_list" class = "edit_btn_manage" data-id= <?php echo $row ["id"] ?>>Edit</button></li>
+                                               <li><button id = "delete_official_btn" class = "delete_btn_req" data-id= <?php echo $row ["id"] ?>>Delete</button></li>
                                         </ul>
                                        
                                   
@@ -195,7 +194,7 @@
                     <div id = "edit-modal_manage" class = "edit-modal_manage">
                 <div class = "edit-modal-content_manage">
                     <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn_manage">&times;</span>
-                        <?php include("update_manage_list.php");?>
+                        <?php include("update_req_list.php");?>
                     </div>
            </div>
         <!-- MODAL ADD -->
@@ -206,16 +205,16 @@
                     </div>
            </div>
                <!-- MODAL Delete -->    
-              <div id = "delete-modal_manage" class = "delete-modal_manage">
-                          <div class = "delete-modal-content_manage">
+              <div id = "delete-modal_req" class = "delete-modal_req">
+                          <div class = "delete-modal-content_req">
                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
                                         <h2>Delete Confirmation</h2>
                                             <h3>Are you sure you want to delete this record!</h3>
                                             <div class = "div-delete">   
-                                            <button id = "confirm-delete_manage" class = "btn-delete_manage">Delete</button>
-                                            <button id = "cancel-delete_manage" class = "btn-delete_manage">Cancel</button>
+                                            <button id = "confirm-delete_req" class = "btn-delete_req">Delete</button>
+                                            <button id = "cancel-delete_req" class = "btn-delete_req">Cancel</button>
                                             </div>
-                                        </div>
+            </div>
              </div>
 
         

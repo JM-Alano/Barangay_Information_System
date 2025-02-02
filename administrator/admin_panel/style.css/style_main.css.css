@@ -72,6 +72,9 @@ html {
 .nav_list .sub_certification_folder #certificate:hover,.nav_list .sub_certification_folder #clearance:hover,.nav_list .sub_certification_folder #indigency:hover,.nav_list .sub_certification_folder #barangay_id:hover{
     color: var(--btn-color);
 }
+.nav_list .sub_certification_folder #certificate:focus,.nav_list .sub_certification_folder #clearance:focus,.nav_list .sub_certification_folder #indigency:focus,.nav_list .sub_certification_folder #barangay_id:focus{
+    color: var(--btn-color);
+}
 body{
     background-color: var(--bg-color);
     position: relative;

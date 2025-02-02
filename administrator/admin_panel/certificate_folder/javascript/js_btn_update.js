@@ -26,19 +26,18 @@ document.addEventListener("mouseover", function() {
     let  house_no_upd = btn.parentNode.childNodes[15].textContent;
     let  sitio_pook_upd = btn.parentNode.childNodes[17].textContent;
 
-    let  contact_no_upd = btn.parentNode.childNodes[19].textContent;
-    let  contact_person_upd = btn.parentNode.childNodes[21].textContent;
-    let  contact_person_no_upd = btn.parentNode.childNodes[23].textContent;
+    let purpose_upd = btn.parentNode.childNodes[19].textContent;
 
-    let  request_document_upd = btn.parentNode.childNodes[25].textContent;
-    let  date_issue_upd  = btn.parentNode.childNodes[27].textContent;
-    let  date_expired_upd = btn.parentNode.childNodes[29].textContent;
+    let  contact_no_upd = btn.parentNode.childNodes[21].textContent;
+    let  contact_person_upd = btn.parentNode.childNodes[23].textContent;
+    let  contact_person_no_upd = btn.parentNode.childNodes[25].textContent;
 
-    let live_since_upd = btn.parentNode.childNodes[31].textContent;
-    let status_upd = btn.parentNode.childNodes[33].textContent;
-    let or_no_upd = btn.parentNode.childNodes[35].textContent;
+    let  request_document_upd = btn.parentNode.childNodes[27].textContent;
+    let live_since_upd = btn.parentNode.childNodes[29].textContent;
+    let status_upd = btn.parentNode.childNodes[31].textContent;
 
-    let purpose_upd = btn.parentNode.childNodes[37].textContent;
+    let profile_upd = btn.parentNode.childNodes[33].textContent;
+ 
 
 
      document.getElementById("id_upd").value = id;
@@ -55,20 +54,19 @@ document.addEventListener("mouseover", function() {
       document.getElementById("house_no_upd").value = house_no_upd;
       document.getElementById("sitio_pook_update").value = sitio_pook_upd;
 
+      document.getElementById("purpose_upd").value = purpose_upd;
+    
       document.getElementById("contact_no_upd").value = contact_no_upd;
       document.getElementById("contact_person_upd").value = contact_person_upd;
       document.getElementById("contact_person_no_upd").value = contact_person_no_upd;
 
       document.getElementById("request_document_upd").value = request_document_upd;
-      document.getElementById("date_issue_upd").value = date_issue_upd;
-      document.getElementById("date_expired_upd").value = date_expired_upd;
 
       document.getElementById("live_since_upd").value = live_since_upd;
       document.getElementById("status_upd").value = status_upd;
-      document.getElementById("or_no_upd").value = or_no_upd;
 
-      document.getElementById("purpose_upd").value = purpose_upd;
-    
+
+      document.getElementById("profile_upd").value = profile_upd;
     
  });
  });

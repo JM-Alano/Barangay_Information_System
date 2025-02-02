@@ -2,7 +2,7 @@
 
     require("../../../database/conn_db.php");
 
-  if(isset($_POST['sub_add_manage'])){
+  if(isset($_POST['sub_add_request'])){
         $id = trim($_POST["id_manage_add"]);
         $firstname = trim($_POST["firstname_add"]);
         $middlename = trim($_POST["middlename_add"]);
@@ -25,41 +25,84 @@
         $purpose  = trim($_POST["purpose_add"]);
         $status  = trim($_POST["status_add"]);
         $gender  = trim($_POST["gender_add"]);
-        $OR_no =  trim($_POST["or_no_add"]);
-       
-        $date_issue  = trim($_POST["date_issue_add"]);
-
-        $exp_date_issue  = trim($_POST["date_expired_add"]);
-
-    
-       
-        $sql = "INSERT INTO barangay_manage (firstname, middlename, lastname, age, 	request_document, house_no, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, 	purpose, 	status, gender, OR_no, date_issue,expired_date,sitio_pook)
-        VALUES ( '$firstname', '$middlename','$lastname','$age','$request_document' 
-        ,'$house_no','$birthday','$place_of_birth','$contact_no','$contact_person','$contact_no_contact_person','$live_since_year','$purpose'
-        ,'$status','$gender','$OR_no','$date_issue','$exp_date_issue','$sitio_pook')";
-
-        $result = mysqli_query($conn, $sql);
         
-      
-                
-                if ($result == true) {
+        date_default_timezone_set("Asia/Manila");
+        $date_request = date("Y-m-d");
 
-                    ?>
-                    <!-- <script>
-                        window.location.href = "/BIS/administrator/admin_panel/certificate_folder/loading_add.php";
-                    </script> -->
-                    
-                    <?php
-                   
+        $fileName = $_FILES["image"]["name"];
+        $fileSize =$_FILES["image"]["size"];
+        $tmpName = $_FILES["image"]["tmp_name"];
+
+        $validImageExtension =  ['jpg', 'jpeg', 'png'];
+        $imageExtension = explode('.', $fileName);
+        $imageExtension = strtolower(end($imageExtension));
+    
+        
+        if($_FILES["image"]["error"] == 4){
+          echo "<script>alert('Image Does Not Exist')</script>";
+         echo " <script>window.location.href = '/BIS/administrator/admin_panel/certificate.php'</script>";
+        }else{
+          $fileName = $_FILES["image"]["name"];
+          $fileSize =$_FILES["image"]["size"];
+          $tmpName = $_FILES["image"]["tmp_name"];
+
+          $validImageExtension =  ['jpg', 'jpeg', 'png'];
+          $imageExtension = explode('.', $fileName);
+          $imageExtension = strtolower(end($imageExtension));
+
+          if(!in_array($imageExtension, $validImageExtension)){
+            echo "
+              <script>alert('Invalid Image Extension ');
+              
+              window.location.href = '/BIS/administrator/admin_panel/certificate.php'
+              </script>
+             
+            ";
+         
+            
+          }else if($fileSize > 1000000){
+            echo "<script>alert('Image Size Is too Large');
+            window.location.href = '/BIS/administrator/admin_panel/certificate.php'
+            </script>";
+           
+          }else{
+            $newImageName = uniqid();
+            $newImageName .= '.' . $imageExtension;
+
+            move_uploaded_file($tmpName, '../../../asset/image/user_profile/'. $newImageName );
+
+           
+            $sql = "INSERT INTO barangay_request (firstname, middlename, lastname, age, 	request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, 	purpose, 	status, gender ,sitio_pook, date_request, profile)
+            VALUES ( '$firstname', '$middlename','$lastname','$age','$request_document' 
+            ,'$house_no','$birthday','$place_of_birth','$contact_no','$contact_person','$contact_no_contact_person','$live_since_year','$purpose'
+            ,'$status','$gender','$sitio_pook', '$date_request' , '$newImageName')";
+
+
+            $result = mysqli_query($conn, $sql);
+
+
+            
+           if ($result === TRUE) {
+
+            ?>
+            <script>
+                window.location.href = "/BIS/administrator/admin_panel/certificate_folder/loading_add.php";
+            </script>
+            
+             <?php
+            
+          } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+
+          }
+        }
+
+
+        
 
 
 
-                    
-                  } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                  }
-                  
-                  mysqli_close($conn);
       
      }
 ?>

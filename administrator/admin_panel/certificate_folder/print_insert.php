@@ -3,7 +3,7 @@
     require("../../../database/conn_db.php");
 
   if(isset($_POST['sub_print'])){
-        $user_id = trim($_POST["id_print"]);
+        $id = trim($_POST["id_print"]);
         $purpose =trim($_POST["purpose_print"]);
 
         $document = trim($_POST["document_print"]);
@@ -23,7 +23,7 @@
         $lastname = trim($_POST["lastname_print"]);
 
         $sql = "INSERT INTO barangay_revenue (user_id,expired_date, firstname, middlename, lastname, document_amount, date_issue, document_type, status )
-        VALUES ('$user_id', '$exd_date', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$status')";
+        VALUES ('$id', '$exd_date', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$status')";
                 
                 if (mysqli_query($conn, $sql)) {
                   

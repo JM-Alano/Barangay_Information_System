@@ -102,8 +102,9 @@
         <input type="hidden" name = "id_print" id = "id_print">
 
 
-        <input type="submit" name = "sub_print" id = "submit">
+       
        <input type="button" id = "cancel" onclick="this.parentElement.parentElement.parentElement.style.display='none';" value = "Cancel" id = "cancel">
+       <input type="submit" name = "sub_print" id = "submit">
     </form>
     
 

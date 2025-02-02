@@ -2,8 +2,8 @@
     require('../../../database/conn_db.php');
 
 
-    $sql = "SELECT * FROM  barangay_revenue as r LEFT JOIN barangay_request as req ON r.user_id = req.user_id  WHERE r.user_id = $user_id";
-
+    $sql = "SELECT * FROM  barangay_revenue as r LEFT JOIN barangay_request as req ON r.user_id = req.id  WHERE req.id = $id";
+ 
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {

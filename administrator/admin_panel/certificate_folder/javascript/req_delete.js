@@ -2,10 +2,10 @@ document.addEventListener("mouseover", function() {
      
            
     // Get the modal
-     let modal_delete_manage = document.getElementById("delete-modal_manage");
-     let deleteBtns_manage = document.querySelectorAll(".delete_btn_manage");
-     let certDeleteBtn_manage = document.getElementById("confirm-delete_manage");
-     let cancelDeleteBtn_manage = document.getElementById("cancel-delete_manage");
+     let modal_delete_manage = document.getElementById("delete-modal_req");
+     let deleteBtns_manage = document.querySelectorAll(".delete_btn_req");
+     let certDeleteBtn_manage = document.getElementById("confirm-delete_req");
+     let cancelDeleteBtn_manage = document.getElementById("cancel-delete_req");
  
      deleteBtns_manage.forEach(function(btn) {
          btn.addEventListener("click", function() {
@@ -30,14 +30,14 @@ document.addEventListener("mouseover", function() {
         let id = certDeleteBtn_manage.getAttribute("data-id");
         // Send AJAX request to delete.php
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/BIS/administrator/admin_panel/certificate_folder/delete_manage.php", true);
+        xhr.open("POST", "/BIS/administrator/admin_panel/certificate_folder/delete.req.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send("id=" + id);
         xhr.onload = function() {
             if (xhr.status === 200) {
            
                 const xhttp = new XMLHttpRequest();
-                xhttp.open("POST", '/BIS/administrator/admin_panel/certificate_folder/manage_certificate.php');
+                xhttp.open("POST", '/BIS/administrator/admin_panel/certificate_folder/certificate.php');
                 xhttp.send();
                 xhttp.onreadystatechange = (e) => {
                     document.getElementById("content_certificate").innerHTML = xhttp.responseText;
