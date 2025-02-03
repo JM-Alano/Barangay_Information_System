@@ -26,30 +26,92 @@
         $status  = trim($_POST["status_upd"]);
         $gender  = trim($_POST["gender_upd"]);
    
-     
-             
-        $sql = "UPDATE  barangay_request as req JOIN barangay_revenue as rev ON rev.user_id = req.id
-          SET req.firstname= '$firstname' , req.middlename= '$middlename' , req.lastname= '$lastname' , req.age= '$age', req.request_document= '$request_document', req.house_number= '$house_no' , req.sitio_pook='$sitio_pook' , req.birthday='$birthday', req.place_of_birth='$place_of_birth' , req.contact_no='$contact_no', req.contact_person='$contact_person', req.contact_no_contact_person='$contact_no_contact_person' , req.contact_no_contact_person='$contact_no_contact_person', req.live_since_year='$live_since_year' , req.purpose='$purpose', req.status='$status', req.gender='$gender' , rev.status='$status'  WHERE req.id = $id";
-        
-                
-                if (mysqli_query($conn, $sql)) {
+        $fileName = $_FILES["image"]["name"];
+        $fileSize =$_FILES["image"]["size"];
+        $tmpName = $_FILES["image"]["tmp_name"];
 
+        $validImageExtension =  ['jpg', 'jpeg', 'png'];
+        $imageExtension = explode('.', $fileName);
+        $imageExtension = strtolower(end($imageExtension));
+
+
+
+        if($_FILES["image"]["error"] == 4){
+
+            $sql = "UPDATE  barangay_request as req JOIN barangay_revenue as rev ON rev.user_id = req.id
+            SET req.firstname= '$firstname' , req.middlename= '$middlename' , req.lastname= '$lastname' , req.age= '$age', req.request_document= '$request_document', req.house_number= '$house_no' , req.sitio_pook='$sitio_pook' , req.birthday='$birthday', req.place_of_birth='$place_of_birth' , req.contact_no='$contact_no', req.contact_person='$contact_person', req.contact_no_contact_person='$contact_no_contact_person' , req.contact_no_contact_person='$contact_no_contact_person', req.live_since_year='$live_since_year' , req.purpose='$purpose', req.status='$status', req.gender='$gender'   WHERE rev.OR_no= rev.OR_no";
+              
+              $sql = "UPDATE  barangay_request 
+              SET firstname= '$firstname' , middlename= '$middlename' , lastname= '$lastname' , age= '$age', request_document= '$request_document', house_number= '$house_no' , sitio_pook='$sitio_pook' , birthday='$birthday', place_of_birth='$place_of_birth' , contact_no='$contact_no', contact_person='$contact_person', contact_no_contact_person='$contact_no_contact_person' , contact_no_contact_person='$contact_no_contact_person', live_since_year='$live_since_year' , purpose='$purpose', status='$status', gender='$gender'  WHERE id = $id";
+  
+                $result = mysqli_query($conn, $sql);
+                if ($result == true) {
+                  
                     ?>
                     <script>
                         window.location.href = "/BIS/administrator/admin_panel/certificate_folder/loading_update.php";
+                      
                     </script>
                     
                     <?php
                    
+                  } 
+              }else{
+                $fileName = $_FILES["image"]["name"];
+                $fileSize =$_FILES["image"]["size"];
+                $tmpName = $_FILES["image"]["tmp_name"];
+      
+                $validImageExtension =  ['jpg', 'jpeg', 'png'];
+                $imageExtension = explode('.', $fileName);
+                $imageExtension = strtolower(end($imageExtension));
+      
+                if(!in_array($imageExtension, $validImageExtension)){
+                  echo "
+                    <script>alert('Invalid Image Extension ')</script>
+                   
+                  ";
+                  echo "<script>window.location.href = '/BIS/administrator/admin_panel/brgy_info.php'</script>";
+                }else if($fileSize > 1000000){
+                  echo "<script>alert('Image Size Is too Large')</script>";
+                  echo "<script>window.location.href = '/BIS/administrator/admin_panel/brgy_info.php'</script>";
+                }else{
+                  $newImageName = uniqid();
+                  $newImageName .= '.' . $imageExtension;
+      
+                  move_uploaded_file($tmpName, '../../../asset/image/user_profile/'. $newImageName );
+    
+                  $sql = "UPDATE  barangay_request as req JOIN barangay_revenue as rev ON rev.user_id = req.id
+            SET req.firstname= '$firstname' , req.middlename= '$middlename' , req.lastname= '$lastname' , req.age= '$age', req.request_document= '$request_document', req.house_number= '$house_no' , req.sitio_pook='$sitio_pook' , req.birthday='$birthday', req.place_of_birth='$place_of_birth' , req.contact_no='$contact_no', req.contact_person='$contact_person', req.contact_no_contact_person='$contact_no_contact_person' , req.contact_no_contact_person='$contact_no_contact_person', req.live_since_year='$live_since_year' , req.purpose='$purpose', req.status='$status', req.gender='$gender', req.profile='$newImageName' WHERE req.id = $id";
+              
+              $sql = "UPDATE  barangay_request 
+              SET firstname= '$firstname' , middlename= '$middlename' , lastname= '$lastname' ,  age= '$age', request_document= '$request_document', house_number= '$house_no' , sitio_pook='$sitio_pook' , birthday='$birthday', place_of_birth='$place_of_birth' , contact_no='$contact_no', contact_person='$contact_person', contact_no_contact_person='$contact_no_contact_person' , contact_no_contact_person='$contact_no_contact_person', live_since_year='$live_since_year' , purpose='$purpose', status='$status', gender='$gender' , profile='$newImageName'  WHERE id = $id";
+    
+    
+                  if (mysqli_query($conn, $sql)) {
+                
+                    ?>
+                    <script>
+                        
+                        window.location.href = "/BIS/administrator/admin_panel/certificate_folder/loading_update.php";
+                        // <button id = "certificate" type ="button" click="loadContent('certificate_folder/certificate.php')">Barangay Certificate</button>
 
-
-
+   
+                    </script>
                     
-                  } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                  }
-                  
-                  mysqli_close($conn);
+                    <?php
+                   
+                } else {
+                    echo "Error updating record: " . mysqli_error($conn);
+                }
+                
+                mysqli_close($conn);
+                }
+    
+                }
+
+     
+        
+    
       
      }
 ?>

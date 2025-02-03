@@ -49,7 +49,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Barangay Certificate</title>
-            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/brgy.clearance.css"/>
+            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/clearance.css"/>
         </head>
         <body>
       
@@ -93,19 +93,19 @@
                             </div>
 
                             <div class = "name_official">
-                                <h4>kag. Oscar B. Alvarez</h4>
+                                <h4>Kag. Oscar B. Alvarez</h4>
                                 <p>Com. on Environmental Protection</p>
-                                <h4>kag. Rosalie M. Andaya</h4>
+                                <h4>Kag. Rosalie M. Andaya</h4>
                                 <p>Com. on Health and Sanitation</p>
-                                <h4>kag. Alvin A. Andaya</h4>
+                                <h4>Kag. Alvin A. Andaya</h4>
                                 <p>Com. on Cooperative and Livelihood</p>
-                                <h4>kag. Resie Martinez</h4>
+                                <h4>Kag. Resie Martinez</h4>
                                 <p>Com. on Peace & Order and Public safety</p>
-                                <h4>kag. Mark Jester M. Asilo</h4>
+                                <h4>Kag. Mark Jester M. Asilo</h4>
                                 <p>Com. on Education and Culture</p>
-                                <h4>kag. Gilberto A. Magtaas</h4>
+                                <h4>Kag. Gilberto A. Magtaas</h4>
                                 <p>Com. on Finance, Ways & Means, Budget <br> and Appropriation</p>
-                                <h4>kag. Ma. Teresa D. Sanchez</h4>
+                                <h4>Kag. Ma. Teresa D. Sanchez</h4>
                                 <p>Com. on Infrastructure & Public Works</p>
                                 <h4>Ken Elderrine Ofianga</h4>
                                 <p>Com. on Youth & Sport Development <br> <p>SK Chairman</p></p>
@@ -199,13 +199,7 @@
     window.onafterprint = function () {
 
       <?php
-            $sql = "INSERT INTO barangay_revenue (id, firstname, middlename, lastname, document_amount, date_issue, document_type, OR_no, status)
-              VALUES ('$id', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$OR_no', '$status')";
-                      
-                      if (mysqli_query($conn, $sql)) {
-
-                        
-                    }
+           
       ?>
 
        

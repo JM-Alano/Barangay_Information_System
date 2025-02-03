@@ -3,7 +3,7 @@
    session_start();
    require("../../../database/conn_db.php");
 
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['admin_id'];
    $sql = "SELECT *  FROM admin_account WHERE user_id =  $user_id";
     
    

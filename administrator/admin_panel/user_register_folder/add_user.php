@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="login.user.css">
 </head>
 <body>
-    <h1 class = "registration_h1">User Registration</h1>
-    <form action="user_register_folder/regisration_validation.php" class = "form_registration" method = "POST">
-   
+<h1 class = "registration_h1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>Registration Form</h1>
+    <form action="regisration_validation.php" class = "form_registration" method = "POST">
+    <h2>Personal Info</h2>
     <div class = "item1">
       <div><label for="">Firstname</label><br>
       <input type="text" name = "fname" placeholder = "Enter Firstname" required><br></div>
@@ -25,22 +25,19 @@
     </div>
 
     <div class = "item2">
-        <div> <label for="">House no.</label><br>
-        <input type="text" name = "house_no" placeholder = "Enter House. no" ><br>
+        <div> <label for="">Gender</label><br>
+       <select name="gender" id="" required>
+        
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+       </select>
     </div>
 
         <div>
 
-         <label for="">Sitio/Pook/Subdivision </label><br>
-        <select name="Sitio_Pook" id="select" required>
-               <option value="">--Select Pook/Sitio/Subdivision--</option>
-                <option value="Iyala">Iyala</option>
-                <option value="Sitio Burol">Sitio Burol</option>
-                <option value="Sitio Kubuhan & Ridge View">Sitio Kubuhan & Ridge View</option>
-                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
-                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
-                <option value="Camella at the Island Park">Camella at the Island Park</option>
-         </select><br>
+         <label for="" style = "margin-left:-30px;">Age</label><br>
+        <input type="number" name = "age" style = "margin-left:-30px;" min = "0" max = "120" placeholder = "Enter Age" required>
      </div>
       
        
@@ -52,14 +49,6 @@
         <input type="text" name = "uname" placeholder = "Create username" required><br></div>
     
        
-                <!-- password field -->
-                <div id="message">
-                    <h3>Password must contain the following:</h3>
-                    <p id="letter" class="invalid">A lowercase letter</p>
-                    <p id="capital" class="invalid">A capital (uppercase)letter</p>
-                    <p id="number" class="invalid">A number</p>
-                    <p id="length" class="invalid">Minimum 8 characters</p>
-                </div>
                 
 
 
@@ -70,18 +59,29 @@
                     <br>
                     </div>
 
+                    
+                <!-- password field -->
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A lowercase letter</p>
+                    <p id="capital" class="invalid">A capital (uppercase)letter</p>
+                    <p id="number" class="invalid">A number</p>
+                    <p id="length" class="invalid">Minimum 8 characters</p>
+                </div>
+
                 
                 <div>
                 <label for="lname" id = "confirm_plabel">Confirm your password</label><br>
                 <input type="Password" id="confirm_pname"  name="confirm_pword" placeholder = "Enter New password again" required><br>
                 <i class="fa-solid fa-eye-slash" id = "eye_confirm" onclick="myFunction_confirm()"></i>
                 </div>
-                
+                <input type="hidden" name = "profile_default" value = "images.png">
               
 
                 <div class = item4>
-                <input type="submit" name = "registraion_user" value = "Submit"  id = "submit_btn" ><br>
-                <input type="reset" name = "reset" value = "reset"  id = "reset">
+                <input type="reset" name = "reset" value = "Reset"  id = "reset">
+                <input type="submit" name = "registraion" value = "Submit"  id = "submit_btn" ><br>
+              
                 </div>
 
               
@@ -93,7 +93,6 @@
    
 
     </form>
-     
      
   
 

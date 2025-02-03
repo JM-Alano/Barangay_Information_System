@@ -214,7 +214,7 @@
         <!-- add Manage BTN  -->
         <script src = "certificate_folder/javascript/add_btn.js"> </script>
           <!-- DELETE BUTTON -->
-          <script src = "certificate_folder/javascript/req_delete.js"></script>
+          <script src = "certificate_folder/javascript/delete_function.js"></script>
 
 
         <!-- REVENUE LIST BTN -->

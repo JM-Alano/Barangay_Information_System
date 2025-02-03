@@ -178,7 +178,7 @@ caption {
 
 
 /* delete btn */
-.delete-modal,.delete-modal_req,.delete-modal_revenue{
+.delete-modal,.delete-modal_req,.delete-modal_clearance,.delete-modal_indigency,.delete-modal_id{
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -193,7 +193,7 @@ caption {
   align-items: center;
   display: none;
 }
-.delete-modal-content,.delete-modal-content_req,.delete-modal-content_revenue{
+.delete-modal-content,.delete-modal-content_req,.delete-modal-content_clearance,.delete-modal-content_indigency,.delete-modal-content_id{
   background-color: rgb(235, 235, 235);
   margin: 6% auto; /* 15% from the top and centered */
   padding: 20px;
@@ -206,26 +206,26 @@ caption {
   font-family: "sub_text";
   border-radius: 8px;
 }
-.delete-modal-content svg,.delete-modal-content_req svg,.delete-modal-content_revenue svg{
+.delete-modal-content svg,.delete-modal-content_req svg,.delete-modal-content_clearance svg,.delete-modal-content_indigency svg,.delete-modal-content_id svg{
   width: 100px;
   fill: #d4b62f;
   padding-top: 20px;
 }
-.delete-modal-content h2,.delete-modal-content_req h2,.delete-modal-content_revenue h2{
+.delete-modal-content h2,.delete-modal-content_req h2,.delete-modal-content_clearance h2,.delete-modal-content_indigency h2,.delete-modal-content_id h2{
   padding: 20px 0px 40px 0px;
   font-size: 2.5rem;
   color: var(--1st-text-color);
 }
-.delete-modal-content h3,.delete-modal-content_req h3,.delete-modal-content_revenue h3{
+.delete-modal-content h3,.delete-modal-content_req h3,.delete-modal-content_clearance h3,.delete-modal-content_indigency h3,.delete-modal-content_id h3{
   padding: 20px 0px 50px 0px;
   font-size: 1.4rem;
   color: var(--1st-text-color);
 }
-.delete-modal-content .div-delete,.delete-modal-content_req .div-delete,.delete-modal-content_revenue .div-delete{
+.delete-modal-content .div-delete,.delete-modal-content_req .div-delete,.delete-modal-content_clearance .div-delete,.delete-modal-content_indigency .div-delete,.delete-modal-content_id .div-delete{
 display: flex;
 justify-content: space-evenly;
 }
-#confirm-delete,#confirm-delete_req,#confirm-delete_revenue{
+#confirm-delete,#confirm-delete_req,#confirm-delete_clearance,#confirm-delete_indigency,#confirm-delete_id{
   background-color: var(--2nd-bg-color);
   padding: 10px;
   width: 10vw;
@@ -236,7 +236,7 @@ justify-content: space-evenly;
   border-radius: 4px;
   
 }
-#cancel-delete,#cancel-delete_req,#cancel-delete_revenue{
+#cancel-delete,#cancel-delete_req,#cancel-delete_clearance,#cancel-delete_indigency,#cancel-delete_id{
   background-color: red;
   width: 10vw;
   padding: 20px;
