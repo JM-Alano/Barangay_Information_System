@@ -3,9 +3,8 @@
 <?php
     require('../../../database/conn_db.php');
 
-
-    $sql = "SELECT * FROM barangay_manage WHERE OR_no = '$OR_no'";
-
+    $sql = "SELECT * FROM  barangay_revenue as r LEFT JOIN barangay_request as req ON r.user_id = req.id  WHERE req.id = $id";
+    
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -20,7 +19,7 @@
 
        $age = $row["age"];
        $request_document = $row["request_document"];
-       $house_no = strtoupper($row["house_no"]);
+       $house_no = strtoupper($row["house_number"]);
 
        $birthday = $row["birthday"];
        $place_of_birth = $row["place_of_birth"];
@@ -42,6 +41,8 @@
        $OR_no = $row["OR_no"];
 
 
+       $profile = $row["profile"];
+
    
        ?>
             
@@ -51,7 +52,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Barangay ID</title>
-            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/id_barangay.css"/>
+            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/ID_style_brgy.css"/>
         </head>
         <body>
         <main class = "main">
@@ -62,7 +63,7 @@
                     
                     <div class = "front_header">
                             <h1>Republic of the Phillipines <br> <span>Province of Cavite</span> <br><span>City of Dasmariñas Cavite</span> <H1 class = "h1">BARANGAY PALIPARAN II</H1></h1>
-                            
+                            <img class = "img" src="/BIS/asset/image/user_profile/<?php echo $profile; ?>" alt="" />
                             <div class = "div_id_no">
                             <h3>ID NO. <?php echo "#". date("Y") ."-". date('d',strtotime($birthday)) . "-" ."P" ."-". $OR_no?></h3>
                             <span>Issue <br>Valid Until : <?php echo date('m/d/Y',strtotime($expired_date))?></span>
@@ -117,22 +118,8 @@
 
     // Trigger the print dialog
     window.print();
+ 
 
-    // Open a new tab after the print dialog closes
-    window.onafterprint = function () {
-
-      <?php
-            $sql = "INSERT INTO barangay_revenue (id, firstname, middlename, lastname, document_amount, date_issue, document_type, OR_no, status)
-              VALUES ('$id', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$OR_no', '$status')";
-                      
-                      if (mysqli_query($conn, $sql)) {
-
-                        
-                    }
-      ?>
-
-       
-    };
 </script>
               
         </body>

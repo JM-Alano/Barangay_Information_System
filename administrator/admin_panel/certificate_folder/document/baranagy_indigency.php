@@ -140,16 +140,9 @@
                                 
                             document.title = doc_type.concat("_",doc_name);
                             window.print();
-                            
-                            <?php
-            $sql = "INSERT INTO barangay_revenue (id, firstname, middlename, lastname, document_amount, date_issue, document_type, OR_no, status)
-              VALUES ('$id', '$firstname', '$middlename', '$lastname', '$amount', '$current_date', '$document', '$OR_no', '$status')";
-                      
-                      if (mysqli_query($conn, $sql)) {
+                           
 
-                        
-                    }
-      ?>
+    
                             
                                 
                             </script>

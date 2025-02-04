@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "user.css"/>
-    <link rel = "stylesheet" href = "_responsive.css"/>
+    <link rel = "stylesheet" href = "USER.css.css"/>
+    <link rel = "stylesheet" href = "RESPONSIVE.css.css"/>
     <script>
         // Check if the page has already reloaded
         if (!sessionStorage.getItem("reloaded")) {

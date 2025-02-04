@@ -194,16 +194,8 @@
 
     // Trigger the print dialog
     window.print();
-
-    // Open a new tab after the print dialog closes
-    window.onafterprint = function () {
-
-      <?php
-           
-      ?>
-
-       
-    };
+  
+   
 </script>
             
         

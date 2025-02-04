@@ -30,6 +30,8 @@ html {
 body{
  
 }
+
+
 .main{
   display: grid;
   justify-content: center;
@@ -86,7 +88,15 @@ body{
     font-size: 1.3rem;
     text-shadow: 10px 10px 10px rgb(94, 94, 94);
 }
-
+.front_header .img{
+    width: 115px;
+    height: 105px;
+    position: absolute;
+    top: 113px;
+    left: 18px;
+    box-shadow: none;
+    border-radius: 1px;
+}
 .main .back{
     margin-top: 50px;
     text-align: center;
@@ -214,7 +224,15 @@ body{
     .front_header .div_id_no span{
         margin-left: 10px;
     }
-   
+    .front_header .img{
+        width: 78px;
+        height: 75px;
+        position: absolute;
+        top: 80px;
+        left: 29px;
+        box-shadow: none;
+        border-radius: 1px;
+    }
     .front_header .id_name{
         margin-top: 60px;
         width: 250px;

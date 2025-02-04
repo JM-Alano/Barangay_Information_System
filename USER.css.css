@@ -119,8 +119,9 @@ body{
     font-weight: 500;
     font-family: "main_text";
     text-decoration: none;
-    color: var(--1st-text-color);
+ 
     font-weight: 700;
+   
 }
 
 .humber_menu svg{
