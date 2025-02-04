@@ -7,44 +7,82 @@
         $middlename = trim($_POST['mname']);
         $lastname = trim($_POST['lname']);
 
-        $house_no = trim($_POST['house_no']);
-        $Sitio_Pook = trim($_POST['Sitio_Pook']);
+        $gender = trim($_POST['gender']);
+        $age = trim($_POST['age']);
 
         $username = trim($_POST['uname']);
         $password = trim($_POST['pword']);
         $confirm_pword = trim($_POST['confirm_pword']);
 
+        $profile_default = trim($_POST['profile_default']);
+
         date_default_timezone_set("Asia/Manila");
         $date_issue = date("Y-m-d");
         
 
-            if($password != $confirm_pword){
+           
+        if($password != $confirm_pword){
           
             
-                echo"
-                   <script> 
-                       window.location.href = 'BIS/user_login/user_login_page.php';
-                    </script> ";
-                   
-         }else {
+            echo"
+               <script> 
+                   window.location.href = '/BIS/user_login/user_login_page.php';
+                </script> ";
 
-            $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, house_no, sitio_pook, date_registered)
-                        VALUES ('$firstname', '$middlename', '$lastname', '$username' ,'$password', '$house_no', '$Sitio_Pook', '$date_issue')";
-
-            $result = mysqli_query($conn, $query);
-
-
-            if($result){
-            header('location: loading_registration.php');
+                
                
-            }else {
+     }else {
+
+                
+      
+        $checkQuery = "SELECT COUNT(*) AS count FROM  barangay_resident WHERE firstname = '$firstname'  AND lastname = '$lastname' ";
+        $result = mysqli_query($conn, $checkQuery);
+        $row = mysqli_fetch_assoc($result);
+
+                    
+   
+
+        if ($row['count'] > 0) {
 
               
+        $checkQuerys = "SELECT COUNT(*) AS c FROM  user_account WHERE username = '$username' ";
+        $results = mysqli_query($conn, $checkQuerys);
+        $row = mysqli_fetch_assoc($results);
 
-                echo "Invalid Input.";
-               
-            }
-         }
+        if ($row['c'] == 0) {
+                // Insert new record if date is unique
+            $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, gender, age, date_registered, profile)
+            VALUES ('$firstname', '$middlename', '$lastname', '$username', '$password', '$gender', '$age', '$date_issue', '$profile_default')";
+
+
+                if (mysqli_query($conn, $query)) {
+                    echo "<script>
+                    window.location.href = '/BIS/administrator/admin_panel/user_registered.php';
+                    </script>";
+                } else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+        }else{
+            echo "<script>alert('Username already Exists.');
+            window.location.href = '/BIS/administrator/admin_panel/user_registered.php';
+             </script>";
+        }
+
+
+
+            
+        }else{
+           
+
+            echo "<script>alert('No resident records were found.');
+            window.location.href = '/BIS/administrator/admin_panel/user_registered.php';
+             </script>";
+        }
+
+        // Close connection
+        mysqli_close($conn);
+    
+     }
         }
 
 ?>

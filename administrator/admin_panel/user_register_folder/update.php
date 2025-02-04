@@ -10,8 +10,8 @@
         $middlename_user = trim($_POST["middlename_user"]);
         $lastname_user = trim($_POST["lastname_user"]);
 
-        $house_no_user = trim($_POST["house_no_user"]);
-        $sitio_pook_user = trim($_POST["sitio_pook_user"]);
+        $gender_user = trim($_POST["gender_user"]);
+        $age_user = trim($_POST["age_user"]);
         $username_user = trim($_POST["username_user"]);
         $password_user = trim($_POST["password_user"]);
 
@@ -19,7 +19,7 @@
         
         
     
-        $sql= "UPDATE user_account SET firstname='$firstname_user' , middlename='$middlename_user', lastname='$lastname_user' , house_no='$house_no_user' , sitio_pook='$sitio_pook_user' , username='$username_user', password='$password_user' WHERE id= $id_user_edit";
+        $sql= "UPDATE user_account SET firstname='$firstname_user' , middlename='$middlename_user', lastname='$lastname_user' , gender='$gender_user' , age='$age_user' , username='$username_user', password='$password_user' WHERE user_id= $id_user_edit";
         
       
                 

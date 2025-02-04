@@ -4,7 +4,7 @@
         $id = $_POST["id"];
 
         // Delete query
-        $sql = "DELETE FROM user_account WHERE id = '$id'";
+        $sql = "DELETE FROM user_account WHERE user_id = '$id'";
 
         // Execute query
         if (mysqli_query($conn, $sql)) {

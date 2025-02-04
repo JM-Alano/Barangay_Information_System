@@ -1,9 +1,9 @@
       // Get the modal
       document.addEventListener("mouseover", function() {
-      let modal_delete = document.getElementById("delete-modal");
-      let deleteBtns = document.querySelectorAll(".delete_btn_blotter");
-      let confirmDeleteBtn = document.getElementById("confirm-delete");
-      let cancelDeleteBtn = document.getElementById("cancel-delete");
+      let modal_delete = document.getElementById("delete-modal_user");
+      let deleteBtns = document.querySelectorAll(".delete_btn_blotter_user");
+      let confirmDeleteBtn = document.getElementById("confirm-delete_user");
+      let cancelDeleteBtn = document.getElementById("cancel-delete_user");
    
       deleteBtns.forEach(function(btn) {
           btn.addEventListener("click", function() {

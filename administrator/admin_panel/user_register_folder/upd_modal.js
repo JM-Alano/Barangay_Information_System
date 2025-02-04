@@ -16,8 +16,8 @@ document.addEventListener("mouseover", function() {
         let  firstname_user = btn.parentNode.parentNode.parentNode.cells[0].textContent;
         let  middlename_user = btn.parentNode.parentNode.parentNode.cells[1].textContent;
         let  lastname_user = btn.parentNode.parentNode.parentNode.cells[2].textContent;
-        let  house_no_user = btn.parentNode.parentNode.parentNode.cells[3].textContent;
-        let  sitio_pook_user = btn.parentNode.parentNode.parentNode.cells[4].textContent;
+        let  gender = btn.parentNode.parentNode.parentNode.cells[3].textContent;
+        let  age = btn.parentNode.parentNode.parentNode.cells[4].textContent;
         let  username_user = btn.parentNode.parentNode.parentNode.cells[5].textContent;
         let  password_user = btn.parentNode.parentNode.parentNode.cells[6].textContent;
 
@@ -26,9 +26,9 @@ document.addEventListener("mouseover", function() {
         document.getElementById("middlename_user").value = middlename_user;
         document.getElementById("lastname_user").value = lastname_user;
 
-        document.getElementById("house_no_user").value = house_no_user;
+        document.getElementById("gender_user").value = gender;
         
-        document.getElementById("sitio_pook_user").value = sitio_pook_user;
+        document.getElementById("age_user").value = age;
         
         document.getElementById("username_user").value = username_user;
         document.getElementById("password_user").value = password_user;
