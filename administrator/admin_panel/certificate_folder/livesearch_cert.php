@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/table_doc.css">
 </head>
 <body>
+        
+        <?php
+            require("../../../database/conn_db.php");
 
-
-              
             
-        <?php require("../../../database/conn_db.php");
+            
+            if(isset($_POST['input'])){
                 
-                $sql = "SELECT DISTINCT * FROM barangay_request WHERE request_document = 'Barangay ID' ORDER BY id DESC LIMIT 12";
-                $result = $conn->query($sql);
-    
-                $result->num_rows > 0;
-    
+               
+                $input = $_POST['input']; 
+
+                $query = "SELECT * FROM barangay_request WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR id LIKE '{$input}%' OR purpose LIKE '{$input}%' ";
+
+                
+                $result = mysqli_query($conn,$query);
+
                 if ($result->num_rows > 0) {?>
-                  <div id = "searchresult">
-                <table>
-                        <caption>Barangay Clearance Request</caption>
+
+
+                    
+                    <table>
+                        <caption>Barangay Certificate Request</caption>
                         <tr>
                             <th>Profile</th>
                             <th>Fullname</th>
                             <th>Gender</th>
                             <th>Control No.</th>
                             <th>Purpose</th>
-                            
+                            <th>Document Type</th>
                             <th>Date:</th>
                             <th>Status</th>
                           
@@ -74,7 +80,7 @@
                                     <td><?php echo $gender; ?></td>
                                     <td><?php echo $id; ?></td>
                                     <td><?php echo $purpose; ?></td>
-                                    
+                                    <td> <?php echo $request_document ?></td>
                                     <td><?php echo  date('m/d/Y',strtotime($date_request));?></td>
                                     <td  style = 'color:blue;'>
                                         <?php
@@ -150,7 +156,7 @@
                                                 <p hidden><?php echo  $profile ?></p>
                                                 
                                                 <button id = "edit_list" class = "edit_btn_manage" data-id= <?php echo $row ["id"] ?>>Edit</button></li>
-                                               <li><button id = "delete_official_btn" class = "delete_btn_id" data-id= <?php echo $row ["id"] ?>>Delete</button></li>
+                                               <li><button id = "delete_official_btn" class = "delete_btn_req" data-id= <?php echo $row ["id"] ?>>Delete</button></li>
                                         </ul>
                                        
                                   
@@ -171,16 +177,37 @@
                    
                     
                 </table>
-                        </div>
-            
-                <?php
-                }   
-                // -- close connection 
-                mysqli_close($conn);
-                ?> 
 
+                                    
+       
+
+                    
+                    <?php
+                    } else {
+                        ?>
+                            <style>
+                                    .Data-not-found h1{
+                                        color:rgba(255, 0, 0, 0.37);
+                                        position:absolute;
+                                        top:300px;
+                                        left:25%;
+                                        font-size:3.5rem;
+                                    }
+                            </style>
+                            <div class = "Data-not-found">
+                                <h1>DATA NOT FOUND</h1>
+                            </div>
+
+                        <?php
+                       
+                    }
+                }
+                    // -- close connection 
+                    mysqli_close($conn);
+                    ?>          
+        
                     <!-- print CERT -->
-            <div id = "print-modal" class = "print-modal">
+                    <div id = "print-modal" class = "print-modal">
                         <div class = "print-modal-content">
                         <span onclick="this.parentElement.parentElement.style.display='none';" class = "print-close-btn">&times;</span>
                             <?php include("print.php");?>  
@@ -201,28 +228,18 @@
                     </div>
            </div>
                <!-- MODAL Delete -->    
-              <div id = "delete-modal_id" class = "delete-modal_id">
-                          <div class = "delete-modal-content_id">
+              <div id = "delete-modal_req" class = "delete-modal_req">
+                          <div class = "delete-modal-content_req">
                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
                                         <h2>Delete Confirmation</h2>
                                             <h3>Are you sure you want to delete this record!</h3>
                                             <div class = "div-delete">   
-                                            <button id = "confirm-delete_id" class = "btn-delete_id">Delete</button>
-                                            <button id = "cancel-delete_id" class = "btn-delete_id">Cancel</button>
+                                            <button id = "confirm-delete_req" class = "btn-delete_req">Delete</button>
+                                            <button id = "cancel-delete_req" class = "btn-delete_req">Cancel</button>
                                             </div>
             </div>
              </div>
 
         
-
-
-               
-    
-
-     
-
-               
-               
-</body>
-                               
-</html>
+        </body>
+        </html>

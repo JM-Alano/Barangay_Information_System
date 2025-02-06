@@ -25,6 +25,11 @@
   
     --other-color :rgb(0, 183, 255);
   }
+  body{
+    background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .main_content{
     background-color: #005720;
     width: 75vw;
@@ -34,11 +39,7 @@
     margin-right: 20px;
    
   }
-  body{
-  background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+
   .main_content  #create_registered{
     border: none;
     border-radius: 4px;

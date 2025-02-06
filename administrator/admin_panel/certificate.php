@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
-    <link rel = "stylesheet" href = "style.css/style.css_doc.css"/>
+    <link rel = "stylesheet" href = "style.css/doc_style.css"/>
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/style_request.css">
 </head>
 <body>
@@ -129,12 +129,18 @@
         
          
 
-                
-                <div id = "content_certificate">
-              
-               
+                <div class = "search_div">
+                            <!-- SEARCH BUTTON -->
+                            <input type="text" id="live_search" placeholder="All Search" data-url="./certificate_folder/livesearch_cert.php">
 
-                            <?php include('certificate_folder/count_data_foder/count_list.php');?>
+                            <button id = "add_list" class = "add_btn_manage">+Add</button>
+                </div>
+                            
+                
+     
+                     
+                     <div id = "content_certificate">
+                        <?php include('certificate_folder/count_data_foder/count_list.php');?>
                         <div class = "item1">
                             <h2> <?php brgy_cert_list() ?> <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg></span></h2>
                             <h3>Total Barangay Certificate Completed</h3>
@@ -156,7 +162,7 @@
                             <h3>Total Barangay ID Completed</h3>                
                         </div>
           
-                
+          
 
         
                 <footer style = "height:30vh;">
@@ -172,8 +178,8 @@
 
 <!-- -------------------------------------JAVASCRIPT--------------------------------------------- -->
         <!-- AJAX AUTO REFRESH CONTENT -->
-
-      
+  
+            
         <script type = "text/javascript">
             function loadContent(url) {
                 const xhttp = new XMLHttpRequest();
@@ -185,6 +191,10 @@
                 }
             
         </script>
+  
+                    
+
+          
         
         <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
         <script src = "javascript_folder/logout_&_sidebar.js"></script>
@@ -220,12 +230,32 @@
         <script src = "certificate_folder/javascript/add_btn.js"> </script>
           <!-- DELETE BUTTON -->
           <script src = "certificate_folder/javascript/delete_function.js"></script>
+            
+        <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+        <script type = "text/javascript" >
+                $(document).ready(function(){
+                $("#live_search").keyup(function(){
+                    var input = $(this).val();
+                    // alert(input);
 
-        <!-- REVENUE LIST BTN -->
-                <!-- DELETE BTN -->
-      <script src = "certificate_folder/javascript/delete_revenue.js"></script>
-                <!-- UPDATE BTN -->
-      <script src = "certificate_folder/javascript/update_btn_revenue.js"></script>
+                    if(input != ""){
+                        $.ajax({
+                            url: "./certificate_folder/livesearch_cert.php",
+                            method: "POST",
+                            data: {input:input},
+
+                            success:function (data){
+                                $("#searchresult").html(data);
+                            }
+                        });
+                    }
+
+                });
+            });
+        </script>
+             
+        
 </body>
 </html>

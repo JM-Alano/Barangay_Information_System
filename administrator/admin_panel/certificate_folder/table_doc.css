@@ -6,7 +6,9 @@ src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
     font-family: "sub_text";
     src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
 }
-
+.search_div{
+  margin-top: 40px;
+}
  .add_btn_manage{
   border: none;
   border-radius: 4px;
@@ -19,7 +21,7 @@ src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
   transition: all 0.5s ease;
   letter-spacing: 2px;
   margin-left: 50px;
-  
+  display: block;
 }
 table{
 border: 2px solid rgba(228, 228, 228, 0.39);
@@ -90,6 +92,7 @@ caption {
    color:var(--1st-text-color);
    outline: none;
    z-index: 99;
+   display: block;
    
 }
 #live_search:focus{

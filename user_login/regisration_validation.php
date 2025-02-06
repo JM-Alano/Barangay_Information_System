@@ -3,9 +3,9 @@
 
 
     if (isset($_POST['registraion'])) {
-        $firstname = ucfirst(trim($_POST['fname']));
-        $middlename = ucfirst(trim($_POST['mname']));
-        $lastname = ucfirst(trim($_POST['lname']));
+        $firstname = trim($_POST['fname']);
+        $middlename = trim($_POST['mname']);
+        $lastname = trim($_POST['lname']);
 
         $gender = trim($_POST['gender']); 
         $age = trim($_POST['age']);

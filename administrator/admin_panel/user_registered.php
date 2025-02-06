@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
-    <link rel = "stylesheet" href = "style.css/user_register.css.css"/>
+    <link rel = "stylesheet" href = "style.css/reg_user.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 </head>
@@ -158,5 +158,30 @@
                 let admin_profile = document.getElementById("admin_picture").textContent;
                 document.getElementById("admin_profile").src =  admin_profile;
         </script>
+
+           <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+            <script type = "text/javascript" >
+                    $(document).ready(function(){
+                    $("#live_search").keyup(function(){
+                        var input = $(this).val();
+                        // alert(input);
+
+                        if(input != ""){
+                            $.ajax({
+                                url: "./user_register_folder/livesearch.php",
+                                method: "POST",
+                                data: {input:input},
+
+                                success:function (data){
+                                    $("#searchresult").html(data);
+                                }
+                            });
+                        }
+
+                    });
+                });
+            </script>
 </body>
 </html>

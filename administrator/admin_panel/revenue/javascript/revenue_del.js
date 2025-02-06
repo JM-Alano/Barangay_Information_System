@@ -30,22 +30,13 @@ document.addEventListener("mouseover", function() {
         let id = certDeleteBtn.getAttribute("data-id");
         // Send AJAX request to delete.php
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "/BIS/administrator/admin_panel/certificate_folder/delete_revenue.php", true);
+        xhr.open("POST", "/BIS/administrator/admin_panel/revenue/delete_revenue.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send("id=" + id);
         xhr.onload = function() {
-            if (xhr.status === 200) {
-           
-                const xhttp = new XMLHttpRequest();
-                xhttp.open("POST", '/BIS/administrator/admin_panel/certificate_folder/revenue.php');
-                xhttp.send();
-                xhttp.onreadystatechange = (e) => {
-                    document.getElementById("content_certificate").innerHTML = xhttp.responseText;
-                }
-                
-            } else {
-                console.log("Error deleting record!");
-            }
+            
+            window.location.href = "/BIS/administrator/admin_panel/revenue.php";
+
         };
         modal_delete.style.display = "none";
     });

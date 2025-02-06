@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/t_style_table.css">
+    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/table_doc.css">
 </head>
 <body>
 
 
                
-                     
-                     <!-- SEARCH BUTTON -->
-                     <input type="text" id = "live_search" placeholder = "SEARCH">
-                     <button id = "add_list" class = "add_btn_manage">+Add</button>
+                            
+                
+
+           
             
-        <?php require("../../../database/conn_db.php");
+                <?php require("../../../database/conn_db.php");
                 
                 $sql = "SELECT DISTINCT * FROM barangay_request WHERE request_document = 'Barangay Certificate' ORDER BY id DESC LIMIT 12";
                 $result = $conn->query($sql);
@@ -23,7 +23,8 @@
                 $result->num_rows > 0;
     
                 if ($result->num_rows > 0) {?>
-           
+
+          <div id = "searchresult">
                 <table>
                         <caption>Barangay Certificate Request</caption>
                         <tr>
@@ -175,7 +176,7 @@
                    
                     
                 </table>
-            
+                </div>
             
                 <?php
                 }   
@@ -217,16 +218,10 @@
             </div>
              </div>
 
-        
-
 
                
-    
+            
 
-     
-
-               
-               
 </body>
                                
 </html>

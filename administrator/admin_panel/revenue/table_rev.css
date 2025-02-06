@@ -6,7 +6,14 @@ src: url(../../../asset/font/Syncopate/Syncopate-Regular.ttf);
     font-family: "sub_text";
     src: url(../../../asset/font/Afacad_Flux/AfacadFlux-VariableFont_slnt,wght.ttf);
 }
-
+body{
+    background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    overflow: scroll;
+    overflow-x: hidden;
+}
  .add_btn_manage{
   border: none;
   border-radius: 4px;
@@ -76,6 +83,54 @@ caption {
  
   
 }
+.pagination {
+  margin: 20px 0;
+  float: right;
+  margin-right: 20px;
+  padding-bottom: 60px;
+  
+  }
+  
+  .pagination a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: var(--1st-text-color);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  }
+  
+  .pagination a.active {
+  background-color: var(--2nd-bg-color);
+  color: white;
+  border: 1px solid var(--2nd-bg-color);
+  }
+  
+  .pagination a:hover {
+  background-color: var(--2nd-bg-color);
+  color: white;
+  }
+  .sidebar.active ~ .dashboard_content .limit-selector{
+  margin-left: -220px;
+  }
+  .limit-selector {
+  margin-top: 40px;
+  padding-left: 40px;
+  color: #005720;
+  font-family: "sub_text";
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+  float: left;
+  }
+  
+  .limit-selector select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: max-content;
+  color: #005720;
+  }
+
 
 
 #live_search{

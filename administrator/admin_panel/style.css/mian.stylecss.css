@@ -76,7 +76,7 @@ html {
     color: var(--btn-color);
 }
 body{
-    background-color: var(--bg-color);
+
     position: relative;
     min-height: 100%;
     width: 100%;

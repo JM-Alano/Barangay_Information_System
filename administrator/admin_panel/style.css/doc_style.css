@@ -115,3 +115,11 @@ body{
     color:var(--bg-color) ;
    
   }
+  #live_search{
+   
+      display: none;
+      
+   }
+   .add_btn_manage{
+    display: none;
+   }

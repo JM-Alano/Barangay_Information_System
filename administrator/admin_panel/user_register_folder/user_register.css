@@ -56,13 +56,7 @@ html {
         font-family: "sub_text";
      }
     
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+  
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;
@@ -382,13 +376,7 @@ html {
         padding: 20px;
         font-family: "sub_text";
      }
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;
@@ -698,13 +686,7 @@ html {
         padding: 20px;
         font-family: "sub_text";
      }
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;
@@ -1016,13 +998,7 @@ html {
         padding: 20px;
         font-family: "sub_text";
      }
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;
@@ -1337,13 +1313,7 @@ html {
         padding: 20px;
         font-family: "sub_text";
      }
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;
@@ -1655,13 +1625,7 @@ html {
         padding: 20px;
         font-family: "sub_text";
      }
-    body{
-        background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-        background-repeat: repeat;
-        background-size: cover;
-        overflow-x: hidden;
-       
-    }
+
     .header{
         background-color: var(--2nd-bg-color);
         width:100vw;

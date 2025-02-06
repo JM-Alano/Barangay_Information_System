@@ -4,7 +4,7 @@
         $id = $_POST["id"];
             
         // Delete query
-        $sql = "DELETE FROM barangay_revenue WHERE ID_incre = '$id'";
+        $sql = "DELETE FROM barangay_revenue WHERE OR_no = '$id'";
 
         // Execute query
         if (mysqli_query($conn, $sql)) {

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
-    <link rel = "stylesheet" href = "style.css/revenue.css"/>
+    <link rel = "stylesheet" href = "style.css/style_revenue.css"/>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -123,7 +123,7 @@
                                 </div>
                         </div>
                           <!-- Table in Database -->
-                          <div  id = "searchresult" class = "table_div">
+                          <div  class = "table_div">
                                 <?php include('./revenue/revenue_table.php'); ?>
                             
                         </div>
@@ -139,8 +139,34 @@
         <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
         <script src = "javascript_folder/logout_&_sidebar.js"></script>
 
-        <!-- ADD ACCOUNT  -->
-        <script src = "user_register_folder/registered_btn.js"></script>
+      
+        </script>
+
+
+            <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+            <script type = "text/javascript" >
+                    $(document).ready(function(){
+                    $("#live_search").keyup(function(){
+                        var input = $(this).val();
+                        // alert(input);
+
+                        if(input != ""){
+                            $.ajax({
+                                url: "./revenue/livesearch.php",
+                                method: "POST",
+                                data: {input:input},
+
+                                success:function (data){
+                                    $("#searchresult").html(data);
+                                }
+                            });
+                        }
+
+                    });
+                });
+            </script>
         
         <script>
                 
@@ -159,6 +185,12 @@
 
            <!-- REVENUE ACTION BUTTON SCRIPT -->
            <script src = "revenue/javascript/btn_action_requested.js"></script>
+
+        <!-- edit BTN  -->
+        <script src = "revenue/javascript/btn_edit.js"> </script>
+         
+         <!-- DELETE BUTTON -->
+         <script src = "revenue/javascript/revenue_del.js"></script>
         
 </body>
 </html>
