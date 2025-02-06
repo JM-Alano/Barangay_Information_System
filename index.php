@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page | Barangayy Information System</title>
     <link rel = "stylesheet" href = "USER.css.css"/>
-    <link rel = "stylesheet" href = "RESPONSIVE.css.css"/>
+    <link rel = "stylesheet" href = "respon_index.css"/>
     <script>
         // Check if the page has already reloaded
         if (!sessionStorage.getItem("reloaded")) {
@@ -325,7 +325,7 @@
                 <h1>ABOUT</h1>
                 <div class = "div_img">
                 <img src="asset/image/logo/6736e31f2c7d1.png" alt="" id = "logo-about">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores similique hic enim odit sed error cumque, maiores suscipit inventor</p>
+                   
                 </div>
             </div>
             <div class = "item2_footer">

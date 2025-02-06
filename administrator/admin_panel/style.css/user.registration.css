@@ -530,8 +530,7 @@ html {
     opacity: 10%;
   }
 body{
-    background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-    background-repeat: no-repeat;
+
     background-size: cover;
     overflow-x: hidden;
    
@@ -1017,9 +1016,8 @@ body{
    }
   
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
-      background-size: cover;
+
+   
       overflow-x: hidden;
      
   }
@@ -1342,9 +1340,7 @@ body{
       font-family: "sub_text";
    }
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
-      background-size: cover;
+
       overflow-x: hidden;
      
   }
@@ -1658,9 +1654,8 @@ body{
       font-family: "sub_text";
    }
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
-      background-size: cover;
+
+
       overflow-x: hidden;
      
   }
@@ -1976,8 +1971,7 @@ body{
       font-family: "sub_text";
    }
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
+  
       background-size: cover;
       overflow-x: hidden;
      
@@ -2297,8 +2291,7 @@ body{
       font-family: "sub_text";
    }
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
+  
       background-size: cover;
       overflow-x: hidden;
      
@@ -2615,9 +2608,7 @@ body{
       font-family: "sub_text";
    }
   body{
-      background-image: url("../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-      background-repeat: repeat;
-      background-size: cover;
+    
       overflow-x: hidden;
      
   }

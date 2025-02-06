@@ -2688,6 +2688,7 @@ html {
         width: 150px;
         border-radius: 50%;
         height: 180px;
+        margin-left: 0px;
     }
     #footer .item1_footer h1{
         margin-left: 20px;
