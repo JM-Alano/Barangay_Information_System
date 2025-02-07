@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Table</title>
-    <link rel = "stylesheet" href = "table_sle.css" />
+    
 </head>
 <body>
                         
@@ -48,13 +48,15 @@
             <table>
                     <caption>Barangay Blotter List</caption>
                     <tr>
-                        
+                  
                         <th>Complainant</th>
-                        <th>Respondent</th>
-                        <th>Victim(s)</th>
-                        <th>Blotter/Incident</th>
+                        <th>Contact No.</th>
+                        <th>Subject</th>
+                        <th>Date/Time</th>
+                        <th>Type</th>
                         <th>Status</th>
                         <th>Action</th>
+                      
                     </tr>
                     <?php
                          while($row = $result->fetch_assoc()) {
@@ -85,7 +87,7 @@
                                     <td><?php  $status;
 
                                         if($status == 1){
-                                            echo "<p style='color:red;'>Active</p>";
+                                            echo "<p style='color:red;'></p>";
                                         }elseif($status == 2){
                                             echo "<p style='color:green;'>Settled</p>";
                                         }

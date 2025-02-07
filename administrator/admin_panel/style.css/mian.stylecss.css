@@ -57,11 +57,11 @@ html {
 .nav_list .sub_certification_folder #certificate,.nav_list .sub_certification_folder #clearance ,.nav_list .sub_certification_folder #indigency,.nav_list .sub_certification_folder #barangay_id{
     padding: 5px;
     letter-spacing: 1px;
-    margin-top: 5px;
+    margin-top: 0px;
     font-family: "sub_text";
     border: none;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--bg-color);
     cursor: pointer;
  

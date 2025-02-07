@@ -306,8 +306,8 @@ font-weight: bold;
 
 table{
   border: 2px solid rgba(228, 228, 228, 0.39);
-  margin-left: 40px;
-  margin-top: 20px;
+  margin-left: 0px;
+  margin-top: 0px;
   background-color: rgba(226, 226, 226, 0.322);
   width: 77vw;
   border-collapse: collapse;
@@ -358,7 +358,7 @@ caption {
 .pagination {
 margin: 20px 0;
 float: right;
-margin-right: 20px;
+margin-right: -20px;
 padding-bottom: 60px;
 
 }
@@ -386,8 +386,8 @@ color: white;
 margin-left: -220px;
 }
 .limit-selector {
-margin-top: 100px;
-padding-left: 40px;
+margin-top: 0px;
+padding-left: 0px;
 color: #005720;
 font-family: "sub_text";
 transition: all 0.5s ease;
@@ -467,7 +467,7 @@ fill: #d4b62f;
 }
 #view_resident_btn svg:hover{
 fill: #f8da52;
-color: var(--1st-text-color);
+color: var(--1st-text-color); 
 }
 
 
@@ -489,3 +489,52 @@ color: var(--1st-text-color);
 #live_search:focus{
  outline: 3px solid var(--2nd-bg-color);
 }
+.add_btn_manage{
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: var(--2nd-bg-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  margin-top: 20px;
+  width: max-content;
+  transition: all 0.5s ease;
+  letter-spacing: 2px;
+  margin-left: 0px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
