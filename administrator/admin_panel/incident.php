@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blotter | Barangayy Information System</title>
+    <title>Incident | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/brgy.blotter.css"/>
 </head>
@@ -91,7 +91,7 @@
         <div class = "dashboard_content">
         <div class = "text">
                         
-                        <h1>BLOTTER</h1>
+                        <h1>INCIDENT</h1>
                     
                     <div class = "setting">
                         <div>

@@ -968,11 +968,11 @@ body{
   
   
 
-  .form_registration .item3 #eye{
+  .form_registration .item3 #eye ,.form_registration .item3 #eyes{
     position: relative;
     left: 370px;
     bottom: 29px;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     cursor: pointer;
     color: var(--1st-text-color);
     width: 20px;

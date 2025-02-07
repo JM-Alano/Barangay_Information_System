@@ -3,49 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Table</title>
-    
+    <title>Document</title>
 </head>
 <body>
-                        
         
+        <?php
+            require("../../../database/conn_db.php");
 
-            <?php require("../../database/conn_db.php");
+            
+            
+            if(isset($_POST['input'])){
+                
+               
+                $input = $_POST['input']; 
 
-            // Get the current page and limit from query parameters, set defaults if not provided
-            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
-            $limit = $limit > 0 ? $limit : 10; // Ensure the limit is positive
-            $offset = ($page - 1) * $limit;
+                $query = "SELECT * FROM barangay_blotter WHERE complained_name LIKE '{$input}%' OR subject LIKE '{$input}%' OR 	place LIKE '{$input}%' OR 	complainant LIKE '{$input}%' OR tanod LIKE '{$input}%' OR details_reason LIKE '{$input}%' OR complained_name LIKE '{$input}%' OR id LIKE '{$input}%' ";
 
-            // Get the total number of records
-            $countQuery = "SELECT COUNT(*) AS total FROM barangay_official";
-            $countResult = $conn->query($countQuery);
-            $totalRows = $countResult->fetch_assoc()['total'];
-            $totalPages = ceil($totalRows / $limit);
-             
-       
-            $sql = "SELECT * FROM barangay_blotter ORDER BY id DESC LIMIT $limit OFFSET $offset ";
-            $result = $conn->query($sql);
+                
+                $result = mysqli_query($conn,$query);
 
-            $result->num_rows > 0;
+                if ($result->num_rows > 0) {?>
 
-            if ($result->num_rows > 0) {?>
 
-             <!-- Limit Selector -->
-                <div class="limit-selector">
-                    <form method="GET" action="">
-                        <label for="limit">Rows per page:</label>
-                        <select name="limit" id="limit" onchange="this.form.submit()">
-                            <option value="10" <?php if ($limit == 10) echo 'selected'; ?>>10</option>
-                            <option value="20" <?php if ($limit == 20) echo 'selected'; ?>>20</option>
-                            <option value="50" <?php if ($limit == 50) echo 'selected'; ?>>50</option>
-                        </select>
-                        <input type="hidden" name="page" value="<?php echo $page; ?>">
-                    </form>
-                </div>
-
-            <table>
+        <table style = "margin-top:60px;">
                     <caption>Barangay Blotter List</caption>
                     <tr>
                      
@@ -88,21 +68,12 @@
                                     <td><?php echo  $cell_no ?></td>
                                     <td><?php echo  $date . " / " .  $time ?></td>
                                    
-                                    <td hidden ><?php echo  $subject  ?></td>
-                                    
-                                    <td hidden ><?php echo  $place  ?></td>
-                                    <td hidden ><?php echo  $tanod  ?></td>
-                                    <td hidden ><?php echo   $time  ?></td>
+                                    <td hidden ><?php echo  $location  ?></td>
+                                    <td hidden ><?php echo  $date;   ?></td>
+                                    <td hidden ><?php echo  $time;  ?></td>
                                     <td hidden ><?php echo  $status  ?></td>
-                                    <td hidden ><?php echo  $type  ?></td>
-                             
-                                    <td hidden ><?php echo  $age  ?></td>
-                                    <td hidden ><?php echo  $address_complainant  ?></td>
-                                    <td hidden ><?php echo  $complained_name  ?></td>
-                                    <td hidden ><?php echo  $add_complained_name  ?></td>
-                                    <td hidden ><?php echo  $details_reason  ?></td>
-                                    <td hidden ><?php echo  $date; ?></td>
-                                    
+                                    <td hidden ><?php echo   $details  ?></td>
+                                    <td hidden ><?php echo  date('M. d, Y',strtotime($date)); ?></td>
                                     <td  ><?php echo  $type; ?></td>
                                     <td><?php  $status;
 
@@ -147,86 +118,57 @@
                
                 
             </table>
+             
+                                    
+       
 
-            
-<!-- Pagination Controls -->
-<div class="pagination">
-    <?php if ($page > 1): ?>
-        <a href="?page=<?php echo $page - 1; ?>&limit=<?php echo $limit; ?>">Previous</a>
-    <?php endif; ?>
+                    
+                    <?php
+                    } else {
+                        ?>
+                            <style>
+                                    .Data-not-found h1{
+                                        color:rgba(255, 0, 0, 0.37);
+                                        position:absolute;
+                                        top:300px;
+                                        left:25%;
+                                        font-size:3.5rem;
+                                    }
+                            </style>
+                            <div class = "Data-not-found">
+                                <h1>DATA NOT FOUND</h1>
+                            </div>
 
-    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-        <a href="?page=<?php echo $i; ?>&limit=<?php echo $limit; ?>" class="<?php echo $i == $page ? 'active' : ''; ?>">
-            <?php echo $i; ?>
-        </a>
-    <?php endfor; ?>
-
-    <?php if ($page < $totalPages): ?>
-        <a href="?page=<?php echo $page + 1; ?>&limit=<?php echo $limit; ?>">Next</a>
-    <?php endif; ?>
-</div>
-
-          
-           
-
-<?php 
-} else { ?>
-        <style>
-        .Data-not-found h1{
-            color:rgba(255, 0, 0, 0.37);
-            position:absolute;
-            top:300px;
-            left:25%;
-            font-size:3.5rem;
-        }
-    </style>
-    <div class = "Data-not-found">
-    <h1>DATA NOT FOUND</h1>
-    </div>
-    <?php
-}
-
-// Close the connection
-mysqli_close($conn);
-?>          
-
-            <!-- MODAL DELETE -->
-             <div id = "delete-modal" class = "delete-modal">
-                <div class = "delete-modal-content">
+                        <?php
+                       
+                    }
+                }
+                    // -- close connection 
+                    mysqli_close($conn);
+                    ?>          
+        
+                     <!-- MODAL DELETE -->
+             <div id = "delete-modals" class = "delete-modals">
+                <div class = "delete-modal-contents">
                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
                     <h2>Delete Confirmation</h2>
                     <h3>Are you sure you want to delete this record!</h3>
                     <div class = "div-delete">   
-                    <button id = "confirm-delete" class = "btn-delete">Delete</button>
-                    <button id = "cancel-delete" class = "btn-delete">Cancel</button>
+                    <button id = "confirm-deletes" class = "btn-deletes">Delete</button>
+                    <button id = "cancel-deletes" class = "btn-deletes">Cancel</button>
                     </div>
                 </div>
              </div>
-          
-               <!-- AJAX SCRIPT FOR DELETE BUTTON -->
-            <script src = "/BIS/administrator/admin_panel/brgy_blotter/delete_modal_button.js"></script>
 
-            <!-- MODAL UPDATE -->
-            <div id = "edit-modal_blotter" class = "edit-modal_blotter">
-                    <div class = "edit-modal-content_blotter">
+              <!-- MODAL UPDATE -->
+            <div id = "edit-modals" class = "edit-modals">
+                    <div class = "edit-modal-contents">
                     <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
-                        <?php include("update_temp.php");?> 
+                        <?php include("update_temp.php");?>
                     </div>
                </div>
-           <!-- UPDATE MODAL FUNCTION JS -->
-           <script src = "/BIS/administrator/admin_panel/brgy_blotter/update_modal.js"></script>
-           
-             <!-- view MODAL -->
-             <div id = "view-modal_blotter" class = "view-modal_blotter">
-                    <div class = "view-modal-content_blotter">
-                    <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
-                        <?php include('view_temp.php')?> 
-                    </div>
-               </div>
-                     <!-- UPDATE MODAL FUNCTION JS -->
-           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script>
-           
-           
 
-</body>
-</html>
+
+        
+        </body>
+        </html>

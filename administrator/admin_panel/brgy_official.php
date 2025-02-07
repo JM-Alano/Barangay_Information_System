@@ -119,7 +119,7 @@
           
                             <div class = "main_content">
                                         <!-- ADD BUTTON -->
-                                        <button id = "create_btn">+Official</button>
+                                        <button id = "create_btn">+Add</button>
                                         <!-- SEARCH BUTTON -->
                                         <input type="text" id = "live_search" placeholder = "SEARCH">                    
                                 </div>

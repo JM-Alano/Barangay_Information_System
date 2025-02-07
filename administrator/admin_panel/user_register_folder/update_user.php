@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="user_register_folder/user_res.css">
+    <link rel = "stylesheet" href = "style.css/user_register.css"/>
    
 </head>
 <body>

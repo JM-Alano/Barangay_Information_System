@@ -13,27 +13,39 @@ document.addEventListener("mouseover", function() {
         // Get ID and data of record to edit
         let id_blotter = btn.getAttribute("data-id");
 
+        let  subject = btn.parentNode.parentNode.parentNode.cells[3].textContent;
+        let  cell_no = btn.parentNode.parentNode.parentNode.cells[1].textContent;
+        let  place = btn.parentNode.parentNode.parentNode.cells[4].textContent;
+        let  tanod = btn.parentNode.parentNode.parentNode.cells[5].textContent;
+        let  time = btn.parentNode.parentNode.parentNode.cells[6].textContent;
+        let  status = btn.parentNode.parentNode.parentNode.cells[7].textContent;
+        let  type = btn.parentNode.parentNode.parentNode.cells[8].textContent;
         let  complainant = btn.parentNode.parentNode.parentNode.cells[0].textContent;
-        let  respondent = btn.parentNode.parentNode.parentNode.cells[1].textContent;
-        let  vitims = btn.parentNode.parentNode.parentNode.cells[2].textContent;
-        let  incident_type = btn.parentNode.parentNode.parentNode.cells[3].textContent;
-        let  location = btn.parentNode.parentNode.parentNode.cells[4].textContent;
-        let  date_blotter = btn.parentNode.parentNode.parentNode.cells[5].textContent;
-        let  time_blotter = btn.parentNode.parentNode.parentNode.cells[6].textContent;
-        let  status_blotter = btn.parentNode.parentNode.parentNode.cells[7].textContent;
-        let  details = btn.parentNode.parentNode.parentNode.cells[8].textContent;
+        let  age = btn.parentNode.parentNode.parentNode.cells[9].textContent;
+        let  address_complainant = btn.parentNode.parentNode.parentNode.cells[10].textContent;
+        let  complained_name = btn.parentNode.parentNode.parentNode.cells[11].textContent;
+        let  add_complained_name = btn.parentNode.parentNode.parentNode.cells[12].textContent;
+        let  details_reason = btn.parentNode.parentNode.parentNode.cells[13].textContent;
+        let  date = btn.parentNode.parentNode.parentNode.cells[14].textContent;
+      
 
         document.getElementById("id_blotter").value = id_blotter;
-        document.getElementById("complainant").value = complainant;
-        document.getElementById("respondent").value = respondent;
-        document.getElementById("vitims").value = vitims;
-        document.getElementById("incident_type").value = incident_type;
-        document.getElementById("location").value = location;
-        document.getElementById("date_blotter").value = date_blotter;
-        document.getElementById("time_blotter").value = time_blotter;
-        document.getElementById("status_blotter").value = status_blotter;
-        document.getElementById("details").value = details;
-        
+
+        document.getElementById("subject_blotter").value = subject;
+        document.getElementById("cell_no_blotter").value = cell_no;
+        document.getElementById("place_blotter").value = place;
+        document.getElementById("tanod_blotter").value = tanod;
+        document.getElementById("time_blotter").value = time;
+        document.getElementById("status_blotter").value = status;
+        document.getElementById("type_blotter").value = type; 
+        document.getElementById("complainant_blotter").value = complainant;
+        document.getElementById("age_blotter").value = age;
+        document.getElementById("address_complainant_blotter").value = address_complainant;
+        document.getElementById("complained_name_blotter").value = complained_name;
+        document.getElementById("add_complained_name_blotter").value = add_complained_name;
+        document.getElementById("details_reason_blotter").value = details_reason;
+        document.getElementById("date_blotter").value = date;
+
     });
     });
             

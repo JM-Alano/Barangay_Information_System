@@ -10,37 +10,40 @@
 </head>
 <body>
 
+    <header>
+        <h4>BLOTTER FORM</h4>
+    </header>
 
-    <form action="brgy_blotter/insert_blotter.php" method = "POST">
+
+    <form action="/BIS/administrator/admin_panel/brgy_blotter/insert_blotter.php" method = "POST">
     <h1 class = "h1">Add Blotter List</h1>
     <div class = "main_div_blotter">
         <div>
-            <label for="">Complainant</label><br>
-            <input type="text" name="complainant" id="" placeholder = "Enter complainant" required><br>
+           
+           
+            <label for="">SUBJECT :</label><br>
+            <input type="text" name="subject" id="" placeholder = "Enter Subject" ><br>
 
-            <label for="">Victim(s)</label><br>
-            <input type="text" name="victims" id="" placeholder = "Enter Vitim(s)" required ><br>
+            <label for="">CELLPHONE NUMBER :</label><br>
+            <input type="text" name="cell_no" id="" placeholder = "Enter Phone number" pattern="[0-9]{11}" required ><br>
 
-            <label for="">Location</label><br>
-            <input type="text" name="location" id="" placeholder = "Enter Location" ><br>
-            
-            <label for="">Time</label><br>
-            <input type="time" name="time" id=""><br>
+            <label for="">PLACE :</label><br>
+            <input type="text" name="place" id="" value = "Barangay Paliparan II" readonly><br>
         </div>
 
         <div>
-            <label for="">Respondent</label><br>
-            <input type="text" name="respondent" id="" placeholder = "Enter Respondent" required><br>
+            <label for="">TANOD DUTY :</label><br>
+            <input type="text" name="tanod" id="" placeholder = "Enter Tanod duty" required><br>
 
-            <label for="">Type</label><br>
-                <select name="incident_type" id="" required>
-                    <option value="Blotter">Blotter</option>
-                    <option value="Incident">Incident</option>
-                </select><br>
+         
 
             <label for="">Date</label><br>
             <input type="Date" name="date" id="" required><br>
 
+            <label for="">TIME :</label><br>
+                <input type = "time" name="time" id=""  required />
+                   
+               <br>
             <label for="">Status</label><br>
                 <select name="status" id="" required>
                      <option value="" readonly>--Select Blotter Status--</option>
@@ -48,20 +51,30 @@
                     <option value=2>Settled</option>
                     <option value=3>Scheduled</option>
                 </select><br>
+
+                <input type="hidden" name = "type_of_blotter" value = "Blotter">
         </div>
         
     </div>
 
     <div class = "div_2nd">
-        <label for="">Details</label><br>
-        <textarea name="details" id="" rows="4" cols="50" required>
-
+        <h3 class = "h1">Details</h3>
+       <div class = "div">
+        <p>Ako si <input type="text" name = "complainant" style= "width:600px; margin-right:20px;">Edad <input type="number" name = "age" min = "1" max = "105"style = "width:100px; "><br>
+        Nakatira sa <input type="text" name = "address_complainant" style= "width:600px;"> ay dumudulong sahimpilan ng Barangay Paliparan II upang aking ireklamo si <input type="text" name = "complained_name" style= "width:600px;"><br>
+        Address <input type="text" name = "add_complained_name" style= "width:600px;"> sa kadahilanan na
+        <textarea name="details_reason" id="" >
+        
         </textarea>
+        </p>
+       </div>
+        
     </div>
         
     <div class = "div_3rd">
-        <input type="submit" name = "save_blotter" value = "Save" id = "save">
+       
         <input type="reset" value = "Reset" id = "reset">
+        <input type="submit" name = "save_blotter" value = "Save" id = "save">
     </div>
 
     </form>

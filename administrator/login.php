@@ -2,6 +2,24 @@
 
     <?php
         session_start();
+
+        require("../database/conn_db.php");
+
+            // Barangay Info
+            $sql = "SELECT * FROM barangay_information";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0){
+                
+            $row = mysqli_fetch_array($result);
+            
+                ?>
+                <p hidden  id = "logo_get">../asset/image/logo/<?php echo  $row['logo'] ?></p>
+                
+                
+                <?php
+
+            }
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +31,7 @@
 </head>
 <body>
     <header class = "header">
-            <img src="../asset/image/logo/6736e31f2c7d1.png" alt="">
+            <img src="../asset/image/logo/679b85db30f8c.png" alt="" id = "logo">
 
             <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">INFORMATION SYSTEM</span></h1>
     </header>
@@ -94,6 +112,13 @@
     </script>
 
 
-
+<script>
+                let logo = document.getElementById("logo_get").textContent;
+             
+                ;
+                document.getElementById("logo").src =  logo;
+           
+                
+        </script>
 </body>
 </html>

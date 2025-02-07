@@ -123,7 +123,7 @@
                             <!-- SEARCH BUTTON -->
                             <input type="text" id="live_search" placeholder="SEARCH" >
 
-                            <button id = "add_list" class = "add_btn_manage">+Add</button>
+                            <a href="/BIS/administrator/admin_panel/brgy_blotter/add_blotter.php"><button id = "add_list" class = "add_btn_manage">+Add</button></a>
                 </div>
                 <!-- Table in Database -->
                 <div  id = "searchresult" class = "table_div">
@@ -137,7 +137,30 @@
         <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
         <script src = "javascript_folder/logout_&_sidebar.js"></script>
 
-  
+              <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+                <script type = "text/javascript" >
+                        $(document).ready(function(){
+                        $("#live_search").keyup(function(){
+                            var input = $(this).val();
+                            // alert(input);
+
+                            if(input != ""){
+                                $.ajax({
+                                    url: "./brgy_blotter/livesearch.php",
+                                    method: "POST",
+                                    data: {input:input},
+
+                                    success:function (data){
+                                        $("#searchresult").html(data);
+                                    }
+                                });
+                            }
+
+                        });
+                    });
+                </script>
   
 
         <script src = "brgy_blotter/blotter_btn.js"></script>

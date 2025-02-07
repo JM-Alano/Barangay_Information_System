@@ -271,7 +271,7 @@ html {
         color: #4A9D4f;
     }
     
-    .form_registration .item3 #eye,.form_registration .item3 #eyes{
+    .form_registration .item3 #eye{
         position: relative;
         left: 190px;
         bottom: 30px;
@@ -585,7 +585,7 @@ html {
         color: #4A9D4f;
     }
     
-    .form_registration .item3 #eye,.form_registration .item3 #eyes{
+    .form_registration .item3 #eye{
         position: relative;
         left: 260px;
         bottom: 30px;
@@ -897,7 +897,7 @@ html {
         color: #4A9D4f;
     }
     
-    .form_registration .item3 #eye,.form_registration .item3 #eyes{
+    .form_registration .item3 #eye{
         position: relative;
         left: 350px;
         bottom: 30px;
@@ -1210,7 +1210,7 @@ html {
         color: #4A9D4f;
     }
     
-    .form_registration .item3 #eye, .form_registration .item3 #eyes{
+    .form_registration .item3 #eye{
         position: relative;
         left: 350px;
         bottom: 30px;
@@ -1524,7 +1524,7 @@ html {
         color: #4A9D4f;
     }
     
-    .form_registration .item3 #eye, .form_registration .item3 #eyes{
+    .form_registration .item3 #eye {
         position: relative;
         left: 375px;
         bottom: 30px;
@@ -1533,7 +1533,7 @@ html {
         color: var(--1st-text-color);
         width: 20px;
     }
-    
+
     .form_registration .item3 #eye_confirm{
         position: relative;
         left: 375px;
@@ -1838,7 +1838,7 @@ html {
         font-size: 0.9rem;
     }
     
-    .form_registration .item3 #eye,.form_registration .item3 #eyes{
+    .form_registration .item3 #eye{
         position: relative;
         left: 370px;
         bottom: 35px;
@@ -1847,7 +1847,7 @@ html {
         color: var(--1st-text-color);
         width: 20px;
     }
-    
+  
     .form_registration .item3 #eye_confirm{
         position: relative;
         left: 370px;

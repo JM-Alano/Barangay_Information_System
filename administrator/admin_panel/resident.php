@@ -114,7 +114,7 @@
         
             <div class = "main_content">
                         <!-- ADD BUTTON -->
-                        <a href="brgy_resident_folder/add_resident.php"><button id = "create_btn">+Resident</button></a>
+                        <a href="brgy_resident_folder/add_resident.php"><button id = "create_btn">+Add</button></a>
                         <!-- SEARCH BUTTON -->
                         <input type="text" id = "live_search" placeholder = "SEARCH">
             </div>

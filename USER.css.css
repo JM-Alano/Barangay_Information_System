@@ -90,11 +90,15 @@ body{
     background-color: var(--bg-color);
     box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
 }
-.nav .logo img{
+.nav .logo {
+  
+}
+.nav .logo #logo{
     width: 120px;
+    height: 120px;
     margin-left: 120px;
-    border-radius: 50%;
-    height: 140px;
+    border-radius: 0%;
+ 
 }
 .nav .headings{
     text-align: center;
