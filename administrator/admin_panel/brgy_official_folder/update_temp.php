@@ -110,7 +110,7 @@
 
          <label>Chairmanship</label><br>
         <select id='chairmanship' name=chairman >
-          <option value= 'Chairmanship'>Chairmanship</option>
+          <option value= 'Chairman'>Chairman</option>
           <option value= 'Kagawad'>Kagawad</option>
           <option value= 'SK chairman'>SK Chairman</option>
           <option value= 'SK kagawad'>SK Kagawad</option>
@@ -152,8 +152,9 @@
         <input type="hidden" id = "id" name = "id">
 
        <div class = "btn_form_reset_sub">
-        <input type="Submit" id="update-btn" value = "Update" name = "update_official_list">
+    
         <input type = "reset" value = "Reset" id = "reset">
+        <input type="Submit" id="update-btn" value = "Update" name = "update_official_list">
        </div>
        
         </form>

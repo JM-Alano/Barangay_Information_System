@@ -216,7 +216,7 @@ justify-content: space-evenly;
   cursor: pointer;
   border-radius: 4px;
 }
-.edit-modal,.edit-modals,.edit-modal_blotter,.edit-modal_blotters{
+.edit-modal,.edit-modals,.edit-modal_blotter{
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -230,12 +230,12 @@ justify-content: space-evenly;
   animation-duration: 0.7s; 
   display: none;
 }
-.edit-modal-content,.edit-modal-contents,.edit-modal-content_blotters{
+.edit-modal-content,.edit-modal-contents{
 background-color: rgb(235, 235, 235);
   margin: 2% auto; /* 15% from the top and centered */
   padding: 20px 50px 20px 50px;
   border: 1px solid #888;
-  width: 60%; /* Could be more or less, depending on screen size */
+  width: 80%; /* Could be more or less, depending on screen size */
   animation-name: down ;
   animation-duration: 0.7s; 
   border-radius: 8px;
@@ -245,7 +245,7 @@ background-color: rgb(235, 235, 235);
   margin: 2% auto; /* 15% from the top and centered */
   padding: 20px 50px 20px 50px;
   border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+  width: 80%; /* Could be more or less, depending on screen size */
   animation-name: down ;
   animation-duration: 0.7s; 
   border-radius: 8px;
@@ -307,7 +307,7 @@ font-weight: bold;
 table{
   border: 2px solid rgba(228, 228, 228, 0.39);
   margin-left: 0px;
-  margin-top: -40px;
+  margin-top: 10px;
   background-color: rgba(226, 226, 226, 0.322);
   width: 77vw;
   border-collapse: collapse;
@@ -386,9 +386,9 @@ color: white;
 margin-left: -220px;
 }
 .limit-selector {
-margin-top: -50px;
-margin-left: -50px;
-padding-left: -90px;
+margin-top:20px;
+margin-left: 0px;
+
 color: #005720;
 font-family: "sub_text";
 transition: all 0.5s ease;

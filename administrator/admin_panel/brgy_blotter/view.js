@@ -46,7 +46,16 @@ document.addEventListener("mouseover", function() {
         document.getElementById("details_reason_view").value = details_reason;
         document.getElementById("date_view").value = date;
 
-
+        if(status == 1){
+             document.getElementById("status_view").value = "Active";
+             document.getElementById("status_view").style.color = "red";
+        }else if (status == 2){
+            document.getElementById("status_view").value = "Settled";
+            document.getElementById("status_view").style.color = "green";
+        }else if (status == 3){
+            document.getElementById("status_view").value = "Schedule";
+            document.getElementById("status_view").style.color = "orange";
+        }
     });
     });
             

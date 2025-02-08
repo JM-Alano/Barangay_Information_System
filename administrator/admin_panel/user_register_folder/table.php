@@ -165,34 +165,37 @@
 mysqli_close($conn);
 ?>          
 
-            <!-- MODAL DELETE -->
-             <div id = "delete-modal_user" class = "delete-modal_user">
-                <div class = "delete-modal-content_user">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
-                    <h2>Delete Confirmation</h2>
-                    <h3>Are you sure you want to delete this record!</h3>
-                    <div class = "div-delete_user">   
-                    <button id = "confirm-delete_user" class = "btn-delete_user">Delete</button>
-                    <button id = "cancel-delete_user" class = "btn-delete_user">Cancel</button>
-                    </div>
-                </div>
-             </div>
-          
-               <!-- AJAX SCRIPT FOR DELETE BUTTON -->
-            <script src = "/BIS/administrator/admin_panel/user_register_folder/buttodelete.js"></script>
+<!-- MODAL DELETE -->
+<div id="delete-modal_user" class="delete-modal_user">
+    <div class="delete-modal-content_user">
+        <span class="close-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+            </svg>
+        </span>
+        <h2>Delete Confirmation</h2>
+        <h3>Are you sure you want to delete this record?</h3>
+        <div class="div-delete_user">
+            <button id="confirm-delete_user" class="btn-delete_user">Delete</button>
+            <button id="cancel-delete_user" class="btn-delete_user">Cancel</button>
+        </div>
+    </div>
+</div>
 
-            <!-- MODAL UPDATE -->
-            <div id = "edit-modal_blotter" class = "edit-modal_blotter">
-                    <div class = "edit-modal-content_blotter">
-                    <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
-                        <?php include("user_register_folder/update_user.php");?> 
-                    </div>
-               </div>
-          
-            <!-- UPDATE MODAL FUNCTION JS -->
-            <script src = "/BIS/administrator/admin_panel/user_register_folder/upd_modal.js"></script>
+<!-- AJAX SCRIPT FOR DELETE BUTTON -->
+<script src="/BIS/administrator/admin_panel/user_register_folder/buttodelete.js"></script>
 
-               
+<!-- MODAL UPDATE -->
+<div id="edit-modal_blotter" class="edit-modal_blotter">
+    <div class="edit-modal-content_blotter">
+        <span class="update-close-btn" onclick="document.getElementById('edit-modal_blotter').style.display='none';">&times;</span>
+        <?php include("user_register_folder/update_user.php"); ?>
+    </div>
+</div>
+
+<!-- UPDATE MODAL FUNCTION JS -->
+<script src="/BIS/administrator/admin_panel/user_register_folder/upd_modal.js"></script>
+
             
 </body>
 </html>

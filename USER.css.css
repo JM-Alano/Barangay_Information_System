@@ -278,12 +278,13 @@ body{
     }
 #official ._kagawad{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns:  auto auto auto;
     padding: 20px;
     text-align: center;
     justify-content: center;
     column-gap: 20px;
     row-gap: 20px;
+   
     
 }
 #official ._kagawad div p{

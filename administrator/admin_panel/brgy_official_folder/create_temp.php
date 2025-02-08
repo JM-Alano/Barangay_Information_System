@@ -120,7 +120,7 @@
 
          <label>Chairmanship</label><br>
         <select id='chairman' name=chairman >
-          <option value= 'Chairmanship'>Chairmanship</option>
+          <option value= 'Chairman'>Chairman</option>
           <option value= 'Kagawad'>Kagawad</option>
           <option value= 'SK Chairman'>SK Chairman</option>
           <option value= 'SK kagawad'>SK Kagawad</option>
@@ -159,8 +159,9 @@
         </select><br>
 
        <div class = "btn_form_reset_sub">
-        <input type="submit" value = "Create" name = "create_submit" id = "create" >
+        
         <input type = "reset" value = "Reset" id = "reset">
+        <input type="submit" value = "Create" name = "create_submit" id = "create" >
        </div>
        
         </form>

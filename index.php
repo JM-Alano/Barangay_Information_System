@@ -30,8 +30,7 @@
 
         <header class = "header">
             <div class = "social_logo">
-                <a href="https://www.facebook.com/profile.php?id=61553666895025" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg></a>
-                <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg></a>
+                <a href="https://www.facebook.com/profile.php?id=61553666895025" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
                
            
             </div>
@@ -166,80 +165,101 @@
         <section id = "official">
         <h1>BARANGAY OFFICIALS</h1>
             <div class = "chairman">
-              
-                <img src="asset/image/official/RolandoAmbal.jpg" alt="">
-                <p>Engr. Rolando "Rolly" Ambal</p>
-                <p>PUNONG BARANGAY</p>
+                <?php
+                    require('database/conn_db.php');
+                    // Fetch records for the current page
+                    $sql = "SELECT * FROM barangay_official WHERE chairmanship = 'Chairman' ORDER BY id DESC";
+
+
+                        $result = mysqli_query($conn, $sql);
+                        if (mysqli_num_rows($result) > 0) {
+                            // output data of each row
+                           $row = mysqli_fetch_assoc($result);
+
+                        
+                            $id = $row['id'];
+                            $fullname = $row["fullname"];
+                            $chairman = $row["chairmanship"];
+                       
+                            $position = $row["position"];
+                            $term_start = $row["term_start"];
+                            $term_end = $row["term_end"];
+                            $status = $row["status"];
+                            $image = $row["photo"];
+
+                            ?>
+                             <img src="asset/image/official/<?php echo $image;?>" alt="">
+                                <p><?php echo  $fullname ;?></p>
+                                <p>PUNONG BARANGAY</p>
+                            <?php
+                        }
+                
+                ?>
+               
                 
             </div>
 
             <div class = "_kagawad">
 
-                <div>
-                <img src="asset/image/official/OscarAlvarez.jpg" alt="">
-                <p>Kag. Oscar Alvarez</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
-                <div>
-                <img src="asset/image/official/BabyAlvarez.jpg" alt=""  >
-                <p>Kag. Baby Andaya</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
-                <div>
-                <img src="asset/image/official/AlvinAndaya.jpg" alt="">
-                <p>Kag. Alvin Andaya</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
+            <?php
+
+                require('database/conn_db.php');
+            // Fetch records for the current page
+                $sql = "SELECT * FROM barangay_official WHERE chairmanship = 'Kagawad' OR chairmanship = 'SK Chairman' OR chairmanship = 'SK Kagawad'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
+                        $fullname = $row["fullname"];
+                        $chairman = $row["chairmanship"];
+                        $firstThreeLetters = substr($chairman, 0, 3);
+                        $position = $row["position"];
+                        $term_start = $row["term_start"];
+                        $term_end = $row["term_end"];
+                        $status = $row["status"];
+                        $image = $row["photo"];
+                        ?>
+                        
+                        <div>
+                            <img src="asset/image/official/<?php echo $image ?>" alt="">
+                            <p><?php echo  $firstThreeLetters . ". " . $fullname;?></p>
+                            <p>BARANGAY COUNCIL</p>
+                            </div>
+                        
+                        <?php
+                    }
+
+                }
+            
+            ?>
+
                
-                
-                
            
-                <div>
-                <img src="asset/image/official/RessaMartinez.jpg" alt="">
-                <p>Kag. Resie Martinez </p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
-                <div>
-                <img src="asset/image/official/MjAsilo.jpg" alt="">
-                <p>Kag. MJ Asilo</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
-                <div>
-                <img src="asset/image/official/GilbertMagtaas.jpg" alt="">
-                <p>Kag. Gilbert Magtaas</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
-                <div>
-                <img src="asset/image/official/TessaSanchez.jpg" alt="">
-                <p>Kag. Tessa Sanchez</p>
-                <p>BARANGAY COUNCIL</p>
-                </div>
                
             </div>
         </section>
 
         <section id = "online_request"> 
             <h1>ONLINE BARANGAY <br>REQUEST</h1>
-            <a href="form_request/form_request.php"><button>Let's Go</button></a>
+            <a href="user_login/user_login_page.php"><button>Let's Go</button></a>
         </section>
 
         <section id = "galllery">
             <h1>GALLERY</h1>
 
-            <div class = "div_gallery">
-                <img src="asset/image/gallery/1.jpg" alt="">
-                <img src="asset/image/gallery/2.jpg" alt="">
-                <img src="asset/image/gallery/3.jpg" alt="">
-
-                <img src="asset/image/gallery/4.jpg" alt="">
-                <img src="asset/image/gallery/5.jpg" alt="">
-                <img src="asset/image/gallery/6.jpg" alt="">
-
-                <img src="asset/image/gallery/7.jpg" alt="">
-                <img src="asset/image/gallery/8.jpg" alt="">
-                <img src="asset/image/gallery/9.jpg" alt="">
-            </div>
-          
+            <div class="div_gallery">
+        <img src="asset/image/gallery/1.jpg" alt="" class="img">
+        <img src="asset/image/gallery/2.jpg" alt="" class="img">
+        <img src="asset/image/gallery/3.jpg" alt="" class="img">
+        <img src="asset/image/gallery/4.jpg" alt="" class="img">
+        <img src="asset/image/gallery/5.jpg" alt="" class="img">
+        <img src="asset/image/gallery/6.jpg" alt="" class="img">
+        <img src="asset/image/gallery/7.jpg" alt="" class="img">
+        <img src="asset/image/gallery/8.jpg" alt="" class="img">
+        <img src="asset/image/gallery/9.jpg" alt="" class="img">
+    </div>
+            <button style = "cursor:pointer;" onclick="loadmore()">Load more..</button>
         </section>
 
         <section id = "hotlines">
@@ -373,5 +393,45 @@
                 document.getElementById("logo").src =  logo;
                 document.getElementById("logo-about").src =  logo;
         </script>
+
+     
+<script>
+    let toggle = true; // Track state to swap images
+
+    function loadmore() {
+        let images = document.querySelectorAll(".img");
+
+        let newImagesSet1 = [
+            "asset/image/gallery/10.jpg",
+            "asset/image/gallery/11.jpg",
+            "asset/image/gallery/12.jpg",
+            "asset/image/gallery/13.jpg",
+            "asset/image/gallery/14.jpg",
+            "asset/image/gallery/15.jpg",
+            "asset/image/gallery/16.jpg",
+            "asset/image/gallery/17.jpg",
+            "asset/image/gallery/18.jpg"
+        ];
+
+        let newImagesSet2 = [
+            "asset/image/gallery/1.jpg",
+            "asset/image/gallery/2.jpg",
+            "asset/image/gallery/3.jpg",
+            "asset/image/gallery/4.jpg",
+            "asset/image/gallery/5.jpg",
+            "asset/image/gallery/6.jpg",
+            "asset/image/gallery/7.jpg",
+            "asset/image/gallery/8.jpg",
+            "asset/image/gallery/9.jpg"
+        ];
+
+        // Swap between sets when clicking
+        images.forEach((img, index) => {
+            img.src = toggle ? newImagesSet1[index] : newImagesSet2[index];
+        });
+
+        toggle = !toggle; // Toggle state for next click
+    }
+</script>
 </body>
 </html>

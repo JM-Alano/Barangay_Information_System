@@ -46,13 +46,13 @@ if ($result->num_rows > 0) {
 <table>
     <caption>Barangay Official List</caption>
     <tr>
-        
+         <th>Profile</th>
         <th>Fullname</th>
         <th>Chairman</th>
         <th>Position</th>
         <th>Term_start</th>
         <th>Term_end</th>
-        <th>Profile</th>
+        
         <th>Status</th>
         <th>Action</th>
     </tr>
@@ -66,11 +66,12 @@ if ($result->num_rows > 0) {
         $term_end = $row["term_end"];
         $status = $row["status"];
         $image = $row["photo"];
+       
         ?>
         
         <tr class="table_hover">
-            
-            <td><?php echo $fullname; ?></td>
+            <td class = "img"><img src="../../asset/image/official/<?php echo $image?>" alt="" width = "500"  /></td>
+            <td><?php echo  $fullname; ?></td>
             <td><?php echo $chairman; ?></td>
             <td><?php echo $position; ?></td>
             <td><?php echo $term_start; ?></td>
@@ -78,7 +79,7 @@ if ($result->num_rows > 0) {
             <td hidden><?php echo $status; ?></td>
             
         
-            <td class = "img"><img src="../../asset/image/official/<?php echo $image?>" alt="" width = "500"  /></td>
+          
      
             <td>
                 <?php echo $status == 1 ? "<p style='color:blue;'>Active</p>" : "<p style='color:red;'>Inactive</p>"; ?>

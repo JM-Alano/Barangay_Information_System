@@ -2514,7 +2514,7 @@ html {
         }
     #official ._kagawad{
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns:  auto auto auto;
         padding: 20px;
         text-align: center;
         justify-content: center;

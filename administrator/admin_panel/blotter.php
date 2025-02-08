@@ -181,5 +181,14 @@
                 
     
         </script>
+
+        
+               <!-- AJAX SCRIPT FOR DELETE BUTTON -->
+               <script src = "/BIS/administrator/admin_panel/brgy_blotter/delete_modal_button.js"></script>
+                 <!-- UPDATE MODAL FUNCTION JS -->
+               <script src = "/BIS/administrator/admin_panel/brgy_blotter/update_modal.js"></script>
+
+                  <!-- UPDATE MODAL FUNCTION JS -->
+           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script>
 </body>
 </html>

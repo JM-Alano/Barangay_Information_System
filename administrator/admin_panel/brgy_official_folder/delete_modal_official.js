@@ -34,7 +34,7 @@
           xhr.send("id=" + id);
           xhr.onload = function() {
               if (xhr.status === 200) {
-                  alert("Record delete Successfully!");
+           
                   // Refresh page or update table
                   window.location.href = "/BIS/administrator/admin_panel/brgy_official.php";
                   

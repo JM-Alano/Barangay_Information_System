@@ -188,5 +188,10 @@
                     });
                 });
             </script>
+
+              <!-- AJAX SCRIPT FOR DELETE BUTTON -->
+              <script src ="/BIS/administrator/admin_panel/user_register_folder/buttodelete.js"></script>
+            <!-- AJAX SCRIPT FOR UPDATE BUTTON -->
+            <script src ="/BIS/administrator/admin_panel/user_register_folder/upd_modal.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incident | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
-    <link rel = "stylesheet" href = "style.css/brgy.blotter.css"/>
+    <link rel = "stylesheet" href = "style.css/brgy_incident.css"/>
 </head>
 </head>
 <body>
@@ -123,9 +123,13 @@
                             <!-- SEARCH BUTTON -->
                             <input type="text" id="live_search" placeholder="All Search" data-url="./certificate_folder/livesearch_cert.php">
 
-                            <button id = "add_list" class = "add_btn_manage">+Add</button>
+                            <a href="./incident_folder/add_blotter.php"><button id = "add_list" class = "add_btn_manage">+Add</button></a>
                 </div>
-
+            <!-- Table in Database -->
+            <div  id = "searchresult" class = "table_div">
+                                            <?php include('./incident_folder/incident.php'); ?>
+                                        
+            </div>
 
           
 
@@ -154,5 +158,35 @@
                 
     
         </script>
+       <!-- AJAX SCRIPT FOR SEARCH BUTTON -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script type = "text/javascript" >
+                $(document).ready(function(){
+                $("#live_search").keyup(function(){
+                    var input = $(this).val();
+                    // alert(input);
+
+                    if(input != ""){
+                        $.ajax({
+                            url: "./incident_folder/livesearch.php",
+                            method: "POST",
+                            data: {input:input},
+
+                            success:function (data){
+                                $("#searchresult").html(data);
+                            }
+                        });
+                    }
+
+                });
+            });
+        </script>
+       <!-- AJAX SCRIPT FOR DELETE BUTTON -->
+       <script src = "/BIS/administrator/admin_panel/incident_folder/delete_modal_button.js"></script>
+         <!-- UPDATE MODAL FUNCTION JS -->
+     <script src = "/BIS/administrator/admin_panel/incident_folder/update_modal.js"></script>
+          <!-- UPDATE MODAL FUNCTION JS -->  
+       <script src = "/BIS/administrator/admin_panel/incident_folder/view.js"></script
 </body>
 </html>

@@ -17,7 +17,7 @@
                
                 $input = $_POST['input']; 
 
-                $query = "SELECT * FROM barangay_blotter WHERE complained_name LIKE '{$input}%' OR subject LIKE '{$input}%' OR 	place LIKE '{$input}%' OR 	complainant LIKE '{$input}%' OR tanod LIKE '{$input}%' OR details_reason LIKE '{$input}%' OR complained_name LIKE '{$input}%' OR id LIKE '{$input}%' ";
+                $query = "SELECT * FROM barangay_incident WHERE name_involve LIKE '{$input}%' OR id LIKE '{$input}%' OR date LIKE '{$input}%' OR time LIKE '{$input}%' OR address LIKE '{$input}%' OR vehicle LIKE '{$input}%' OR license LIKE '{$input}%' OR plate_no LIKE '{$input}%' OR cause_incident LIKE '{$input}%' OR status LIKE '{$input}%'";
 
                 
                 $result = mysqli_query($conn,$query);
@@ -25,15 +25,16 @@
                 if ($result->num_rows > 0) {?>
 
 
-        <table style = "margin-top:60px;">
-                    <caption>Barangay Blotter List</caption>
+                    
+            <table style = "margin-top:60px;">
+                    <caption>Barangay Incident List</caption>
                     <tr>
                      
-                        <th>Complainant</th>
-                        <th>Contact No.</th>
+                        <th>Names</th>
+                        <th>Address</th>
                      
                         <th>Date/Time</th>
-                        <th>Type</th>
+                        <th>Vehicle</th>
                         <th>Status</th>
                         <th>Action</th>
                       
@@ -41,40 +42,40 @@
                     <?php
                          while($row = $result->fetch_assoc()) {
                             $id = $row ["id"];
-                            $subject = $row ["subject"];
-                            $cell_no = $row ["cell_no"];
-                            $place = $row ["place"];
-                    
-                            $tanod = $row ["tanod"];
+                          
                             $date = $row ["date"];
                             $time = $row ["time"];
-                    
+                            $name_involve = $row ["name_involve"];
+
+                            $name_involve = $row ["name_involve"];
+                            $address = $row ["address"];
+                            $vehicle = $row ["vehicle"];
+                            
+                            $license = $row ["license"];
+                            $plate_no = $row ["plate_no"];
+                          
                             $status = $row ["status"];
-                            $type = $row ["type"];
-                            $complainant = $row ["complainant"];
-                            $age = $row ["age"];
-                    
-                            $address_complainant = $row ["address_complainant"];
-                            $complained_name = $row ["complained_name"];
-                            $add_complained_name = $row ["add_complained_name"];
-                    
-                            $details_reason = $row ["details_reason"];
-                           
+
+                            $cause_incident = $row ["cause_incident"];
 
                             ?>
                              <tr class = "table_hover">
-                                    <td><?php echo  $complainant ?></td>
+                                    <td hidden><?php echo  $date ?></td>
+                                    <td hidden><?php echo  $time ?></td>
+                                    <td hidden><?php echo  $name_involve ?></td>
+                                    <td hidden><?php echo  $address ?></td>
+                                    <td hidden><?php echo  $vehicle ?></td>
+                                    <td hidden><?php echo   $license  ?></td>
+                                    <td hidden><?php echo  $plate_no ?></td>
+                                    <td hidden><?php echo  $cause_incident ?></td>
+                                    <td hidden><?php echo  $status ?></td>
+
+                                    <td><?php echo  $name_involve ?></td>
                             
-                                    <td><?php echo  $cell_no ?></td>
+                                    <td><?php echo  $address ?></td>
                                     <td><?php echo  $date . " / " .  $time ?></td>
-                                   
-                                    <td hidden ><?php echo  $location  ?></td>
-                                    <td hidden ><?php echo  $date;   ?></td>
-                                    <td hidden ><?php echo  $time;  ?></td>
-                                    <td hidden ><?php echo  $status  ?></td>
-                                    <td hidden ><?php echo   $details  ?></td>
-                                    <td hidden ><?php echo  date('M. d, Y',strtotime($date)); ?></td>
-                                    <td  ><?php echo  $type; ?></td>
+                                    <td><?php echo  $vehicle ?></td>
+                                    
                                     <td><?php  $status;
 
                                         if($status == 1){
@@ -147,22 +148,21 @@
                     mysqli_close($conn);
                     ?>          
         
-                     <!-- MODAL DELETE -->
-           
-            <!-- MODAL DELETE -->
-            <div id = "delete-modals" class = "delete-modals">
+               <!-- MODAL DELETE -->
+             <div id = "delete-modals" class = "delete-modals">
                 <div class = "delete-modal-contents">
                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
                     <h2>Delete Confirmation</h2>
                     <h3>Are you sure you want to delete this record!</h3>
-                    <input type="text">
                     <div class = "div-deletes">   
                     <button id = "confirm-deletes" class = "btn-deletes">Delete</button>
                     <button id = "cancel-deletes" class = "btn-deletes">Cancel</button>
                     </div>
                 </div>
              </div>
-         
+          
+        
+
             <!-- MODAL UPDATE -->
             <div id = "edit-modal_blotter" class = "edit-modal_blotter">
                     <div class = "edit-modal-content_blotter">
@@ -170,15 +170,16 @@
                         <?php include("update_temp.php");?> 
                     </div>
                </div>
-
-                  <!-- view MODAL -->
+         
+           
+             <!-- view MODAL -->
              <div id = "view-modal_blotter" class = "view-modal_blotter">
                     <div class = "view-modal-content_blotter">
                     <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
                         <?php include('view_temp.php')?> 
                     </div>
                </div>
-
+        
         
         </body>
         </html>
