@@ -1,8 +1,9 @@
 <?php
    
     require('../session.php');
+    require('select_data_db.php');
     require('db_data_user.php');
-   
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">
-            <img src="../../asset/image/logo/679b85db30f8c.png" alt="" id = "logo">
+            <img src="../../asset/image/logo/679b85db30f8c.png" alt="" id = "logo_user">
                 <div class = "logo_name">BIS</div>
             </div>
             <span id = "btn_menu">
@@ -230,6 +231,10 @@
 
                 let profile_user = document.getElementById("profile_profile").textContent;
                 document.getElementById("profile_user_display").value =  profile_user;
+
+                let logo_get_user = document.getElementById("logo_get_user").textContent;
+                document.getElementById("logo_user").src =  logo_get_user;
+
 
         </script>
 </body>

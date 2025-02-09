@@ -203,8 +203,8 @@ mysqli_close($conn);
                 </div>
              </div>
           
-               <!-- AJAX SCRIPT FOR DELETE BUTTON -->
-            <script src = "/BIS/administrator/admin_panel/brgy_blotter/delete_modal_button.js"></script>
+               <!-- AJAX SCRIPT FOR DELETE BUTTON
+            <script src = "/BIS/administrator/admin_panel/brgy_blotter/delete_modal_button.js"></script> -->
 
             <!-- MODAL UPDATE -->
             <div id = "edit-modal_blotter" class = "edit-modal_blotter">
@@ -213,8 +213,8 @@ mysqli_close($conn);
                         <?php include("update_temp.php");?> 
                     </div>
                </div>
-           <!-- UPDATE MODAL FUNCTION JS -->
-           <script src = "/BIS/administrator/admin_panel/brgy_blotter/update_modal.js"></script>
+           <!-- UPDATE MODAL FUNCTION JS
+           <script src = "/BIS/administrator/admin_panel/brgy_blotter/update_modal.js"></script> -->
            
              <!-- view MODAL -->
              <div id = "view-modal_blotter" class = "view-modal_blotter">
@@ -223,8 +223,8 @@ mysqli_close($conn);
                         <?php include('view_temp.php')?> 
                     </div>
                </div>
-                     <!-- UPDATE MODAL FUNCTION JS -->
-           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script>
+                     <!-- UPDATE MODAL FUNCTION JS
+           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script> -->
            
            
 

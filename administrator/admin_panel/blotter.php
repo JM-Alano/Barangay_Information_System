@@ -189,6 +189,6 @@
                <script src = "/BIS/administrator/admin_panel/brgy_blotter/update_modal.js"></script>
 
                   <!-- UPDATE MODAL FUNCTION JS -->
-           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script>
+           <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script> 
 </body>
 </html>
