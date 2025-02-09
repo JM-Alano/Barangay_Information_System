@@ -60,21 +60,21 @@
                 
                         <div class = "info_div">
                             <div class = "item1">
-                            <img src="../../../asset/image/resident_profile/<?php echo $row['image'] ?>" alt="" id = "image">
+                      
                                 <h2>INFORMATION</h2>
                                 <p><?php echo "Birthday : " . date('F d, Y',strtotime($birthday)); ?></p>
                                 <p><?php echo "Age: " . $row['age'] . " " . "yrs. old"; ?></p>
                                 <p><?php echo "Civil Status: " . $row['civil_status'] ;?></p>
                                 <p><?php echo "Gender: " . $row['gender'] ?></p>
-                                <h2>ACCUPATION</h2>
+                                <h2>OCCUPATION</h2>
                                 <p><?php echo "Occupation: " . $row['occupation'] ?></p>
                             </div>
                             <div class = "item2">
                                 <p><?php echo "Name : " . $row['firstname'] . " " . $row['middlename'] . " " . $row['lastname']?></p>
-                                <p><?php echo $row['id_type'] . " : " . $row['id_type_no'] ?></p>
+                                
                                 <p><?php echo "Address : " . $row['house_no'] ." ". $row['sitio_pook'] ?></p>
                                 <br>
-                                <p><?php echo "Alias : " . $row['alias'] ?></p>
+                           
                                 <hr style = "width:40vw; margin-top:20px;">
                                 <h1>About</h1>
                                 <div class = "item2-about">

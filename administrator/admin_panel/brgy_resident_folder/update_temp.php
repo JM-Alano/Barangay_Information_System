@@ -84,7 +84,7 @@
                 padding: 10px;
                 font-family: "sub_text";
                 width: 50vw;
-                color: var(--2nd-bg-color);
+                color:var(#005720);
             } 
 
             .main_container .form .item-form1 input{
@@ -172,9 +172,10 @@
             }
             .submit_reset_div{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: end;
                 align-items: center;
                 font-family: "sub_text";
+                margin-right:40px;
             }
             .div_form #submit,#reset,#cancel{
             padding: 12px;
@@ -208,42 +209,7 @@
     <main class = "main_container">
            
         <form action="/BIS/administrator/admin_panel/brgy_resident_folder/update.php" method = "POST" enctype = "multipart/form-data" class = "form">
-            <div class = "item1">
-
-            <div class = "img-profile-resident">
-                <img src="../../asset/image/resident_profile/672cb2c54fafb.png" alt="error" id = "images">
-            </div>
-                <input type="file" name = "image" accept = ".jpg, .jpeg, .png" id = "image"><br>
-               
-
-                <label for="">ID Type</label><br>
-                <select name="id_type" id="id_type">
-                   <option value="No ID">No ID</option>
-                   <optgroup label = "Recommended">
-                        <option value="Barangay ID">Barangay ID</option>
-                        <option value="National ID">National ID</option>
-                        <option value="UMID">UMID</option>
-                        <option value="TIN ID">TIN ID</option>
-                        <option value="Philhealth Card">Philhealth Card</option>
-                        <option value="Drivers License">Drivers License</option>
-                  </optgroup>
-                  <optgroup label = "Other ID">
-                        <option value="Passport">Passport</option>
-                        <option value="Students ID">Students ID</option>
-                        <option value="Voters ID">Voters ID</option>
-                        <option value="SSS ID">SSS ID</option>
-                        <option value="Alien/Immigrant COR">Alien/Immigrant COR</option>
-                        <option value="Government Office/GOCC ID">Government Office/GOCC ID</option>
-                        <option value="HDMF ID (Pagibig)">HDMF ID (Pagibig)</option>
-                        <option value="Postal ID">Postal ID</option>
-                        <option value="PRC ID">PRC ID</option>
-                  </optgroup>
-                </select><br>
-
-
-                <label for="" >ID Number</label><br>
-                <input type="text" name = "id_number"  id = "id_number" style = "color:#005720;">
-            </div>
+          
 
             <div class = "div_form">
                     <div class = "item-form1">
@@ -262,10 +228,7 @@
                        
                     </div>
                     <div class = "item-form2">
-                        <div>
-                        <label for="">Alias:</label><br>
-                        <input type="text" name = "alias" placeholder = "Enter Alias" id = "alias">
-                        </div>
+                        
                         <div>
                         <label for="">Place of birth :</label><br>
                         <input type="text" name = "place_of_birth" placeholder = "Enter Place of Birth" id = "place_of_birth"required>
@@ -285,18 +248,18 @@
                         <div>
                         <label for="">Civil Status :</label><br>
                     <select name="civil-status" id = "civil_status"required>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Seperated">Seperated</option>
-                        <option value="Widowed">Widowed</option>
-                        <option value="Divorced">Divorced</option>
+                        <option value="SINGLE">SINGLE</option>
+                        <option value="MARRIED">MARRIED</option>
+                        <option value="SEPARATED">SEPARATED</option>
+                        <option value="WIDOWED">WIDOWED</option>
+                       
                     </select>
                         </div>
                         <div>
                         <label for="">Gender:</label><br>
                         <select name="gender" id="gender" required>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                            <option value="MALE">MALE</option>
+                            <option value="FEMALE">FEMALE</option>
                         </select>
                         </div>
                     </div>
@@ -307,7 +270,7 @@
                         </div>
                         <div>
                         <label for="">Contact number :</label><br>
-                        <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" id = "contact_no" pattern="[0-9]{11}">
+                        <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" id = "contact_no" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
                         </div>
                         <div>
                         <label for="">Occupation</label><br>
@@ -318,8 +281,8 @@
                         <div>
                         <label for="">Voter Status :</label><br>
                         <select name="voter-status" id="voter-status">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
+                            <option value="YES">YES</option>
+                            <option value="No">NO</option>
                         </select>
                         </div>
                         <div>
@@ -330,14 +293,8 @@
                         <label for="">House number :</label><br>
                         <input type="text" name = "house_no" placeholder = "Enter Complete Address" id = "house_no"required> <br>
                         <label for="">Sitio/Pook</label><br>
-                            <select id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
-                                <option value="Iyala">Iyala</option>
-                                <option value="Sitio Burol">Sitio Burol</option>
-                                <option value="Sitio Kubuhan & Rigde View">Sitio Kubuhan & Rigde View</option>
-                                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
-                                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
-                                <option value="Camella at the Island Park">Camella at the Island Park</option>
-                            </select><br>
+                         <input style = "height:30px;" type = "text" id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
+                                
                      </div>
                         
                         
@@ -345,9 +302,11 @@
                     </div>
                     <input type="hidden" id = "id" name = "id">
                     <div class = "submit_reset_div">
-                        <input type="submit" name = "submit_resident_list" id = "submit">
-                        <input type="reset" id = "reset">
+                      
+                      
                         <a href="/BIS/administrator/admin_panel/resident.php"><input type="button" value = "Cancel" id = "cancel"></a>
+                        <input type="reset" id = "reset">
+                        <input type="submit" name = "submit_resident_list" id = "submit">
                         
                     
                     </div>

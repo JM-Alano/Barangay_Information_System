@@ -11,21 +11,20 @@
         
 
             <?php require("../../database/conn_db.php");
+                // Get the current page and limit from query parameters, set defaults if not provided
+                $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
+                $limit = isset($_GET['limit']) ? max(1, (int)$_GET['limit']) : 10;
+                $offset = ($page - 1) * $limit;
 
-            // Get the current page and limit from query parameters, set defaults if not provided
-            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
-            $limit = $limit > 0 ? $limit : 10; // Ensure the limit is positive
-            $offset = ($page - 1) * $limit;
+                // Get the total number of records from the correct table
+                $countQuery = "SELECT COUNT(*) AS total FROM barangay_resident";
+                $countResult = $conn->query($countQuery);
+                $totalRows = $countResult->fetch_assoc()['total'];
+                $totalPages = max(1, ceil($totalRows / $limit));
 
-            // Get the total number of records
-            $countQuery = "SELECT COUNT(*) AS total FROM barangay_official";
-            $countResult = $conn->query($countQuery);
-            $totalRows = $countResult->fetch_assoc()['total'];
-            $totalPages = ceil($totalRows / $limit);
              
        
-            $sql = "SELECT * FROM barangay_resident LIMIT $limit OFFSET $offset";
+            $sql = "SELECT * FROM barangay_resident ORDER BY id DESC LIMIT $limit OFFSET $offset";
             $result = $conn->query($sql);
 
             $result->num_rows > 0;
@@ -48,9 +47,9 @@
             <table>
                     <caption>Barangay Resident list</caption>
                     <tr>
-                         <th>Profile</th>
+                     
                         <th>Fullname</th>
-                        <th>National ID</th>
+                        <th>Contact no.</th>
                         <th>Age</th>
                         <th>Civil Status</th>
                         <th>Gender</th>
@@ -64,7 +63,7 @@
                             $middlename = $row["middlename"];
                             $lastname = $row["lastname"];
 
-                            $alias = $row["alias"];
+                          
                             $place_of_birthday = $row["place_of_birth"];
                             $birthday = $row["birthday"];
 
@@ -78,21 +77,20 @@
 
                             $citizenship =$row["citizenship"];
                             $house_no =$row["house_no"];
-                            $id_type = $row["id_type"];
+                           
 
-                            $id_type_no = $row["id_type_no"];
-                            $precinct_no = $row["precinct_no"];
+                           
                             $occupation = $row["occupation"];
                            
                             $sitio_pook =$row["sitio_pook"];
-                            $image = $row["image"];
+                       
                             $id = $row["id"];
 
                             ?>
                              <tr class = "table_hover">
-                                <td class = "img"><img src="../../asset/image/resident_profile/<?php echo $image; ?>" alt="" width = 500/></td>
+                               
                                 <td> <?php echo $firstname ." ".  $middlename ." ". $lastname ; ?></td>
-                                <td><?php echo $id_type; ?></td>
+                                <td><?php echo $contact_no  ?></td>
                                 <td><?php echo $age; ?></td>
                                 <td><?php echo $civil_status; ?></td>
                                 <td><?php echo $gender; ?></td>
@@ -102,16 +100,16 @@
                                 <td hidden><?php echo $firstname; ?></td>
                                 <td hidden><?php echo $middlename; ?></td>
                                 <td hidden><?php echo $lastname; ?></td>
-                                <td hidden><?php echo $alias; ?></td>
+                           
                                 <td hidden><?php echo $place_of_birthday; ?></td>
                                 <td hidden><?php echo $birthday; ?></td>
                                 <td hidden><?php echo $email; ?></td>
                                 <td hidden><?php echo $contact_no; ?></td>
                                 <td hidden><?php echo $citizenship; ?></td>
                                 <td hidden><?php echo $occupation; ?></td>
-                                <td hidden><?php echo $id_type_no; ?></td>
+                              
                                 <td hidden><?php echo $sitio_pook; ?></td>
-                                <td hidden><?php echo "../../asset/image/resident_profile/" . $image;  ?></td>
+                              
                                
                                 <td>
                                 

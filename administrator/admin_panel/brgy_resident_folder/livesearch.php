@@ -17,7 +17,7 @@
                
                 $input = $_POST['input']; 
 
-                $query = "SELECT * FROM barangay_resident WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%' OR id_type LIKE '{$input}%' OR age LIKE '{$input}%' OR civil_status LIKE '{$input}%' OR gender LIKE '{$input}%' OR voter_status LIKE '{$input}%'";
+                $query = "SELECT * FROM barangay_resident WHERE firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%'  OR age LIKE '{$input}%' OR civil_status LIKE '{$input}%' OR gender LIKE '{$input}%' OR voter_status LIKE '{$input}%'";
 
                 
                 $result = mysqli_query($conn,$query);
@@ -30,13 +30,13 @@
             <table>
                     <caption>Barangay Resident list</caption>
                     <tr>
-                        <th>Profile</th>
-                        <th>Fullname</th>
-                        <th>National ID</th>
+                         <th>Fullname</th>
+                        <th>Contact no.</th>
                         <th>Age</th>
                         <th>Civil Status</th>
                         <th>Gender</th>
                         <th>Voter Status</th>
+                       
                         <th>Action</th>
                     </tr>
                     <?php
@@ -45,7 +45,7 @@
                             $middlename = $row["middlename"];
                             $lastname = $row["lastname"];
 
-                            $alias = $row["alias"];
+                          
                             $place_of_birthday = $row["place_of_birth"];
                             $birthday = $row["birthday"];
 
@@ -59,21 +59,19 @@
 
                             $citizenship =$row["citizenship"];
                             $house_no =$row["house_no"];
-                            $id_type = $row["id_type"];
+                           
 
-                            $id_type_no = $row["id_type_no"];
-                            $precinct_no = $row["precinct_no"];
+                           
                             $occupation = $row["occupation"];
                            
                             $sitio_pook =$row["sitio_pook"];
-                            $image = $row["image"];
+                       
                             $id = $row["id"];
 
                             ?>
                              <tr class = "table_hover">
-                                <td class = "img"><img src="../../asset/image/resident_profile/<?php echo $image; ?>" alt="" width = 500/></td>
-                                <td> <?php echo $firstname ." ".  $middlename ." ". $lastname ; ?></td>
-                                <td><?php echo $id_type; ?></td>
+                             <td> <?php echo $firstname ." ".  $middlename ." ". $lastname ; ?></td>
+                                <td><?php echo $contact_no  ?></td>
                                 <td><?php echo $age; ?></td>
                                 <td><?php echo $civil_status; ?></td>
                                 <td><?php echo $gender; ?></td>
@@ -83,16 +81,16 @@
                                 <td hidden><?php echo $firstname; ?></td>
                                 <td hidden><?php echo $middlename; ?></td>
                                 <td hidden><?php echo $lastname; ?></td>
-                                <td hidden><?php echo $alias; ?></td>
+                           
                                 <td hidden><?php echo $place_of_birthday; ?></td>
                                 <td hidden><?php echo $birthday; ?></td>
                                 <td hidden><?php echo $email; ?></td>
                                 <td hidden><?php echo $contact_no; ?></td>
                                 <td hidden><?php echo $citizenship; ?></td>
                                 <td hidden><?php echo $occupation; ?></td>
-                                <td hidden><?php echo $id_type_no; ?></td>
+                              
                                 <td hidden><?php echo $sitio_pook; ?></td>
-                                <td hidden><?php echo "../../asset/image/resident_profile/" . $image;  ?></td>
+                              
 
                                 <td>
                                     <div id = "form_up_del_official">

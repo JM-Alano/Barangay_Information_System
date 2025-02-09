@@ -149,9 +149,9 @@
            
             .submit_reset_div{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: end;
                 padding: 40px 20px 40px 10px;
-                
+                margin-right:230px;
             }
             .submit_reset_div input{
                 padding: 10px;
@@ -161,16 +161,18 @@
                 border: none;
                 height: 30px;
              
+             
             }
           
             .submit_reset_div #submit{
                 background-color: #4A9D4f;
                 color: var(--bg-color);
+                
             }
             .submit_reset_div #reset{
                 background-color: red;
                 color: var(--bg-color);
-                margin-left:0px;
+                margin-right:10px;
             }
             .submit_reset_div #return{
                 padding: 10px;
@@ -181,7 +183,7 @@
                 border: none;
                 background-color: var(--other-color);
                 color: var(--bg-color);
-                margin-left:40px;
+                margin-right:10px;
             
             }
 
@@ -212,49 +214,13 @@
         <h1>ADD RESIDENT LIST</h1>
     </header>
     <main class = "main_container">
-        <div class = "img-profile-resident">
-            <img src="../../../asset/image/resident_profile/images.png" alt="">
-        </div>
-        <form action="/BIS/administrator/admin_panel/brgy_resident_folder/create.php" method = "post" enctype = "multipart/form-data">
-            <div class = "item1">
-                <input type="file" name = "image" value = "" accept = ".jpg, .jpeg, .png" required><br>
-                
-            </div>
-
+       
+        <form action="/BIS/administrator/admin_panel/brgy_resident_folder/create.php" method = "post">
 
           
             <div class = "item-form">
-            
-                <div>
-                <label for="">ID Type</label><br>
-                <select name="id_type" id="id_type" >
-                    <option value="No ID">No ID</option>
-                    <optgroup label = "Recommended">
-                            <option value="Barangay ID">Barangay ID</option>
-                            <option value="National ID">National ID</option>
-                            <option value="UMID">UMID</option>
-                            <option value="TIN ID">TIN ID</option>
-                            <option value="Philhealth Card">Philhealth Card</option>
-                            <option value="Drivers License">Drivers License</option>
-                    </optgroup>
-                    <optgroup label = "Other ID">
-                            <option value="Passport">Passport</option>
-                            <option value="Students ID">Students ID</option>
-                            <option value="Voters ID">Voters ID</option>
-                            <option value="SSS ID">SSS ID</option>
-                            <option value="Alien/Immigrant COR">Alien/Immigrant COR</option>
-                            <option value="Government Office/GOCC ID">Government Office/GOCC ID</option>
-                            <option value="HDMF ID (Pagibig)">HDMF ID (Pagibig)</option>
-                            <option value="Postal ID">Postal ID</option>
-                            <option value="PRC ID">PRC ID</option>
-                    </optgroup>
-        
-                    </select>
-                </div>
-                <div>
-                    <label for="" >ID Number</label><br>
-                    <input type="text" name = "id_number"  placeholder = "Enter Your ID Number">
-                </div>
+           
+              
                
             </div>
 
@@ -269,8 +235,7 @@
                 <input type="text" name = "lastname" placeholder = "Enter Lastname" required>
             </div>
             <div class = "item-form2">
-                <label for="">Alias :</label><br>
-                <input type="text" name = "alias" placeholder = "Enter Alias"><br>
+                
                 <label for="">Place of birth :</label><br>
                 <input type="text" name = "place_of_birth" placeholder = "Enter Place of Birth" required><br>
                 <label for="">Birthday :</label><br>
@@ -298,7 +263,7 @@
                 <label for="" >Email :</label><br>
                 <input type="email" name = "email" placeholder = "Enter email"><br>
                 <label for="">Contact number :</label><br>
-                <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" pattern="[0-9]{11}"><br>
+                <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br>
                 <label for="">Occupation</label><br>
                 <input type="text" name = "occupation" placeholder = "Enter Occupation">
             </div>
@@ -316,21 +281,17 @@
                 <input type="text" name = "house_no" placeholder = "Enter house number" required><br>
             
             <label for="">Sitio/Pook</label><br>
-            <select id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
-                <option value="Iyala">Iyala</option>
-                <option value="Sitio Burol">Sitio Burol</option>
-                <option value="Sitio Kubuhan & Rigde View">Sitio Kubuhan & Rigde View</option>
-                <option value="Mabuhay Homes 2000">Mabuhay Homes 2000</option>
-                <option value="Sitio Pook Boundary">Sitio Pook Boundary</option>
-                <option value="Camella at the Island Park">Camella at the Island Park</option>
-            </select><br>
+            <input type = "text" id = "sitio_pook_add" name = "sitio_pook_add" placeholder = "Enter Sitio/Pook" required>
+               <br>
             
             </div>
 
             <div class = "submit_reset_div">
-                <input type="submit" name = "submit_resident" id = "submit">
-                <a href="../resident.php"><button id = "return" type = "button">Return</button></a>
+              
+              
                 <input type="reset" id = "reset">
+                <a href="../resident.php"><button id = "return" type = "button">Return</button></a>
+                <input type="submit" name = "submit_resident" id = "submit">
                
             </div>
         </form>

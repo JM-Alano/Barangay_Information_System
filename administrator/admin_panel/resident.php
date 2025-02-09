@@ -1,8 +1,8 @@
     
     <?php
         require('../session.php');
-
-        require('select_data_db.php');
+    
+        include('select_data_db.php');
     ?>
 
 <!DOCTYPE html>
@@ -112,13 +112,22 @@
                     </div>
                 </div>
         
-            <div class = "main_content">
+               <div class = "main_content">
                         <!-- ADD BUTTON -->
                         <a href="brgy_resident_folder/add_resident.php"><button id = "create_btn">+Add</button></a>
+                        <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
+                        <a href="/BIS/administrator/admin_panel/brgy_resident_folder/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                         <!-- SEARCH BUTTON -->
                         <input type="text" id = "live_search" placeholder = "SEARCH">
             </div>
-     
+                <!-- IMPORT FORM -->
+                <div id="modal_import" class="modal_import">
+                                <!-- Modal content -->
+                                <div class="modal-content_import">
+                                <span class="close">&times;</span>
+                                    <?php include('./brgy_resident_folder/import_temp.php')?>
+                                </div>
+                </div>
             <!-- Table in Database -->
            <div  id = "searchresult" class = "table_div">
                     <?php include('./brgy_resident_folder/table.php'); ?>
@@ -208,5 +217,9 @@
         <script src = "certificate_folder/javascript/delete_revenue.js"></script>
                 <!-- UPDATE BTN -->
       <script src = "certificate_folder/javascript/update_btn_revenue.js"></script>
+
+
+           <!-- IMPORT MODAL FUCNTION BUTTON -->
+           <script src ="/BIS/administrator/admin_panel/brgy_resident_folder/import.js"></script>
 </body>
 </html>
