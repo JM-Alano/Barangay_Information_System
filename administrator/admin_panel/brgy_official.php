@@ -119,20 +119,29 @@
           
                             <div class = "main_content">
                                         <!-- ADD BUTTON -->
-                                        <button id = "create_btn">+Add</button>
+                                        <button id = "create_btn" >+Add</button>
+                                          <a href="/BIS/administrator/admin_panel/brgy_official_folder/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                                         <!-- SEARCH BUTTON -->
                                         <input type="text" id = "live_search" placeholder = "SEARCH">                    
                                 </div>
                     
-                
+                              <!-- IMPORT FORM -->
+                              <div id="modal_import" class="modal_import">
+                                <!-- Modal content -->
+                                <div class="modal-content_import">
+                                <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
+                                    <?php include('./brgy_resident_folder/import_temp.php')?>
+                                </div>
+                        </div>
                         <!-- ADD FORM -->
                         <div id="modal_add_official" class="modal">
                                 <!-- Modal content -->
                                 <div class="modal-content">
-                                <span class="close">&times;</span>
-                                    <?php include ("brgy_official_folder/create_temp.php") ;?>
+                                <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
+                                    <?php include ("./brgy_official_folder/create_temp.php") ;?>
                                 </div>
                         </div>
+          
         
                         <!-- Table in Database -->
                     <div id = "content_refresh">
@@ -219,6 +228,8 @@
          <script src = "/BIS/administrator/admin_panel/brgy_official_folder/delete_modal_official.js"></script>
         <!-- AJAX SCRIPT FOR UPDATE BUTTON -->
         <script src ="/BIS/administrator/admin_panel/brgy_official_folder/update_modal_official.js"></script>
+
+ 
       
 </body>
 </html>

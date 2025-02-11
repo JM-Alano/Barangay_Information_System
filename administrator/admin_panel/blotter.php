@@ -124,6 +124,16 @@
                             <input type="text" id="live_search" placeholder="SEARCH" >
 
                             <a href="/BIS/administrator/admin_panel/brgy_blotter/add_blotter.php"><button id = "add_list" class = "add_btn_manage">+Add</button></a>
+                            <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
+                            <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
+                </div>
+                <!-- IMPORT FORM -->
+                <div id="modal_import" class="modal_import">
+                                <!-- Modal content -->
+                                <div class="modal-content_import">
+                                <span class="close">&times;</span>
+                                    <?php include('./brgy_blotter/import_temp.php')?>
+                                </div>
                 </div>
                 <!-- Table in Database -->
                 <div  id = "searchresult" class = "table_div">
@@ -190,5 +200,9 @@
 
                   <!-- UPDATE MODAL FUNCTION JS -->
            <script src = "/BIS/administrator/admin_panel/brgy_blotter/view.js"></script> 
+
+           
+           <!-- IMPORT MODAL FUCNTION BUTTON -->
+           <script src ="/BIS/administrator/admin_panel/brgy_blotter/import.js"></script>
 </body>
 </html>

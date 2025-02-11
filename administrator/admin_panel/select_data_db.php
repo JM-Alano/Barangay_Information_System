@@ -1,6 +1,6 @@
 <?php
 
-require("../../database/conn_db.php");
+require('../../database/conn_db.php');
 
 // Barangay Info
 $sql = "SELECT * FROM barangay_information";

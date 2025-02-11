@@ -12,17 +12,16 @@
 
             <?php require("../../database/conn_db.php");
 
-            // Get the current page and limit from query parameters, set defaults if not provided
-            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
-            $limit = $limit > 0 ? $limit : 10; // Ensure the limit is positive
-            $offset = ($page - 1) * $limit;
+           // Get the current page and limit from query parameters, set defaults if not provided
+           $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
+           $limit = isset($_GET['limit']) ? max(1, (int)$_GET['limit']) : 10;
+           $offset = ($page - 1) * $limit;
 
-            // Get the total number of records
-            $countQuery = "SELECT COUNT(*) AS total FROM barangay_official";
-            $countResult = $conn->query($countQuery);
-            $totalRows = $countResult->fetch_assoc()['total'];
-            $totalPages = ceil($totalRows / $limit);
+           // Get the total number of records from the correct table
+           $countQuery = "SELECT COUNT(*) AS total FROM barangay_resident";
+           $countResult = $conn->query($countQuery);
+           $totalRows = $countResult->fetch_assoc()['total'];
+           $totalPages = max(1, ceil($totalRows / $limit));
              
        
             $sql = "SELECT * FROM barangay_blotter ORDER BY id DESC LIMIT $limit OFFSET $offset ";
@@ -32,8 +31,9 @@
 
             if ($result->num_rows > 0) {?>
 
+      
              <!-- Limit Selector -->
-                <div class="limit-selector">
+             <div class="limit-selector">
                     <form method="GET" action="">
                         <label for="limit">Rows per page:</label>
                         <select name="limit" id="limit" onchange="this.form.submit()">
@@ -148,6 +148,7 @@
                 
             </table>
 
+            
             
 <!-- Pagination Controls -->
 <div class="pagination">

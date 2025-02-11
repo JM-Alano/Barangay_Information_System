@@ -13,12 +13,12 @@
         // Get ID and data of record to edit
         let id = btn.getAttribute("data-id");
        
-        let fullname = btn.parentNode.parentNode.parentNode.cells[0].textContent;
-        let chairman = btn.parentNode.parentNode.parentNode.cells[1].textContent;
-        let position = btn.parentNode.parentNode.parentNode.cells[2].textContent;
-        let term_start = btn.parentNode.parentNode.parentNode.cells[3].textContent;
-        let term_end = btn.parentNode.parentNode.parentNode.cells[4].textContent;
-        let status = btn.parentNode.parentNode.parentNode.cells[5].textContent;
+        let fullname = btn.parentNode.parentNode.parentNode.cells[1].textContent;
+        let chairman = btn.parentNode.parentNode.parentNode.cells[2].textContent;
+        let position = btn.parentNode.parentNode.parentNode.cells[3].textContent;
+        let term_start = btn.parentNode.parentNode.parentNode.cells[4].textContent;
+        let term_end = btn.parentNode.parentNode.parentNode.cells[5].textContent;
+        let status = btn.parentNode.parentNode.parentNode.cells[6].textContent;
 
         
         
