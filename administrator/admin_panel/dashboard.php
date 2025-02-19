@@ -131,7 +131,7 @@
                                     <h3>Totol <br> Requested </h3>
                                     </div>
                                     <div class = "count_div">
-                                        <h2>Population</h2>
+                                        <h2>Total</h2>
                                         <p class = "number_div"><?php population_total() ?></p>
                                     </div>
                             

@@ -78,7 +78,7 @@ html {
     }
     .header svg{
         width: 28px;
-        margin-left: 5px;
+        margin-left: 35px;
         fill: var(--btn-color);
     }
     .header svg:hover{
@@ -94,7 +94,7 @@ html {
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width:90px;
         margin-left: 20px;
         border-radius: 50%;
@@ -636,7 +636,7 @@ html {
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width:100px;
         margin-left: 35px;
         border-radius: 50%;
@@ -1174,8 +1174,8 @@ html {
        background-color: var(--bg-color);
     }
     .header svg{
-        width: 38px;
-        margin-left: 5px;
+        width: 30px;
+        margin-left: 55px;
         fill: var(--btn-color);
     }
     .header svg:hover{
@@ -1191,7 +1191,7 @@ html {
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width:100px;
         margin-left: 60px;
         border-radius: 50%;
@@ -1721,8 +1721,8 @@ html {
        background-color: var(--bg-color);
     }
     .header svg{
-        width: 38px;
-        margin-left: 5px;
+        width: 30px;
+        margin-left:30px;
         fill: var(--btn-color);
     }
     .header svg:hover{
@@ -1739,7 +1739,7 @@ html {
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
         z-index: 99;
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width:100px;
         margin-left: 60px;
         border-radius: 50%;
@@ -2262,8 +2262,8 @@ html {
        background-color: var(--bg-color);
     }
     .header svg{
-        width: 38px;
-        margin-left: 20px;
+        width: 30px;
+        margin-left: 40px;
         fill: var(--btn-color);
     }
     .header svg:hover{
@@ -2280,7 +2280,7 @@ html {
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
         z-index: 99;
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width: 120px;
         margin-left: 130px;
         border-radius: 50%;
@@ -2757,7 +2757,7 @@ html {
     }
     .header svg{
         width: 38px;
-        margin-left: 20px;
+        margin-left: 50px;
         fill: var(--btn-color);
     }
     .header svg:hover{
@@ -2773,7 +2773,7 @@ html {
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
     }
-    .nav .logo img{
+    .nav .logo #logo{
         width: 120px;
         margin-left: 130px;
         border-radius: 50%;

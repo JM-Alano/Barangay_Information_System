@@ -124,8 +124,8 @@
                             <input type="text" id="live_search" placeholder="SEARCH" >
 
                             <a href="/BIS/administrator/admin_panel/brgy_blotter/add_blotter.php"><button id = "add_list" class = "add_btn_manage">+Add</button></a>
-                            <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
-                            <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
+                            <!-- <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
+                            <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a> -->
                 </div>
                 <!-- IMPORT FORM -->
                 <div id="modal_import" class="modal_import">
