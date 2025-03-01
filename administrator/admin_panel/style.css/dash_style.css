@@ -26,8 +26,8 @@
     --other-color :rgb(0, 183, 255);
 }
 body{
-  background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-
+ 
+    background-color: var(--bg-color);
   background-size: cover;
 }
 .sidebar.active ~ .dashboard_content .div_content{

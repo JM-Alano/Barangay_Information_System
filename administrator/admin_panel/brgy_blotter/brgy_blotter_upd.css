@@ -30,9 +30,9 @@ html {
     --other-color :rgb(0, 183, 255);
 }
 body{
-    background-image: url("../../../asset/image/background/admin_bg/circle-scatter-haikei (1).png");
-    background-repeat: no-repeat;
+   background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--bg-color);
 }
 
 .h1{

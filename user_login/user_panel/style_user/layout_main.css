@@ -474,7 +474,7 @@
     }
 }
 @media only screen and (min-width:  1081px  ){
-    
+
 .date_today{
     display: flex;
     justify-content: space-between;
@@ -556,7 +556,7 @@
     color: var(--btn-color);
 }
 body{
-    background-image: url("/BIS/asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+   
     background-repeat: repeat;
     background-size: cover;
     min-height: 100%;
@@ -892,6 +892,19 @@ body{
 }
 /* Extra-Large Desktops: 1441px and up*/
 @media only screen and (min-width: 1441px) {
+      #add_btn{
+        border: none;
+        border-radius: 4px;
+        padding: 15px;
+        background-color: var(--2nd-bg-color);
+        color: var(--bg-color);
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: max-content;
+        letter-spacing: 2px;
+        transition: all 0.5s ease;
+    }
     .date_today{
         display: flex;
         justify-content: space-between;
@@ -971,7 +984,7 @@ body{
         color: var(--btn-color);
     }
     body{
-        background-image: url("/BIS/asset/image/background/admin_bg/circle-scatter-haikei (1).png");
+      
         background-repeat: repeat;
         background-size: cover;
         min-height: 100%;

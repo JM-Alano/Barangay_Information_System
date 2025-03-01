@@ -27,7 +27,7 @@
             <span id = "btn_menu">
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" ;transform: ;msFilter:;><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path></svg>
             </span>
-           
+            
         </div>
 
 
@@ -84,79 +84,18 @@
                             echo  $date_today;
                         ?></p>
                 </div>
-                
+               
                 <div class = "div_content">
                             
-              
+               
+                <div>
 
-    <section id = "form_request" class = "form-request">
-        
+                    <?php 
+                        require('table_document.php');
+                    ?>
+                </div>                  
     
-        <form action="submit_update.php" method = "POST">
-            <h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg>Fill up the Form</h1>
-            <label for="">Document Type</label>
-            <select name="request_document" class ="select" required >
-                <option value="">-- Select Document Request --</option>
-                <option value="Barangay Clearance">Barangay Clearance</option>
-                <option value="Barangay Certificate">Barangay Certificate</option>
-                <option value="Barangay Indigency">Barangay Indigency</option>
-                <option value="Barangay ID">Barangay ID</option>
-           
-            </select><br>
-            
-
-            <label for="" >House No : </label><br>
-            <input type="text" id = "house_no_my_profile_id" name = "house_no" placeholder = "Enter House Number" required><br>
-
-            <label for="" >Sitio/Pook/Subdivision : </label><br>
-            <input   name="Sitio_Pook" id="select" class ="select"/>
-              
-            <br>
-            
-            <label for="">Birthday : </label><br>
-            <input type="date" id = "birthday_my_profile_id" name = "date_birthday" required><br>
-
-
-            <label for="">Place of birth : </label><br>
-            <input type="text" id = "place_of_birth_my_profile_id" name = "place_of_birth" placeholder = "Ex. Dasmarinas" required><br>
-
-            <label for="">Cell phone no : </label><br>
-            <input type="tel" id = "contact_phone_my_profile_id" name = "contact_no" placeholder = "Ex. 09123456789" pattern="[0-9]{11}" ><br>
-            
-            <label for="">Contact Person : </label><br>
-            <input type="text" id = "contact_person_my_profile_id" name = "contact_person" placeholder = "Enter your contact person" ><br>
-
-            <label for="">Contact # of Contact Person : </label><br>
-            <input type="tel" id = "contact_no_contact_person_my_profile_id" name = "contact_person_no" placeholder = "Ex. 09123456789"  pattern="[0-9]{11}"><br>
-            
-            <label for="">How long do you live here and what month/year.</label><br>
-            <input type="month" id = "live_since_year_my_profile_id" name = "live_since_year" placeholder = "Answer the question" required><br>
-
-            <label for="">Purpose : </label><br>
-            <input type="text" id = "purpose_my_profile_id" name = "purpose" placeholder = "Purpose of request document"  required> <br>
-
-            <input type="hidden" name = "firstname" id = "firstname_my_profile_id">
-            <input type="hidden" name = "middlename" id = "middlename_my_profile_id">
-            <input type="hidden" name = "lastname" id = "lastname_my_profile_id">
-
-            <input type="hidden" name = "age" name = "" id = "age_my_profile_id">
-            <input type="hidden" name = "gender" id = "gender_my_profile_id">
-            <input type="hidden" name = "user_id" id = "user_id_my_profile_id">
-            <input type="hidden" name = "status" value = 1 id = "status_my_profile_id">
-            <input type="hidden" name = "id"  id = "id_my_profile_id">
-            <input type="hidden" name = "profile_user"  id = "profile_user_display">
-
-            <div class = "submit_reset_return_div">
                 
-                <input type="reset" id = "reset" value = "Reset">
-                <input type="submit" id = "submit" name = "submit_request" value = "Submit">
-            </div>
-        </form>
-    </section>
-    
-                           
-
-                 
                             
                            
                           

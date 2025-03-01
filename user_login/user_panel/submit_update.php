@@ -44,9 +44,8 @@
         
             if($results == true){
                 
-
-                $sqls = "UPDATE user_account as u JOIN barangay_request as r ON u.user_id = r.user_id
-                SET u.birthday = '$birthday', u.contact_no = '$contact_no' , u.house_no = '$house_no' , u.sitio_pook = '$sitio_pook' ,  r.sitio_pook = '$sitio_pook' , r.place_of_birth = '$place_of_birth' , r.contact_person = '$contact_person' , r.contact_no_contact_person = '$contact_person_no' , r.live_since_year = '$live_since_year' , r.purpose = '$purpose' , r.request_document = '$request_document' , r.profile = '$profile' WHERE r.user_id = u.user_id";
+                $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
+            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
 
                 if(mysqli_query($conn, $sqls)){
                     echo "<script>window.location.href = 'successful.php'</script>";
@@ -63,8 +62,9 @@
 
         }else if ($id == $id){
 
-            $sqls = "UPDATE user_account as u JOIN barangay_request as r ON u.user_id = r.user_id
-            SET u.birthday = '$birthday' , r.birthday = '$birthday', u.contact_no = '$contact_no' , r.contact_no = '$contact_no' , u.house_no = '$house_no' , r.house_number = '$house_no' , u.sitio_pook = '$sitio_pook' , r.sitio_pook = '$sitio_pook' , r.place_of_birth = '$place_of_birth' , r.contact_person = '$contact_person' , r.contact_no_contact_person = '$contact_person_no' , r.live_since_year = '$live_since_year' , r.purpose = '$purpose' , r.request_document = '$request_document' , r.profile = '$profile' , r.firstname = '$firstname' , r.middlename = '$middlename' , r.lastname = '$lastname' WHERE r.id = $id";
+            $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
+            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
+
 
             if(mysqli_query($conn, $sqls)){
                 echo "<script>window.location.href = 'successful.php'</script>";
