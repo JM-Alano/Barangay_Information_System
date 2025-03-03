@@ -42,7 +42,7 @@ background-size: cover;
 .main_content  #create_blotter,.main_content  #create_import{
   border: none;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   background-color: var(--2nd-bg-color);
   color: var(--bg-color);
   cursor: pointer;
@@ -520,7 +520,7 @@ color: var(--1st-text-color);
 .add_btn_manage{
   border: none;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   background-color: var(--2nd-bg-color);
   color: var(--bg-color);
   cursor: pointer;

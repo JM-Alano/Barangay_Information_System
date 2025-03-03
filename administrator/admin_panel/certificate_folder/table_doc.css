@@ -35,6 +35,7 @@ border-radius:4px;
 font-family: "sub_text";
 text-align: center;
 color: var(--1st-text-color);
+overflow-x: scroll;
 }
 .sidebar.active ~ .dashboard_content #content_certificate table{
     width: 93vw;
@@ -99,74 +100,7 @@ caption {
   outline: 3px solid var(--2nd-bg-color);
 }
 
-.dropdown-btns {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  border-radius: 2px;
-  padding: 5px;
-}
 
-.dropdown-btns:hover {
-  background-color: #3e8e41;
-}
-
-.dropdown-contents {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width:fit-content;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 0px 12px 0px;
-  z-index: 1;
-  border-radius: 2px;
-}
-
-.dropdown-contents li {
-  margin-bottom: 2px;
-  display: flex;
-}
-.dropdown-contents li button{
-  padding: 10px;
-  width: 100%;
-  border: none;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  color:#005720 ;
-  font-weight: 500;
- 
- 
-}
-.dropdown-contents li button:hover{
-  background-color: #d3d3d3;
-  color: #3e8e41;
-}
-
-
-
-
-.dropdown-contents li:last-child {
-  margin-bottom: 0;
-}
-
-.arrow {
-  border: solid whitesmoke;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-.down {
-  transform: rotate(130deg);
-}
-
-.up {
-  transform: rotate(45deg);
-}
 #delete_official_btn{
   color: rgba(255, 0, 0, 0.342);
 }
@@ -178,6 +112,68 @@ caption {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
 }
+
+
+
+#form_up_del_official{
+  display: flex;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+#edit_list{
+   color: var(--bg-color);
+   cursor: pointer;
+   padding: 3px 5px 3px 5px;
+   background-color: transparent;
+   border-radius: 4px;
+   font-size: 0.9rem;
+   outline: none;
+   border: none;
+}
+#edit_list svg{
+ width: 20px;
+ fill: var(--other-color);
+}
+#edit_list svg:hover{
+   fill: rgb(150, 202, 250);
+}
+#barangay_print{
+  color: var(--bg-color);
+  cursor: pointer;
+  padding: 3px 5px 3px 5px;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+}
+#barangay_print svg{
+width: 20px;
+fill: #d4b62f;
+}
+#barangay_print svg:hover{
+  fill: #ffe261;
+}
+#delete_official_btn{
+   color: var(--bg-color);
+   cursor: pointer;
+   padding: 3px 5px 3px 5px;
+   background-color: transparent;
+   border-radius: 4px;
+   border: 1px solid rgb(197, 197, 197);
+   outline: none;
+   border: none;
+   font-size: 0.9rem;
+}
+#delete_official_btn svg{
+ width: 20px;
+ fill: red;
+}
+#delete_official_btn svg:hover{
+   fill: rgb(252, 134, 134);
+   color: var(--1st-text-color);
+}
+
 
 
 /* delete btn */

@@ -34,7 +34,7 @@
     <header class = "header">
             <img src="../asset/image/logo/679b85db30f8c.png" alt="" id = "logo_image">
 
-            <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">INFORMATION SYSTEM</span></h1>
+            <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">ONLINE CERTIFICATION REQUEST</span></h1>
     </header>
 
 
@@ -67,6 +67,12 @@
         </button>
      </div>
     </div>
+    <div id = "logo">
+        <img src="../asset/image/logo/67a89c6822aa9.png" alt="" id = "img_logo">
+    </div>
+
+
+
     <div id = "validation">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p><?php include('user_validation.php'); ?></p>

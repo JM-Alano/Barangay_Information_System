@@ -14,14 +14,14 @@ document.addEventListener("mouseover", function() {
      let id = btn.getAttribute("data-id");
            
  
-     let  request_document = btn.parentNode.childNodes[1].textContent;
+     let  request_document = btn.parentNode.childNodes[27].textContent;
      
-     let  status = btn.parentNode.childNodes[3].textContent;
-     let  purpose = btn.parentNode.childNodes[5].textContent;
+     let  status = btn.parentNode.childNodes[31].textContent;
+     let  purpose = btn.parentNode.childNodes[19].textContent;
 
-     let  firstname = btn.parentNode.childNodes[7].textContent;
-     let  middlename = btn.parentNode.childNodes[9].textContent;
-     let  lastname = btn.parentNode.childNodes[11].textContent;
+     let  firstname = btn.parentNode.childNodes[1].textContent;
+     let  middlename = btn.parentNode.childNodes[3].textContent;
+     let  lastname = btn.parentNode.childNodes[5].textContent;
     
      document.getElementById("id_print").value = id;
 

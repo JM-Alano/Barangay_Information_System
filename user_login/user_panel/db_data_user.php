@@ -17,8 +17,8 @@
       <p hidden id = "profile_profile"><?php echo  $row['profile'] ?></p>
       
        <!-- This data send to profile.php file -->
-           <p hidden id = "firstname_my_profile"><?php echo  $row['firstname'] ;?></p>
-            <p hidden id = "middlename_my_profile"><?php echo  $row['middlename'] ;?></p>
+            <p hidden id = "firstname_my_profile"><?php echo  $row['firstname'] ;?></p>
+             <p hidden id = "middlename_my_profile"><?php echo  $row['middlename'] ;?></p>
             <p hidden id = "lastname_my_profile"><?php echo  $row['lastname'] ;?></p>
             <p hidden id = "age_my_profile"><?php echo  $row['age'] ;?></p>
             <p hidden id = "gender_my_profile"><?php echo  $row['gender'] ;?></p>

@@ -56,6 +56,7 @@
 
                     if (mysqli_query($conn, $query)) {
                         echo "<script>
+                        alert('Successfully.');
                         window.location.href = '/BIS/user_login/user_login_page.php';
                         </script>";
                     } else {

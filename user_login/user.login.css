@@ -83,6 +83,7 @@ body{
     overflow-x: hidden;
    
 }
+
 .header{
     background-color: var(--2nd-bg-color);
     width:100vw;

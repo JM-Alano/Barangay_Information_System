@@ -390,7 +390,7 @@
    align-items: center;
   }
   
-  #update_official_btn{
+  #barangay_cert{
     color: var(--bg-color);
     cursor: pointer;
     padding: 3px 5px 3px 5px;
@@ -400,12 +400,12 @@
     outline: none;
     border: none;
   }
-  #update_official_btn svg{
+  #barangay_cert svg{
   width: 20px;
   fill: var(--other-color);
   }
   
-  #update_official_btn svg:hover{
+  #barangay_cert svg:hover{
     fill: rgb(150, 202, 250);
     color: var(--1st-text-color);
   }

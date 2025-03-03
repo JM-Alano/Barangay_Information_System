@@ -2,6 +2,7 @@
    
     require('../session.php');
     require('select_data_db.php');
+    // require('db_data_user.php');
     require('db_data_user.php');
 
 ?>
@@ -82,31 +83,37 @@
                         <p><?php
                             $date_today = date("F d, Y / l");
                             echo  $date_today;
+                         
                         ?></p>
                 </div>
                
                 <div class = "div_content">
-                            
+                
+                <button class = "add_button" id = "add_btn">+ ADD</button>
                
-                <div>
+                <div style = "margin-bottom:200px;">
 
                     <?php 
                         require('table_document.php');
                     ?>
                 </div>                  
     
-                
+                   <!-- IMPORT FORM -->
+                   <div id="modal_document" class="modal_document">
+                                <!-- Modal content -->
+                                <div class="modal-content_document">
+                                <span onclick="this.parentElement.parentElement.style.display='none';" class = "closesss">&times;</span>
+                                        <?php include('document_form.php')?>
+                                </div>
+                   </div>
                             
                            
-                          
+         
                 </div>
             <!-- ------------------------ -->
             </div>
           
-            <footer style = "height:30vh;">
-
-            </footer>
-            
+         
            
         </div>
 
@@ -117,64 +124,14 @@
         
         <script>
                 
-                let house_no_my_profile = document.getElementById("house_no_my_profile").textContent;
-                document.getElementById("house_no_my_profile_id").value = house_no_my_profile;
 
-                let sitio_pook_my_profile = document.getElementById("sitio_pook_my_profile").textContent;
-                document.getElementById("select").value = sitio_pook_my_profile;
-
-                let birthday_my_profile = document.getElementById("birthday_my_profile").textContent;
-                document.getElementById("birthday_my_profile_id").value = birthday_my_profile;
-
-                let firstname_my_profile = document.getElementById("firstname_my_profile").textContent;
-                document.getElementById("firstname_my_profile_id").value =  firstname_my_profile;
-
-                let middlename_my_profile = document.getElementById("middlename_my_profile").textContent;
-                document.getElementById("middlename_my_profile_id").value =  middlename_my_profile;
-                
-                let lastname_my_profile = document.getElementById("lastname_my_profile").textContent;
-                document.getElementById("lastname_my_profile_id").value =  lastname_my_profile;
-
-                let age_my_profile = document.getElementById("age_my_profile").textContent;
-                document.getElementById("age_my_profile_id").value =  age_my_profile;
-
-                let gender_my_profile = document.getElementById("gender_my_profile").textContent;
-                document.getElementById("gender_my_profile_id").value =  gender_my_profile;
-
-                 let user_id_my_profile = document.getElementById("user_id_my_profile").textContent;
-                document.getElementById("user_id_my_profile_id").value = user_id_my_profile;
-
-                let contact_phone_my_profile = document.getElementById("contact_phone_my_profile").textContent;
-                document.getElementById("contact_phone_my_profile_id").value = contact_phone_my_profile;
-
-                
-                let contact_person_my_profile = document.getElementById("contact_person_my_profile").textContent;
-                document.getElementById("contact_person_my_profile_id").value = contact_person_my_profile;
-                
-                let place_of_birth_my_profile = document.getElementById("place_of_birth_my_profile").textContent;
-                document.getElementById("place_of_birth_my_profile_id").value = place_of_birth_my_profile;
-                
-                let contact_no_contact_person_my_profile = document.getElementById("contact_no_contact_person_my_profile").textContent;
-                document.getElementById("contact_no_contact_person_my_profile_id").value = contact_no_contact_person_my_profile;
-
-                
-                let live_since_year_my_profile = document.getElementById("live_since_year_my_profile").textContent;
-                document.getElementById("live_since_year_my_profile_id").value = live_since_year_my_profile;
-
-                let purpose_my_profile = document.getElementById("purpose_my_profile").textContent;
-                document.getElementById("purpose_my_profile_id").value = purpose_my_profile;
-
-                
-                let id_my_profile = document.getElementById("id_my_profile").textContent;
-                document.getElementById("id_my_profile_id").value = id_my_profile;
-
-                let profile_user = document.getElementById("profile_profile").textContent;
-                document.getElementById("profile_user_display").value =  profile_user;
 
                 let logo_get_user = document.getElementById("logo_get_user").textContent;
                 document.getElementById("logo_user").src =  logo_get_user;
 
 
         </script>
+
+        <script src = "documnet.js"></script>
 </body>
 </html>

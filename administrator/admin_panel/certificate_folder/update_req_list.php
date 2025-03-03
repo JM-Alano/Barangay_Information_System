@@ -129,7 +129,7 @@
    
 
     <form action="certificate_folder/update_req_list.php" class = "form_manage" method = "POST" enctype = "multipart/form-data" >
-    <h1>Edit Manage List</h1>
+    <h1>Edit List</h1>
 
     <div class = "main_div_manage">
         <div>

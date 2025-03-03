@@ -91,7 +91,7 @@
 
         <div class = "dashboard_content">
                 <div class = "text">
-                    <h1>USER REGISTRED</h1>
+                    <h1>INCOME</h1>
                     <div class = "setting">
                          <div>
                         <img src="../../asset/image/admin/" alt="" id = "admin_profile">

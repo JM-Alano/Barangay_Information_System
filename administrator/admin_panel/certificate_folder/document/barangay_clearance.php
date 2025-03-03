@@ -143,7 +143,7 @@
                                     <h6>Res. Certificate No. Date Issue</h6>
                                 </div>
                                 <div class = "item2">
-                                    <h6><?php echo ":" . $firstname ." ". $middlename .".".  $lastname?></h6>
+                                    <h6><?php echo ":" . $firstname ." ". $middlename .". ".  $lastname?></h6>
                                     <h6>:<?php echo $house_no ." ". $sitio_pook . " PALIPARAN II DASMARIÑAS CITY CAVITE" ;?></h6><br>
                                     <h6>:<?php echo date('F d, Y',strtotime($birthday));?></h6>
                                     <h6>:<?php echo $place_of_birth;?></h6>
@@ -175,28 +175,18 @@
 
             </main>
 
-            <p id = "document_name" hidden><?php echo $lastname ?></p>
-            <p id = "document_type" hidden><?php echo $request_document ?></p>
-            
-            <script>
-    // Get the document name and type from the elements
-    let docs_name = document.getElementById("document_name");
-    let docs_type = document.getElementById("document_type");
+      
+                    <script>
+        // Retrieve PHP values dynamically and assign them to JavaScript variables
+        let doc_name = "<?php echo addslashes($lastname); ?>";
+        let doc_type = "<?php echo addslashes($request_document); ?>";
 
-    if (docs_name && docs_type) {
-        // Retrieve the inner text of the elements
-        let doc_name = docs_name.innerHTML;
-        let doc_type = docs_type.innerHTML;
+        // Combine the document type and name to set the title
+        document.title = doc_type + " - " + doc_name;
 
-        // Set the document's title
-        document.title = doc_type.concat("_", doc_name);
-    }
-
-    // Trigger the print dialog
-    window.print();
-  
-   
-</script>
+        // Trigger the print dialog
+        window.print();
+        </script>
             
         
              

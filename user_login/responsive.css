@@ -1310,6 +1310,15 @@ html {
 }
 
 @media only screen and (min-width: 1281px ){
+    #img_logo{
+        width:400px;
+        margin-left: 150px;
+        height: auto;  /* Optional, adjust as needed */
+        filter: drop-shadow(30px 1px 3px #30330942);
+        border-radius: 250px;
+      
+        
+    }
     #validation{
         animation-name: validation;
         animation-duration: 1s;

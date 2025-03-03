@@ -33,16 +33,13 @@
         date_default_timezone_set("Asia/Manila");
         $date_request = date("Y-m-d");
 
-        if(empty($id)){
-                    $query = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id )
-                    VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' )";
+      
 
 
-            $results = mysqli_query($conn, $query);
         
             
         
-            if($results == true){
+            if( true){
                 
                 $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
             VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
@@ -52,15 +49,10 @@
                 }
                 
                     
-            }else {
-
-            
-                echo "invalid ";
-                
-                }
+            }
 
 
-        }else if ($id == $id){
+        else if ($id == $id){
 
             $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
             VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
