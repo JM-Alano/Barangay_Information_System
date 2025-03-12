@@ -120,6 +120,7 @@
                             <div class = "main_content">
                                         <!-- ADD BUTTON -->
                                         <button id = "create_btn" >+Add</button>
+                                        <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
                                           <a href="/BIS/administrator/admin_panel/brgy_official_folder/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                                         <!-- SEARCH BUTTON -->
                                         <input type="text" id = "live_search" placeholder = "SEARCH">                    

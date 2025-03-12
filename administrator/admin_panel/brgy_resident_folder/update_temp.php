@@ -248,18 +248,20 @@
                         <div>
                         <label for="">Civil Status :</label><br>
                     <select name="civil-status" id = "civil_status"required>
-                        <option value="SINGLE">SINGLE</option>
-                        <option value="MARRIED">MARRIED</option>
-                        <option value="SEPARATED">SEPARATED</option>
-                        <option value="WIDOWED">WIDOWED</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Seperated">Seperated</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Divorced">Divorced</option>
                        
                     </select>
                         </div>
                         <div>
                         <label for="">Gender:</label><br>
                         <select name="gender" id="gender" required>
-                            <option value="MALE">MALE</option>
-                            <option value="FEMALE">FEMALE</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
                         </select>
                         </div>
                     </div>
@@ -270,7 +272,7 @@
                         </div>
                         <div>
                         <label for="">Contact number :</label><br>
-                        <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" id = "contact_no" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                        <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" id = "contact_no" pattern="[0-9]{11}">
                         </div>
                         <div>
                         <label for="">Occupation</label><br>
@@ -281,8 +283,8 @@
                         <div>
                         <label for="">Voter Status :</label><br>
                         <select name="voter-status" id="voter-status">
-                            <option value="YES">YES</option>
-                            <option value="No">NO</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>>
                         </select>
                         </div>
                         <div>

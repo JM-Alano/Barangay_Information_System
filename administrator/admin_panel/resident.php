@@ -114,7 +114,7 @@
         
                <div class = "main_content">
                         <!-- ADD BUTTON -->
-                        <a href="brgy_resident_folder/add_resident.php"><button id = "create_btn">+Add</button></a>
+                        <button onclick="loadContent('brgy_resident_folder/add_resident.php')" id = "create_btn">+Add</button>
                         <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
                         <a href="/BIS/administrator/admin_panel/brgy_resident_folder/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                         <!-- SEARCH BUTTON -->
@@ -158,7 +158,7 @@
                 xhttp.open("POST", url);
                 xhttp.send();
                 xhttp.onreadystatechange = (e) => {
-                    document.getElementById("content_refresh").innerHTML = xhttp.responseText;
+                    document.getElementById("searchresult").innerHTML = xhttp.responseText;
                 }
                 }    
         </script>

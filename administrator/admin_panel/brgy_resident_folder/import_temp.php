@@ -83,7 +83,7 @@
 <body>
     <h2 class = "h2">Import Data</h2>
 	<form class = "form" action="brgy_resident_folder/import_temp.php" method="post" enctype="multipart/form-data">
-    <input class = "input" type="file" name="excel" accept=".xls,.xlsx" required><br>
+    <input class = "input" type="file" name="excel" accept=".xls,.xlsx" required> <span style = "color:#4A9D4f;">.xls .xlsx</span> <br>
     <button class = "button" type="submit" name="import">Import</button>
 </form>
 

@@ -53,6 +53,19 @@
     letter-spacing: 2px;
     
   }
+  .main_content  #create_import{
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: var(--2nd-bg-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    margin-top: 30px;
+    width: max-content;
+    transition: all 0.5s ease;
+    letter-spacing: 2px;
+    
+  }
   .sidebar.active ~ .dashboard_content .main_content  #create_registered{
     margin-left: -220px;
   }

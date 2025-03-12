@@ -20,7 +20,7 @@
                 <option value="Barangay Certificate">Barangay Certificate</option>
                 <option value="Barangay Indigency">Barangay Indigency</option>
                 <option value="Barangay ID">Barangay ID</option>
-                <option value="Barangay Permit">Barangay Permit</option>
+                <option value="Business Permit">Business Permit</option>
                 <option value="Barangay Cedula">Barangay Cedula</option>
            
             </select><br>

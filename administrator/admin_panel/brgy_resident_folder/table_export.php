@@ -1,29 +1,5 @@
 <?php  require("../../../database/conn_db.php"); ?>
 <table border = 1>
-<caption><h1>Barangay Resident list</h1></caption>
-                <tr>
-                     <th>ID</th>
-                     <th>Fullname</th>
-                     <th>House Number</th>
-                     <th>Place of Birth</th>
-
-                     <th>Birthday</th>
-                     <th>Age</th>
-                     <th>Civil Status</th>
-
-                     <th>Gender</th>
-                     <th>Voter Status</th>
-                     <th>Email</th>
-
-                     <th>Contact no.</th>
-                     <th>Occupation</th>
-                
-
-                     <th>Citizenship</th>
-                     <th>Sitio Pook</th>
-                    
-                        
-                 </tr>
   <?php
   $i = 1;
   $rows = mysqli_query($conn, "SELECT * FROM barangay_resident");

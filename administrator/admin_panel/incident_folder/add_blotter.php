@@ -10,11 +10,6 @@
 </head>
 <body>
 
-    <header>
-        <h4>INCIDENT REPORT FORM</h4>
-    </header>
-
-
     <form action="/BIS/administrator/admin_panel/incident_folder/insert_incident.php" method = "POST">
     <h1 class = "h1">Add Incident Report:</h1>
     <div class = "main_div_blotter">
@@ -59,45 +54,9 @@
             <label for="">Plate : </label>
             <input type="text" name = "plate1">
         </div>
-        <div>
-        <label for="">Names : </label>
-         <input type="text" name = "person2">
-         <label for="">address : </label>
-            <input type="text" name = "address2">
-            <label for="">vehicle : </label>
-            <input type="text" name = "vehicle2">
-            <label for="">License no : </label>
-            <input type="text" name = "license2">
-            <label for="">Plate : </label>
-            <input type="text" name = "plate2">
-        </div>
+     
 
-        <div>
-        <label for="">Names : </label>
-        <input type="text" name = "person3">
-        <label for="">address : </label>
-            <input type="text" name = "address3">
-            <label for="">vehicle : </label>
-            <input type="text" name = "vehicle3">
-            <label for="">License no : </label>
-            <input type="text" name = "license3">
-            <label for="">Plate : </label>
-            <input type="text" name = "plate3">
-        </div>
-         
-         <div>
-         <label for="">Names : </label>
-         <input type="text" name = "person4"/>
-         <label for="">address : </label>
-            <input type="text" name = "address4">
-            <label for="">vehicle : </label>
-            <input type="text" name = "vehicle4">
-            <label for="">License no : </label>
-            <input type="text" name = "license4">
-            <label for="">Plate : </label>
-            <input type="text" name = "plate4">
-         </div>
-      
+    
         
             
 

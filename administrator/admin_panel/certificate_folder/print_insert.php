@@ -53,6 +53,12 @@
                     case "Barangay ID":
                       include('document/barangay_ID.php');
                       break;
+                     case "Business Permit":
+                        include('document/business_permit.php');
+                        break;
+                      case "Barangay Permit":
+                          include('document/barangay_cedula.php');
+                          break;
                     
                       default:
                       echo "error";

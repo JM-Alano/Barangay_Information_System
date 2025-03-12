@@ -53,17 +53,19 @@
                 
             }
             .main_container{
-                background-color: rgb(235, 235, 235);
-                width: 90vw;
+                
+                width: 80vw;
                 height: max-content;
                 margin-bottom: 5%;
                 margin-top: 2%;
                 border-radius: 4px;
-                  margin-left: 70px;
+                margin-left: 10px;
                 color: #4A9D4f;
                 padding-top: 10px;
                 animation-name: side_animation;
                 animation-duration: 2s ;
+                margin-top:80px;
+                
                 
             
             }
@@ -94,6 +96,7 @@
                 font-family: "sub_text";
                 color: #4A9D4f;
                 cursor: pointer;
+                border:1px solid #4A9D4f;
 
             }
             form label{
@@ -104,7 +107,7 @@
                 outline:3px solid #4A9D4f;
             }
             form .item-form input,.item-form select{
-                
+               
                 width: 300px;
                 height:30px;
                 margin-top:10px;
@@ -123,7 +126,7 @@
                 margin-bottom:10px;
                 padding :5px 10px 5px 10px;
                 border-radius:4px;
-                border:none;
+                border:1px solid #4A9D4f;
                 color:#4A9D4f;
             }
             form .item-form5{
@@ -137,10 +140,10 @@
                 color:#4A9D4f;
                 width: 50vw;
                 height:30px;
-                
+                border:1px solid #4A9D4f;
                 padding :5px 10px 5px 10px;
                 border-radius:4px;
-                border:none;
+                
                 
             }
     
@@ -211,7 +214,7 @@
 </head>
 <body>
     <header>
-        <h1>ADD RESIDENT LIST</h1>
+        
     </header>
     <main class = "main_container">
        
@@ -257,13 +260,14 @@
                 <select name="gender" id="gender" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
                 </select>
             </div>
             <div class = "item-form4">
                 <label for="" >Email :</label><br>
                 <input type="email" name = "email" placeholder = "Enter email"><br>
                 <label for="">Contact number :</label><br>
-                <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br>
+                <input type="tel" name = "contact_no" placeholder = "Enter Contact.no" pattern="[0-9]{11}"><br>
                 <label for="">Occupation</label><br>
                 <input type="text" name = "occupation" placeholder = "Enter Occupation">
             </div>

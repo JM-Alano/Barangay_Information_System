@@ -10,11 +10,6 @@
 </head>
 <body>
 
-    <header>
-        <h4>BLOTTER FORM</h4>
-    </header>
-
-
     <form action="/BIS/administrator/admin_panel/brgy_blotter/insert_blotter.php" method = "POST">
     <h1 class = "h1">Add Blotter List</h1>
     <div class = "main_div_blotter">

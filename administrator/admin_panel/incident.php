@@ -122,8 +122,18 @@
                 <div class = "search_div">
                             <!-- SEARCH BUTTON -->
                             <input type="text" id="live_search" placeholder="All Search" data-url="./certificate_folder/livesearch_cert.php">
-
-                            <a href="./incident_folder/add_blotter.php"><button id = "add_list" class = "add_btn_manage">+Add</button></a>
+                           
+                        <button onclick="loadContent('incident_folder/add_blotter.php')" id = "add_list" class = "add_btn_manage">+Add</button>
+                        <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
+                        <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
+                </div>
+                 <!-- IMPORT FORM -->
+                 <div id="modal_import" class="modal_import">
+                                <!-- Modal content -->
+                                <div class="modal-content_import">
+                                <span class="close">&times;</span>
+                                    <?php include('./incident_folder/import_temp.php')?>
+                    </div>
                 </div>
             <!-- Table in Database -->
             <div  id = "searchresult" class = "table_div">
@@ -137,7 +147,17 @@
         <!-- LOGOUT AND SIDEBAR FUNCTION SCRIPT -->
         <script src = "javascript_folder/logout_&_sidebar.js"></script>
 
-  
+        <script type = "text/javascript">
+            function loadContent(url) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.open("POST", url);
+                xhttp.send();
+                xhttp.onreadystatechange = (e) => {
+                    document.getElementById("searchresult").innerHTML = xhttp.responseText;
+                }
+                }
+            
+        </script>
   
 
         <script src = "brgy_blotter/blotter_btn.js"></script>
@@ -187,6 +207,9 @@
          <!-- UPDATE MODAL FUNCTION JS -->
      <script src = "/BIS/administrator/admin_panel/incident_folder/update_modal.js"></script>
           <!-- UPDATE MODAL FUNCTION JS -->  
-       <script src = "/BIS/administrator/admin_panel/incident_folder/view.js"></script
+       <script src = "/BIS/administrator/admin_panel/incident_folder/view.js"></script>
+
+       <!-- IMPORT MODAL FUCNTION BUTTON -->
+       <script src ="/BIS/administrator/admin_panel/incident_folder/import.js"></script>
 </body>
 </html>

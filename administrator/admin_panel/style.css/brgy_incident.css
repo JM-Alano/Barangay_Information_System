@@ -39,10 +39,10 @@ background-color: var(--bg-color);
 background-repeat: no-repeat;
 background-size: cover;
 }
-.main_content  #create_blotter{
+.main_content  #create_import{
   border: none;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   background-color: var(--2nd-bg-color);
   color: var(--bg-color);
   cursor: pointer;
@@ -107,6 +107,33 @@ background-size: cover;
 
 /* ----------------CRUD BUTTON Style------------------------------------- */
 /* The Modal (background) */
+.modal_import {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: scroll; /* Enable scroll if needed */
+  background-color: rgb(153, 0, 0); /* Fallback color */
+  background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
+  animation-name: background ;
+  animation-duration: 0.7s; 
+  display: none;
+}
+/* Modal Content/Box */
+.modal-content_import {
+  background-color: rgb(235, 235, 235);
+  margin: 2% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  animation-name: down ;
+  animation-duration: 0.7s; 
+  border-radius: 8px;
+  
+}
 .modal_blotter {
   display: none;
   position: fixed; /* Stay in place */
@@ -404,6 +431,7 @@ width: max-content;
 color: #005720;
 height: max-content;
 background-color: white;
+margin-top: 20px;
 }
 
 

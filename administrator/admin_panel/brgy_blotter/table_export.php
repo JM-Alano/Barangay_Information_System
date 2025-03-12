@@ -1,6 +1,6 @@
 <?php  require("../../../database/conn_db.php"); ?>
 <table border = 1>
-<caption><h1>Barangay Blotter list</h1></caption>
+
                 <tr>
                      <th>subject</th>
                      <th>cell_no</th>
