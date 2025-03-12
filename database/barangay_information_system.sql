@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2025 at 01:18 PM
+-- Generation Time: Mar 12, 2025 at 08:01 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -200,7 +200,12 @@ INSERT INTO `barangay_request` (`firstname`, `middlename`, `lastname`, `age`, `r
 ('chin', 'Acantilado e', 'Alano e', 25, 'Barangay Certificate', 'asdsdad e', 'Mabuhay Homes 2000 asdsd', '2025-02-03', 'Manila', '11000001223', 'Jenmar Acantilado Alano', '12083021981', '2025-02', 'For Education Assistance', 4, 'Female', '2025-01-28', '679b9f74184a1.jpg', 18, 53),
 ('2312das', 'asdasd', 'adsad', 23, 'Barangay ID', '2asdas', 'adsads', '2025-02-12', 'adsad', '09694911585', 'asdasd', '09694911585', '2025-02', 'asdasd', 4, 'Female', '2025-02-02', '67a0bad7d3620.jpg', 0, 65),
 ('2312das', 'aasdasd', 'asdsd', 22, 'Barangay ID', '2asdas', 'adsads', '2025-02-04', 'adsad', '09694911585', 'asdasd', '09694911585', '2025-02', 'asdasd', 3, 'Prefer not to say', '2025-02-03', '67a060b0a2de7.jpg', 0, 66),
-('chin', 'adasd', 'alano', 23, 'Barangay Clearance', 'asdsdad e', '2adasdsd', '2025-02-05', 'Manila', '09694911523', 'Jenmar Acantilado Alano', '09958140197', '2025-02', 'For Education Assistance', 1, 'Male', '2025-02-05', 'images.png', 33, 68);
+('chin', 'adasd', 'alano', 23, 'Barangay Clearance', 'asdsdad e', '2adasdsd', '2025-02-05', 'Manila', '09694911523', 'Jenmar Acantilado Alano', '09958140197', '2025-02', 'For Education Assistance', 1, 'Male', '2025-02-05', 'images.png', 33, 68),
+('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'sdasd', 'asdas', '2025-03-12', 'asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 69),
+('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'asdad', 'asda', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 70),
+('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'asdasasd', 'adasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 71),
+('Jenmara asd', 'dassad', 'Alano', 23, 'Business Permit', 'asdad', 'asdasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 72),
+('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Cedula', 'adsasd', 'asdasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 73);
 
 -- --------------------------------------------------------
 
@@ -239,7 +244,8 @@ CREATE TABLE `barangay_resident` (
 INSERT INTO `barangay_resident` (`id`, `firstname`, `middlename`, `lastname`, `house_no`, `alias`, `place_of_birth`, `birthday`, `age`, `civil_status`, `gender`, `voter_status`, `email`, `contact_no`, `occupation`, `citizenship`, `sitio_pook`, `id_type`, `id_type_no`, `precinct_no`, `image`) VALUES
 (65, 'Chin', 'Acantilado', 'Alano', 'bkl 18 lot 18', 'Jayjay', 'Manila', '2024-12-11', 22, 'Seperated', 'Female', 'Yes', 'tmc.jenmar.alano@cvsu.edu.ph', '01312323322', 'Web Development', 'asdasdaaaaaaaaaa', 'Sitio Kubuhan & Rigde View', 'Voters ID', '234324', '', '6759a4a2325f6.png'),
 (67, 'neil', 's', 'Alegiojo', '34 22', 'tukmol', 'Manila', '2024-12-16', 22, 'Divorced', 'Male', 'No', 'jenmar.alano04@gmail.com', '09958140197', 'student', 'filipino', 'Camella at the Island Park', 'No ID', 'adasd123', '', '675f99c669a0e.jpg'),
-(68, 'Jenmar', 'Acantilado', 'Alano', 'asdsdad e', 'JM', 'Manila', '2024-11-04', 25, 'Single', 'Male', 'Yes', 'tmc.jenmar.alano@cvsu.edu.ph', '09694911585', 'Web developer', 'filipino', 'Mabuhay Homes 2000', 'National ID', '', '', '67a33ca1e9d3a.jpg');
+(68, 'Jenmar', 'Acantilado', 'Alano', 'asdsdad e', 'JM', 'Manila', '2024-11-04', 25, 'Single', 'Male', 'Yes', 'tmc.jenmar.alano@cvsu.edu.ph', '09694911585', 'Web developer', 'filipino', 'Mabuhay Homes 2000', 'National ID', '', '', '67a33ca1e9d3a.jpg'),
+(69, 'JENAMR', 'asdasdsa', 'aaaaaaaaaa', 'adads', '', 'asdada', '2023-02-22', 22, 'Single', 'Male', 'Yes', 'asad@gmail.com', '09232323232', 'dasd', 'asdad', 'sadsadsad', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -279,7 +285,8 @@ INSERT INTO `barangay_revenue` (`date_issue`, `expired_date`, `document_amount`,
 ('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 334),
 ('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 335),
 ('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 336),
-('2025-02-05', '2026-02-05', 50, '2312das', 'asdasd', 'adsad', 'Barangay ID', 65, 337);
+('2025-02-05', '2026-02-05', 50, '2312das', 'asdasd', 'adsad', 'Barangay ID', 65, 337),
+('2025-03-12', '2026-03-12', 6, 'Jenmara asd', 'dassad', 'Alano', 'Barangay Cedula', 73, 338);
 
 -- --------------------------------------------------------
 
@@ -407,19 +414,19 @@ ALTER TABLE `barangay_official`
 -- AUTO_INCREMENT for table `barangay_request`
 --
 ALTER TABLE `barangay_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `barangay_resident`
 --
 ALTER TABLE `barangay_resident`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `barangay_revenue`
 --
 ALTER TABLE `barangay_revenue`
-  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
+  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=339;
 
 --
 -- AUTO_INCREMENT for table `user_account`
