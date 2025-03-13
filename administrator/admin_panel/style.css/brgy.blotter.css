@@ -128,6 +128,7 @@ background-size: cover;
   padding: 20px;
   border: 1px solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
+  height: 30%;
   animation-name: down ;
   animation-duration: 0.7s; 
   border-radius: 8px;

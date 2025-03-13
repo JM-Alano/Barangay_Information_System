@@ -67,6 +67,7 @@
         </button>
      </div>
     </div>
+    
     <div id = "logo">
         <img src="../asset/image/logo/67a89c6822aa9.png" alt="" id = "img_logo">
     </div>

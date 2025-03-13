@@ -48,8 +48,8 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Barangay Business Permit</title>
-            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/indigency.css"/>
+            <title>Barangay Business Clearance</title>
+            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/business_permit.css"/>
         </head>
         <body>
              <img src="/BIS/administrator/admin_panel/certificate_folder/document/bg_main.png" alt="" id = "main_bg_logo">
@@ -79,50 +79,37 @@
             </header>
 
             <main class = "main">
-                <h1>BARANGAY BUSINESS PERMIT</h1>
+                <h1>BARANGAY BUSINESS CLEARANCE</h1>
 
                 
 
                 <h2 class = "to_whom">TO WHOM IT MAY CONCERN:</h2>
 
-                <p class = "dear">Dear Sir/Madam,</p>
-
-                <p class = "p1">This is to certify that <u><b>MR./MRS./MS.<?php echo $firstname ." " . $middlename .". " .$lastname . ","; ?></b></u> of legal age, FIlipino Citizen, is a bonafide reside <u><b><?php echo $house_no . " " .  $sitio_pook ; ?> Paliparan II, Dasmariñas City, Cavite.</b></u>
-
-                <p class = "p2">I further certify that <b><u>MR./MRS./MS. <?php echo $firstname . " " . $middlename . ". " .$lastname . ","; ?></u></b>  is one of the members of an indigency family in our community and is not capable to sustain his/her financial expenses due to financial constraint. </p>
-
-                <p class = "p3">This Certification is being issued upon request of the above-named person for <u><b> <?php echo $purpose ?>.</b></u></p>
-
-                <p class = "p4"><b>CERTIFIED AND ISSUED</b> this <u><b>
-                    <?php echo $day_issue = date('d',strtotime($date_issue)); 
-                           $second_character = substr($day_issue, 1, 1);  $second_character ;
-                    switch ($second_character) {
-                        case 1:
-                            echo "<sup>st</sup>";
-                          break;
-                        case 2:
-                            echo "<sup>nd</sup>";
-                          break;
-                        case 3:
-                          echo "<sup>rd</sup>";
-                        break;
-                        case 9 || 8 || 7 || 6 || 5 || 4 :
-                          echo "<sup>th</sup>";
-                          break;
-                        default:
-                            echo "<sup>th</sup>";
-                      }
-                    ?></b></u> of <u><b><?php echo date('F Y',strtotime($date_issue)) .".";?></b></u> at the office of the Barangay Chairman, Paliparan II, City of Dasmarinas, Cavite.</p>
-
-
+                <p class = "p1">This is to certify that the business or trade activity described below: </p>
+                <div class = "div_info">
+                    <p class = "p1_div">BUSINESS NAME </p><span><b>Business/Trade Name</span></b>
+                    <p class = "p2_div"><?php echo $firstname . " " . $middlename.". " . $lastname ?></p><span><b>Operator/Owner</b></span>
+                    <p class = "p3_div"><?php echo $house_no . " " . $sitio_pook ?></p><span><b>Address</b></span>
+                </div>
+                <div class = "div_2nd">
+                    <p class = "div_p1">Propose to be established in the barangay and is being applied for business clearance to be used in securing corresponding Mayor's Permit has been to be:</p>
+                    <p class = "div_p2">_____ Complying with the provisions of existing Barangay Ordinanc, rules and regulations being enforce on this Barangay;</p>
+                    <p class = "div_p3">_____ Partially complying with provisions of existing Barangay Ordinances, rules and regulations being enforced in this Barangay;</p>
+                    <p class = "div_p4">_____ Interpose No objection for the issuance of the corresponding Barangay Permit applied for.</p>
+                </div>
+                
                 <div class = "brgy_chair">
                     <h2>PB. RORALDO C. AMBAL</h2>
                     <h3>Barangay Chairman</h3>
                     <h3>Paliparan II</h3>
                 </div>
-                <footer class = "footer">
-                        <img src="/BIS/administrator/admin_panel/certificate_folder/document/footer.png" alt="">
-                </footer>
+
+                <div class = "div_date_issued">
+                    <h4>Date : <span><?php echo $day_issue = date('F d, Y',strtotime($date_issue));  ?></span></h4>
+                    <h4>Control no : <span><?php echo $OR_no ."-". date("Y")?></span></h4>
+                    <p class = "footer_div"><i>This Business Clearance will be valid until December 31, <?php echo " ". date("Y")?></i></p>
+                </div>
+             
             </main>
             
             <p id = "document_name" hidden><?php echo $lastname ?></p>

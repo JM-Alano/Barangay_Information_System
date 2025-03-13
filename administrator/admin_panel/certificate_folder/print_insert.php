@@ -56,7 +56,7 @@
                      case "Business Permit":
                         include('document/business_permit.php');
                         break;
-                      case "Barangay Permit":
+                      case "Barangay Cedula":
                           include('document/barangay_cedula.php');
                           break;
                     

@@ -119,15 +119,24 @@
                                         <!-- ADD BUTTON -->
                                         <button id = "create_registered">+Add</button>
                                         <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
-                        <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
+                                <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                                         <!-- SEARCH BUTTON -->
                                         <input type="text" id = "live_search" placeholder = "SEARCH">                    
                  </div> 
+
+                  <!-- IMPORT FORM -->
+                  <div id="modal_import" class="modal_import">
+                                <!-- Modal content -->
+                                <div class="modal-content_import">
+                                <span class="close">&times;</span>
+                                    <?php include('./user_register_folder/import_temp.php')?>
+                    </div>
+                </div>
                   <!-- ADD FORM -->
                   <div id="modal_add_registered" class="modal_registered">
                                 <!-- Modal content -->
                                 <div class="modal-content_registered">
-                                <span class="close">&times;</span>
+                                <span class="closes">&times;</span>
                                     <?php   include('./user_register_folder/add_user.php'); ;?>
                                 </div>
                         </div>
@@ -195,5 +204,8 @@
               <script src ="/BIS/administrator/admin_panel/user_register_folder/buttodelete.js"></script>
             <!-- AJAX SCRIPT FOR UPDATE BUTTON -->
             <script src ="/BIS/administrator/admin_panel/user_register_folder/upd_modal.js"></script>
+
+            <!-- IMPORT MODAL FUCNTION BUTTON -->
+       <script src ="/BIS/administrator/admin_panel/user_register_folder/import.js"></script>
 </body>
 </html>

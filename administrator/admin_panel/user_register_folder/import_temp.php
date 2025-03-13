@@ -60,11 +60,11 @@
     font-family: "sub_text";
    }
    .input{
-    margin-top: -20px;
+    margin-top: 20px;
     border-radius: 4px;
     border: 2px solid #4A9D4f;
     padding: 10px;
-    margin-left:-50px;
+    margin-left:10px;
    }
    .button{
     padding: 10px;
@@ -75,7 +75,7 @@
     width:100px;
     border: none;
     cursor: pointer;
-    margin-left:-50px;
+    margin-left: 10px;
    }
    .button:hover{
     background-color: rgb(70, 198, 248);
