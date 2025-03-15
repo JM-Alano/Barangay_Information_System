@@ -127,11 +127,11 @@
                                 </div>
                     
                               <!-- IMPORT FORM -->
-                              <div id="modal_import" class="modal_import">
+                       <div id="modal_import" class="modal_import">
                                 <!-- Modal content -->
                                 <div class="modal-content_import">
                                 <span onclick="this.parentElement.parentElement.style.display='none';" class = "update-close-btn">&times;</span>
-                                    <?php include('./brgy_resident_folder/import_temp.php')?>
+                                    <?php include('./brgy_official_folder/import_temp.php')?>
                                 </div>
                         </div>
                         <!-- ADD FORM -->
@@ -230,7 +230,9 @@
         <!-- AJAX SCRIPT FOR UPDATE BUTTON -->
         <script src ="/BIS/administrator/admin_panel/brgy_official_folder/update_modal_official.js"></script>
 
- 
+              <!-- IMPORT MODAL FUCNTION BUTTON -->
+       <script src ="/BIS/administrator/admin_panel/brgy_official_folder/import.js"></script>
+
       
 </body>
 </html>

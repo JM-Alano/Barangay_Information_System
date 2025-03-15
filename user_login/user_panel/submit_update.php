@@ -6,6 +6,7 @@
         $user_id = trim($_POST['user_id']);
         $id = trim($_POST['id']);
 
+        $business_name = trim($_POST['business_permit_Name']);
         $firstname = trim($_POST['firstname']);
         $middlename = trim($_POST['middlename']);
         $lastname = trim($_POST['lastname']);
@@ -41,8 +42,8 @@
         
             if( true){
                 
-                $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
-            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
+                $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile, business_name)
+            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile' , '$business_name')";
 
                 if(mysqli_query($conn, $sqls)){
                     echo "<script>window.location.href = 'successful.php'</script>";
@@ -54,8 +55,8 @@
 
         else if ($id == $id){
 
-            $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile )
-            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile')";
+            $sqls = "INSERT INTO barangay_request (firstname, middlename, lastname, age, request_document, house_number, birthday, place_of_birth, contact_no, contact_person, contact_no_contact_person, live_since_year, purpose, status, gender, date_request, sitio_pook, user_id , profile, business_name)
+            VALUES ('$firstname', '$middlename', '$lastname' , '$age', '$request_document', '$house_no', '$birthday', '$place_of_birth', '$contact_no' , '$contact_person', '$contact_person_no' , '$live_since_year' , '$purpose' , ' $status', '$gender', '$date_request', '$sitio_pook' , '$user_id' , '$profile' , '$business_name')";
 
 
             if(mysqli_query($conn, $sqls)){

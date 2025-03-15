@@ -125,7 +125,7 @@
                            
                         <button onclick="loadContent('incident_folder/add_blotter.php')" id = "add_list" class = "add_btn_manage">+Add</button>
                         <button id = "create_import" style = "background-color:rgb(0, 183, 255);">Import</button>
-                        <a href="/BIS/administrator/admin_panel/brgy_blotter/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
+                        <a href="/BIS/administrator/admin_panel/incident_folder/export.php"><button id = "create_import" style = "background-color:#d4b62f;">Export</button></a>
                 </div>
                  <!-- IMPORT FORM -->
                  <div id="modal_import" class="modal_import">
@@ -211,5 +211,35 @@
 
        <!-- IMPORT MODAL FUCNTION BUTTON -->
        <script src ="/BIS/administrator/admin_panel/incident_folder/import.js"></script>
-</body>
+
+
+   
+       <script>
+        let partyCounter = 1; // Counter to increment party number
+
+        function addPartyField() {
+         
+            // Create a new div element for the new party input fields
+            const newParty = document.createElement('div');
+            newParty.classList.add('party');
+            newParty.id = `party${partyCounter}`; // Add a unique ID for the new party
+
+            // Create the new input fields for the party
+            newParty.innerHTML = `
+                <label for="">Names:</label>
+                <input type="text" name="person[]">
+                <label for="">Address:</label>
+                <input type="text" name="address[]">
+                <label for="">Vehicle:</label>
+                <input type="text" name="vehicle[]">
+                <label for="">License no:</label>
+                <input type="text" name="license[]">
+                <label for="">Plate:</label>
+                <input type="text" name="plate[]">
+            `;
+          
+            // Append the new party input fields to the partyFields container
+            document.getElementById('partyFields').appendChild(newParty);
+        }
+    </script>
 </html>

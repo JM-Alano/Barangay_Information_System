@@ -39,7 +39,9 @@
 
        $OR_no = $row["OR_no"];
 
+        // variable Cedula 
 
+      
    
        ?>
             
@@ -49,12 +51,13 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Barangay Cedula</title>
-            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/clearance.css"/>
+            <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/certificate_folder/document/cedula.css"/>
         </head>
         <body>
-            <h1>
-                barangay_cedula
-            </h1>
+            <div class = "cedula_div">
+            <img src="./document/Cedula.png" alt="" class ="cedula">
+            </div>
+                
       
                     <script>
         // Retrieve PHP values dynamically and assign them to JavaScript variables
@@ -65,7 +68,7 @@
         document.title = doc_type + " - " + doc_name;
 
         // Trigger the print dialog
-        window.print();
+        // window.print();
         </script>
             
         

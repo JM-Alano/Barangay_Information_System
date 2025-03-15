@@ -1,6 +1,6 @@
 <?php  require("../../../database/conn_db.php"); ?>
 <table border = 1>
-<caption><h1>Barangay Officers list</h1></caption>
+
                 <tr>
                      <th>ID</th>
                      <th>Fullname</th>

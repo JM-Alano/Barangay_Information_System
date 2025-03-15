@@ -144,22 +144,7 @@ if ($result->num_rows > 0) { ?>
         </tfoot>
     </table>
 
-    <!-- Pagination Controls -->
-    <div class="pagination">
-        <?php if ($page > 1): ?>
-            <a href="?page=<?php echo $page - 1; ?>&limit=<?php echo $limit; ?>&month=<?php echo $month; ?>&year=<?php echo $year; ?>">Previous</a>
-        <?php endif; ?>
-
-        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-            <a href="?page=<?php echo $i; ?>&limit=<?php echo $limit; ?>&month=<?php echo $month; ?>&year=<?php echo $year; ?>" class="<?php echo $i == $page ? 'active' : ''; ?>">
-                <?php echo $i; ?>
-            </a>
-        <?php endfor; ?>
-
-        <?php if ($page < $totalPages): ?>
-            <a href="?page=<?php echo $page + 1; ?>&limit=<?php echo $limit; ?>&month=<?php echo $month; ?>&year=<?php echo $year; ?>">Next</a>
-        <?php endif; ?>
-    </div>
+   
 
 </div>
 <?php

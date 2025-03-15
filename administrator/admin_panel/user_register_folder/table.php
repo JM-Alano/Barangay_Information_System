@@ -12,19 +12,16 @@
         
 
             <?php require("../../database/conn_db.php");
+   // Get the current page and limit from query parameters, set defaults if not provided
+           $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
+           $limit = isset($_GET['limit']) ? max(1, (int)$_GET['limit']) : 10;
+           $offset = ($page - 1) * $limit;
 
-            // Get the current page and limit from query parameters, set defaults if not provided
-            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
-            $limit = $limit > 0 ? $limit : 10; // Ensure the limit is positive
-            $offset = ($page - 1) * $limit;
-
-            // Get the total number of records
-            $countQuery = "SELECT COUNT(*) AS total FROM user_account";
-            $countResult = $conn->query($countQuery);
-            $totalRows = $countResult->fetch_assoc()['total'];
-            $totalPages = ceil($totalRows / $limit);
-             
+           // Get the total number of records from the correct table
+           $countQuery = "SELECT COUNT(*) AS total FROM barangay_resident";
+           $countResult = $conn->query($countQuery);
+           $totalRows = $countResult->fetch_assoc()['total'];
+           $totalPages = max(1, ceil($totalRows / $limit));
        
             $sql = "SELECT * FROM user_account  ORDER BY user_id DESC LIMIT $limit OFFSET $offset";
             $result = $conn->query($sql);
@@ -123,7 +120,6 @@
                 
             </table>
 
-            
 <!-- Pagination Controls -->
 <div class="pagination">
     <?php if ($page > 1): ?>
@@ -142,6 +138,8 @@
 </div>
 
           
+
+          
            
 
 <?php 
@@ -154,7 +152,7 @@
             left:25%;
             font-size:3.5rem;
         }
-    </styl>
+    </style>
     <div class = "Data-not-found">
     <h1>DATA NOT FOUND</h1>
     </div>

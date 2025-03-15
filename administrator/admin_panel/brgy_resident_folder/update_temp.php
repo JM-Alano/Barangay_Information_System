@@ -248,20 +248,19 @@
                         <div>
                         <label for="">Civil Status :</label><br>
                     <select name="civil-status" id = "civil_status"required>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Seperated">Seperated</option>
-                        <option value="Widowed">Widowed</option>
-                        <option value="Divorced">Divorced</option>
+                        <option value="SINGLE">SINGLE</option>
+                        <option value="MARRIED">MARRIED</option>
+                        <option value="SEPERATED">SEPERATED</option>
+                        <option value="WIDOWEd">WIDOWEd</option>
                        
                     </select>
                         </div>
                         <div>
                         <label for="">Gender:</label><br>
                         <select name="gender" id="gender" required>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Prefer not to say">Prefer not to say</option>
+                        <option value="MALE">MALE</option>
+                        <option value="FEMALE">FEMALE</option>
+                        <option value="PREFER NOT TO SAY">PREFER NOT TO SAY</option>
                         </select>
                         </div>
                     </div>
@@ -283,8 +282,8 @@
                         <div>
                         <label for="">Voter Status :</label><br>
                         <select name="voter-status" id="voter-status">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>>
+                        <option value="YES">YES</option>
+                        <option value="NO">NO</option>>
                         </select>
                         </div>
                         <div>

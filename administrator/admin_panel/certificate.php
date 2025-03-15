@@ -95,7 +95,7 @@
 
                          <button id = "barangay_id" onclick="loadContent('certificate_folder/ID.php')" >Barangay I.D</button>
 
-                         <button id = "barangay_id" onclick="loadContent('certificate_folder/permit.php')" >Barangay Permit</button>
+                         <button id = "barangay_id" onclick="loadContent('certificate_folder/permit.php')" >Business Permit</button>
 
                          <button id = "barangay_id" onclick="loadContent('certificate_folder/cedula.php')" >Barangay Cedula</button>
                             

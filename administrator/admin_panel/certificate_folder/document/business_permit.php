@@ -19,6 +19,7 @@
        $request_document = $row["request_document"];
        $house_no = strtoupper($row["house_number"]);
 
+       $business_name = $row["business_name"];
        $birthday = $row["birthday"];
        $place_of_birth = $row["place_of_birth"];
        $contact_no = $row["contact_no"];
@@ -87,7 +88,7 @@
 
                 <p class = "p1">This is to certify that the business or trade activity described below: </p>
                 <div class = "div_info">
-                    <p class = "p1_div">BUSINESS NAME </p><span><b>Business/Trade Name</span></b>
+                    <p class = "p1_div"><?php echo $business_name ?> </p><span><b>Business/Trade Name</span></b>
                     <p class = "p2_div"><?php echo $firstname . " " . $middlename.". " . $lastname ?></p><span><b>Operator/Owner</b></span>
                     <p class = "p3_div"><?php echo $house_no . " " . $sitio_pook ?></p><span><b>Address</b></span>
                 </div>

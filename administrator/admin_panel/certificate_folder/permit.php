@@ -21,7 +21,7 @@
                         <tr>
                             <th>Profile</th>
                             <th>Fullname</th>
-                            <th>Gender</th>
+                            <th>Business <br> Name </th>
                             <th>Control No.</th>
                             <th>Purpose</th>
                             
@@ -38,6 +38,8 @@
                                 $firstname = $row["firstname"];
                                 $lastname = $row["lastname"];
                                 $middlename = $row["middlename"];
+
+                                $business_name = $row["business_name"];
 
                                 $age = $row["age"];
                                 $request_document = $row["request_document"];
@@ -67,7 +69,7 @@
                                  <tr class = "table_hover">
                                  <td class = "img"><img src="/BIS/asset/image/user_profile/<?php echo $profile; ?>" alt="" width = 500/></td>
                                     <td><?php echo $firstname ." ". $middlename ." ". $lastname; ?></td>
-                                    <td><?php echo $gender; ?></td>
+                                    <td><?php echo $business_name; ?></td>
                                     <td><?php echo $id; ?></td>
                                     <td><?php echo $purpose; ?></td>
                                     

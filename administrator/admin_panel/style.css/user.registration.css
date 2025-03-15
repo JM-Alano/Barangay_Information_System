@@ -131,19 +131,19 @@
         height: 100%; /* Full height */
         overflow-y: scroll; /* Enable scroll if needed */
         background-color: rgb(153, 0, 0); /* Fallback color */
-        background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
-        animation-name: background ;
+        background-color: rgba(12, 10, 10, 0.911); /* Black w/ opacity */
+        animation-name: import ;
         animation-duration: 0.7s; 
         display: none;
       }
       /* Modal Content/Box */
       .modal-content_import {
         background-color: rgb(235, 235, 235);
-        margin: 2% auto; /* 15% from the top and centered */
+        margin: 10% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
         width: 40%; /* Could be more or less, depending on screen size */
-        animation-name: down ;
+        animation-name: import ;
         animation-duration: 0.7s; 
         border-radius: 8px;
         
@@ -159,7 +159,7 @@
     height: 100%; /* Full height */
     overflow-y: scroll; /* Enable scroll if needed */
     background-color: rgb(153, 0, 0); /* Fallback color */
-    background-color: rgba(58, 58, 58, 0.548); /* Black w/ opacity */
+    background-color: rgba(10, 10, 10, 0.548); /* Black w/ opacity */
     animation-name: background ;
     animation-duration: 0.7s; 
     display: none;
@@ -176,15 +176,28 @@
     border-radius: 8px;
     
   }
-  .close {
+  .closes {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .closes:hover,
+  .closes:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .y_closes {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .y_closes:hover,
+  .y_closes:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -319,7 +332,13 @@
     }
     to {opacity: 100%;}
   }
-
+  @keyframes import {
+    from {
+        opacity: 10%;
+    }
+    to {opacity: 100%;}
+  }
+  
   /*-------------------------  TABLE STYLE ------------------------------------*/ 
   
   
