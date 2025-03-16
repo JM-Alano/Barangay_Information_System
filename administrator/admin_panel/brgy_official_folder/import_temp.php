@@ -140,7 +140,7 @@
 
         echo "
         <script>
-            alert('Successfully Importedsssssssss');
+            alert('Successfully Imported');
             document.location.href = '/BIS/administrator/admin_panel/brgy_official.php';
         </script>
         ";

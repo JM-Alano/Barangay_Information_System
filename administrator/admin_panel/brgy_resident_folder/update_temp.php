@@ -283,7 +283,7 @@
                         <label for="">Voter Status :</label><br>
                         <select name="voter-status" id="voter-status">
                         <option value="YES">YES</option>
-                        <option value="NO">NO</option>>
+                        <option value="NO">NO</option>
                         </select>
                         </div>
                         <div>

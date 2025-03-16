@@ -23,7 +23,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-}
+}   
 
 // Query to fetch data from the database
 $sql = "SELECT subject, cell_no, place, tanod, date, time, status, complainant, age, address_complainant, complained_name, add_complained_name, details_reason, type FROM barangay_blotter";

@@ -125,29 +125,20 @@
                 </footer>
             </main>
         
-            <p id = "document_name" hidden><?php echo $lastname ?></p>
-            <p id = "document_type" hidden><?php echo $request_document ?></p>
+        
             
       
             <script>
-    // Get the document name and type from the elements
-    let docs_name = document.getElementById("document_name");
-    let docs_type = document.getElementById("document_type");
+      let doc_name = "<?php echo addslashes($lastname); ?>";
+      let doc_type = "<?php echo addslashes($request_document); ?>";
+      let doc_id = "<?php echo $id; ?>"; // Optional: Include ID or other identifiers for uniqueness
 
-    if (docs_name && docs_type) {
-        // Retrieve the inner text of the elements
-        let doc_name = docs_name.innerHTML;
-        let doc_type = docs_type.innerHTML;
+      // Combine the document type, name, and optional ID to set the title
+      document.title = doc_type + " - " + doc_name + " (" + doc_id + ")";
 
-        // Set the document's title
-        document.title = doc_type.concat("_", doc_name);
-    }
-
-    // Trigger the print dialog
-    window.print();
-
-   
-</script>
+      // Trigger the print dialog
+      window.print();
+  </script>
 
 
         </body>

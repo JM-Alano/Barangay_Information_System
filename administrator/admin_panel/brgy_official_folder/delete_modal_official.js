@@ -36,7 +36,7 @@
               if (xhr.status === 200) {
            
                   // Refresh page or update table
-                  window.location.href = "/BIS/administrator/admin_panel/brgy_official.php";
+                  window.location.href = "/BIS/administrator/admin_panel/brgy_official_folder/loading_delete.php";
                   
               } else {
                   console.log("Error deleting record!");

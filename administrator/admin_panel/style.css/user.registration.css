@@ -394,21 +394,22 @@
     
   }
   .pagination {
-  margin: 20px 0;
-  float: right;
-  margin-right: 20px;
-  padding-bottom: 60px;
-  
-  }
-  
-  .pagination a {
-  margin: 0 5px;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: var(--1st-text-color);
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  }
+    margin: 0px 0;
+    float: right;
+    margin-right: 0px;
+    padding-bottom: 60px;
+    margin-left: 20px;
+    }
+    
+    .pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--1st-text-color);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+      line-height: 50px;
+    }
   
   .pagination a.active {
   background-color: var(--2nd-bg-color);

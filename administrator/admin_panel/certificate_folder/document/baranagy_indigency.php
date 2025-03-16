@@ -129,23 +129,17 @@
             <p id = "document_type" hidden><?php echo $request_document ?></p>
             
       
-                            <script>
+            <script>
+            let doc_name = "<?php echo addslashes($lastname); ?>";
+            let doc_type = "<?php echo addslashes($request_document); ?>";
+            let doc_id = "<?php echo $id; ?>"; // Optional: Include ID or other identifiers for uniqueness
 
-                            let docs_name = document.getElementById("document_name");
-                            let docs_type = document.getElementById("document_type");
+            // Combine the document type, name, and optional ID to set the title
+            document.title = doc_type + " - " + doc_name + " (" + doc_id + ")";
 
-                            let doc_name = docs_name.innerHTML;
-                            let doc_type = docs_type.innerHTML;
-                      
-                                
-                            document.title = doc_type.concat("_",doc_name);
-                            window.print();
-                           
-
-    
-                            
-                                
-                            </script>
+            // Trigger the print dialog
+            window.print();
+            </script>
 
 
         </body>

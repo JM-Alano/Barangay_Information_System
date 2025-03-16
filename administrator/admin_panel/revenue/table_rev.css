@@ -84,11 +84,11 @@ caption {
   
 }
 .pagination {
-  margin: 20px 0;
+  margin: 0px 0;
   float: right;
-  margin-right: 20px;
+  margin-right: 0px;
   padding-bottom: 60px;
-  
+  margin-left: 20px;
   }
   
   .pagination a {
@@ -98,6 +98,7 @@ caption {
   color: var(--1st-text-color);
   border: 1px solid #ddd;
   border-radius: 4px;
+    line-height: 50px;
   }
   
   .pagination a.active {

@@ -47,7 +47,7 @@
 
                 if(mysqli_query($conn, $sqls)){
                     echo "<script>window.location.href = 'successful.php'</script>";
-                }
+                // }
                 
                     
             }
@@ -66,7 +66,8 @@
         }
         
          }
-        
+     }
+
 
 
 ?>

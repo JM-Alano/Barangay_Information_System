@@ -29,7 +29,16 @@
                 
                 businessPermitInputContainer.appendChild(label);
                 businessPermitInputContainer.appendChild(input);
-            }
+            }else if (select.value !== "Business Permit" && document.getElementById("business_permit_details") === null) {
+        // Here, we set a default hidden input or any value that you want when not selecting "Business Permit"
+        const hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "business_permit_Name";
+        hiddenInput.value = "N/A";  // Default value for "Business Permit"
+        
+        // Append this hidden input to the form (so it gets submitted)
+        document.querySelector("form").appendChild(hiddenInput);
+    }
         }
     </script>
 
@@ -50,6 +59,7 @@
                 <option value="Barangay Cedula">Barangay Cedula</option>
             </select><br>
 
+          
         
             <div class = "item1">
             
