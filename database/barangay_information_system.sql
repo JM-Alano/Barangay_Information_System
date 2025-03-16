@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2025 at 08:01 AM
+-- Generation Time: Mar 16, 2025 at 09:29 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,7 +80,18 @@ CREATE TABLE `barangay_blotter` (
 --
 
 INSERT INTO `barangay_blotter` (`subject`, `cell_no`, `place`, `tanod`, `date`, `time`, `status`, `id`, `complainant`, `age`, `address_complainant`, `complained_name`, `add_complained_name`, `details_reason`, `type`) VALUES
-('SUNTUKAN asddsd', '09694911585', 'Barangay Paliparan II', 'sadklajsd', '2025-02-09', '19:39:00', 2, 10, 'asdsad', 22, ' sdsadds', 'sdasdsad', 'asdsdsds', 'adasdsdsds', 'Blotter');
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 487, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 488, 'sadasds', 11, ' asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 490, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 491, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 492, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 493, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 494, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 495, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 496, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 497, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '9694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 498, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter'),
+('aaasdas', '09694911333', 'Barangay Paliparan II', 'sdasd', '2025-03-15', '04:28:00', 1, 499, 'sadasds', 11, 'asdasdsa', 'asdsadsad', 'asdsadsad', 'asdasdasdsadsad', 'Blotter');
 
 -- --------------------------------------------------------
 
@@ -107,7 +118,16 @@ CREATE TABLE `barangay_incident` (
 
 INSERT INTO `barangay_incident` (`id`, `date`, `time`, `name_involve`, `address`, `vehicle`, `license`, `plate_no`, `cause_incident`, `status`) VALUES
 (8, '2025-02-09', '00:09:00', 'asdasddsdssssssssssd ssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssss ssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sadasdasd', 2),
-(9, '2025-02-09', '00:09:00', 'Juan dela Cruz Juan dela Cruz Juan dela Cruz Juan dela Cruz', 'blk 18 lot 2 san francesco villaggio blk 18 lot 2 san francesco villaggio Juan dela Cruz Juan dela Cruz', 'motor motor motor motor adsds', '213981093812 213981093812 213981093812 213981093812', '213 2135 213 13fsd34', 'BANGAAN aaa', 1);
+(10, '2025-02-09', '12:09:00', 'asdasddsdssssssssssd ssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssss ssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sadasdasd', 2),
+(11, '2025-02-09', '12:09:00', 'asdasddsdssssssssssd ssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssss ssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'ssssssssssssssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss ssssssssssssssssssss', 'sadasdasd', 2),
+(12, '2025-03-15', '21:11:00', 'asd   ', 'aasdsad   ', 'asdsad   ', 'sdas   ', 'dasdsd   ', 'adsas', 1),
+(13, '2025-03-15', '21:14:00', 'asd', 'asdas', 'dasdsd', 'sdsad', 'sadsd', 'adsas', 2),
+(14, '2025-03-15', '23:26:00', 'a', 'a', 'a', 'a', 'a', 'asd', 1),
+(15, '2025-03-15', '22:27:00', 'dd', 'dd', 'dd', 'dd', 'dd', 'adsas', 3),
+(16, '2025-03-15', '13:30:00', 'aaa', 'aaaaaa', 'aaaaaaaa', 'aaaaaa', 'aaaaaaaaaa', 'd', 2),
+(17, '2025-03-08', '22:33:00', 'ffff', 'ffffff', 'ffff', 'fffffff', 'ffffff', 'adsas', 2),
+(18, '2025-03-08', '22:33:00', 'aasss', 'ssss', 'ss', 'ss', 'sss', 'adsas', 2),
+(19, '2025-03-15', '22:34:00', 'd', 'd', 'd', 'd', 'd', 'asd', 2);
 
 -- --------------------------------------------------------
 
@@ -154,14 +174,18 @@ CREATE TABLE `barangay_official` (
 --
 
 INSERT INTO `barangay_official` (`id`, `fullname`, `chairmanship`, `position`, `term_start`, `term_end`, `status`, `photo`) VALUES
-(71, 'Engr. Rolando \"Rolly\" Ambal', 'Chairman', 'Chairman', '2025-02-08', '2025-02-08', 1, '67a71073b1beb.jpg'),
-(72, 'Oscar Alvarez', 'Kagawad', 'Commnittee on Education', '2025-02-07', '2025-02-08', 1, '67a711849cb69.jpg'),
-(73, 'Baby Andaya', 'Kagawad', 'Commnittee on Health', '2025-02-08', '2025-02-01', 1, '67a712fbdd0ec.jpg'),
-(74, 'Alvin Andaya', 'Kagawad', 'Commnittee on Solid Waste', '2025-02-08', '2025-02-08', 1, '67a7131f4b1e7.jpg'),
-(75, 'MJ Asilo', 'Kagawad', 'Commnittee on Appropriation', '2025-02-08', '2025-02-08', 1, '67a7137398cd4.jpg'),
-(76, 'Gilbert Magtaas', 'Kagawad', 'Commnittee on Appropriation', '2025-02-08', '2025-02-08', 1, '67a713a1586ec.jpg'),
-(77, 'Ressa Martinez', 'Kagawad', 'Presiding Officer', '2025-01-31', '2025-02-12', 1, '67a713cf18629.jpg'),
-(78, 'Tessa Sanchez', 'Kagawad', 'Commnittee on Health', '2025-02-06', '2025-02-07', 1, '67a713ef8f29a.jpg');
+(87, 'asdasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d6792bcec69.png'),
+(88, 'asdasd', 'Chairman', 'Chairman', '2025-03-19', '2025-03-17', 1, '67d679b2b93de.png'),
+(89, 'adasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d679d5b4015.png'),
+(90, 'asdasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d6792bcec69.png'),
+(91, 'asdasd', 'Chairman', 'Chairman', '2025-03-19', '2025-03-17', 1, '67d679b2b93de.png'),
+(92, 'adasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d679d5b4015.png'),
+(93, 'asdasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d6792bcec69.png'),
+(94, 'asdasd', 'Chairman', 'Chairman', '2025-03-19', '2025-03-17', 1, '67d679b2b93de.png'),
+(95, 'adasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d679d5b4015.png'),
+(96, 'asdasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d6792bcec69.png'),
+(97, 'asdasd', 'Chairman', 'Chairman', '2025-03-19', '2025-03-17', 1, '67d679b2b93de.png'),
+(98, 'adasd', 'Chairman', 'Chairman', '2025-03-16', '2025-03-16', 1, '67d679d5b4015.png');
 
 -- --------------------------------------------------------
 
@@ -187,25 +211,11 @@ CREATE TABLE `barangay_request` (
   `status` int(200) NOT NULL,
   `gender` varchar(200) NOT NULL,
   `date_request` date NOT NULL,
+  `business_name` varchar(200) NOT NULL,
   `profile` varchar(200) NOT NULL,
   `user_id` int(11) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `barangay_request`
---
-
-INSERT INTO `barangay_request` (`firstname`, `middlename`, `lastname`, `age`, `request_document`, `house_number`, `sitio_pook`, `birthday`, `place_of_birth`, `contact_no`, `contact_person`, `contact_no_contact_person`, `live_since_year`, `purpose`, `status`, `gender`, `date_request`, `profile`, `user_id`, `id`) VALUES
-('chin', 'Acantilado e', 'Alano e', 25, 'Barangay Certificate', 'asdsdad e', 'Mabuhay Homes 2000 asdsd', '2025-02-03', 'Manila', '11000001223', 'Jenmar Acantilado Alano', '12083021981', '2025-02', 'For Education Assistance', 4, 'Female', '2025-01-28', '679b9f74184a1.jpg', 18, 53),
-('2312das', 'asdasd', 'adsad', 23, 'Barangay ID', '2asdas', 'adsads', '2025-02-12', 'adsad', '09694911585', 'asdasd', '09694911585', '2025-02', 'asdasd', 4, 'Female', '2025-02-02', '67a0bad7d3620.jpg', 0, 65),
-('2312das', 'aasdasd', 'asdsd', 22, 'Barangay ID', '2asdas', 'adsads', '2025-02-04', 'adsad', '09694911585', 'asdasd', '09694911585', '2025-02', 'asdasd', 3, 'Prefer not to say', '2025-02-03', '67a060b0a2de7.jpg', 0, 66),
-('chin', 'adasd', 'alano', 23, 'Barangay Clearance', 'asdsdad e', '2adasdsd', '2025-02-05', 'Manila', '09694911523', 'Jenmar Acantilado Alano', '09958140197', '2025-02', 'For Education Assistance', 1, 'Male', '2025-02-05', 'images.png', 33, 68),
-('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'sdasd', 'asdas', '2025-03-12', 'asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 69),
-('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'asdad', 'asda', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 70),
-('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Permit', 'asdasasd', 'adasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 71),
-('Jenmara asd', 'dassad', 'Alano', 23, 'Business Permit', 'asdad', 'asdasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 72),
-('Jenmara asd', 'dassad', 'Alano', 23, 'Barangay Cedula', 'adsasd', 'asdasd', '2025-03-12', 'asd2asd', '0923232323', 'asdsadasds', 'asdasdasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-13', 'images.png', 34, 73);
 
 -- --------------------------------------------------------
 
@@ -219,7 +229,6 @@ CREATE TABLE `barangay_resident` (
   `middlename` varchar(200) NOT NULL,
   `lastname` varchar(200) NOT NULL,
   `house_no` varchar(200) NOT NULL,
-  `alias` varchar(200) NOT NULL,
   `place_of_birth` varchar(200) NOT NULL,
   `birthday` date NOT NULL,
   `age` int(200) NOT NULL,
@@ -230,22 +239,66 @@ CREATE TABLE `barangay_resident` (
   `contact_no` varchar(200) NOT NULL,
   `occupation` varchar(200) NOT NULL,
   `citizenship` varchar(200) NOT NULL,
-  `sitio_pook` varchar(200) NOT NULL,
-  `id_type` varchar(200) NOT NULL,
-  `id_type_no` varchar(200) NOT NULL,
-  `precinct_no` varchar(200) NOT NULL,
-  `image` varchar(200) NOT NULL
+  `sitio_pook` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `barangay_resident`
 --
 
-INSERT INTO `barangay_resident` (`id`, `firstname`, `middlename`, `lastname`, `house_no`, `alias`, `place_of_birth`, `birthday`, `age`, `civil_status`, `gender`, `voter_status`, `email`, `contact_no`, `occupation`, `citizenship`, `sitio_pook`, `id_type`, `id_type_no`, `precinct_no`, `image`) VALUES
-(65, 'Chin', 'Acantilado', 'Alano', 'bkl 18 lot 18', 'Jayjay', 'Manila', '2024-12-11', 22, 'Seperated', 'Female', 'Yes', 'tmc.jenmar.alano@cvsu.edu.ph', '01312323322', 'Web Development', 'asdasdaaaaaaaaaa', 'Sitio Kubuhan & Rigde View', 'Voters ID', '234324', '', '6759a4a2325f6.png'),
-(67, 'neil', 's', 'Alegiojo', '34 22', 'tukmol', 'Manila', '2024-12-16', 22, 'Divorced', 'Male', 'No', 'jenmar.alano04@gmail.com', '09958140197', 'student', 'filipino', 'Camella at the Island Park', 'No ID', 'adasd123', '', '675f99c669a0e.jpg'),
-(68, 'Jenmar', 'Acantilado', 'Alano', 'asdsdad e', 'JM', 'Manila', '2024-11-04', 25, 'Single', 'Male', 'Yes', 'tmc.jenmar.alano@cvsu.edu.ph', '09694911585', 'Web developer', 'filipino', 'Mabuhay Homes 2000', 'National ID', '', '', '67a33ca1e9d3a.jpg'),
-(69, 'JENAMR', 'asdasdsa', 'aaaaaaaaaa', 'adads', '', 'asdada', '2023-02-22', 22, 'Single', 'Male', 'Yes', 'asad@gmail.com', '09232323232', 'dasd', 'asdad', 'sadsadsad', '', '', '', '');
+INSERT INTO `barangay_resident` (`id`, `firstname`, `middlename`, `lastname`, `house_no`, `place_of_birth`, `birthday`, `age`, `civil_status`, `gender`, `voter_status`, `email`, `contact_no`, `occupation`, `citizenship`, `sitio_pook`) VALUES
+(101, 'JOHN ERIC', 'CASTRO', 'CAJUDAY', '381', 'DASMARIÑAS CITY, CAVITE', '2003-03-22', 23, 'SINGLE', 'MALE', 'YES', 'jcajuday44@gmail.com', '9694911585', 'N/A', 'FILIPINO', 'SITIO POOK'),
+(102, 'KRISTINE JOY', 'ARANDIA', 'VIÑA', '456', 'BULACAN', '1995-09-28', 25, 'SINGLE', 'FEMALE', 'YES', 'joy.vina@gmail.com', '9694911585', 'STUDENT', 'FILIPINO', 'SITIO ILAYA'),
+(103, 'ARRAH MARIE', 'FAJARDO', 'DIMAANDAL', 'BLK 30 LOT 21', 'CALOOCAN CITY', '1995-06-30', 25, 'SINGLE', 'FEMALE', 'YES', 'arahhdimaandal04@gmail.com', '9694911585', 'BUSINESS OWNER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(104, 'JHAZZENMHAY', 'DADOR', 'ALVAREZ', '239', 'DASMARIÑAS CITY, CAVITE', '1996-11-07', 24, 'SINGLE', 'FEMALE', 'YES', 'j.mhayalvarez@gmail.com', '9694911585', 'BARISTA', 'FILIPINO', 'SITIO POOK'),
+(105, 'MARY ANN', 'GARDOZA', 'VILLAMOR', 'BLK 209 LOT 47', 'MANILA', '1970-08-25', 54, 'MARRIED', 'FEMALE', 'YES', 'mhane.villamor@gmail.com', '9694911585', 'HOUSEWIFE', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(106, 'RONIE', 'CASTAÑEDA', 'TIEMPO', 'BLK 24 LOT 5', 'CEBU', '1985-09-17', 39, 'MARRIED', 'MALE', 'YES', 'markboss05@gmail.com', '9694911585', 'DRIVER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(107, 'MARK ANTHONY', 'HERNANDEZ', 'GIRON', 'BLK 4 LOT 5', 'DAVAO CITY', '1990-03-10', 34, 'MARRIED', 'MALE', 'YES', 'mark.anthony@gmail.com', '9694911585', 'EMPLOYEE', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(108, 'MARY CATHERINE', 'JUSTO', 'GIRON', 'BLK 4 LOT 5', 'BAGUIO CITY', '1996-05-09', 28, 'MARRIED', 'FEMALE', 'YES', 'cathy.justo@gmail.com', '9694911585', 'EMPLOYEE', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(109, 'JOHN MARK', 'DELGADO', 'VELOSO', '269', 'ANGELES CITY', '1978-03-18', 46, 'SINGLE', 'MALE', 'YES', 'jmveloso20@gmail.com', '9694911585', 'VENDOR', 'FILIPINO', 'SITIO POOK'),
+(110, 'CARLA ALEXANDRA', 'JIMENA', 'PERALTA', '189', 'QUEZON CITY', '2002-04-20', 22, 'SINGLE', 'FEMALE', 'YES', 'carlaalexandraperalta@gmail.com', '9694911585', 'STUDENT', 'FILIPINO', 'SITIO POOK'),
+(111, 'ALICIA', 'JIMENA', 'PERALTA', '189', 'QUEZON CITY', '1961-02-09', 63, 'MARRIED', 'FEMALE', 'YES', 'aliciajimena02@gmail.com', '9694911585', 'N/A', 'FILIPINO', 'SITIO POOK'),
+(112, 'GABRIEL', 'JIMENA', 'PERALTA', 'BLK 44 LOT 17', 'MANILA', '1999-11-30', 25, 'SINGLE', 'MALE', 'YES', 'gabriel.peralta@gmail.com', '9694911585', 'N/A', 'FILIPINO', 'SITIO ILAYA'),
+(113, 'RICARDO', 'GOMEZ', 'SALAZAR', 'BLK 48 LOT. 6', 'BACOLOD CITY', '0169-07-29', 55, 'MARRIED', 'MALE', 'YES', 'salazarricardo@gmail.com', '9694911585', 'EMPLOYEE', 'FILIPINO', 'RIDGEVIEW'),
+(114, 'SOFIA ALLIAH', 'MATILLA', 'MENDOZA', '186', 'DASMARIÑAS CITY, CAVITE', '2004-02-12', 20, 'SINGLE', 'FEMALE', 'YES', 'sofiamendoza@gmail.com', '9694911585', 'STUDENT', 'FILIPINO', 'SITIO POOK'),
+(115, 'ROSARIO', 'QUIRINO', 'MARTINEZ', '579', 'NAGA CITY, CAMARINES SUR', '1968-05-14', 68, 'MARRIED', 'FEMALE', 'YES', 'r0sarioalvar3z@gmail.com', '9694911585', 'HOUSEWIFE', 'FILIPINO', 'SITIO ILAYA'),
+(116, 'PEDRO', 'LEONES', 'SALVADOR', '124', 'BATANGAS CITY', '1967-10-27', 57, 'MARRIED', 'MALE', 'YES', 'salvadorramos25@gmail.com', '9694911585', 'DRIVER', 'FILIPINO', 'SITIO POOK'),
+(117, 'ELENA KAYE', 'MARTINEZ', 'BUCAL', '465', 'DASMARIÑAS CITY, CAVITE', '1991-09-08', 33, 'SINGLE', 'FEMALE', 'YES', 'bucal.elena@gmail.com', '9694911585', 'N/A', 'FILIPINO', 'SITIO ILAYA'),
+(118, 'ALJOHN', 'VIRAY', 'PARAON', '213', 'NAVOTAS CITY', '1987-06-21', 37, 'SINGLE', 'MALE', 'YES', 'aljohnviray@gmail.com', '9694911585', 'SECURITY GUARD', 'FILIPINO', 'SITIO POOK'),
+(119, 'CARL ANDREI', 'CINCO', 'RIVERA', '589', 'SANTA ROSA CITY', '1984-04-30', 40, 'MARRIED', 'MALE', 'YES', 'dreipogi3000@gmail.com', '9694911585', 'POLICE', 'FILIPINO', 'SITIO ILAYA'),
+(120, 'JESSIELYN', 'MALMIS', 'SANDOY', 'BLK 5 LOT 10', 'ILOILO CITY', '1988-12-26', 26, 'SINGLE', 'FEMALE', 'YES', 'jessmalmissandoy14@gmail.com', '9694911585', 'RECEPTIONIST', 'FILIPINO', 'SITIO ILAYA'),
+(121, 'DHERVIN KYLE', 'GEMOTO', 'TORDECILLA', 'BLK 9 LOT 21', 'URDANETA CITY', '1976-09-22', 46, 'MARRIED', 'MALE', 'YES', 'dhervinkyle1976@gmail.com', '9694911585', 'EMPLOYEE', 'FILIPINO', 'SITIO ILAYA'),
+(122, 'ALLEN', 'CASTRO', 'PULAO', '289', 'BACOOR CITY', '1975-02-26', 49, 'SINGLE', 'MALE', 'YES', 'allenjayveepula0@gmail.com', '9694911585', 'EMPLOYEE', 'FILIPINO', 'SITIO POOK'),
+(124, 'ELAINE VICTORIA', 'RECTO', 'CONCEPCION', 'BLK. 16 LOT. 30', 'DASMARIÑAS CITY, CAVITE', '2004-04-06', 20, 'SINGLE', 'FEMALE', 'YES', 'vivivictoria04@gmail.com', '9694911585', 'STUDENT', 'FILIPINO', 'RIDGEVIEW'),
+(125, 'MARIS', 'LOYOLA', 'SOLOMON', 'BLK. 42 LOT. 17', 'CABANATUAN CITY', '1953-09-14', 71, 'WIDOWED', 'FEMALE', 'YES', 'solomonmaris@gmail.com', '9694911585', 'HOUSEWIFE', 'FILIPINO', 'RIDGEVIEW'),
+(126, 'CHRISTINA', 'SANTOS', 'LOPEZ', 'BLK. 29 LOT. 63', 'ORMOC CITY', '1959-01-07', 65, 'MARRIED', 'FEMALE', 'YES', 'jesslopez17@gmail.com', '9694911585', 'HOUSEWIFE', 'FILIPINO', 'RIDGEVIEW'),
+(127, 'LUIS', 'HERNANDEZ', 'SANTOS', 'BLK. 2 LOT 13', 'MALABON CITY', '1992-04-19', 32, 'SINGLE', 'MALE', 'YES', 'cl.martinez@gmail.com', '9694911585', 'MANAGER', 'FILIPINO', 'RIDGEVIEW'),
+(128, 'JUAN', 'DELA CRUZ', 'SANTOS', 'BLK. 12 LOT. 5', 'CEBU', '1992-10-05', 31, 'SINGLE', 'MALE', 'YES', 'juan.santos@gmail.com', '9694911585', 'ENGINEER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(129, 'MARIA', 'REYES', 'GONZALES', 'BLK. 7 LOT. 20', 'DAVAO', '1985-08-22', 38, 'MARRIED', 'FEMALE', 'YES', 'maria.gonzales@gmail.com', '9694911585', 'MANAGER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(130, 'JOSE', 'DIZON', 'MERCADO', 'BLK. 15 LOT. 3', 'MANILA', '1995-12-30', 28, 'SINGLE', 'MALE', 'YES', 'jose.mercado@gmail.com', '9694911585', 'IT SPECIALIST', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(131, 'ANNA', 'PASCUAL', 'CRUZ', 'BLK. 8 LOT 18', 'CAVITE', '1998-02-15', 26, 'SINGLE', 'FEMALE', 'YES', 'anna.cruz@gmail.com', '9694911585', 'NURSE', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(132, 'MIGUEL', 'SANTOS', 'RIVERA', 'BLK 2. LOT. 7', 'BATANGAS', '1980-05-07', 40, 'MARRIED', 'MALE', 'YES', 'miguel.rivera@gmail.com', '9694911585', 'BUSINESS MAN', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(133, 'CARLA', 'DOMINGUEZ', 'LOPEZ', 'BLK. 10 LOT. 12', 'PAMPANGA', '1993-09-14', 30, 'WIDOWED', 'FEMALE', 'YES', 'carla.lopez@gmail.com', '9694911585', 'ACCOUNTANT', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(134, 'ROBERTO', 'VALDEZ', 'AQUINO', 'BLK. 5 LOT. 23', 'ZAMBALES', '1987-12-06', 37, 'SEPARATED', 'MALE', 'YES', 'roberto.aquino@gmail.com', '9694911585', 'POLICE OFFICER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(135, 'KATRINA', 'DEL ROSARIO', 'FAJARDO', 'BLK. 3 LOT. 17', 'QUEZON', '1990-09-11', 33, 'SINGLE', 'FEMALE', 'YES', 'katrina.fajardo@gmail.com', '9694911585', 'ARCHITECT', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(136, 'DANIEL', 'MENDOZA', 'HERRERA', 'BLK. 6 LOT. 9', 'ILOCOS', '1996-03-21', 28, 'MARRIED', 'MALE', 'YES', 'danile.herrera@gmail.com', '9694911585', 'CHEF', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(137, 'SOPHIA', 'LIM', 'TORRES', 'BLK. 4 LOT. 14', 'BAGUIO', '1999-10-25', 25, 'SINGLE', 'FEMALE', 'YES', 'sophia.torres@gmail.com', '9694911585', 'ARTIST', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(138, 'VINCENT', 'RAMIREZ', 'SANTOS', 'BLK. 9 LOT. 21', 'LAGUNA', '1991-04-18', 33, 'SINGLE', 'MALE', 'YES', 'vincent.santos@gmail.com', '9694911585', 'GRAPHIC DESIGNER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(139, 'ANGELA', 'FERNANDEZ', 'CRUZ', 'BLK. 11 LOT. 9', 'QUEZON CITY', '1989-07-30', 35, 'MARRIED', 'FEMALE', 'YES', 'angela.cruz@gmail.com', '9694911585', 'DOCTOR', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(140, 'MARCO', 'SORIANO', 'DELA PAZ', 'BLK. 14 LOT. 6', 'DAVAO', '1995-10-01', 29, 'SINGLE', 'MALE', 'YES', 'marco.delapaz@gmail.com', '9694911585', 'CIVIL ENGINEER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(141, 'CAMILLE', 'BAUTISTA', 'REYES', 'BLK. 18 LOT. 2', 'ILOILO', '1994-06-22', 30, 'SINGLE', 'FEMALE', 'YES', 'camille.reyes@gmail.com', '9694911585', 'TEACHER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(142, 'RICHARD', 'CRUZ', 'VELASCO', 'BLK. 13 LOT. 10', 'CEBU', '1982-02-14', 42, 'MARRIED', 'MALE', 'YES', 'richard.velasco@gmail.com', '9694911585', 'LAWYER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(143, 'JOANNA', 'VILLANUEVA', 'OCAMPO', 'BLK. 17 LOT. 11', 'PAMPANGA', '1996-05-05', 28, 'SINGLE', 'FEMALE', 'YES', 'joanna.ocampo@gmail.com', '9694911585', 'JOURNALIST', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(144, 'PATRICK', 'LOPEZ', 'MARQUEZ', 'BLK. 20 LOT. 4', 'MANILA', '1993-08-17', 31, 'SINGLE', 'MALE', 'YES', 'patrick.marquez@gmail.com', '9694911585', 'BANKER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(145, 'MELISSA', 'NAVARRO', 'SANTOS', 'BLK. 15 LOT. 8', 'CAVITE', '1990-08-11', 34, 'MARRIED', 'FEMALE', 'YES', 'melissa.santos@gmail.com', '9694911585', 'NURSE', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(146, 'ANTHONY', 'DELGADO', 'GUTIERREZ', 'BLK. 7 LOT. 15', 'ZAMBOANGA', '1988-12-09', 36, 'WIDOWED', 'MALE', 'YES', 'anthony.gutierrez@gmail.com', '9694911585', 'ENTREPRENEUR', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(147, 'CHRISTINE', 'CASTRO', 'DE VERA', 'BLK. 10 LOT. 16', 'BAGUIO', '1997-12-20', 27, 'SINGLE', 'FEMALE', 'YES', 'christine.devera@gmail.com', '9694911585', 'SOCIAL WORKER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(148, 'KENNETH', 'AGULAR', 'RAMOS', 'BLK. 8 LOT. 3', 'BATANGAS', '1985-03-03', 39, 'MARRIED', 'MALE', 'YES', 'kenneth.ramos@gmail.com', '9694911585', 'SOFTWARE ENGINEER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(149, 'LOUISE', 'MENDOZA', 'VILLANUEVA', 'BLK. 5 LOT. 22', 'QUEZON', '1992-02-10', 32, 'SINGLE', 'MALE', 'YES', 'louise.villanueva@gmail.com', '09694911585', 'PHARMACIST', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(150, 'RAYMOND', 'TAN', 'GO', 'BLK. 6 LOT. 14', 'ILOILO', '1990-05-29', 34, 'MARRIED', 'MALE', 'YES', 'raymond.go@gmail.con', '9694911585', 'BUSINESS OWNER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(151, 'FELICIA', 'UY', 'SY', 'BLK. 9 LOT. 19', 'CEBU', '1986-11-07', 38, 'SEPARATED', 'FEMALE', 'YES', 'felicia.sy@gmail.com', '9694911585', 'HR MANAGER', 'FILIPINO', 'CAMELLA ISLAND PARK'),
+(152, 'BENEDICT', 'CHUA', 'LIM', 'BLK. 12 LOT. 1', 'DAVAO', '1999-01-28', 25, 'SINGLE', 'MALE', 'YES', 'bryan.lim@gmail.com', '9694911585', 'MECHANICAL ENGINEER', 'FILIPINO', 'MABUHAY HOMES 2000'),
+(162, 'JENAMR', 'asdasd', 'Alano', 'BLK. 5 LOT. 22', 'QUEZON', '2025-03-16', 22, 'SINGLE', 'MALE', 'YES', 'asad@gmail.com', '09232323232', 'dasd', 'asdad', 'CAMELLA ISLAND PARK');
 
 -- --------------------------------------------------------
 
@@ -270,23 +323,7 @@ CREATE TABLE `barangay_revenue` (
 --
 
 INSERT INTO `barangay_revenue` (`date_issue`, `expired_date`, `document_amount`, `firstname`, `middlename`, `lastname`, `document_type`, `user_id`, `OR_no`) VALUES
-('2025-02-05', '2026-02-05', 23, 'Jenmar e 2323 asdsad', 'Acantilado e', 'Alano e', 'Barangay Clearance', 53, 322),
-('2025-02-05', '2026-02-05', 23, 'Jenmar e 2323 asdsad', 'Acantilado e', 'Alano e', 'Barangay Clearance', 53, 323),
-('2025-02-05', '2026-02-05', 23, 'Jenmar e 2323 asdsad', 'Acantilado e', 'Alano e', 'Barangay Clearance', 53, 324),
-('2025-02-05', '2026-02-05', 1022, 'Jenmar e 2323 asdsad', 'Acantilado e', 'Alano e', 'Barangay Clearance', 53, 325),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 326),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 327),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 328),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 329),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 330),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 331),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 332),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 333),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 334),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 335),
-('2025-02-05', '2026-02-05', 23, '2312das', 'aasdasd', 'asdsd', 'Barangay ID', 66, 336),
-('2025-02-05', '2026-02-05', 50, '2312das', 'asdasd', 'adsad', 'Barangay ID', 65, 337),
-('2025-03-12', '2026-03-12', 6, 'Jenmara asd', 'dassad', 'Alano', 'Barangay Cedula', 73, 338);
+('2025-03-16', '2026-03-16', 11, 'Jenmara asd', 'dassad', 'Alano', 'Barangay Cedula', 73, 1094);
 
 -- --------------------------------------------------------
 
@@ -316,7 +353,7 @@ CREATE TABLE `user_account` (
 --
 
 INSERT INTO `user_account` (`firstname`, `middlename`, `lastname`, `username`, `password`, `gender`, `age`, `birthday`, `date_registered`, `house_no`, `sitio_pook`, `contact_no`, `profile`, `user_id`) VALUES
-('Jenmara asd', 'dassad', 'Alano', 'Jenmar0411', 'Jenmar0411', 'Male', 23, '0000-00-00', '2025-02-06', '', '', '', 'images.png', 34);
+('BENEDICT', 'CHUA', 'LIM', 'admin', 'Jenmar0411', 'Male', 23, '2025-03-16', '2025-03-16', 'BLK. 5 LOT. 22', 'kjhjkjk', '09232323232', 'images.png', 35);
 
 --
 -- Indexes for dumped tables
@@ -390,13 +427,13 @@ ALTER TABLE `admin_account`
 -- AUTO_INCREMENT for table `barangay_blotter`
 --
 ALTER TABLE `barangay_blotter`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=500;
 
 --
 -- AUTO_INCREMENT for table `barangay_incident`
 --
 ALTER TABLE `barangay_incident`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `barangay_information`
@@ -408,31 +445,31 @@ ALTER TABLE `barangay_information`
 -- AUTO_INCREMENT for table `barangay_official`
 --
 ALTER TABLE `barangay_official`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `barangay_request`
 --
 ALTER TABLE `barangay_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `barangay_resident`
 --
 ALTER TABLE `barangay_resident`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
 
 --
 -- AUTO_INCREMENT for table `barangay_revenue`
 --
 ALTER TABLE `barangay_revenue`
-  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=339;
+  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1095;
 
 --
 -- AUTO_INCREMENT for table `user_account`
 --
 ALTER TABLE `user_account`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
