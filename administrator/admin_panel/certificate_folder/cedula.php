@@ -189,8 +189,8 @@
                                         <h2>Delete Confirmation</h2>
                                             <h3>Are you sure you want to delete this record!</h3>
                                             <div class = "div-delete">   
-                                            <button id = "confirm-delete_id" class = "btn-delete_id">Delete</button>
-                                            <button id = "cancel-delete_id" class = "btn-delete_id">Cancel</button>
+                                            <button id = "confirm-delete_id" id = "cedula_red" class = "btn-delete_id">Delete</button>
+                                            <button id = "cancel-delete_id" id = "cedula_green"class = "btn-delete_id">Cancel</button>
                                             </div>
             </div>
              </div>

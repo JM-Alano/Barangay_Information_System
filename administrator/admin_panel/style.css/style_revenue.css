@@ -196,7 +196,7 @@
   justify-content: space-evenly;
   }
   #confirm-delete,#confirm-deletes,  #confirm-delete_user,  #confirm-delete_revenue{
-    background-color: var(--2nd-bg-color);
+    background-color: red;
     width: 10vw;
     padding: 20px;
     border: none;
@@ -207,7 +207,7 @@
     
   }
   #cancel-delete, #cancel-deletes,  #cancel-delete_user,  #cancel-delete_revenue{
-    background-color: red;
+    background-color: var(--2nd-bg-color);
     width: 10vw;
     padding: 20px;
     border: none;

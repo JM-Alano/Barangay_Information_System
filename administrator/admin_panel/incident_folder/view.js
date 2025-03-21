@@ -1,15 +1,15 @@
 document.addEventListener("mouseover", function() {
     
     // Get modal and button elements
-    let edit_modal = document.getElementById("view-modal_blotter");
-    let editBtns = document.querySelectorAll(".view_btn");
+    let view_modal = document.getElementById("view-modal");
+    let viewBtns = document.querySelectorAll(".view_btn");
        
 
 
     // Show modal on edit button click
-    editBtns.forEach(function(btn) {
+    viewBtns.forEach(function(btn) {
     btn.addEventListener("click", function() {
-        edit_modal.style.display = "block";
+        view_modal.style.display = "block";
         // Get ID and data of record to edit
         let id_view = btn.getAttribute("data-id");
       
@@ -51,8 +51,8 @@ document.addEventListener("mouseover", function() {
     });
             
     window.addEventListener("click", function(event) {
-        if (event.target == edit_modal) {
-            edit_modal.style.display = "none";
+        if (event.target == view_modal) {
+            view_modal.style.display = "none";
         }
     });
 

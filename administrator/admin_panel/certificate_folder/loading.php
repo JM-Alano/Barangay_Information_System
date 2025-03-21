@@ -50,8 +50,7 @@
 <body>
     <!-- Loading screen -->
     <div id="loading-screen">
-        <h1>Data Has Been Process</h1>
-        <h2>Go to Manage Certificate To Generate</h2>
+        <h1>Payment Created Successfully!</h1>
         <div class="spinner"></div>
     </div>
 

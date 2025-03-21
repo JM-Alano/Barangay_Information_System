@@ -1,7 +1,7 @@
 document.addEventListener("mouseover", function() {
     
     // Get modal and button elements
-    let edit_modal = document.getElementById("edit-modal_blotter");
+    let edit_modal = document.getElementById("edit-modal_update");
     let editBtns = document.querySelectorAll(".update_btn");
     let updateBtn = document.getElementById("update-btn");        
 
@@ -47,4 +47,3 @@ document.addEventListener("mouseover", function() {
     });
 
 });
-

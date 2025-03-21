@@ -135,14 +135,35 @@
     mysqli_close($conn);
     ?>
 
-    <!-- Modal Delete Script -->
-    <script src="/BIS/administrator/admin_panel/incident_folder/delete_modal_button.js"></script>
+           
+<!-- MODAL DELETE -->
+<div id="delete-modal" class="delete-modal">
+    <div class="delete-modal-content">
+        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></span>
+        <h2>Delete Confirmation</h2>
+        <h3>Are you sure you want to delete this record!</h3>
+        <div class="div-delete">   
+            <button id="confirm-delete" class="btn-delete">Delete</button>
+            <button id="cancel-delete" class="btn-delete">Cancel</button>
+        </div>
+    </div>
+</div>
 
-    <!-- Modal Update Script -->
-    <script src="/BIS/administrator/admin_panel/incident_folder/update_modal.js"></script>
+<!-- MODAL UPDATE -->
+<div id="edit-modal_update" class="edit-modal_blotter">
+    <div class="edit-modal-content_blotter">
+        <span onclick="this.parentElement.parentElement.style.display='none';" class="update-close-btn">&times;</span>
+        <?php include("update_temp.php");?> 
+    </div>
+</div>
 
-    <!-- View Modal Script -->
-    <script src="/BIS/administrator/admin_panel/incident_folder/view.js"></script>
+<!-- MODAL VIEW -->
+<div id="view-modal" class="view-modal_blotter">
+    <div class="view-modal-content_blotter">
+        <span onclick="this.parentElement.parentElement.style.display='none';" class="update-close-btn">&times;</span>
+        <?php include('view_temp.php')?> 
+    </div>
+</div>
 
 </body>
 </html>

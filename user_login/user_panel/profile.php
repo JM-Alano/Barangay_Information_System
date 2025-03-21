@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Barangayy Information System</title>
+    <title>Profile | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
     <link rel = "stylesheet" href = "style_user/profile_user.css"/>
     <link rel = "stylesheet" href = "style_user/layout_main.css"/>
@@ -82,13 +82,7 @@
 
 
                 </div>
-                <div class = "date_today">
-                         <a href="user.php">Go to Dashboard</a>
-                        <p><?php
-                            $date_today = date("F d, Y / l");
-                            echo  $date_today;
-                        ?></p>
-                </div>
+            
                 
                 <div class = "div_content">
                             

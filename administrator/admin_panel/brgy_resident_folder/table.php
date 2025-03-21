@@ -56,11 +56,14 @@ if ($result->num_rows > 0) { ?>
             $firstname = $row["firstname"];
             $middlename = $row["middlename"];
             $lastname = $row["lastname"];
+
             $contact_no = $row["contact_no"];
             $age = $row["age"];
             $civil_status = $row["civil_status"];
             $gender = $row["gender"];
+
             $voter_status = $row["voter_status"];
+            
             $id = $row["id"];
         ?>
         <tr class="table_hover">

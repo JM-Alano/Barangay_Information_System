@@ -57,7 +57,11 @@
                         include('document/business_permit.php');
                         break;
                       case "Barangay Cedula":
-                          include('document/barangay_cedula.php');
+                            ?>
+                            <script>
+                              window.location.href = '/BIS/administrator/admin_panel/certificate_folder/loading.php';
+                            </script>
+                            <?php
                           break;
                     
                       default:

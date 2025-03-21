@@ -47,48 +47,33 @@
 
             <div class = "img">
             <img src="../../../asset/image/admin/<?php echo $row['admin_profile']?>" alt=""><br>
-             <input type="file" readonly>
+            
             </div>
             
         </div>
 
         <div class="container">
     <div class="label_div">
-        
+         <label for="">Fullname</label>
         <label for="">Usertype</label>
-        <label for="">User ID</label>
-        <label for="">Firstname</label>
-        <label for="">Middlename</label>
-        <label for="">Lastname</label>
-        <label for="">Age</label>
-        <label for="">Gender</label>
-        <label for="">Email</label>
-        <label for="">Username</label>
-        <label for="">Password</label>
+      
+    
+        
         <label for="">Date Created</label>
     </div>
     <div class="input_div">
+     
+    <input type="text" name = "fullname" value ="<?php echo $row['firstname'] . " " . $row['middlename'] . " ". $row['lastname']?>" readonly>
         <input type="text" name = "user_type" value = "<?php echo  $row['user_type'] ?>" readonly>
-        <input type="number" value="<?php echo $row['user_id']; ?>" readonly>
-        <input type="hidden" name = "user_id" value="<?php echo $row['user_id']; ?>" readonly>
-        <input type="text" name = "firstname" value ="<?php echo $row['firstname'] ?>" readonly>
-        <input type="text" name = "middlename" value ="<?php echo $row['middlename'] ?>" readonly>
-        <input type="text" name = "lastname" value ="<?php echo $row['lastname'] ?>" readonly>
-        <input type="number" name = "age" value = "<?php echo  $row['age'] ?>" min = "0" max = "110" readonly>
-        <input type="text" name = "gender" value = "<?php echo $row['gender'] ?>" readonly>
-        <input type="email" name = "email" value = "<?php echo  $row['email'] ?>"readonly>
-        <input type="text" name = "username" value = "<?php echo $row['username']?>"readonly>
-        <input type="password" name = "password" value = "<?php echo $row['password']?>"readonly>
+       
         <input type="date"  value="<?php echo $row['date_created']; ?>" readonly>
         <input type="hidden" name = "date" value="<?php echo $row['date_created']; ?>" readonly>
+        <input type="hidden" name = "user_id" value="<?php echo $row['user_id']; ?>" readonly>
     </div>
     
 </div>
     
- 
-
-
-        </form>
+ </form>
         
     
     

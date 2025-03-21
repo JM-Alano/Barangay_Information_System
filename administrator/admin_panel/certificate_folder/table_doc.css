@@ -224,8 +224,8 @@ fill: #d4b62f;
 display: flex;
 justify-content: space-evenly;
 }
-#confirm-delete,#confirm-delete_req,#confirm-delete_clearance,#confirm-delete_indigency,#confirm-delete_id{
-  background-color: var(--2nd-bg-color);
+#confirm-delete,#confirm-delete_req,#confirm-delete_clearance,#confirm-delete_indigency,#confirm-delete_id,#cedula_red,#permit_red{
+  background-color: red;
   padding: 10px;
   width: 10vw;
   border: none;
@@ -235,8 +235,8 @@ justify-content: space-evenly;
   border-radius: 4px;
   
 }
-#cancel-delete,#cancel-delete_req,#cancel-delete_clearance,#cancel-delete_indigency,#cancel-delete_id{
-  background-color: red;
+#cancel-delete,#cancel-delete_req,#cancel-delete_clearance,#cancel-delete_indigency,#cancel-delete_id,#cancel-delete_cedula,#cancel-delete_permit,#permit_green,#cedula_green{
+  background-color: var(--2nd-bg-color);
   width: 10vw;
   padding: 20px;
   border: none;

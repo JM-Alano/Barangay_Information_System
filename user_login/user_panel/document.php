@@ -82,14 +82,7 @@
 
 
                 </div>
-                <div class = "date_today">
-                    <a href="user.php">Go to Dashboard</a>
-                        <p><?php
-                            $date_today = date("F d, Y / l");
-                            echo  $date_today;
-                         
-                        ?></p>
-                </div>
+             
                
                 <div class = "div_content">
                 

@@ -17,7 +17,17 @@
                
                 $input = $_POST['input']; 
 
-                $query = "SELECT * FROM barangay_revenue WHERE OR_no LIKE '{$input}%' OR firstname LIKE '{$input}%' OR middlename LIKE '{$input}%' OR lastname LIKE '{$input}%' OR document_type LIKE '{$input}%' OR date_issue LIKE '{$input}%' OR expired_date LIKE '{$input}%' OR document_amount LIKE '{$input}%' ";
+                $query = "SELECT * FROM barangay_revenue WHERE 
+                OR_no LIKE '{$input}%' OR 
+                firstname LIKE '{$input}%' OR 
+                middlename LIKE '{$input}%' OR 
+                lastname LIKE '{$input}%' OR 
+                document_type LIKE '{$input}%' OR 
+                date_issue LIKE '{$input}%' OR 
+                expired_date LIKE '{$input}%' OR 
+                document_amount LIKE '{$input}%' 
+                LIMIT 20"; // This limits the result to 10 rows
+            
 
                 
                 $result = mysqli_query($conn,$query);
