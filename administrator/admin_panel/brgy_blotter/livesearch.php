@@ -63,38 +63,36 @@
 
                             ?>
                              <tr class = "table_hover">
-                                    <td><?php echo  $complainant ?></td>
+                                  
                             
-                                    <td><?php echo  $cell_no ?></td>
-                                    <td><?php echo  $date . " / " .  $time ?></td>
-                                   
-                                    <td hidden ><?php echo  $subject  ?></td>
-                                    
-                                    <td hidden ><?php echo  $place  ?></td>
-                                    <td hidden ><?php echo  $tanod  ?></td>
-                                    <td hidden ><?php echo   $time  ?></td>
-                                    <td hidden ><?php echo  $status  ?></td>
-                                    <td hidden ><?php echo  $type  ?></td>
-                             
-                                    <td hidden ><?php echo  $age  ?></td>
-                                    <td hidden ><?php echo  $address_complainant  ?></td>
-                                    <td hidden ><?php echo  $complained_name  ?></td>
-                                    <td hidden ><?php echo  $add_complained_name  ?></td>
-                                    <td hidden ><?php echo  $details_reason  ?></td>
-                                    <td hidden ><?php echo  $date; ?></td>
-                                    <td  ><?php echo  $type; ?></td>
-                                    <td><?php  $status;
-
-                                        if($status == 1){
-                                            echo "<p style='color:red;'>Active</p>";
-                                        }elseif($status == 2){
-                                            echo "<p style='color:green;'>Settled</p>";
-                                        }
-                                        elseif($status == 3){
-                                            echo "<p style='color:orange;'>Schedule</p>";
-                                        }
-                                    
-                                    ?></td>
+                    <td><?php echo $row["complainant"]; ?></td>
+                    <td><?php echo $row["cell_no"]; ?></td>
+                    <td hidden><?php echo $row["subject"]; ?></td>
+                    <td hidden><?php echo $row["place"]; ?></td>
+                    <td hidden><?php echo $row["tanod"]; ?></td>
+                    <td hidden><?php echo $row["time"]; ?></td>
+                    <td hidden><?php echo $row["status"]; ?></td>
+                    <td hidden><?php echo $row["type"]; ?></td>
+                    <td hidden><?php echo $row["age"]; ?></td>
+                    <td hidden><?php echo $row["address_complainant"]; ?></td>
+                    <td hidden><?php echo $row["complained_name"]; ?></td>
+                    <td hidden><?php echo $row["add_complained_name"]; ?></td>
+                    <td hidden><?php echo $row["details_reason"]; ?></td>
+                    <td hidden><?php echo $row["date"]; ?></td>
+                <td><?php echo $row["date"] . " / " . $row["time"]; ?></td>
+                <td><?php echo $row["type"]; ?></td>
+                <td>
+                    <?php 
+                    $status = $row["status"];
+                    if ($status == 1) {
+                        echo "<p style='color:red;'>Active</p>";
+                    } elseif ($status == 2) {
+                        echo "<p style='color:green;'>Settled</p>";
+                    } elseif ($status == 3) {
+                        echo "<p style='color:orange;'>Scheduled</p>";
+                    }
+                    ?>
+                </td>
                                
                                 <td>
                                 

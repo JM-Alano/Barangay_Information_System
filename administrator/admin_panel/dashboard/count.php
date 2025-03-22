@@ -52,6 +52,14 @@ function population_total() {
     echo  number_format($count);
    }
 
+   function admin_list(){
+    require("../../database/conn_db.php");
+    $result = $conn->query("SELECT *  FROM admin_account ");
+    $count = $result->num_rows;
+    echo  number_format($count);
+   }
+
+
  function revenue_total() {
     require("../../database/conn_db.php");
 

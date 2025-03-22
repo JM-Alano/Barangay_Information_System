@@ -57,22 +57,51 @@ if ($result->num_rows > 0) { ?>
             $middlename = $row["middlename"];
             $lastname = $row["lastname"];
 
-            $contact_no = $row["contact_no"];
+           
             $age = $row["age"];
             $civil_status = $row["civil_status"];
             $gender = $row["gender"];
 
             $voter_status = $row["voter_status"];
+            $house_no = $row["house_no"];
+
+            $place_of_birth = $row["place_of_birth"];
+            $birthday = $row["birthday"];
+
             
+            $email = $row["email"];
+            $contact_no = $row["contact_no"];
+
+            $citizenship = $row["citizenship"];
+            $occupation = $row["occupation"];
+            $sitio_pook = $row["sitio_pook"];
+
             $id = $row["id"];
         ?>
         <tr class="table_hover">
             <td><?php echo $firstname . " " . $middlename . " " . $lastname; ?></td>
+      
             <td><?php echo $contact_no; ?></td>
             <td><?php echo $age; ?></td>
             <td><?php echo $civil_status; ?></td>
             <td><?php echo $gender; ?></td>
             <td><?php echo $voter_status; ?></td>
+            <td hidden><?php echo $house_no; ?></td>
+
+            <td hidden><?php echo  $firstname; ?></td>
+            <td hidden><?php echo $middlename; ?></td>
+            <td hidden><?php echo  $lastname; ?></td>
+
+            <td hidden><?php echo   $place_of_birth ; ?></td>
+            <td hidden><?php echo   $birthday; ?></td>
+            <td hidden><?php echo  $lastname; ?></td>
+
+            <td hidden><?php echo   $email; ?></td>
+
+            <td hidden><?php echo    $citizenship; ?></td>
+            <td hidden><?php echo   $occupation; ?></td>
+            <td hidden><?php echo   $sitio_pook; ?></td>
+           
             <td>
                                 <div id = "form_up_del_official">
                                        
@@ -142,7 +171,6 @@ mysqli_close($conn);
     </div>
 </div>
 
-<!-- Additional JavaScript for handling delete and update modals -->
 <script src="/BIS/administrator/admin_panel/brgy_resident_folder/delete_modal_button.js"></script>
 <script src="/BIS/administrator/admin_panel/brgy_resident_folder/update_modal.js"></script>
 

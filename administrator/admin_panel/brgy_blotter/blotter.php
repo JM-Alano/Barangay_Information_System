@@ -55,6 +55,18 @@ if ($result->num_rows > 0) {?>
             <tr class="table_hover">
                 <td><?php echo $row["complainant"]; ?></td>
                 <td><?php echo $row["cell_no"]; ?></td>
+                <td hidden><?php echo $row["subject"]; ?></td>
+                <td hidden><?php echo $row["place"]; ?></td>
+                <td hidden><?php echo $row["tanod"]; ?></td>
+                <td hidden><?php echo $row["time"]; ?></td>
+                <td hidden><?php echo $row["status"]; ?></td>
+                <td hidden><?php echo $row["type"]; ?></td>
+                <td hidden><?php echo $row["age"]; ?></td>
+                <td hidden><?php echo $row["address_complainant"]; ?></td>
+                <td hidden><?php echo $row["complained_name"]; ?></td>
+                <td hidden><?php echo $row["add_complained_name"]; ?></td>
+                <td hidden><?php echo $row["details_reason"]; ?></td>
+                <td hidden><?php echo $row["date"]; ?></td>
                 <td><?php echo $row["date"] . " / " . $row["time"]; ?></td>
                 <td><?php echo $row["type"]; ?></td>
                 <td>

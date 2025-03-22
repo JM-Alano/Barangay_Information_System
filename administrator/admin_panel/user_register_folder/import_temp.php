@@ -75,7 +75,7 @@
 </head>
 <body>
     <h2 class="h2">Import Data</h2>
-    <form class="form" action="brgy_resident_folder/import_temp.php" method="post" enctype="multipart/form-data">
+    <form class="form" action="user_register_folder/import_temp.php" method="post" enctype="multipart/form-data">
         <!-- Accept only CSV files -->
         <input class="input" type="file" name="excel" accept=".csv" required>
         <span style="color:#4A9D4f;">Only .csv files are allowed</span><br>
@@ -123,26 +123,25 @@
 				$middlename = trim($data[1]);
 				$lastname = trim($data[2]);
 
-				$house_no = trim($data[3]);
-				$place_of_birth = trim($data[4]);
-				$birthday = date("Y-m-d", strtotime($data[5]));
+				$username = trim($data[3]);
+				$password = trim($data[4]);
+				$gender = date("Y-m-d", strtotime($data[5]));
 				
 				$age = trim($data[6]);
-				$civil_status = trim($data[7]);
-				$gender = trim($data[8]);
+				$birthday = trim($data[7]);
+				$date_registered = trim($data[8]);
 
-				$voter_status = trim($data[9]);
-				$email = trim($data[10]);
+				$house_no = trim($data[9]);
+				$sitio_pook = trim($data[10]);
 				$contact_no = trim($data[11]);
 
-				$occupation = trim($data[12]);
-				$citizenship = trim($data[13]);
-				$sitio_pook = trim($data[14]);
+				$profile = trim($data[12]);
+				
 
 
 
                
-				mysqli_query($conn, "INSERT INTO barangay_resident VALUES('','$firstname', '$middlename', '$lastname' , '$house_no' , '$place_of_birth' , '$birthday' , '$age' , '$civil_status' , '$gender' , '$voter_status' , '$email' , '$contact_no' , '$occupation' , '$citizenship' , '$sitio_pook')");
+				mysqli_query($conn, "INSERT INTO user_account VALUES('$firstname', '$middlename', '$lastname' , '$username' , '$password' , '$gender' , '$age' , '$birthday' , '$date_registered' , '$house_no' , '$sitio_pook' , '$contact_no' , '$profile' , '')");
                 
             
             }
@@ -152,7 +151,7 @@
         echo "
         <script>
             alert('Successfully Imported');
-            document.location.href = '/BIS/administrator/admin_panel/resident.php';
+             document.location.href = '/BIS/administrator/admin_panel/resident.php';
         </script>
         ";
     }

@@ -249,17 +249,17 @@
                 <input type="number" name = "age" placeholder = "Enter Age"  max = "110" min = "1" required ><br>
                 <label for="">Civil Status :</label><br>
                 <select name="civil-status" id = "civil_status"required>
-                        <option value="SINGLE">SINGLE</option>
-                        <option value="MARRIED">MARRIED</option>
-                        <option value="SEPERATED">SEPERATED</option>
-                        <option value="WIDOWEd">WIDOWEd</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Seperated">Seperated</option>
+                        <option value="Widowed">Widowed</option>
                 </select><br>
 
                 <label for="">Gender :</label><br>
                 <select name="gender" id="gender" required>
-                        <option value="MALE">MALE</option>
-                        <option value="FEMALE">FEMALE</option>
-                        <option value="PREFER NOT TO SAY">PREFER NOT TO SAY</option>
+                <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
                 </select>
             </div>
             <div class = "item-form4">
@@ -275,8 +275,8 @@
         <div class = "item-form5">
                 <label for="">Voter Status :</label><br>
                 <select name="voter-status" id="voter-status">
-                <option value="YES">YES</option>
-                <option value="NO">NO</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
                 </select><br>
                 <label for=""   >Citizenship :</label><br>
                 <input type="text" name = "citezenship" placeholder = "Enter Citezenship"><br>

@@ -9,7 +9,6 @@
         $middlename = trim($_POST["middlename"]);
         $lastname = trim($_POST["lastname"]);
 
-
         $place_of_birth = trim($_POST["place_of_birth"]);
         $birthday = trim($_POST["date"]);
         
@@ -27,27 +26,17 @@
 
         $sitio_pook = trim($_POST["sitio_pook_add"]);
         
+        // Fix: Removed extra space after $birthday
+        $sql = "UPDATE barangay_resident SET
+               firstname='$firstname', middlename='$middlename', lastname='$lastname', place_of_birth='$place_of_birth', birthday='$birthday', age='$age', civil_status='$civil_status', gender='$gender', email='$email', contact_no='$contact_no', occupation='$occupation', voter_status='$voter_status', citizenship='$citizenship', house_no='$house_no', sitio_pook='$sitio_pook'  
+               WHERE id=$id";
 
-      
-              $sql = "UPDATE barangay_resident SET firstname='$firstname' , middlename='$middlename', lastname='$lastname' , place_of_birth='$place_of_birth' , birthday='$birthday ' , age='$age' , civil_status='$civil_status' , gender='$gender' , email='$email' , contact_no='$contact_no' ,  occupation='$occupation' , voter_status='$voter_status' , citizenship='$citizenship' , house_no='$house_no' , sitio_pook='$sitio_pook'  WHERE id=$id";
-
-
-              if (mysqli_query($conn, $sql)) {
-            
-                echo "<script>window.location.href = 'loading_update.php';</script>";
-               
-            } else {
-                echo "Error updating record: " . mysqli_error($conn);
-            }
-            
-            mysqli_close($conn);
-            }
-
-            
-
+        if (mysqli_query($conn, $sql)) {
+            echo "<script>window.location.href = 'loading_update.php';</script>";
+        } else {
+            echo "Error updating record: " . mysqli_error($conn);
+        }
         
-        
-
-  ?>
-
-    
+        mysqli_close($conn);
+    }
+?>

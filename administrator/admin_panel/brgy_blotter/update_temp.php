@@ -51,7 +51,7 @@
                     <option value=2>Settled</option>
                     <option value=3>Scheduled</option>
                 </select><br>
-                    <input type="hidden" name = "id_blotter" id = "id_blotter">
+                    <input type="text" name = "id_blotter" id = "id_blotter">
                 <input type="hidden" name = "type_of_blotter" id = "type_blotter"value = "Blotter">
         </div>
         

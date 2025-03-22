@@ -1,22 +1,22 @@
 
 <?php
-   session_start();
-   require("../../../database/conn_db.php");
+  
+    require("../../database/conn_db.php");
 
-    $user_id = $_SESSION['admin_id'];
-   $sql = "SELECT *  FROM admin_account WHERE user_id =  $user_id";
+        $user_id = $_SESSION['admin_id'];
+    $sql = "SELECT *  FROM admin_account WHERE user_id =  $user_id";
+        
     
-   
-   $result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-   $result->num_rows > 0;
+    $result->num_rows > 0;
 
-   if ($result->num_rows > 0) {
-       
-    $row = mysqli_fetch_array($result);
- 
+    if ($result->num_rows > 0) {
+        
+        $row = mysqli_fetch_array($result);
+    
 
-      ?>
+        ?>
       
       
 <!DOCTYPE html>
@@ -30,23 +30,14 @@
 <body>
 
 
-        <header class = "admin_header">
-            <div>
-                <h1>Administrator Profile</h1>
-            
-            </div>
-                <h4>View your personal information <span><a href="../dashboard.php">Back to Dashboard</a></span></h4>
-               
-        </header>
-
-    <h1></h1>
+        
         <form action="/BIS/administrator/admin_panel/admin_folder/update.php" method = "POST" class = "form">
 
         <div class = "profile">
             <h1>Profile</h1>
 
             <div class = "img">
-            <img src="../../../asset/image/admin/<?php echo $row['admin_profile']?>" alt=""><br>
+            <img src="../../asset/image/admin/<?php echo $row['admin_profile']?>" alt=""><br>
             
             </div>
             
@@ -74,8 +65,9 @@
 </div>
     
  </form>
-        
     
+
+
     
 </body>
 </html>

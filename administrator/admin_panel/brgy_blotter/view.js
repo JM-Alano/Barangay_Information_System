@@ -13,20 +13,21 @@ document.addEventListener("mouseover", function() {
         // Get ID and data of record to edit
         let id_view = btn.getAttribute("data-id");
 
-        let  subject = btn.parentNode.parentNode.parentNode.cells[3].textContent;
+        let  subject = btn.parentNode.parentNode.parentNode.cells[2].textContent;
         let  cell_no = btn.parentNode.parentNode.parentNode.cells[1].textContent;
-        let  place = btn.parentNode.parentNode.parentNode.cells[4].textContent;
-        let  tanod = btn.parentNode.parentNode.parentNode.cells[5].textContent;
-        let  time = btn.parentNode.parentNode.parentNode.cells[6].textContent;
-        let  status = btn.parentNode.parentNode.parentNode.cells[7].textContent;
-        let  type = btn.parentNode.parentNode.parentNode.cells[8].textContent;
+        let  place = btn.parentNode.parentNode.parentNode.cells[3].textContent;
+        let  tanod = btn.parentNode.parentNode.parentNode.cells[4].textContent;
+        let  time = btn.parentNode.parentNode.parentNode.cells[5].textContent;
+        let  status = btn.parentNode.parentNode.parentNode.cells[6].textContent;
+        let  type = btn.parentNode.parentNode.parentNode.cells[7].textContent;
         let  complainant = btn.parentNode.parentNode.parentNode.cells[0].textContent;
-        let  age = btn.parentNode.parentNode.parentNode.cells[9].textContent;
-        let  address_complainant = btn.parentNode.parentNode.parentNode.cells[10].textContent;
-        let  complained_name = btn.parentNode.parentNode.parentNode.cells[11].textContent;
-        let  add_complained_name = btn.parentNode.parentNode.parentNode.cells[12].textContent;
-        let  details_reason = btn.parentNode.parentNode.parentNode.cells[13].textContent;
-        let  date = btn.parentNode.parentNode.parentNode.cells[14].textContent;
+        let  age = btn.parentNode.parentNode.parentNode.cells[8].textContent;
+        let  address_complainant = btn.parentNode.parentNode.parentNode.cells[9].textContent;
+        let  complained_name = btn.parentNode.parentNode.parentNode.cells[10].textContent;
+        let  add_complained_name = btn.parentNode.parentNode.parentNode.cells[11].textContent;
+        let  details_reason = btn.parentNode.parentNode.parentNode.cells[12].textContent;
+        let  date = btn.parentNode.parentNode.parentNode.cells[13].textContent;
+      
       
 
         document.getElementById("id_view").value = id_view;

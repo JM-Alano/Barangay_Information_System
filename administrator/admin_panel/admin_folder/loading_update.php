@@ -61,7 +61,7 @@
         setTimeout(() => {
             // Hide the loading screen after 5 seconds
             
-            window.location.href = "/BIS/administrator/admin_panel/admin_folder/admin_manage.php";
+            window.location.href = "/BIS/administrator/admin_panel/administrator_account.php";
             clearInterval(timerInterval);
         }, 1000); // Simulate PHP execution time
 

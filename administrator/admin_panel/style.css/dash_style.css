@@ -30,11 +30,11 @@ body{
     background-color: var(--bg-color);
   background-size: cover;
 }
-.sidebar.active ~ .dashboard_content .div_content{
+.sidebar.active ~ .dashboard_content #div_content{
     width: 90vw;
     margin-left: -150px;
 }
-.div_content{
+#div_content{
   
     display: grid;
     grid-template-columns: auto auto auto;
@@ -56,7 +56,7 @@ body{
     text-align: end;
     color: #4A9D4f;
 }
-.div_content .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9{
+#div_content .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9{
    
     width: 290px;
     height: 200px;
@@ -65,7 +65,7 @@ body{
    
 }
 
-.div_content .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8,.item9 {
+#div_content .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8,.item9 {
    background-color: #EBEBEB;
     display: flex;
     padding-left: 40px;
@@ -76,24 +76,24 @@ body{
    
  }
 
- .div_content .item1 h3,.div_content .item2 h3,.div_content .item3 h3,.div_content .item4 h3,.div_content .item5 h3,.div_content .item6 h3,.div_content .item7 h3,.div_content .item8 h3,.div_content .item9 h3{
+ #div_content .item1 h3,#div_content .item2 h3,#div_content .item3 h3,#div_content .item4 h3,#div_content .item5 h3,#div_content #item6 h3,#div_content .item7 h3,#div_content .item8 h3,#div_content .item9 h3{
     font-size: 1rem;
     padding-top: 20px;
    color: #026d2985;
 
  }
 
- .div_content .item1 .count_div, .div_content .item2 .count_div, .div_content .item3 .count_div, .div_content .item4 .count_div, .div_content .item5 .count_div, .div_content .item6 .count_div, .div_content .item7 .count_div, .div_content .item8 .count_div, .div_content .item9 .count_div{
+ #div_content .item1 .count_div, #div_content .item2 .count_div, #div_content .item3 .count_div, #div_content .item4 .count_div, #div_content .item5 .count_div, #div_content .item6 .count_div, #div_content .item7 .count_div, #div_content .item8 .count_div, #div_content .item9 .count_div{
     line-height: 50px;
     padding-left: 40px;
  }
- .div_content .item1 .count_div p,.div_content .item2 .count_div p,.div_content .item3 .count_div p,.div_content .item4 .count_div p,.div_content .item5 .count_div p,.div_content .item6 .count_div p,.div_content .item7 .count_div p,.div_content .item8 .count_div p,.div_content .item9 .count_div p{
+ #div_content .item1 .count_div p,#div_content .item2 .count_div p,#div_content .item3 .count_div p,#div_content .item4 .count_div p,#div_content .item5 .count_div p,#div_content .item6 .count_div p,#div_content .item7 .count_div p,#div_content .item8 .count_div p,#div_content .item9 .count_div p{
     font-size: 1.5rem;
     color: #575757f6;
     font-weight: 500;
  }
-.div_content .item1 svg,.div_content .item2 svg,.div_content .item3 svg,.div_content .item4 svg,.div_content .item5 svg,.div_content .item6 svg,.div_content .item7 svg,.div_content .item8 svg
-,.div_content .item9 svg{
+#div_content .item1 svg,#div_content .item2 svg,#div_content .item3 svg,#div_content .item4 svg,#div_content .item5 svg,#div_content .item6 svg,#div_content .item7 svg,#div_content .item8 svg
+,#div_content .item9 svg{
    fill: #e0bd24cc;
    width: 58px;
    margin-top: 40px;

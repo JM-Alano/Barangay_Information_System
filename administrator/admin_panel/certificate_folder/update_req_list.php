@@ -188,10 +188,12 @@
             
             <label for="">Document Type</label><br>
                 <select id="request_document_upd" name = "request_document_upd" required>
-                    <option value="Barangay Certificate">Barangay Certificate</option>
-                    <option value="Barangay Clearance">Barangay Clearance</option>
-                    <option value="Barangay Indigency">Barangay Indigency</option>
-                    <option value="Barangay ID">Barangay ID</option>
+                <option value="Barangay Clearance">Barangay Clearance</option>
+                <option value="Barangay Certificate">Barangay Certificate</option>
+                <option value="Barangay Indigency">Barangay Indigency</option>
+                <option value="Barangay ID">Barangay ID</option>
+                <option value="Business Permit">Business Permit</option>
+                <option value="Barangay Cedula">Barangay Cedula</option>
 
                 </select><br>
 

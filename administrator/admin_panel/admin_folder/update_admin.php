@@ -75,9 +75,9 @@
         
     </div>
     <div class = "div_3">
-        <input name = "submit_add_edit" type="submit" id = "submit_add">
+       
         <input name = "reset_add_edit" type="reset"  id = "reset_add">
-        
+        <input name = "submit_add_edit" type="submit" id = "submit_add">
     </div>
 
         

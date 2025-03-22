@@ -25,8 +25,8 @@ document.addEventListener("mouseover", function() {
         let lastname = btn.parentNode.parentNode.parentNode.cells[9].textContent;
         let place_of_birthday = btn.parentNode.parentNode.parentNode.cells[10].textContent;
         let birthday = btn.parentNode.parentNode.parentNode.cells[11].textContent;
-        let email = btn.parentNode.parentNode.parentNode.cells[12].textContent;
-        let contact_no = btn.parentNode.parentNode.parentNode.cells[13].textContent;
+        let email = btn.parentNode.parentNode.parentNode.cells[13].textContent;
+        let contact_no = btn.parentNode.parentNode.parentNode.cells[1].textContent;
         let citizenship = btn.parentNode.parentNode.parentNode.cells[14].textContent;
         let occupation = btn.parentNode.parentNode.parentNode.cells[15].textContent;
         let sitio_pook = btn.parentNode.parentNode.parentNode.cells[16].textContent;
