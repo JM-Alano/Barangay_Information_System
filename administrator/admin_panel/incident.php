@@ -12,6 +12,7 @@
     <title>Incident | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/brgy_incident.css"/>
+    <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
 </head>
 </head>
 <body>
@@ -243,5 +244,7 @@
 <script src="/BIS/administrator/admin_panel/incident_folder/update_modal.js"></script>
 
 <!-- View Modal Script -->
-<script src="/BIS/administrator/admin_panel/incident_folder/view.js"></script>
+<script src="/BIS/administrator/admin_panel/incident_folder/view.js"></script>|
+
+<script src="/BIS/administrator/admin_panel/incident_folder/import.js"></script>
 </html>

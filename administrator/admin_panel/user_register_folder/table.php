@@ -54,22 +54,30 @@
         </tr>
         <?php
         while($row = $result->fetch_assoc()) {
-            $firstname = $row["firstname"];
-            $middlename = $row["middlename"];
-            $lastname = $row["lastname"];
-            $gender = $row["gender"];
-            $age = $row["age"];
-            $username = $row["username"];
-            $date_registered = $row["date_registered"];
+      
+            $id_registered =$row["user_id"];
+                            
+            $firstname =$row["firstname"];
+            $middlename =$row["middlename"];
+            $lastname =$row["lastname"];
+
+            $gender =$row["gender"];
+            $age =$row["age"];
+
+            $username =$row["username"];
+            $password=$row["password"];
+            $date_registered=$row["date_registered"]
         ?>
         <tr class="table_hover">
-            <td hidden><?php echo $firstname; ?></td>
-            <td hidden><?php echo $middlename; ?></td>
-            <td hidden><?php echo $lastname; ?></td>
-            <td hidden><?php echo $gender; ?></td>
-            <td hidden><?php echo $age; ?></td>
-            <td hidden><?php echo $username; ?></td>
-            <td hidden><?php echo $row["password"]; ?></td>
+                                    <td hidden><?php echo  $firstname;?></td>
+                                    <td hidden><?php echo  $middlename ;?></td>
+                                    <td hidden><?php echo  $lastname;?></td>
+
+                                    <td hidden><?php echo  $gender;?></td>
+                                    <td hidden><?php echo  $age;?></td>
+                                    
+                                    <td hidden><?php echo  $username;?></td>
+                                    <td hidden><?php echo  $password;?></td>
 
             <td><?php echo $firstname . " " . $middlename . " " . $lastname; ?></td>
             <td><?php echo $age; ?></td>

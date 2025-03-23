@@ -55,30 +55,52 @@
         </tr>
         <?php
         while ($row = $result->fetch_assoc()) {
-            $id = $row["id"];
-            $date = $row["date"];
-            $time = $row["time"];
-            $name_involve = $row["name_involve"];
-            $address = $row["address"];
-            $vehicle = $row["vehicle"];
-            $status = $row["status"];
+            $id = $row ["id"];
+                          
+            $date = $row ["date"];
+            $time = $row ["time"];
+            $name_involve = $row ["name_involve"];
+
+            $name_involve = $row ["name_involve"];
+            $address = $row ["address"];
+            $vehicle = $row ["vehicle"];
+            
+            $license = $row ["license"];
+            $plate_no = $row ["plate_no"];
+          
+            $status = $row ["status"];
+
+            $cause_incident = $row ["cause_incident"];
         ?>
             <tr class="table_hover">
-                <td><?php echo $name_involve; ?></td>
-                <td><?php echo $address; ?></td>
-                <td><?php echo $date . " / " . $time; ?></td>
-                <td><?php echo $vehicle; ?></td>
-                <td>
-                    <?php
-                    if ($status == 1) {
-                        echo "<p style='color:red;'>Active</p>";
-                    } elseif ($status == 2) {
-                        echo "<p style='color:green;'>Settled</p>";
-                    } elseif ($status == 3) {
-                        echo "<p style='color:orange;'>Scheduled</p>";
-                    }
-                    ?>
-                </td>
+            <td hidden><?php echo  $date ?></td>
+                                    <td hidden><?php echo  $time ?></td>
+                                    <td hidden><?php echo  $name_involve ?></td>
+                                    <td hidden><?php echo  $address ?></td>
+                                    <td hidden><?php echo  $vehicle ?></td>
+                                    <td hidden><?php echo   $license  ?></td>
+                                    <td hidden><?php echo  $plate_no ?></td>
+                                    <td hidden><?php echo  $cause_incident ?></td>
+                                    <td hidden><?php echo  $status ?></td>
+
+                                    <td><?php echo  $name_involve ?></td>
+                            
+                                    <td><?php echo  $address ?></td>
+                                    <td><?php echo  $date . " / " .  $time ?></td>
+                                    <td><?php echo  $vehicle ?></td>
+                                    
+                                    <td><?php  $status;
+
+                                        if($status == 1){
+                                            echo "<p style='color:red;'>Active</p>";
+                                        }elseif($status == 2){
+                                            echo "<p style='color:green;'>Settled</p>";
+                                        }
+                                        elseif($status == 3){
+                                            echo "<p style='color:orange;'>Schedule</p>";
+                                        }
+                                    
+                                    ?></td>
                 <td>
                     <!-- Action Buttons -->
                     <div id = "form_up_del_official">

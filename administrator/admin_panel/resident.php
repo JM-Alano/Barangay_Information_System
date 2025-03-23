@@ -13,6 +13,7 @@
     <title>Resident | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/resident_style.css"/>
+    <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
 </head>
 <body>
 

@@ -15,6 +15,7 @@
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/doc_style.css"/>
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/style_request.css">
+    <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
 </head>
 <body>
 
