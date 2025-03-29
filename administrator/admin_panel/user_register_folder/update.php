@@ -19,7 +19,7 @@
         
         
     
-        $sql= "UPDATE user_account SET firstname='$firstname_user' , middlename='$middlename_user', lastname='$lastname_user' , gender='$gender_user' , age='$age_user' , username='$username_user', password='$password_user' WHERE user_id= $id_user_edit";
+        $sql= "UPDATE user_account SET firstname='$firstname_user' , middlename='$middlename_user', lastname='$lastname_user' , gender='$gender_user' , age='$age_user' , username='$username_user', password= md5('$password_user') WHERE user_id= $id_user_edit";
         
       
                 

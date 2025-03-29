@@ -27,7 +27,7 @@
                     
          }else {
 
-            $query = "SELECT * FROM Admin_account WHERE password =  '$password' AND username = '$username'";
+            $query = "SELECT * FROM Admin_account WHERE password =  md5('$password') AND username = '$username'";
 
             $result = mysqli_query($conn, $query);
 

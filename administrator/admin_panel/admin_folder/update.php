@@ -38,7 +38,7 @@
           
 
 
-            $sql = "UPDATE admin_account SET firstname='$firstname_edit' , middlename='$middlename_edit', lastname='$lastname_edit' , gender='$gender_edit' , age='$age_edit', date_created='$date_created_edit', user_type='$user_type_edit', status='$status_edit', email='$email_edit', username='$username_edit', password='$password_edit', age='$age_edit' WHERE user_id=$user_id";
+            $sql = "UPDATE admin_account SET firstname='$firstname_edit' , middlename='$middlename_edit', lastname='$lastname_edit' , gender='$gender_edit' , age='$age_edit', date_created='$date_created_edit', user_type='$user_type_edit', status='$status_edit', email='$email_edit', username='$username_edit', password= md5('$password_edit'), age='$age_edit' WHERE user_id=$user_id";
 
             if (mysqli_query($conn, $sql)) {
                 

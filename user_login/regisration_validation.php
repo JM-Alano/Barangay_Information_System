@@ -51,7 +51,7 @@
             if ($row['c'] == 0) {
                     // Insert new record if date is unique
                 $query = "INSERT INTO user_account (firstname, middlename, lastname, username, password, gender, age, date_registered, profile)
-                VALUES ('$firstname', '$middlename', '$lastname', '$username', '$password', '$gender', '$age', '$date_issue', '$profile_default')";
+                VALUES ('$firstname', '$middlename', '$lastname', '$username', md5('$password') , '$gender', '$age', '$date_issue', '$profile_default')";
 
 
                     if (mysqli_query($conn, $query)) {

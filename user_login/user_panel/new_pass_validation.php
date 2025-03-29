@@ -12,7 +12,7 @@ require('../../database/conn_db.php');
     
     
           
-                  $sql = "UPDATE user_account SET password='$Password' WHERE user_id=$id";
+                  $sql = "UPDATE user_account SET password= md5('$Password') WHERE user_id=$id";
     
     
                   if (mysqli_query($conn, $sql)) {

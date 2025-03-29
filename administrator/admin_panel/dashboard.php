@@ -11,9 +11,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
+    <!-- <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/dash_style.css"/>
     <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
+   
+
+
 </head>
 <body>
 

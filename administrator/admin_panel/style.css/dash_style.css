@@ -162,7 +162,7 @@ body{
     }
     #div_content .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9{
        
-        width: 320px;
+        width: 360px;
         height: 270px;
         box-shadow: 10px 10px 10px rgba(189, 189, 189, 0.425);
         border-radius: 4px;
@@ -172,7 +172,7 @@ body{
     #div_content .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8,.item9 {
        background-color: #EBEBEB;
         display: flex;
-        padding-left: 40px;
+        padding-left: 60px;
         align-items: center;
         font-family: "sub_text";
         color: var(--2nd-bg-color);

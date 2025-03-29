@@ -11,9 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page | Barangayy Information System</title>
+   <title>Home page | Barangayy Information System</title>
     <link rel = "stylesheet" href = "index.css"/>
     <link rel = "stylesheet" href = "respon_index.css"/>
+
+ 
     <script>
         // Check if the page has already reloaded
         if (!sessionStorage.getItem("reloaded")) {
@@ -24,6 +26,9 @@
             window.location.reload();
         }
     </script>
+
+       <!-- If it's a PNG or another format -->
+       <link rel="icon" href="/BIS/favicon/favicon-32x32.png" type="image/png">
 </head>
 <body>  
         

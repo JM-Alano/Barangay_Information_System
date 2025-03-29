@@ -1734,7 +1734,7 @@ html {
         align-items: center;
         position: sticky;
         top: 0px;
-        height: fit-content;
+        height: max-content;
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
         z-index: 99;
@@ -2275,7 +2275,7 @@ html {
         align-items: center;
         position: sticky;
         top: 0px;
-        height: 110px;
+        height: max-content;
         background-color: var(--bg-color);
         box-shadow: 5px 5px 5px rgba(70, 66, 9, 0.068);
         z-index: 99;
@@ -2837,7 +2837,7 @@ html {
         text-decoration: none;
         color: var(--1st-text-color);
         background-color:transparent;
-        font-size: 1.3rem;
+        font-size: 1rem;
         position: relative;
         top: 0px;
         border-radius: 0px;

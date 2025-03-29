@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/table_doc.css">
+    <link rel="stylesheet" href="/BIS/administrator/admin_panel/certificate_folder/table.css">
 </head>
 <body>
 <?php require("../../../database/conn_db.php");
