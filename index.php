@@ -1,11 +1,4 @@
-<?php
-    
-    require('select_data_db.php');
-    
-    session_start();
 
-   
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +7,7 @@
    <title>Home page | Barangayy Information System</title>
     <link rel = "stylesheet" href = "index.css"/>
     <link rel = "stylesheet" href = "respon_index.css"/>
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
 
  
     <script>
@@ -31,7 +25,14 @@
        <link rel="icon" href="/BIS/favicon/favicon-32x32.png" type="image/png">
 </head>
 <body>  
-        
+            <?php
+                
+                require('select_data_db.php');
+                
+                session_start();
+
+            
+            ?>
 
         <header class = "header">
             <div class = "social_logo">

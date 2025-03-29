@@ -1,8 +1,5 @@
     
-    <?php
-        require('../session.php');
-        require('select_data_db.php');
-    ?>
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +10,14 @@
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/brgy_incident.css"/>
     <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
 </head>
 </head>
 <body>
-
+    <?php
+        require('../session.php');
+        require('select_data_db.php');
+    ?>
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">

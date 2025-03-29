@@ -1,13 +1,4 @@
-<?php
-    
-    require('../session.php');
-    require('select_data_db.php');
-    require('db_data_user.php');
 
-
-   
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +9,21 @@
     <link rel = "stylesheet" href = "style_user/user_style_main.css"/>
     <link rel = "stylesheet" href = "style_user/dashboard_style.css"/>
     <link rel = "stylesheet" href = "style_user/layout_main.css"/>
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
+    <?php
+        
+        require('../session.php');
+        require('select_data_db.php');
+        require('db_data_user.php');
+
+
+    
+
+    ?>
     
     <div class = "sidebar" >
         <div class = "logo_content">

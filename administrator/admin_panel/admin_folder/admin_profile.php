@@ -1,4 +1,17 @@
 
+
+      
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Profile</title>
+    <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/admin_folder/admin_style.css">
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
 <?php
   
     require("../../database/conn_db.php");
@@ -17,18 +30,6 @@
     
 
         ?>
-      
-      
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrator Profile</title>
-    <link rel = "stylesheet" href = "/BIS/administrator/admin_panel/admin_folder/admin_style.css">
-</head>
-<body>
-
 
         
         <form action="/BIS/administrator/admin_panel/admin_folder/update.php" method = "POST" class = "form">

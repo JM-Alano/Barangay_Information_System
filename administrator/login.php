@@ -1,6 +1,18 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page | Barangayy Information System</title>
+     <!-- Dynamically set favicon -->
+     <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel = "stylesheet" href = "login.admin.css"/>
+</head>
+<body>
 
-    <?php
+
+<?php
         session_start();
 
         require("../database/conn_db.php");
@@ -20,19 +32,15 @@
                 <?php
 
             }
+
+            
     ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page | Barangayy Information System</title>
-    <link rel = "stylesheet" href = "login.admin.css"/>
-</head>
-<body>
+
+
     <header class = "header">
             <img src="../asset/image/logo/679b85db30f8c.png" alt="" id = "logo">
-
+         
+           
             <h1><span style = "color:#FCFAEE;">BARANGAY </span><span style = "color:#F5E402;">INFORMATION SYSTEM</span></h1>
     </header>
 
@@ -40,7 +48,7 @@
         
    
 
-
+    
     <main id = "main">
 
         <form action="login.php" method = "POST">

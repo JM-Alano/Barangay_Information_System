@@ -1,9 +1,5 @@
     
-    <?php
-        require('../session.php');
-        require('select_data_db.php');
-
-    ?>
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,16 +7,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Barangayy Information System</title>
-    <!-- <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" type="image/png"> -->
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/dash_style.css"/>
     <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
-   
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
 
 
 </head>
 <body>
+    <?php
+        require('../session.php');
+        require('select_data_db.php');
 
+    ?>
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">

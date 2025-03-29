@@ -1,9 +1,4 @@
     
-    <?php
-        require('../session.php');
-        require('select_data_db.php');
-
-    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +8,14 @@
     <title>Profile | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/dash_style.css"/>
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<?php
+        require('../session.php');
+        require('select_data_db.php');
+
+    ?>
 
     <div class = "sidebar">
         <div class = "logo_content">

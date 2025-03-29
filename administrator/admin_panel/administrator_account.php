@@ -1,8 +1,4 @@
-    
-    <?php
-        require('../session.php');
-        require('select_data_db.php');
-    ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrator | Barangayy Information System</title>
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/user.registration.css"/>
     <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
@@ -17,7 +14,11 @@
 </head>
 </head>
 <body>
-
+    
+<?php
+        require('../session.php');
+        require('select_data_db.php');
+    ?>
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">

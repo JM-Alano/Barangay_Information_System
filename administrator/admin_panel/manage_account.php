@@ -1,25 +1,26 @@
     
-    <?php
-        require('../session.php');
-        require('select_data_db.php');
-
-      
-    ?>
+  
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document | Barangayy Information System</title>
+    <title>Manage Account | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
     <link rel = "stylesheet" href = "style.css/doc_style.css"/>
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/style_request.css">
     <link rel="stylesheet" href="/BIS/administrator/admin_panel/style.css/user.registration.css">
     <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
+    <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<?php
+        require('../session.php');
+        require('select_data_db.php');
 
+      
+    ?>
     <div class = "sidebar">
         <div class = "logo_content">
             <div class = "logo">
