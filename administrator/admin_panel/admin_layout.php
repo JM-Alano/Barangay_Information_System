@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile | Barangayy Information System</title>
     <link rel = "stylesheet" href = "style.css/mian.stylecss.css"/>
-    <link rel = "stylesheet" href = "style.css/dash_style.css"/>
+    <link rel = "stylesheet" href = "style.css/reposive_main.css"/>
     <link rel="icon" href="/BIS/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
