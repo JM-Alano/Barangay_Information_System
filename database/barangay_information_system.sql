@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2025 at 04:48 AM
+-- Generation Time: Mar 29, 2025 at 02:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,8 +48,8 @@ CREATE TABLE `admin_account` (
 --
 
 INSERT INTO `admin_account` (`user_id`, `user_type`, `firstname`, `middlename`, `lastname`, `email`, `username`, `password`, `date_created`, `admin_profile`, `gender`, `age`, `status`) VALUES
-(82, 'SECRETARY', 'Alex', 'Peralta', 'Peralta', 'tmc.jenmar.alano@cvsu.edu.ph', 'admin', 'admin', '2025-03-22', '67dec8439c304.png', 'Female', 25, 1),
-(84, 'OFFICER', 'Alexssxxxxxxxxxx', 'Peralta', 'Peralta', 'tmc.jenmar.alano@cvsu.edu.ph', 'admin', 'admin', '2025-03-22', '67dec8439c304.png', 'Female', 25, 1);
+(82, 'SECRETARY', 'Alex', 'Peralta', 'Peralta', 'tmc.jenmar.alano@cvsu.edu.ph', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2025-03-22', '67dec8439c304.png', 'Female', 25, 1),
+(84, 'OFFICER', 'Alex', 'Peralta', 'Peralta', 'tmc.jenmar.alano@cvsu.edu.ph', 'admin', 'admin', '2025-03-22', '67dec8439c304.png', 'Female', 25, 1);
 
 -- --------------------------------------------------------
 
@@ -154,7 +154,82 @@ INSERT INTO `barangay_blotter` (`subject`, `cell_no`, `place`, `tanod`, `date`, 
 ('Sexual Harassment', '09182345679', 'Barangay V', 'Daniel Reyes', '2025-03-01', '08:00:00', 1, 747, 'Victoria Cruz', 25, '1818 Maple St, Barangay V', 'José Garcia', 'None', 'Unwanted advances made by a neighbor', 'Social'),
 ('Abandoned Vehicle', '09241234567', 'Barangay W', 'Sofia Garcia', '2025-02-28', '11:00:00', 1, 748, 'Roberto Lopez', 38, '1919 Oak St, Barangay W', 'Pedro Cruz', 'None', 'Car abandoned on the side of the road', 'Traffic'),
 ('Electric Line Issues', '09256789012', 'Barangay X', 'Ricardo Lopez', '2025-02-27', '02:00:00', 1, 749, 'Patricia Reyes', 31, '2020 Elm St, Barangay X', 'Javier Dizon', 'sadadasdsd', 'Flickering lights in the neighborhood', 'Environment'),
-('Trespassing', '09262345678', 'Barangay Y', 'Fernando Perez', '2025-02-26', '12:30:00', 1, 750, 'Angela Cruz', 29, '2121 Pine St, Barangay Y', 'Raul Reyes', 'None', 'Individuals trespassing in private property', 'Crime');
+('Trespassing', '09262345678', 'Barangay Y', 'Fernando Perez', '2025-02-26', '12:30:00', 1, 750, 'Angela Cruz', 29, '2121 Pine St, Barangay Y', 'Raul Reyes', 'None', 'Individuals trespassing in private property', 'Crime'),
+('Noise Complaint', '09171234567', 'Barangay A', 'Juan Dela Cruz', '2025-03-22', '10:30:00', 1, 751, 'Maria Santos', 30, '123 Main St, Barangay A', 'Carlos Reyes', 'None', 'Loud music disturbing the neighbors', 'Noise'),
+('Illegal Parking', '09182345678', 'Barangay B', 'Pedro Garcia', '2025-03-21', '02:00:00', 0, 752, 'Josefa Bautista', 45, '456 Elm St, Barangay B', 'Ricardo Lopez', 'None', 'Car parked in front of a fire hydrant', 'Traffic'),
+('Vandalism', '09191234567', 'Barangay C', 'Andres Martinez', '2025-03-20', '04:45:00', 1, 753, 'Rafael Cruz', 24, '789 Oak St, Barangay C', 'Emma Ramos', 'None', 'Graffiti on public property', 'Crime'),
+('Littering', '09123456789', 'Barangay D', 'Leandro Flores', '2025-03-19', '08:00:00', 0, 754, 'Nina Garcia', 35, '101 Pine St, Barangay D', 'Victor Dizon', 'None', 'Trash thrown on the street', 'Environment'),
+('Domestic Dispute', '09211234567', 'Barangay E', 'Teresa Lopez', '2025-03-18', '08:30:00', 1, 755, 'Alfredo Perez', 55, '102 Maple St, Barangay E', 'Lina Martinez', 'None', 'Loud arguments coming from the house', 'Social'),
+('Public Disturbance', '09301234567', 'Barangay F', 'Miguel Santiago', '2025-03-17', '11:15:00', 0, 756, 'Luis Morales', 28, '202 Cedar St, Barangay F', 'Juan de la Cruz', 'None', 'Drunken individuals causing a scene in the public park', 'Noise'),
+('Drug Activity', '09222334455', 'Barangay G', 'Carmen Aguilar', '2025-03-16', '01:45:00', 1, 757, 'Gabriela Reyes', 40, '303 Birch St, Barangay G', 'Carlos Reyes', 'None', 'Suspicious individuals seen exchanging items', 'Crime'),
+('Street Fighting', '09194567890', 'Barangay H', 'Luis Perez', '2025-03-15', '09:00:00', 0, 758, 'Armando Santos', 32, '404 Birch St, Barangay H', 'Pedro Garcia', 'None', 'Fight between two men on the street', 'Social'),
+('Fire Hazard', '09336677788', 'Barangay I', 'Felipe Gomez', '2025-03-14', '07:30:00', 1, 759, 'Celia Cruz', 60, '505 Pine St, Barangay I', 'Maria Reyes', 'None', 'Burnt debris near residential area, potential fire hazard', 'Environment'),
+('Overcrowding', '09237658901', 'Barangay J', 'Hernan Torres', '2025-03-13', '06:00:00', 0, 760, 'Diego Lopez', 27, '606 Cedar St, Barangay J', 'Juan de la Cruz', 'None', 'Too many people gathering in a small area', 'Social'),
+('Noise Pollution', '09123456780', 'Barangay K', 'Eva Martinez', '2025-03-12', '10:15:00', 1, 761, 'Cristina Reyes', 39, '707 Elm St, Barangay K', 'Ricardo Lopez', 'None', 'Loud generator noise in the area', 'Noise'),
+('Illegal Construction', '09162345678', 'Barangay L', 'Manuel Garcia', '2025-03-11', '06:45:00', 1, 762, 'Martha Dizon', 50, '808 Maple St, Barangay L', 'Antonio Cruz', 'None', 'Unapproved construction work in residential area', 'Environment'),
+('Animal Abuse', '09212345678', 'Barangay M', 'Esteban Garcia', '2025-03-10', '03:30:00', 1, 763, 'Joana Reyes', 22, '909 Oak St, Barangay M', 'Carlos Dizon', 'None', 'Neglect of pet animals in the area', 'Crime'),
+('Excessive Smoking', '09123457901', 'Barangay N', 'Diana Cruz', '2025-03-09', '12:00:00', 0, 764, 'Bernardo Reyes', 30, '1011 Cedar St, Barangay N', 'Nina Lopez', 'None', 'People smoking near children in public places', 'Health'),
+('Spitting in Public', '09123456710', 'Barangay O', 'Ana Ramos', '2025-03-08', '05:00:00', 1, 765, 'Oscar Reyes', 28, '1111 Pine St, Barangay O', 'Sofia Garcia', 'None', 'People spitting on sidewalks and public areas', 'Health'),
+('Public Urination', '09132345678', 'Barangay P', 'Ricardo Perez', '2025-03-07', '07:30:00', 1, 766, 'Santiago Lopez', 42, '1212 Birch St, Barangay P', 'Pablo Reyes', 'None', 'Individuals urinating in public', 'Health'),
+('Electricity Theft', '09141122334', 'Barangay Q', 'María Hernández', '2025-03-06', '02:20:00', 0, 767, 'Diana Perez', 60, '1313 Elm St, Barangay Q', 'Carlos Reyes', 'None', 'Suspected illegal connection to electric line', 'Crime'),
+('Water Pollution', '09152033445', 'Barangay R', 'Luisa Martinez', '2025-03-05', '10:40:00', 1, 768, 'Francisco Reyes', 33, '1414 Maple St, Barangay R', 'Vicente Cruz', 'None', 'Waste being dumped in the local water supply', 'Environment'),
+('Illegal Logging', '09163456789', 'Barangay S', 'Carlos Gomez', '2025-03-04', '01:00:00', 0, 769, 'Monica Reyes', 47, '1515 Oak St, Barangay S', 'Eduardo Lopez', 'None', 'Unregulated cutting of trees in protected area', 'Environment'),
+('Hawking without Permit', '09234567890', 'Barangay T', 'Ricardo Cruz', '2025-03-03', '04:30:00', 1, 770, 'Raul Martinez', 53, '1616 Cedar St, Barangay T', 'Ana Reyes', 'None', 'Street vendors operating without a permit', 'Business'),
+('Illegal Waste Dumping', '09193456789', 'Barangay U', 'Teresa Santos', '2025-03-02', '09:30:00', 0, 771, 'Evelyn Lopez', 41, '1717 Pine St, Barangay U', 'Marcos Dizon', 'None', 'Non-recyclable waste dumped in public area', 'Environment'),
+('Sexual Harassment', '09182345679', 'Barangay V', 'Daniel Reyes', '2025-03-01', '08:00:00', 1, 772, 'Victoria Cruz', 25, '1818 Maple St, Barangay V', 'José Garcia', 'None', 'Unwanted advances made by a neighbor', 'Social'),
+('Abandoned Vehicle', '09241234567', 'Barangay W', 'Sofia Garcia', '2025-02-28', '11:00:00', 1, 773, 'Roberto Lopez', 38, '1919 Oak St, Barangay W', 'Pedro Cruz', 'None', 'Car abandoned on the side of the road', 'Traffic'),
+('Electric Line Issues', '09256789012', 'Barangay X', 'Ricardo Lopez', '2025-02-27', '02:00:00', 1, 774, 'Patricia Reyes', 31, '2020 Elm St, Barangay X', 'Javier Dizon', 'sadadasdsd', 'Flickering lights in the neighborhood', 'Environment'),
+('Trespassing', '09262345678', 'Barangay Y', 'Fernando Perez', '2025-02-26', '12:30:00', 1, 775, 'Angela Cruz', 29, '2121 Pine St, Barangay Y', 'Raul Reyes', 'None', 'Individuals trespassing in private property', 'Crime'),
+('Noise Complaint', '09171234567', 'Barangay A', 'Juan Dela Cruz', '2025-03-22', '10:30:00', 1, 776, 'Maria Santos', 30, '123 Main St, Barangay A', 'Carlos Reyes', 'None', 'Loud music disturbing the neighbors', 'Noise'),
+('Illegal Parking', '09182345678', 'Barangay B', 'Pedro Garcia', '2025-03-21', '02:00:00', 0, 777, 'Josefa Bautista', 45, '456 Elm St, Barangay B', 'Ricardo Lopez', 'None', 'Car parked in front of a fire hydrant', 'Traffic'),
+('Vandalism', '09191234567', 'Barangay C', 'Andres Martinez', '2025-03-20', '04:45:00', 1, 778, 'Rafael Cruz', 24, '789 Oak St, Barangay C', 'Emma Ramos', 'None', 'Graffiti on public property', 'Crime'),
+('Littering', '09123456789', 'Barangay D', 'Leandro Flores', '2025-03-19', '08:00:00', 0, 779, 'Nina Garcia', 35, '101 Pine St, Barangay D', 'Victor Dizon', 'None', 'Trash thrown on the street', 'Environment'),
+('Domestic Dispute', '09211234567', 'Barangay E', 'Teresa Lopez', '2025-03-18', '08:30:00', 1, 780, 'Alfredo Perez', 55, '102 Maple St, Barangay E', 'Lina Martinez', 'None', 'Loud arguments coming from the house', 'Social'),
+('Public Disturbance', '09301234567', 'Barangay F', 'Miguel Santiago', '2025-03-17', '11:15:00', 0, 781, 'Luis Morales', 28, '202 Cedar St, Barangay F', 'Juan de la Cruz', 'None', 'Drunken individuals causing a scene in the public park', 'Noise'),
+('Drug Activity', '09222334455', 'Barangay G', 'Carmen Aguilar', '2025-03-16', '01:45:00', 1, 782, 'Gabriela Reyes', 40, '303 Birch St, Barangay G', 'Carlos Reyes', 'None', 'Suspicious individuals seen exchanging items', 'Crime'),
+('Street Fighting', '09194567890', 'Barangay H', 'Luis Perez', '2025-03-15', '09:00:00', 0, 783, 'Armando Santos', 32, '404 Birch St, Barangay H', 'Pedro Garcia', 'None', 'Fight between two men on the street', 'Social'),
+('Fire Hazard', '09336677788', 'Barangay I', 'Felipe Gomez', '2025-03-14', '07:30:00', 1, 784, 'Celia Cruz', 60, '505 Pine St, Barangay I', 'Maria Reyes', 'None', 'Burnt debris near residential area, potential fire hazard', 'Environment'),
+('Overcrowding', '09237658901', 'Barangay J', 'Hernan Torres', '2025-03-13', '06:00:00', 0, 785, 'Diego Lopez', 27, '606 Cedar St, Barangay J', 'Juan de la Cruz', 'None', 'Too many people gathering in a small area', 'Social'),
+('Noise Pollution', '09123456780', 'Barangay K', 'Eva Martinez', '2025-03-12', '10:15:00', 1, 786, 'Cristina Reyes', 39, '707 Elm St, Barangay K', 'Ricardo Lopez', 'None', 'Loud generator noise in the area', 'Noise'),
+('Illegal Construction', '09162345678', 'Barangay L', 'Manuel Garcia', '2025-03-11', '06:45:00', 1, 787, 'Martha Dizon', 50, '808 Maple St, Barangay L', 'Antonio Cruz', 'None', 'Unapproved construction work in residential area', 'Environment'),
+('Animal Abuse', '09212345678', 'Barangay M', 'Esteban Garcia', '2025-03-10', '03:30:00', 1, 788, 'Joana Reyes', 22, '909 Oak St, Barangay M', 'Carlos Dizon', 'None', 'Neglect of pet animals in the area', 'Crime'),
+('Excessive Smoking', '09123457901', 'Barangay N', 'Diana Cruz', '2025-03-09', '12:00:00', 0, 789, 'Bernardo Reyes', 30, '1011 Cedar St, Barangay N', 'Nina Lopez', 'None', 'People smoking near children in public places', 'Health'),
+('Spitting in Public', '09123456710', 'Barangay O', 'Ana Ramos', '2025-03-08', '05:00:00', 1, 790, 'Oscar Reyes', 28, '1111 Pine St, Barangay O', 'Sofia Garcia', 'None', 'People spitting on sidewalks and public areas', 'Health'),
+('Public Urination', '09132345678', 'Barangay P', 'Ricardo Perez', '2025-03-07', '07:30:00', 1, 791, 'Santiago Lopez', 42, '1212 Birch St, Barangay P', 'Pablo Reyes', 'None', 'Individuals urinating in public', 'Health'),
+('Electricity Theft', '09141122334', 'Barangay Q', 'María Hernández', '2025-03-06', '02:20:00', 0, 792, 'Diana Perez', 60, '1313 Elm St, Barangay Q', 'Carlos Reyes', 'None', 'Suspected illegal connection to electric line', 'Crime'),
+('Water Pollution', '09152033445', 'Barangay R', 'Luisa Martinez', '2025-03-05', '10:40:00', 1, 793, 'Francisco Reyes', 33, '1414 Maple St, Barangay R', 'Vicente Cruz', 'None', 'Waste being dumped in the local water supply', 'Environment'),
+('Illegal Logging', '09163456789', 'Barangay S', 'Carlos Gomez', '2025-03-04', '01:00:00', 0, 794, 'Monica Reyes', 47, '1515 Oak St, Barangay S', 'Eduardo Lopez', 'None', 'Unregulated cutting of trees in protected area', 'Environment'),
+('Hawking without Permit', '09234567890', 'Barangay T', 'Ricardo Cruz', '2025-03-03', '04:30:00', 1, 795, 'Raul Martinez', 53, '1616 Cedar St, Barangay T', 'Ana Reyes', 'None', 'Street vendors operating without a permit', 'Business'),
+('Illegal Waste Dumping', '09193456789', 'Barangay U', 'Teresa Santos', '2025-03-02', '09:30:00', 0, 796, 'Evelyn Lopez', 41, '1717 Pine St, Barangay U', 'Marcos Dizon', 'None', 'Non-recyclable waste dumped in public area', 'Environment'),
+('Sexual Harassment', '09182345679', 'Barangay V', 'Daniel Reyes', '2025-03-01', '08:00:00', 1, 797, 'Victoria Cruz', 25, '1818 Maple St, Barangay V', 'José Garcia', 'None', 'Unwanted advances made by a neighbor', 'Social'),
+('Abandoned Vehicle', '09241234567', 'Barangay W', 'Sofia Garcia', '2025-02-28', '11:00:00', 1, 798, 'Roberto Lopez', 38, '1919 Oak St, Barangay W', 'Pedro Cruz', 'None', 'Car abandoned on the side of the road', 'Traffic'),
+('Electric Line Issues', '09256789012', 'Barangay X', 'Ricardo Lopez', '2025-02-27', '02:00:00', 1, 799, 'Patricia Reyes', 31, '2020 Elm St, Barangay X', 'Javier Dizon', 'sadadasdsd', 'Flickering lights in the neighborhood', 'Environment'),
+('Trespassing', '09262345678', 'Barangay Y', 'Fernando Perez', '2025-02-26', '12:30:00', 1, 800, 'Angela Cruz', 29, '2121 Pine St, Barangay Y', 'Raul Reyes', 'None', 'Individuals trespassing in private property', 'Crime'),
+('Noise Complaint', '09171234567', 'Barangay A', 'Juan Dela Cruz', '2025-03-22', '10:30:00', 1, 801, 'Maria Santos', 30, '123 Main St, Barangay A', 'Carlos Reyes', 'None', 'Loud music disturbing the neighbors', 'Noise'),
+('Illegal Parking', '09182345678', 'Barangay B', 'Pedro Garcia', '2025-03-21', '02:00:00', 0, 802, 'Josefa Bautista', 45, '456 Elm St, Barangay B', 'Ricardo Lopez', 'None', 'Car parked in front of a fire hydrant', 'Traffic'),
+('Vandalism', '09191234567', 'Barangay C', 'Andres Martinez', '2025-03-20', '04:45:00', 1, 803, 'Rafael Cruz', 24, '789 Oak St, Barangay C', 'Emma Ramos', 'None', 'Graffiti on public property', 'Crime'),
+('Littering', '09123456789', 'Barangay D', 'Leandro Flores', '2025-03-19', '08:00:00', 0, 804, 'Nina Garcia', 35, '101 Pine St, Barangay D', 'Victor Dizon', 'None', 'Trash thrown on the street', 'Environment'),
+('Domestic Dispute', '09211234567', 'Barangay E', 'Teresa Lopez', '2025-03-18', '08:30:00', 1, 805, 'Alfredo Perez', 55, '102 Maple St, Barangay E', 'Lina Martinez', 'None', 'Loud arguments coming from the house', 'Social'),
+('Public Disturbance', '09301234567', 'Barangay F', 'Miguel Santiago', '2025-03-17', '11:15:00', 0, 806, 'Luis Morales', 28, '202 Cedar St, Barangay F', 'Juan de la Cruz', 'None', 'Drunken individuals causing a scene in the public park', 'Noise'),
+('Drug Activity', '09222334455', 'Barangay G', 'Carmen Aguilar', '2025-03-16', '01:45:00', 1, 807, 'Gabriela Reyes', 40, '303 Birch St, Barangay G', 'Carlos Reyes', 'None', 'Suspicious individuals seen exchanging items', 'Crime'),
+('Street Fighting', '09194567890', 'Barangay H', 'Luis Perez', '2025-03-15', '09:00:00', 0, 808, 'Armando Santos', 32, '404 Birch St, Barangay H', 'Pedro Garcia', 'None', 'Fight between two men on the street', 'Social'),
+('Fire Hazard', '09336677788', 'Barangay I', 'Felipe Gomez', '2025-03-14', '07:30:00', 1, 809, 'Celia Cruz', 60, '505 Pine St, Barangay I', 'Maria Reyes', 'None', 'Burnt debris near residential area, potential fire hazard', 'Environment'),
+('Overcrowding', '09237658901', 'Barangay J', 'Hernan Torres', '2025-03-13', '06:00:00', 0, 810, 'Diego Lopez', 27, '606 Cedar St, Barangay J', 'Juan de la Cruz', 'None', 'Too many people gathering in a small area', 'Social'),
+('Noise Pollution', '09123456780', 'Barangay K', 'Eva Martinez', '2025-03-12', '10:15:00', 1, 811, 'Cristina Reyes', 39, '707 Elm St, Barangay K', 'Ricardo Lopez', 'None', 'Loud generator noise in the area', 'Noise'),
+('Illegal Construction', '09162345678', 'Barangay L', 'Manuel Garcia', '2025-03-11', '06:45:00', 1, 812, 'Martha Dizon', 50, '808 Maple St, Barangay L', 'Antonio Cruz', 'None', 'Unapproved construction work in residential area', 'Environment'),
+('Animal Abuse', '09212345678', 'Barangay M', 'Esteban Garcia', '2025-03-10', '03:30:00', 1, 813, 'Joana Reyes', 22, '909 Oak St, Barangay M', 'Carlos Dizon', 'None', 'Neglect of pet animals in the area', 'Crime'),
+('Excessive Smoking', '09123457901', 'Barangay N', 'Diana Cruz', '2025-03-09', '12:00:00', 0, 814, 'Bernardo Reyes', 30, '1011 Cedar St, Barangay N', 'Nina Lopez', 'None', 'People smoking near children in public places', 'Health'),
+('Spitting in Public', '09123456710', 'Barangay O', 'Ana Ramos', '2025-03-08', '05:00:00', 1, 815, 'Oscar Reyes', 28, '1111 Pine St, Barangay O', 'Sofia Garcia', 'None', 'People spitting on sidewalks and public areas', 'Health'),
+('Public Urination', '09132345678', 'Barangay P', 'Ricardo Perez', '2025-03-07', '07:30:00', 1, 816, 'Santiago Lopez', 42, '1212 Birch St, Barangay P', 'Pablo Reyes', 'None', 'Individuals urinating in public', 'Health'),
+('Electricity Theft', '09141122334', 'Barangay Q', 'María Hernández', '2025-03-06', '02:20:00', 0, 817, 'Diana Perez', 60, '1313 Elm St, Barangay Q', 'Carlos Reyes', 'None', 'Suspected illegal connection to electric line', 'Crime'),
+('Water Pollution', '09152033445', 'Barangay R', 'Luisa Martinez', '2025-03-05', '10:40:00', 1, 818, 'Francisco Reyes', 33, '1414 Maple St, Barangay R', 'Vicente Cruz', 'None', 'Waste being dumped in the local water supply', 'Environment'),
+('Illegal Logging', '09163456789', 'Barangay S', 'Carlos Gomez', '2025-03-04', '01:00:00', 0, 819, 'Monica Reyes', 47, '1515 Oak St, Barangay S', 'Eduardo Lopez', 'None', 'Unregulated cutting of trees in protected area', 'Environment'),
+('Hawking without Permit', '09234567890', 'Barangay T', 'Ricardo Cruz', '2025-03-03', '04:30:00', 1, 820, 'Raul Martinez', 53, '1616 Cedar St, Barangay T', 'Ana Reyes', 'None', 'Street vendors operating without a permit', 'Business'),
+('Illegal Waste Dumping', '09193456789', 'Barangay U', 'Teresa Santos', '2025-03-02', '09:30:00', 0, 821, 'Evelyn Lopez', 41, '1717 Pine St, Barangay U', 'Marcos Dizon', 'None', 'Non-recyclable waste dumped in public area', 'Environment'),
+('Sexual Harassment', '09182345679', 'Barangay V', 'Daniel Reyes', '2025-03-01', '08:00:00', 1, 822, 'Victoria Cruz', 25, '1818 Maple St, Barangay V', 'José Garcia', 'None', 'Unwanted advances made by a neighbor', 'Social'),
+('Abandoned Vehicle', '09241234567', 'Barangay W', 'Sofia Garcia', '2025-02-28', '11:00:00', 1, 823, 'Roberto Lopez', 38, '1919 Oak St, Barangay W', 'Pedro Cruz', 'None', 'Car abandoned on the side of the road', 'Traffic'),
+('Electric Line Issues', '09256789012', 'Barangay X', 'Ricardo Lopez', '2025-02-27', '02:00:00', 1, 824, 'Patricia Reyes', 31, '2020 Elm St, Barangay X', 'Javier Dizon', 'sadadasdsd', 'Flickering lights in the neighborhood', 'Environment'),
+('Trespassing', '09262345678', 'Barangay Y', 'Fernando Perez', '2025-02-26', '12:30:00', 1, 825, 'Angela Cruz JENMAR', 29, ' 2121 Pine St, Barangay Y', 'Raul Reyes', 'None', 'Individuals trespassing in private property', 'Crime');
 
 -- --------------------------------------------------------
 
@@ -227,7 +302,7 @@ INSERT INTO `barangay_incident` (`id`, `date`, `time`, `name_involve`, `address`
 (118, '2025-03-21', '02:30:00', 'Benjamin Moore', '1818 Birch Rd, Barangay 21', 'Honda Pilot', 'JKL3456', 'OPQ678', 'Vehicle Fire', 2),
 (119, '2025-03-22', '03:00:00', 'Grace Allen', '1919 Pine St, Barangay 22', 'Nissan Rogue', 'RST5678', 'UVW901', 'Parking Violation', 2),
 (120, '2025-03-23', '10:30:00', 'Samuel Harris', '2020 Maple Ave, Barangay 23', 'Chevrolet Traverse', 'EFG6789', 'XYZ123', 'Accident', 1),
-(121, '2025-03-25', '12:00:00', 'Amelia Baker', '2222 Oak Rd, Barangay 25', 'Subaru Forester', 'JKL5678', 'STU012', 'Drunk Driving', 3);
+(121, '2025-03-25', '12:00:00', 'Amelia Baker', '2222 Oak Rd, Barangay 25', 'Subaru Forester', 'JKL5678', 'STU012', 'Drunk Driving', 1);
 
 -- --------------------------------------------------------
 
@@ -250,7 +325,7 @@ CREATE TABLE `barangay_information` (
 --
 
 INSERT INTO `barangay_information` (`barangay_name`, `municipality`, `address`, `phone_no`, `email`, `id`, `logo`) VALUES
-('PALIPARAN II', 'DASMARINAS', 'Paliparan II, Dasmariñas, Philippines', '09513856318', 'Barangay.paliparanII@gmail.com', 1, '67a89c6822aa9.png');
+('PALIPARAN II', 'DASMARINAS', 'Paliparan II, Dasmariñas, Philippines', '09513856318', 'Barangay.paliparanII@gmail.com', 1, '67e4bee14e4a4.png');
 
 -- --------------------------------------------------------
 
@@ -321,7 +396,11 @@ INSERT INTO `barangay_request` (`firstname`, `middlename`, `lastname`, `age`, `r
 ('BENEDICT', 'CHUA', 'LIM', 23, 'Barangay Clearance', 'BLK. 5 LOT. 22', 'kjhjkjk', '2025-03-16', 'QUEZON', '09232323232', 'adasd', '09232323232', '2025-03', 'adasdsd', 1, 'Male', '2025-03-17', 'JOLIBEE', 'images.png', 35, 106),
 ('BENEDICT', 'CHUA', 'LIM', 23, 'Barangay ID', 'BLK. 5 LOT. 22', 'kjhjkjk', '2025-03-16', 'QUEZON', '09232323232', 'adasd', '09232323232', '2025-03', 'adasdsd', 4, 'Male', '2025-03-17', 'N/A', 'images.png', 35, 107),
 ('BENEDICT', 'CHUA', 'LIM', 23, 'Barangay Cedula', 'BLK. 5 LOT. 22', 'kjhjkjk', '2025-03-16', 'QUEZON', '09232323232', 'adasd', '09232323232', '2025-03', 'adasdsd', 4, 'Male', '2025-03-17', 'askldadsl', 'images.png', 35, 108),
-('Mason', 'Milleraa', 'Evans', 33, 'Barangay Clearance', '150', 'Barangay 50', '1991-09-21', 'adsd', '09379012356', 'adasd', 'adasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-22', 'N/A', '67de7fb92949e.png', 85, 109);
+('Mason', 'Milleraa', 'Evans', 33, 'Barangay Clearance', '150', 'Barangay 50', '1991-09-21', 'adsd', '09379012356', 'adasd', 'adasd', '2025-03', 'adasdsd', 1, 'Male', '2025-03-22', 'N/A', '67de7fb92949e.png', 85, 109),
+('Henry', 'Daniel', 'Baker', 39, 'Business Permit', '145', 'Barangay 45', '1985-02-14', 'QUEZON', '09124567801', 'asdsadasds', '09232323232', '2025-03', 'adasdsd', 1, 'Male', '2025-03-26', 'JOLIBEE', '67e353c369e18.png', 80, 110),
+('Ethan', 'Luke', 'Collins', 27, 'Barangay Clearance', '146', 'Barangay 46', '1997-11-06', 'QUEZON', '09235678912', 'asdsadasds', '09232323232', '2025-03', 'adasdsd', 1, 'Male', '2025-03-26', 'N/A', 'user46_profile.jpg', 81, 111),
+('Ethan', 'Luke', 'Collins', 27, 'Barangay Certificate', '146', 'Barangay 46', '1997-11-06', 'QUEZON', '09235678912', 'asdsadasds', '09232323232', '2025-03', 'adasdsd', 1, 'Male', '2025-03-27', 'N/A', 'user46_profile.jpg', 81, 112),
+('Ethan', 'Luke', 'Collins', 27, 'Barangay Indigency', '146', 'Barangay 46', '1997-11-06', 'QUEZON', '09235678912', 'asdsadasds', '09232323232', '2025-03', 'EDUCATIONAL', 3, 'Male', '2025-03-27', 'N/A', '67e7e3b5f1448.jpg', 81, 113);
 
 -- --------------------------------------------------------
 
@@ -436,7 +515,17 @@ INSERT INTO `barangay_revenue` (`date_issue`, `expired_date`, `document_amount`,
 ('2025-03-22', '2026-03-22', 23, 'Mason', 'Milleraa', 'Evans', 'Barangay Clearance', 109, 1107),
 ('2025-03-22', '2026-03-22', 23, 'Mason', 'Milleraa', 'Evans', 'Barangay Clearance', 109, 1108),
 ('2025-03-22', '2026-03-22', 23, 'Mason', 'Milleraa', 'Evans', 'Barangay Clearance', 109, 1109),
-('2025-03-22', '2026-03-22', 22, 'BENEDICT', 'CHUA', 'LIM', 'Barangay Cedula', 108, 1110);
+('2025-03-22', '2026-03-22', 22, 'BENEDICT', 'CHUA', 'LIM', 'Barangay Cedula', 108, 1110),
+('2025-03-26', '2026-03-26', 23, 'BENEDICT', 'CHUA', 'LIM', 'Barangay ID', 107, 1111),
+('2025-03-26', '2026-03-26', 23, 'Ethan', 'Luke', 'Collins', 'Barangay Clearance', 111, 1112),
+('2025-03-27', '2026-03-27', 120, 'Ethan', 'Luke', 'Collins', 'Barangay Certificate', 113, 1113),
+('2025-03-28', '2026-03-28', 33, 'Henry', 'Daniel', 'Baker', 'Business Permit', 110, 1114),
+('2025-03-29', '2026-03-29', 12, 'Henry', 'Daniel', 'Baker', 'Business Permit', 110, 1115),
+('2025-03-29', '2026-03-29', 23, 'Ethan', 'Luke', 'Collins', 'Barangay Indigency', 113, 1116),
+('2025-03-29', '2026-03-29', 23, 'Ethan', 'Luke', 'Collins', 'Barangay Indigency', 113, 1117),
+('2025-03-29', '2026-03-29', 12, 'Ethan', 'Luke', 'Collins', 'Barangay Clearance', 112, 1118),
+('2025-03-29', '2026-03-29', 12, 'Ethan', 'Luke', 'Collins', 'Barangay Certificate', 112, 1119),
+('2025-03-29', '2026-03-29', 23, 'Ethan', 'Luke', 'Collins', 'Barangay Certificate', 112, 1120);
 
 -- --------------------------------------------------------
 
@@ -511,7 +600,7 @@ INSERT INTO `user_account` (`firstname`, `middlename`, `lastname`, `username`, `
 ('Jack', 'Wade', 'Miller', 'jackwade', 'password7892', 'Male', 32, '1992-01-19', '2025-04-11', '142', 'Barangay 42', '09191234578', 'user42_profile.jpg', 77),
 ('Zoey', 'Clara', 'Scott', 'zoeyscott', 'password8903', 'Female', 28, '1996-09-05', '2025-04-12', '143', 'Barangay 43', '09202345689', 'user43_profile.jpg', 78),
 ('Leo', 'Owen', 'Bennett', 'leobennett', 'password9014', 'Male', 36, '1988-05-12', '2025-04-13', '144', 'Barangay 44', '09313456790', 'user44_profile.jpg', 79),
-('Henry', 'Daniel', 'Baker', 'henrybaker', 'password0125', 'Male', 39, '1985-02-14', '2025-04-14', '145', 'Barangay 45', '09124567801', 'user45_profile.jpg', 80),
+('Henry', 'Daniel', 'Baker', 'henrybaker', 'password0125', 'Male', 39, '1985-02-14', '2025-04-14', '145', 'Barangay 45', '09124567801', '67e353c369e18.png', 80),
 ('Ethan', 'Luke', 'Collins', 'ethancollins', 'password1237', 'Male', 27, '1997-11-06', '2025-04-15', '146', 'Barangay 46', '09235678912', 'user46_profile.jpg', 81),
 ('Sophia', 'Nicole', 'Evans', 'sophiaevans', 'password2348', 'Female', 25, '1999-10-18', '2025-04-16', '147', 'Barangay 47', '09346789023', 'user47_profile.jpg', 82),
 ('Lucas', 'Nathan', 'Nelson', 'lucasnelson', 'password3459', 'Male', 31, '1993-02-12', '2025-04-17', '148', 'Barangay 48', '09157890134', 'user48_profile.jpg', 83),
@@ -567,7 +656,9 @@ INSERT INTO `user_account` (`firstname`, `middlename`, `lastname`, `username`, `
 ('Sophia', 'Nicole', 'Evans', 'sophiaevans', 'password2348', '1970-01-01', 25, '1999-10-18', '2025-04-16', '147', 'Barangay 47', '09346789023', 'user47_profile.jpg', 133),
 ('Lucas', 'Nathan', 'Nelson', 'lucasnelson', 'password3459', '1970-01-01', 31, '1993-02-12', '2025-04-17', '148', 'Barangay 48', '09157890134', 'user48_profile.jpg', 134),
 ('Lily', 'Rose', 'Harris', 'lilyharris', 'password4560', '1970-01-01', 29, '1995-06-03', '2025-04-18', '149', 'Barangay 49', '09268901245', 'user49_profile.jpg', 135),
-('Mason', 'Milleraa', 'Evans', 'masonmillerevans', 'Password5671', '1970-01-01', 33, '1991-09-21', '2025-04-19', '150', 'Barangay 50', '09379012356', '67de7fb92949e.png', 136);
+('Mason', 'Milleraa', 'Evans', 'masonmillerevans', 'Password5671', '1970-01-01', 33, '1991-09-21', '2025-04-19', '150', 'Barangay 50', '09379012356', '67de7fb92949e.png', 136),
+('BENEDICT', 'CHUA', 'LIM', 'Jenmar', '75626a8eb37e2207ea186fd7b3e8f6d2', 'Male', 22, '0000-00-00', '2025-03-28', '', '', '', 'images.png', 137),
+('BENEDICT', 'CHUA', 'LIM', 'RAYMOND', 'fe673cf26ae096e4a483c16ede8ade04', 'Male', 22, '2025-03-29', '2025-03-28', 'BLK. 5 LOT. 22', 'asdasdasd', '09694911585', 'images.png', 138);
 
 --
 -- Indexes for dumped tables
@@ -641,7 +732,7 @@ ALTER TABLE `admin_account`
 -- AUTO_INCREMENT for table `barangay_blotter`
 --
 ALTER TABLE `barangay_blotter`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=751;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=826;
 
 --
 -- AUTO_INCREMENT for table `barangay_incident`
@@ -665,7 +756,7 @@ ALTER TABLE `barangay_official`
 -- AUTO_INCREMENT for table `barangay_request`
 --
 ALTER TABLE `barangay_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `barangay_resident`
@@ -677,13 +768,13 @@ ALTER TABLE `barangay_resident`
 -- AUTO_INCREMENT for table `barangay_revenue`
 --
 ALTER TABLE `barangay_revenue`
-  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1111;
+  MODIFY `OR_no` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1121;
 
 --
 -- AUTO_INCREMENT for table `user_account`
 --
 ALTER TABLE `user_account`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
